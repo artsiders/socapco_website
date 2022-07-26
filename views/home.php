@@ -10,60 +10,23 @@
      <meta name="author" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/magnific-popup.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="<?= ASSETS ?>css/bootstrap.min.css">
+     <link rel="stylesheet" href="<?= ASSETS ?>css/magnific-popup.css">
+     <link rel="stylesheet" href="<?= ASSETS ?>css/font-awesome.min.css">
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/templatemo-style.css">
+     <link rel="stylesheet" href="<?= ASSETS ?>css/templatemo-style.css">
 </head>
 
 <body>
 
      <!-- PRE LOADER -->
-     <section class="preloader">
-          <div class="spinner">
-               <span class="spinner-rotate"></span>
-          </div>
-     </section>
+     <?php include_once VIEW . 'partials/_pre_loader.php' ?>
 
 
      <!-- MENU -->
-     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
-          <div class="container">
+     <?php include_once VIEW . 'partials/_navigation.php' ?>
 
-               <div class="navbar-header">
-                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
-
-                    <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand">Socapco</a>
-               </div>
-
-               <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="#home" class="smoothScroll">Home</a></li>
-                         <li><a href="#about" class="smoothScroll">About</a></li>
-                         <li><a href="#blog" class="smoothScroll">Blog</a></li>
-                         <li><a href="#work" class="smoothScroll">Our Work</a></li>
-                         <li><a href="#contact" class="smoothScroll">Contacts</a></li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in /
-                                   Join</a></li>
-                    </ul>
-               </div>
-
-          </div>
-     </section>
 
 
      <!-- HOME -->
@@ -87,7 +50,7 @@
                          <div class="home-video">
                               <div class="embed-responsive embed-responsive-16by9">
                                    <!-- <iframe src="https://www.youtube.com/embed/AqcjdkPMPJA" frameborder="0"
-                                             allowfullscreen></iframe> -->
+                                        allowfullscreen></iframe> -->
                               </div>
                          </div>
                     </div>
@@ -120,29 +83,25 @@
                               <strong>Web Design</strong>
                               <span class="pull-right">85%</span>
                               <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
+                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
                               </div>
 
                               <strong>Photography</strong>
                               <span class="pull-right">90%</span>
                               <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
                               </div>
 
                               <strong>Content Marketing</strong>
                               <span class="pull-right">75%</span>
                               <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
                               </div>
 
                               <strong>CMS Admin</strong>
                               <span class="pull-right">70%</span>
                               <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
                               </div>
 
                          </div>
@@ -150,13 +109,14 @@
 
                     <div class="col-md-4 col-sm-12">
                          <div class="about-image">
-                              <img src="images/about-image.jpg" class="img-responsive" alt="">
+                              <img src="<?= ASSETS ?>images/about-image.jpg" class="img-responsive" alt="">
                          </div>
                     </div>
 
                </div>
           </div>
      </section>
+
 
 
      <!-- BLOG -->
@@ -175,8 +135,7 @@
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="images/blog-image1.jpg" class="img-responsive"
-                                             alt=""></a>
+                                   <a href="blog-detail.html"><img src="<?= ASSETS ?>images/blog-image1.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 22, 2017</small>
@@ -191,8 +150,7 @@
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="images/blog-image2.jpg" class="img-responsive"
-                                             alt=""></a>
+                                   <a href="blog-detail.html"><img src="<?= ASSETS ?>images/blog-image2.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 18, 2017</small>
@@ -207,8 +165,7 @@
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="images/blog-image3.jpg" class="img-responsive"
-                                             alt=""></a>
+                                   <a href="blog-detail.html"><img src="<?= ASSETS ?>images/blog-image3.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 14, 2017</small>
@@ -223,8 +180,7 @@
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="images/blog-image4.jpg" class="img-responsive"
-                                             alt=""></a>
+                                   <a href="blog-detail.html"><img src="<?= ASSETS ?>images/blog-image4.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 10, 2017</small>
@@ -256,7 +212,7 @@
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
                               <a href="images/work-image1.jpg" class="image-popup">
-                                   <img src="images/work-image1.jpg" class="img-responsive" alt="Work">
+                                   <img src="<?= ASSETS ?>images/work-image1.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Clean &amp; Minimal</h3>
@@ -270,7 +226,7 @@
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
                               <a href="images/work-image2.jpg" class="image-popup">
-                                   <img src="images/work-image2.jpg" class="img-responsive" alt="Work">
+                                   <img src="<?= ASSETS ?>images/work-image4.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Studio Bag</h3>
@@ -284,7 +240,7 @@
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
                               <a href="images/work-image3.jpg" class="image-popup">
-                                   <img src="images/work-image3.jpg" class="img-responsive" alt="Work">
+                                   <img src="<?= ASSETS ?>images/work-image3.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Frame Design</h3>
@@ -298,7 +254,7 @@
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
                               <a href="images/work-image4.jpg" class="image-popup">
-                                   <img src="images/work-image4.jpg" class="img-responsive" alt="Work">
+                                   <img src="<?= ASSETS ?>images/work-image4.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Paint Work</h3>
@@ -329,18 +285,15 @@
                          <!-- CONTACT FORM HERE -->
                          <form id="contact-form" role="form" action="#" method="post">
                               <div class="col-md-6 col-sm-6">
-                                   <input type="text" class="form-control" placeholder="Full Name" id="cf-name"
-                                        name="cf-name" required="">
+                                   <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">
                               </div>
 
                               <div class="col-md-6 col-sm-6">
-                                   <input type="email" class="form-control" placeholder="Your Email" id="cf-email"
-                                        name="cf-email" required="">
+                                   <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="cf-email" required="">
                               </div>
 
                               <div class="col-md-6 col-sm-6">
-                                   <input type="tel" class="form-control" placeholder="Your Phone" id="cf-number"
-                                        name="cf-number" required="">
+                                   <input type="tel" class="form-control" placeholder="Your Phone" id="cf-number" name="cf-number" required="">
                               </div>
 
                               <div class="col-md-6 col-sm-6">
@@ -356,8 +309,7 @@
                               </div>
 
                               <div class="col-md-12 col-sm-12">
-                                   <textarea class="form-control" rows="6" placeholder="Your requirements"
-                                        id="cf-message" name="cf-message" required=""></textarea>
+                                   <textarea class="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>
                               </div>
 
                               <div class="col-md-4 col-sm-12">
@@ -369,9 +321,7 @@
 
                     <div class="col-md-4 col-sm-4">
                          <div class="google-map">
-                              <iframe
-                                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945"
-                                   allowfullscreen></iframe>
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" allowfullscreen></iframe>
                          </div>
                     </div>
 
@@ -435,8 +385,7 @@
                                         <p>Call us <span>(+66) 010-020-0340</span></p>
                                    </div>
                                    <ul class="social-icon">
-                                        <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square"
-                                                  attr="facebook icon"></a></li>
+                                        <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
                                         <li><a href="#" class="fa fa-twitter"></a></li>
                                         <li><a href="#" class="fa fa-instagram"></a></li>
                                    </ul>
@@ -450,8 +399,7 @@
 
 
      <!-- MODAL -->
-     <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-          aria-hidden="true">
+     <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
                <div class="modal-content modal-popup">
 
@@ -472,37 +420,27 @@
 
                                         <!-- NAV TABS -->
                                         <ul class="nav nav-tabs" role="tablist">
-                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab"
-                                                       data-toggle="tab">Create an account</a></li>
-                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab"
-                                                       data-toggle="tab">Sign In</a></li>
+                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create an account</a></li>
+                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
                                         </ul>
 
                                         <!-- TAB PANES -->
                                         <div class="tab-content">
                                              <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
                                                   <form action="#" method="post">
-                                                       <input type="text" class="form-control" name="name"
-                                                            placeholder="Name" required>
-                                                       <input type="telephone" class="form-control" name="telephone"
-                                                            placeholder="Telephone" required>
-                                                       <input type="email" class="form-control" name="email"
-                                                            placeholder="Email" required>
-                                                       <input type="password" class="form-control" name="password"
-                                                            placeholder="Password" required>
-                                                       <input type="submit" class="form-control" name="submit"
-                                                            value="Submit Button">
+                                                       <input type="text" class="form-control" name="name" placeholder="Name" required>
+                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
+                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
                                                   </form>
                                              </div>
 
                                              <div role="tabpanel" class="tab-pane fade in" id="sign_in">
                                                   <form action="#" method="post">
-                                                       <input type="email" class="form-control" name="email"
-                                                            placeholder="Email" required>
-                                                       <input type="password" class="form-control" name="password"
-                                                            placeholder="Password" required>
-                                                       <input type="submit" class="form-control" name="submit"
-                                                            value="Submit Button">
+                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
                                                        <a href="https://www.facebook.com/templatemo">Forgot your
                                                             password?</a>
                                                   </form>
@@ -519,14 +457,14 @@
      </section>
 
      <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.stellar.min.js"></script>
-     <script src="js/jquery.magnific-popup.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
-     <script src="js/animate.js"></script>
-     <script src="js/animation.js"></script>
+     <script src="<?= ASSETS ?>js/jquery.js"></script>
+     <script src="<?= ASSETS ?>js/bootstrap.min.js"></script>
+     <script src="<?= ASSETS ?>js/jquery.stellar.min.js"></script>
+     <script src="<?= ASSETS ?>js/jquery.magnific-popup.min.js"></script>
+     <script src="<?= ASSETS ?>js/smoothscroll.js"></script>
+     <script src="<?= ASSETS ?>js/custom.js"></script>
+     <script src="<?= ASSETS ?>js/animate.js"></script>
+     <script src="<?= ASSETS ?>js/animation.js"></script>
 
 </body>
 
