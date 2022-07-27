@@ -68,11 +68,11 @@
                                    <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="cf-email" required="">
                               </div>
 
-                              <div class="col-md-6 col-sm-6">
+                              <!-- <div class="col-md-6 col-sm-6">
                                    <input type="tel" class="form-control" placeholder="Your Phone" id="cf-number" name="cf-number" required="">
-                              </div>
+                              </div> -->
 
-                              <div class="col-md-6 col-sm-6">
+                              <!-- <div class="col-md-6 col-sm-6">
                                    <select class="form-control" id="cf-budgets" name="cf-budgets">
                                         <option>Budget Level</option>
                                         <option>$500 to $1,000</option>
@@ -82,7 +82,7 @@
                                         <option>$7,500 to $12,000</option>
                                         <option>$12,000 or more</option>
                                    </select>
-                              </div>
+                              </div> -->
 
                               <div class="col-md-12 col-sm-12">
                                    <textarea class="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>

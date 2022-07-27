@@ -9,17 +9,27 @@
             </button>
 
             <!-- lOGO TEXT HERE -->
-            <a href="" class="navbar-brand">Socapco</a>
+            <a href="./home" class="navbar-brand">Socapco</a>
         </div>
 
         <!-- MENU LINKS -->
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-nav-first">
-                <li class="<?php if ($this->request == "home" || $this->request == "") echo "active" ?>"><a href="./home" class="smoothScroll">Home</a></li>
-                <li class="<?php if ($this->request == "about") echo "active" ?>"><a href="./about" class="smoothScroll">About</a></li>
-                <li class="<?php if ($this->request == "blog") echo "active" ?>"><a href="./blog" class="smoothScroll">Blog</a></li>
-                <li class="<?php if ($this->request == "work") echo "active" ?>"><a href="./work" class="smoothScroll">Our Work</a></li>
-                <li class="<?php if ($this->request == "contact") echo "active" ?>"><a href="./contact" class="smoothScroll">Contacts</a></li>
+                <li class="<?php if ($this->request == "home" || $this->request == "") echo "active" ?>">
+                    <a href="./home" class="smoothScroll">Home</a>
+                </li>
+                <li class="<?php if ($this->request == "about") echo "active" ?>">
+                    <a href="./about" class="smoothScroll">About</a>
+                </li>
+                <li class="<?php if ($this->request == "blog") echo "active" ?>">
+                    <a href="./blog" class="smoothScroll">Blog</a>
+                </li>
+                <li class="<?php if ($this->request == "work") echo "active" ?>">
+                    <a href="./work" class="smoothScroll">Our Work</a>
+                </li>
+                <li class="<?php if ($this->request == "contact") echo "active" ?>">
+                    <a href="./contact" class="smoothScroll">Contacts</a>
+                </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
