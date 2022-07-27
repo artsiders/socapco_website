@@ -267,8 +267,17 @@ http://www.templatemo.com/tm-509-hydro
   }
 
   .custom-navbar .nav li.active > a {
-    background-color: transparent;
-    color: #ce3232;
+    font-weight: bold;
+    position: relative;
+  }
+  .custom-navbar .nav li.active > a::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 60%;
+    background-color: white;
+    bottom: 10px;
+    left: 20%;
   }
 
   .custom-navbar .navbar-toggle {
