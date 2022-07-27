@@ -12,5 +12,14 @@ class Routeur
         if ($this->request == "home" || $this->request == "") {
             include VIEW . "home.php";
         }
+        if ($this->request == "detail") {
+            include VIEW . "blog-detail.php";
+        }
+        if ($this->request == "about") {
+            include VIEW . "about.php";
+        }
+        if ($this->request == "contact") {
+            include VIEW . "contact.php";
+        }
     }
 }

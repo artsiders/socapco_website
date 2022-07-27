@@ -1,0 +1,6 @@
+@mixin specila_font($weight, $size) {
+    font-family: 'Ink Free';
+    font-weight: $weight;
+    font-size: $size;
+    letter-spacing: 2px;
+}

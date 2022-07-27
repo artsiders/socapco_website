@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-md-6 col-sm-7">
                         <div class="phone-contact">
-                            <p>Call us <span>(+66) 010-020-0340</span></p>
+                            <p>Call us <span>(+237) 010-020-0340</span></p>
                         </div>
                         <ul class="social-icon">
                             <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>

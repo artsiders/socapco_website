@@ -135,13 +135,13 @@
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="<?= ASSETS ?>images/blog-image1.jpg" class="img-responsive" alt=""></a>
+                                   <a href="./detail"><img src="<?= ASSETS ?>images/blog-image1.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 22, 2017</small>
-                                   <h3><a href="blog-detail.html">How To Find Out Beautiful Workspace.</a></h3>
+                                   <h3><a href="./detail">How To Find Out Beautiful Workspace.</a></h3>
                                    <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
+                                   <a href="./detail" class="btn section-btn">Read article</a>
                               </div>
                          </div>
                     </div>
@@ -150,13 +150,13 @@
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="<?= ASSETS ?>images/blog-image2.jpg" class="img-responsive" alt=""></a>
+                                   <a href="./detail"><img src="<?= ASSETS ?>images/blog-image2.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 18, 2017</small>
-                                   <h3><a href="blog-detail.html">woman sportwear.</a></h3>
+                                   <h3><a href="./detail">woman sportwear.</a></h3>
                                    <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read more</a>
+                                   <a href="./detail" class="btn section-btn">Read more</a>
                               </div>
                          </div>
                     </div>
@@ -165,13 +165,13 @@
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="<?= ASSETS ?>images/blog-image3.jpg" class="img-responsive" alt=""></a>
+                                   <a href="./detail"><img src="<?= ASSETS ?>images/blog-image3.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 14, 2017</small>
-                                   <h3><a href="blog-detail.html">new creative fashion.</a></h3>
+                                   <h3><a href="./detail">new creative fashion.</a></h3>
                                    <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
+                                   <a href="./detail" class="btn section-btn">Read article</a>
                               </div>
                          </div>
                     </div>
@@ -180,13 +180,13 @@
                          <!-- BLOG THUMB -->
                          <div class="media blog-thumb">
                               <div class="media-object media-left">
-                                   <a href="blog-detail.html"><img src="<?= ASSETS ?>images/blog-image4.jpg" class="img-responsive" alt=""></a>
+                                   <a href="./detail"><img src="<?= ASSETS ?>images/blog-image4.jpg" class="img-responsive" alt=""></a>
                               </div>
                               <div class="media-body blog-info">
                                    <small><i class="fa fa-clock-o"></i> December 10, 2017</small>
-                                   <h3><a href="blog-detail.html">minimalist design trend in 2018.</a></h3>
+                                   <h3><a href="./detail">minimalist design trend in 2018.</a></h3>
                                    <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="blog-detail.html" class="btn section-btn">View Detail</a>
+                                   <a href="./detail" class="btn section-btn">View Detail</a>
                               </div>
                          </div>
                     </div>
@@ -329,74 +329,8 @@
           </div>
      </section>
 
-
      <!-- FOOTER -->
-     <footer data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-5 col-sm-12">
-                         <div class="footer-thumb footer-info">
-                              <h2>Socapco</h2>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                   incididunt ut labore et dolore magna aliqua.</p>
-                         </div>
-                    </div>
-
-                    <div class="col-md-2 col-sm-4">
-                         <div class="footer-thumb">
-                              <h2>Company</h2>
-                              <ul class="footer-link">
-                                   <li><a href="#">About Us</a></li>
-                                   <li><a href="#">Join our team</a></li>
-                                   <li><a href="#">Read Blog</a></li>
-                                   <li><a href="#">Press</a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <div class="col-md-2 col-sm-4">
-                         <div class="footer-thumb">
-                              <h2>Services</h2>
-                              <ul class="footer-link">
-                                   <li><a href="#">Pricing</a></li>
-                                   <li><a href="#">Documentation</a></li>
-                                   <li><a href="#">Support</a></li>
-                              </ul>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-4">
-                         <div class="footer-thumb">
-                              <h2>Find us</h2>
-                              <p>123 Grand Rama IX, <br> Krung Thep Maha Nakhon 10400</p>
-                         </div>
-                    </div>
-
-                    <div class="col-md-12 col-sm-12">
-                         <div class="footer-bottom">
-                              <div class="col-md-6 col-sm-5">
-                                   <div class="copyright-text">
-                                        <p>Copyright &copy; 2017 Your Company</p>
-                                   </div>
-                              </div>
-                              <div class="col-md-6 col-sm-7">
-                                   <div class="phone-contact">
-                                        <p>Call us <span>(+66) 010-020-0340</span></p>
-                                   </div>
-                                   <ul class="social-icon">
-                                        <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                        <li><a href="#" class="fa fa-twitter"></a></li>
-                                        <li><a href="#" class="fa fa-instagram"></a></li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </footer>
-
+     <?php include_once VIEW . 'partials/_footer.php' ?>
 
      <!-- MODAL -->
      <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
