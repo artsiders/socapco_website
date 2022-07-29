@@ -384,6 +384,8 @@ http://www.templatemo.com/tm-509-hydro
   #about {
     text-align: left;
     padding-bottom: 0;
+    display: flex;
+    justify-content: center;
   }
 
   #about .about-info:first-child {
@@ -497,6 +499,8 @@ http://www.templatemo.com/tm-509-hydro
 
   #blog {
     background: #f0f0f0;
+    background: url('../images/blog-header-bg.jpg') no-repeat;
+    background-size: cover;
   }
 
   #blog-header,
