@@ -4,19 +4,7 @@
 <head>
 
      <title>socapco - à propos</title>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-     <link rel="stylesheet" href="<?= ASSETS ?>css/bootstrap.min.css">
-     <link rel="stylesheet" href="<?= ASSETS ?>css/magnific-popup.css">
-     <link rel="stylesheet" href="<?= ASSETS ?>css/font-awesome.min.css">
-
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="<?= ASSETS ?>css/templatemo-style.css">
+     <?php include_once VIEW . "partials/_head.php" ?>
 </head>
 
 <body>
@@ -156,15 +144,6 @@
                </div>
           </div>
      </section>
-
-     <!-- SCRIPTS -->
-     <script src="<?= ASSETS ?>js/jquery.js"></script>
-     <script src="<?= ASSETS ?>js/bootstrap.min.js"></script>
-     <script src="<?= ASSETS ?>js/jquery.stellar.min.js"></script>
-     <script src="<?= ASSETS ?>js/jquery.magnific-popup.min.js"></script>
-     <script src="<?= ASSETS ?>js/smoothscroll.js"></script>
-     <script src="<?= ASSETS ?>js/custom.js"></script>
-
 </body>
 
 </html>
