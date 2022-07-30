@@ -36,8 +36,7 @@
                 <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in /
-                        Join</a></li>
+                <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">+237 000 000 000</a></li>
             </ul>
         </div>
 

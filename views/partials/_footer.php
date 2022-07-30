@@ -37,7 +37,7 @@
             <div class="col-md-3 col-sm-4">
                 <div class="footer-thumb">
                     <h2>Find us</h2>
-                    <p>123 Grand Rama IX, <br> Krung Thep Maha Nakhon 10400</p>
+                    <p>baffousam <br> adresse</p>
                 </div>
             </div>
 
@@ -45,7 +45,7 @@
                 <div class="footer-bottom">
                     <div class="col-md-6 col-sm-5">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2017 Your Company</p>
+                            <p>Copyright &copy; 2022 Socapco</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-7">

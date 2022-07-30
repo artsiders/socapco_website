@@ -24,7 +24,7 @@
                <div class="row">
 
                     <div class="col-md-offset-1 col-md-5 col-sm-12">
-                         <h2>Do you Know What Thing Really Makes Artist Nowadays?</h2>
+                         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
                     </div>
 
                </div>
@@ -41,38 +41,26 @@
                          <!-- BLOG THUMB -->
                          <div class="blog-detail-thumb">
                               <div class="blog-image">
-                                   <img src="images/blog-detail-image.jpg" class="img-responsive" alt="Blog Image">
+                                   <img src="<?= ASSETS ?>/images/post-4d0925278b5484b8a6236cb952a63bbb9ea09391d6101391c8faed70.webp" class="img-responsive" alt="Blog Image">
                               </div>
-                              <h2>What makes you happy everyday?</h2>
-                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus
-                                   augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.
-                                   Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus
-                                   purus augue vulputate voluptate neque</p>
+                              <h2>Faisons connaissances maintenant</h2>
+                              <p>
+                                   Dans l’optique d’apporter aux Cameroun en particulier et à l’Afrique en general, les solutions cosmétiques adaptées à leurs besoins, la Société Camerounaise des Produits Cosmétiques (SOCAPCO) voit le jour en 2013 et s’implante à Bafoussam. Etant donné que chaque être humain est beau à sa maniere, notre souci c’est votre bien-être car l’espèce humain est au coeur de notre passion.
+                              </p>
 
-                              <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quisquam,
-                                   aut, eum, natus excepturi impedit ipsa rerum ratione id dolores ducimus minus eos
-                                   veniam similique.</blockquote>
+                              <h3>MOTIVATION</h3>
+                              <p>
+                                   Rendre la beaute accessible à tous est notre motivation, voilà pourquoi la Socapco s’est assignée la mission d’améliorer, d’enrichir et de capitaliser la beauté des peaux noires et metissées. D’avancer en mettant la ressource humaine et le management de qualité au cœur du metier afin d’offrir les produits de qualité au meilleur prix. L’objectif etant ainsi d’offrir des produits de meilleures qualités grâce à la mise sur pied de notre politique d’innovation permanente.
+                              </p>
 
-                              <p>Vivamus quis velit sed ante suscipit aliquam nec sed ex. Maecenas porta leo at mi
-                                   suscipit congue. Donec ipsum metus, tristique eu leo ut, luctu Vivamus sit amet purus
-                                   nec risus mollis tempor.</p>
+                              <h3>EQUIPE</h3>
+                              <p>
+                                   Nous sommes passionnés par ce que nous faisons et c’est ce qui nous pousse à toujours entreprendre et s’améliorer. Constituée à 70% des jeunes et dynamique, la Socapco pense que les jeunes d’aujourd’hui sont l’Afrique de demain. C’est en des idées fulgurantes et des strategies des plus aiguisées, que repose l’un des fondements de l’entreprise. Parce que l’industrie de la beauté étant en réforme permanente, s’adapter est le maître mot pour s’y imposer et surtout y faire perdurer son leadership.
+                              </p>
 
-                              <div class="blog-ads">
-                                   <h4>Blog Sample Advertising</h4>
-                              </div>
-
-                              <ul>
-                                   <li>Brand Identity ipsum dolor eget vestibulum justo imper diet.</li>
-                                   <li>Social Marketing porta leo at mi suscipit congue. Donec ipsum metus, tristique
-                                        leo luctus.</li>
-                                   <li>Wordpress Themes augue vulputate voluptate neque, curabitur dolor vitae massa.
-                                   </li>
-                              </ul>
-                              <p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus
-                                   augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa.</p>
                               <div class="blog-social-share">
-                                   <h4>Share this article</h4>
-                                   <a href="https://www.facebook.com/templatemo" class="btn btn-primary"><i class="fa fa-facebook"></i>facebook</a>
+                                   <h4>nous contactez</h4>
+                                   <a href="#" class="btn btn-primary"><i class="fa fa-facebook"></i>facebook</a>
                                    <a href="#" class="btn btn-success"><i class="fa fa-twitter"></i>twitter</a>
                                    <a href="#" class="btn btn-danger"><i class="fa fa-google-plus"></i>google plus</a>
                               </div>
@@ -130,8 +118,7 @@
                                                        <input type="email" class="form-control" name="email" placeholder="Email" required>
                                                        <input type="password" class="form-control" name="password" placeholder="Password" required>
                                                        <input type="submit" class="form-control" name="submit" value="Submit Button">
-                                                       <a href="https://www.facebook.com/templatemo">Forgot your
-                                                            password?</a>
+                                                       <a href="#">Forgot your password?</a>
                                                   </form>
                                              </div>
                                         </div>
