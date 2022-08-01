@@ -16,16 +16,16 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-nav-first">
                 <li class="<?php if ($this->request == "home" || $this->request == "") echo "active" ?>">
-                    <a href="./home" class="smoothScroll">Home</a>
+                    <a href="./home" class="smoothScroll">Accueil</a>
                 </li>
                 <li class="<?php if ($this->request == "about") echo "active" ?>">
-                    <a href="./about" class="smoothScroll">About</a>
+                    <a href="./about" class="smoothScroll">A Propos</a>
                 </li>
                 <li class="<?php if ($this->request == "blog") echo "active" ?>">
                     <a href="./blog" class="smoothScroll">Blog</a>
                 </li>
                 <li class="<?php if ($this->request == "work") echo "active" ?>">
-                    <a href="./work" class="smoothScroll">Our Work</a>
+                    <a href="./work" class="smoothScroll">nos service</a>
                 </li>
                 <li class="<?php if ($this->request == "contact") echo "active" ?>">
                     <a href="./contact" class="smoothScroll">Contacts</a>

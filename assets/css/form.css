@@ -39,7 +39,7 @@ body::before{
   padding: 25px 20px;
 }
 .content .image-box{
-  max-width: 55%;
+  max-width: 45%;
 }
 .content .image-box img{
   width: 100%;
@@ -107,7 +107,7 @@ body::before{
   border: 2px solid transparent;
   border-radius: 6px;
   outline: none;
-  transition all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .content .message-box textarea:focus{
   border-color: #ba24c2;
@@ -144,7 +144,7 @@ body::before{
 }
 @media (max-width:1000px) {
   .content .image-box{
-    max-width: 70%;
+    /* max-width: 70%; */
   }
   .content{
     padding: 10px 0;
