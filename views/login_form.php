@@ -11,6 +11,7 @@
     <meta name="author" content="">
     <!-- Custom CSS -->
     <link href="<?= ASSETS ?>dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= ASSETS ?>css/index.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -110,6 +111,9 @@
                             <div class="row m-t-20">
                                 <div class="col-12">
                                     <button class="btn btn-block btn-lg btn-danger" type="submit" name="action">Réinitialisé</button>
+                                </div>
+                                <div class="col-sm-12 text-center">
+                                    <a href="./register" class="text-info m-l-5"><b>annuler</b></a>
                                 </div>
                             </div>
                         </form>

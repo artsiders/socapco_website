@@ -11,6 +11,7 @@
 
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="<?= ASSETS ?>css/templatemo-style.css">
+<link rel="stylesheet" href="<?= ASSETS ?>css/index.css">
 
 
 <!-- SCRIPTS -->
