@@ -4,7 +4,7 @@ class Connexion
     private $server = 'localhost';
     private $login  = 'root';
     private $pass   = '';
-    private $dbName = 'websignerr';
+    private $dbName = 'socapco';
     private $connect;
 
     // public function getConnect()

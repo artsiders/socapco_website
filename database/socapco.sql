@@ -5,13 +5,15 @@ USE `socapco` ;
 -- -----------------------------------------------------
 -- Table `socapco`.`user`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `socapco`.`user` (
-  `idusers` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `socapco`.`users` (
+  `id_user` INT NOT NULL AUTO_INCREMENT,
   `login` VARCHAR(45) NOT NULL,
   `pass` VARCHAR(255) NOT NULL,
-  `join_date` DATETIME NOT NULL DEFAULT CURRENT_TIME,
+  `email` VARCHAR(255) NOT NULL,
+  `picture` VARCHAR(255) NOT NULL,
+  `join_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   `is_admin` INT NOT NULL DEFAULT 0,
-  PRIMARY KEY (`idusers`)
+  PRIMARY KEY (`id_user`)
 );
 
 
