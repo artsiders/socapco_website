@@ -559,10 +559,9 @@
                             <span class="hide-menu">Apps</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="authentication-login1.html
-                                   " aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" id="btnDiconect" aria-expanded="false">
                                 <i class="mdi mdi-directions"></i>
-                                <span class="hide-menu">Log Out</span>
+                                <span class="hide-menu"> se déconnecter </span>
                             </a>
                         </li>
                     </ul>
@@ -921,6 +920,7 @@
     <script src="<?= ASSETS ?>dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="<?= ASSETS ?>dist/js/custom.min.js"></script>
+    <script src="<?= ASSETS ?>js/deconnexion.js"></script>
     <!--This page JavaScript -->
     <script>
     </script>

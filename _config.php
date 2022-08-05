@@ -18,6 +18,8 @@ class AutoLoad
         define("ROOT", "$root/socapco_website/");
         define("HOST", "http://" . "$host/");
 
+        define("HOST_WEBSITE", "http://" . "$host/socapco_website/");
+
         define("MODEL", "$root/socapco_website/models/");
         define("VIEW", "$root/socapco_website/views/");
         define("CONTROLER", "$root/socapco_website/controlers/");
