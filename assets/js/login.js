@@ -1,10 +1,12 @@
-const form = document.getElementById("loginForm")
+const loginForm = document.getElementById("loginForm")
 
-console.log(form);
+let errorBox = document.getElementById("error")
+let successBox = document.getElementById("success")
 
-form.addEventListener("submit", e => {
+
+loginForm.addEventListener("submit", e => {
     e.preventDefault()
-    let data = new FormData(logForm)
+    let data = new FormData(loginForm)
 
     fetch(`${location.origin}/socapco_website/controlers/loginUser.php`, {
         method: 'POST',
@@ -14,13 +16,32 @@ form.addEventListener("submit", e => {
         body: data
     }).then(responce => responce.json()).then(data => {
         if (data.msg != "") {
-            alert(data.msg)
-        } else {
+            errorBox.classList.remove("hide")
+            errorBox.innerHTML = data.msg
+        }
+        if (!data.login) {
+            loginForm.login.classList.add("border-danger")
+        }
+        else {
+            loginForm.login.classList.remove("border-danger")
+        }
+        if (!data.pass) {
+            loginForm.pass.classList.add("border-danger")
+        }
+        else {
+            loginForm.pass.classList.remove("border-danger")
+        }
+
+        if (data.msg == "") {
             if (data.isOk) {
-                location.assign(`${location.href}home`)
+                location.assign(`${location.origin}/socapco_website/admin`)
             } else {
-                alert("erreur")
+                errorBox.classList.remove("hide")
+                errorBox.innerHTML = "ERREUR <strong>500</strong>"
             }
+        } else {
+            errorBox.classList.remove("hide")
+            errorBox.innerHTML = data.msg
         }
     })
 })

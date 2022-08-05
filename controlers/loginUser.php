@@ -9,20 +9,20 @@ $connect = $connect->getConnect();
 if (isset($_POST) and !empty($_POST)) {
     $resultArray = array(
         "msg" => "",
-        "input_login" => "",
-        "input_pass" => "",
+        "login" => true,
+        "pass" => true,
         "isOk" => false
     );
 
-    $userLogin = $_POST["user_login"];
-    $userPass = $_POST["user_pass"];
+    $userLogin = $_POST["login"];
+    $userPass = $_POST["pass"];
 
     if (empty($userLogin)) {
-        $resultArray['msg'] = "entrer votre login";
-        $resultArray['input_login'] = false;
+        $resultArray['msg'] = "entrer votre nom d'utilisateur";
+        $resultArray['login'] = false;
     } else if (empty($userPass)) {
         $resultArray['msg'] = "entrer votre mot de pass";
-        $resultArray['input_pass'] = false;
+        $resultArray['pass'] = false;
     } else {
         require_once "../Models/Users.php";
         $result = new Users;
@@ -30,17 +30,17 @@ if (isset($_POST) and !empty($_POST)) {
 
         if ($result) {
             // verification du mot de passe
-            if (password_verify($userPass, $result["user_pass"])) {
-                $_SESSION['user']  = $result;
+            if (password_verify($userPass, $result["pass"])) {
+                $_SESSION['socapco_admin']  = $result;
                 $resultArray['isOk'] = true;
             } else {
                 $resultArray['msg'] = "mot de passe incorrect :(";
-                $resultArray['input_pass'] = false;
+                $resultArray['pass'] = false;
             }
-            $resultArray['input_login'] = true;
+            $resultArray['login'] = true;
         } else {
-            $resultArray['msg'] = "le compte n'exite pas :(";
-            $resultArray['input_login'] = false;
+            $resultArray['msg'] = "le compte n'exite pas ou n'est pas encore valide";
+            $resultArray['login'] = false;
         }
     }
     echo json_encode($resultArray);

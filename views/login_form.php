@@ -47,6 +47,8 @@
                     <!-- Form -->
                     <div class="row">
                         <div class="col-12">
+                            <p class="hide alert alert-danger text-center" id="error"></p>
+                            <p class="hide alert alert-success text-center" id="success"></p>
                             <form id="loginForm" class="form-horizontal m-t-20" id="loginform" action="index.html">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
