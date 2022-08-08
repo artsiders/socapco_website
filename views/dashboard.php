@@ -457,7 +457,7 @@
                                 <div class="dropdown-divider"></div>
 
                                 <a class="dropdown-item" href="javascript:void(0)">
-                                    <i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
+                                    <i class="ti-settings m-r-5 m-l-5"></i>parametre du compte</a>
 
                                 <div class="dropdown-divider"></div>
 
@@ -494,74 +494,86 @@
                             <!-- User Profile-->
                             <div class="user-profile dropdown m-t-20">
                                 <div class="user-pic">
-                                    <img src="<?= ASSETS ?>images/users/1.jpg" alt="users" class="rounded-circle img-fluid" />
+                                    <img src="<?= ASSETS ?>images/uploads/<?= $_SESSION["socapco_admin"]["picture"] ?>" alt="users" class="rounded-circle img-fluid" />
                                 </div>
                                 <div class="user-content hide-menu m-t-10">
-                                    <h5 class="m-b-10 user-name font-medium">Steave Jobs</h5>
+                                    <h5 class="m-b-10 user-name font-medium"><?= $_SESSION["socapco_admin"]["login"] ?></h5>
                                     <a href="javascript:void(0)" class="btn btn-circle btn-sm m-r-5" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="ti-settings"></i>
                                     </a>
-                                    <a href="javascript:void(0)" title="Logout" class="btn btn-circle btn-sm">
+                                    <a href="javascript:void(0)" title="Logout" class="btn btn-circle btn-sm log_out">
                                         <i class="ti-power-off"></i>
                                     </a>
-                                    <div class="dropdown-menu animated flipInY" aria-labelledby="Userdd">
+                                    <div class="dropdown-menu animated  fadeInUp " aria-labelledby="Userdd">
                                         <a class="dropdown-item" href="javascript:void(0)">
-                                            <i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">
-                                            <i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
-                                        <a class="dropdown-item" href="javascript:void(0)">
-                                            <i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
+                                            <i class="ti-user m-r-5 m-l-5"></i>mon profile</a>
+
                                         <div class="dropdown-divider"></div>
+
                                         <a class="dropdown-item" href="javascript:void(0)">
-                                            <i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
+                                            <i class="ti-settings m-r-5 m-l-5"></i>parametre du compte</a>
+
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="javascript:void(0)">
-                                            <i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+
+                                        <a class="dropdown-item log_out" href="javascript:void(0)">
+                                            <i class="fa fa-power-off m-r-5 m-l-5"></i>se déconnecter</a>
+                                        <div class="dropdown-divider"></div>
                                     </div>
                                 </div>
                             </div>
                             <!-- End User Profile-->
                         </li>
                         <!-- User Profile-->
-                        <li class="nav-small-cap">
-                            <i class="mdi mdi-dots-horizontal"></i>
-                            <span class="hide-menu">Personal</span>
-                        </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
-                                <i class="fas fa-globe"></i>
-                                <span class="hide-menu">Dashboards </span>
+                                <i class="fab fa-product-hunt"></i>
+                                <span class="hide-menu">produits </span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item">
                                     <a href="index.html" class="sidebar-link">
-                                        <i class="icon-Record"></i>
-                                        <span class="hide-menu"> Dashboard 1 </span>
+                                        <i class="fas fa-circle"></i>
+                                        <span class="hide-menu"> Cosméthique </span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
                                     <a href="index2.html" class="sidebar-link">
-                                        <i class="icon-Record"></i>
-                                        <span class="hide-menu"> Dashboard 2 </span>
+                                        <i class="fas fa-circle"></i>
+                                        <span class="hide-menu"> Sovonerie </span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item">
                                     <a href="index3.html" class="sidebar-link">
-                                        <i class="icon-Record"></i>
-                                        <span class="hide-menu"> Dashboard 3 </span>
+                                        <i class="fas fa-circle"></i>
+                                        <span class="hide-menu"> lorem </span>
                                     </a>
                                 </li>
 
                             </ul>
                         </li>
-
-                        <li class="nav-small-cap">
-                            <i class="mdi mdi-dots-horizontal"></i>
-                            <span class="hide-menu">Apps</span>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                                <span class="hide-menu">utilisateur</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item">
+                                    <a href="index.html" class="sidebar-link">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="hide-menu"> demande </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="index2.html" class="sidebar-link">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="hide-menu"> admin </span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" id="btnDiconect" aria-expanded="false">
-                                <i class="mdi mdi-directions"></i>
+                                <i class="fab fa-get-pocket"></i>
                                 <span class="hide-menu"> se déconnecter </span>
                             </a>
                         </li>
@@ -591,17 +603,18 @@
             <!-- Container fluid  -->
             <!-- ============================================================== -->
             <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="">
-                                <div class="row">
-                                    <!-- code...  -->
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-12">
+                        <!-- Column -->
+                        <?php require_once VIEW . "partials/admin/_list_users.php" ?>
                     </div>
                 </div>
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
                 <!-- BEGIN MODAL -->
                 <div class="modal none-border" id="my-event">
                     <div class="modal-dialog">
@@ -695,10 +708,7 @@
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
-                <?php
-                echo "<pre>";
-                var_dump($_SESSION);
-                ?>
+                <!-- tab side  -->
             </div>
         </div>
     </aside>
@@ -725,6 +735,8 @@
     <script src="<?= ASSETS ?>dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="<?= ASSETS ?>dist/js/custom.min.js"></script>
+
+    <script src="<?= ASSETS ?>libs/footable/dist/footable.all.min.js"></script>
     <script src="<?= ASSETS ?>js/deconnexion.js"></script>
     <!--This page JavaScript -->
     <script>

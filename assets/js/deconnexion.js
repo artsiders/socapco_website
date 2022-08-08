@@ -1,10 +1,12 @@
 const btnDiconect = document.getElementById('btnDiconect')
 
-const logOut = document.querySelector('.log_out')
+const logOuts = document.querySelectorAll('.log_out')
 
-logOut.addEventListener('click', () => {
-    btnDiconect.click()
-})
+logOuts.forEach(logOut => {
+    logOut.addEventListener('click', () => {
+        btnDiconect.click()
+    })
+});
 
 btnDiconect.addEventListener("click", () => {
     fetch(`${location.origin}/socapco_website/controlers/deconnexion.php`)
