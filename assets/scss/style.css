@@ -14,13 +14,13 @@
     background-color: var(--primary);
 } */
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 242, 96, 0.4392156863);
+  background-color: rgba(255, 204, 51, 0.4392156863);
   border-radius: 10px;
   max-width: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #00F260;
+  background-color: #ffcc33;
 }
 
 ::-webkit-scrollbar-track {
