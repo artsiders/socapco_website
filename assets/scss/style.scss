@@ -22,6 +22,14 @@
 /* :: 3.0 Base CSS */
 @import 'reset';
 
+
+
+
+/* body */
+body {
+    background-color: #fffff2;
+}
+
 /* Section Heading */
 
 .section-heading {
@@ -194,9 +202,9 @@
     font-size: 14px;
     line-height: 65px;
     @include transition(all 500ms);
-    background: #61ba6d;
-    background-image: -webkit-linear-gradient(left, #61ba6d 0%, #83c331 51%, #61ba6d 100%);
-    background-image: linear-gradient(to right, #61ba6d 0%, #83c331 51%, #61ba6d 100%);
+    @include bg-gradients-btn;
+    transition: 0.5s;
+    background-size: 200% auto;
     font-weight: 600;
     &.btn-sm {
         min-width: 110px;
@@ -210,7 +218,9 @@
         font-size: 14px;
         font-weight: 600;
         color: $white-color;
-        @include bg-gradients;
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
     }
     &.btn-2 {
         background: $dark-color;
@@ -393,7 +403,7 @@
                 top: 0;
                 right: 0;
                 z-index: 1;
-                background-color: #83c331;
+                background-color: $bg-default-2;
                 content: '';
             }
         }

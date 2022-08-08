@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 	<!-- Favicon icon -->
 	<link rel="icon" type="image/png" sizes="16x16" href="<?= ASSETS ?>images/favicon.png">
-	<title>Socapco register</title>
+	<title>Socapco | register</title>
 	<!-- Custom CSS -->
 	<link href="<?= ASSETS ?>dist/css/style.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?= ASSETS ?>css/index.css">

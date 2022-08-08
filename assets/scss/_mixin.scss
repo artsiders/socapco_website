@@ -62,7 +62,13 @@
 }
 
 @mixin bg-gradients {
-    background: #61ba6d;
-    background: -webkit-linear-gradient(to right, #61ba6d, #83c331);
-    background: linear-gradient(to right, #61ba6d, #83c331);
+    background: #ffcc33;
+    background: -webkit-linear-gradient(to right, #ffb347, #ffcc33);
+    background: linear-gradient(to right, #ffb347, #ffcc33);
+}
+
+@mixin bg-gradients-btn {
+    background: #ffb347;
+    background-image: -webkit-linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);
+    background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);
 }
