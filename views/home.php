@@ -13,281 +13,438 @@ try {
 <html lang="en">
 
 <head>
-     <title>Socapco - website</title>
-     <?php include_once VIEW . "partials/_head.php" ?>
+     <meta charset="UTF-8">
+     <meta name="description" content="">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+     <!-- Title -->
+     <title>socapco | Accueil</title>
+
+     <!-- Favicon -->
+     <link rel="icon" href="<?= ASSETS ?>images/core-img/favicon.ico">
+
+     <!-- Core Stylesheet -->
+     <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
+
 </head>
 
 <body>
+     <!-- ##### Preloader ##### -->
+     <div id="preloader">
+          <i class="circle-preloader"></i>
+     </div>
 
-     <!-- PRE LOADER -->
-     <?php include_once VIEW . 'partials/_pre_loader.php' ?>
+     <!-- ##### Header Area Start ##### -->
+     <header class="header-area">
 
+          <!-- Top Header Area -->
+          <?php include_once VIEW . "partials/_top_header.php" ?>
 
-     <!-- MENU -->
-     <?php include_once VIEW . 'partials/_navigation.php' ?>
+          <!-- Navbar Area -->
+          <?php include_once VIEW . "partials/_navigation.php" ?>
+     </header>
+     <!-- ##### Header Area End ##### -->
 
+     <!-- ##### Hero Area Start ##### -->
+     <section class="hero-area">
+          <div class="hero-slides owl-carousel">
 
-
-     <!-- HOME -->
-     <section id="home" data-stellar-background-ratio="0.5">
-          <div class="overlay"></div>
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-6 col-sm-12">
-                         <div class="home-info">
-                              <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-                              <a href="#about" class="btn section-btn smoothScroll">visitez</a>
-                              <span>
-                                   CONTACTEZ NOUS (+237) 000-000-000
-                                   <small>pour passer commande</small>
-                              </span>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12">
-                         <div class="home-video">
-                              <div class="embed-responsive embed-responsive-16by9">
-                                   <!-- <iframe src="https://www.youtube.com/embed/AqcjdkPMPJA" frameborder="0"
-                                        allowfullscreen></iframe> -->
+               <!-- Single Hero Slide -->
+               <div class="single-hero-slide bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-1.jpg);">
+                    <div class="container h-100">
+                         <div class="row h-100 align-items-center">
+                              <div class="col-12">
+                                   <div class="hero-slides-content">
+                                        <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
+                                        <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University
+                                        </h2>
+                                        <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read
+                                             More</a>
+                                   </div>
                               </div>
                          </div>
                     </div>
+               </div>
 
+               <!-- Single Hero Slide -->
+               <div class="single-hero-slide bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
+                    <div class="container h-100">
+                         <div class="row h-100 align-items-center">
+                              <div class="col-12">
+                                   <div class="hero-slides-content">
+                                        <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
+                                        <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University
+                                        </h2>
+                                        <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read
+                                             More</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
                </div>
           </div>
      </section>
+     <!-- ##### Hero Area End ##### -->
 
-
-     <!-- ABOUT -->
-     <section id="about" data-stellar-background-ratio="0.5">
+     <!-- ##### Top Feature Area Start ##### -->
+     <div class="top-features-area wow fadeInUp" data-wow-delay="300ms">
           <div class="container">
                <div class="row">
-
-                    <div class="col-md-5 col-sm-6">
-                         <div class="about-info">
-                              <div class="section-title">
-                                   <h2>Let us introduce</h2>
-                                   <span class="line-bar">...</span>
-                              </div>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                   incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <div class="about-info skill-thumb">
-
-                              <strong>text simple</strong>
-                              <span class="pull-right">text</span>
-                              <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
-                              </div>
-
-                              <strong>test</strong>
-                              <span class="pull-right">90%</span>
-                              <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                              </div>
-
-                              <strong>Content Marketing</strong>
-                              <span class="pull-right">75%</span>
-                              <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                              </div>
-
-                              <strong>CMS Admin</strong>
-                              <span class="pull-right">70%</span>
-                              <div class="progress">
-                                   <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
-                              </div>
-
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12">
-                         <div class="about-image">
-                              <img src="<?= ASSETS ?>images/about-image.jpg" class="img-responsive" alt="">
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
-
-
-     <!-- BLOG -->
-     <section id="blog" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-12 col-sm-12">
-                         <div class="section-title">
-                              <h2>departement</h2>
-                              <span class="line-bar">...</span>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="./detail"><img src="<?= ASSETS ?>images/blog-image1.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> text simple</small>
-                                   <h3><a href="./detail">Lorem ipsum dolor sit amet.</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="./detail" class="btn section-btn">plus</a>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="./detail"><img src="<?= ASSETS ?>images/blog-image2.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> text simple</small>
-                                   <h3><a href="./detail">Lorem ipsum dolor sit amet..</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="./detail" class="btn section-btn">plus</a>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="./detail"><img src="<?= ASSETS ?>images/blog-image3.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> text simple</small>
-                                   <h3><a href="./detail">Lorem ipsum dolor sit amet.</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="./detail" class="btn section-btn">plus</a>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6">
-                         <!-- BLOG THUMB -->
-                         <div class="media blog-thumb">
-                              <div class="media-object media-left">
-                                   <a href="./detail"><img src="<?= ASSETS ?>images/blog-image4.jpg" class="img-responsive" alt=""></a>
-                              </div>
-                              <div class="media-body blog-info">
-                                   <small><i class="fa fa-clock-o"></i> text simple</small>
-                                   <h3><a href="./detail">Lorem ipsum dolor sit amet.</a></h3>
-                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
-                                   <a href="./detail" class="btn section-btn">View Detail</a>
-                              </div>
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
-
-     <!-- WORK -->
-     <section id="work" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-12 col-sm-12">
-                         <div class="section-title">
-                              <h2>produits</h2>
-                              <span class="line-bar">...</span>
-                         </div>
-                    </div>
-
-                    <?php foreach ($products as $key => $product) : ?>
-                         <div class="col-md-3 col-sm-6">
-                              <!-- WORK THUMB -->
-                              <div class="work-thumb">
-                                   <a href="images/work-image1.jpg" class="image-popup">
-                                        <img src="<?= ASSETS ?>images/uploads/<?= $product['picture'] ?>" class="img-responsive" alt="Work">
-
-                                        <div class="work-info">
-                                             <h3>Clean &amp; Minimal</h3>
-                                             <small>Product Design</small>
-                                        </div>
-                                   </a>
-                              </div>
-                         </div>
-
-                    <?php endforeach; ?>
-               </div>
-          </div>
-     </section>
-
-     <!-- FOOTER -->
-     <?php include_once VIEW . 'partials/_footer.php' ?>
-
-     <!-- MODAL -->
-     <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-               <div class="modal-content modal-popup">
-
-                    <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                         </button>
-                    </div>
-
-                    <div class="modal-body">
-                         <div class="container-fluid">
-                              <div class="row">
-
-                                   <div class="col-md-12 col-sm-12">
-                                        <div class="modal-title">
-                                             <h2>Socapco</h2>
-                                        </div>
-
-                                        <!-- NAV TABS -->
-                                        <ul class="nav nav-tabs" role="tablist">
-                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create an account</a></li>
-                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
-                                        </ul>
-
-                                        <!-- TAB PANES -->
-                                        <div class="tab-content">
-                                             <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
-                                                  <form action="#" method="post">
-                                                       <input type="text" class="form-control" name="name" placeholder="Name" required>
-                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
-                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
-                                                  </form>
-                                             </div>
-
-                                             <div role="tabpanel" class="tab-pane fade in" id="sign_in">
-                                                  <form action="#" method="post">
-                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
-                                                       <a href="https://www.facebook.com/templatemo">Forgot your
-                                                            password?</a>
-                                                  </form>
-                                             </div>
+                    <div class="col-12">
+                         <div class="features-content">
+                              <div class="row no-gutters">
+                                   <!-- Single Top Features -->
+                                   <div class="col-12 col-md-4">
+                                        <div class="single-top-features d-flex align-items-center justify-content-center">
+                                             <i class="icon-agenda-1"></i>
+                                             <h5>Online Courses</h5>
                                         </div>
                                    </div>
+                                   <!-- Single Top Features -->
+                                   <div class="col-12 col-md-4">
+                                        <div class="single-top-features d-flex align-items-center justify-content-center">
+                                             <i class="icon-assistance"></i>
+                                             <h5>Amazing Teachers</h5>
+                                        </div>
+                                   </div>
+                                   <!-- Single Top Features -->
+                                   <div class="col-12 col-md-4">
+                                        <div class="single-top-features d-flex align-items-center justify-content-center">
+                                             <i class="icon-telephone-3"></i>
+                                             <h5>Great Support</h5>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- ##### Top Feature Area End ##### -->
 
+     <!-- ##### Course Area Start ##### -->
+     <div class="academy-courses-area section-padding-100-0">
+          <div class="container">
+               <div class="row">
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                         <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="300ms">
+                              <div class="course-icon">
+                                   <i class="icon-id-card"></i>
+                              </div>
+                              <div class="course-content">
+                                   <h4>Business School</h4>
+                                   <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                         <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="400ms">
+                              <div class="course-icon">
+                                   <i class="icon-worldwide"></i>
+                              </div>
+                              <div class="course-content">
+                                   <h4>Marketing</h4>
+                                   <p>Lacinia, lacinia la cus non, fermen tum nisi.</p>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                         <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="500ms">
+                              <div class="course-icon">
+                                   <i class="icon-map"></i>
+                              </div>
+                              <div class="course-content">
+                                   <h4>Photography</h4>
+                                   <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                         <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="600ms">
+                              <div class="course-icon">
+                                   <i class="icon-like"></i>
+                              </div>
+                              <div class="course-content">
+                                   <h4>Social Media</h4>
+                                   <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                         <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="700ms">
+                              <div class="course-icon">
+                                   <i class="icon-responsive"></i>
+                              </div>
+                              <div class="course-content">
+                                   <h4>Development</h4>
+                                   <p>Lacinia, lacinia la cus non, fermen tum nisi.</p>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Single Course Area -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                         <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="800ms">
+                              <div class="course-icon">
+                                   <i class="icon-message"></i>
+                              </div>
+                              <div class="course-content">
+                                   <h4>Design</h4>
+                                   <p>Cras vitae turpis lacinia, lacinia la cus non, fermentum nisi.</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- ##### Course Area End ##### -->
+
+     <!-- ##### Testimonials Area Start ##### -->
+     <div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
+          <div class="container">
+               <div class="row">
+                    <div class="col-12">
+                         <div class="section-heading text-center mx-auto white wow fadeInUp" data-wow-delay="300ms">
+                              <span>our testimonials</span>
+                              <h3>See what our satisfied customers are saying about us</h3>
+                         </div>
+                    </div>
+               </div>
+               <div class="row">
+                    <!-- Single Testimonials Area -->
+                    <div class="col-12 col-md-6">
+                         <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="400ms">
+                              <div class="testimonial-thumb">
+                                   <img src="<?= ASSETS ?>images/bg-img/t1.jpg" alt="">
+                              </div>
+                              <div class="testimonial-content">
+                                   <h5>Great teachers</h5>
+                                   <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus
+                                        blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et
+                                        tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic
+                                        iturut magna.</p>
+                                   <h6><span>Maria Smith,</span> Student</h6>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Single Testimonials Area -->
+                    <div class="col-12 col-md-6">
+                         <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="500ms">
+                              <div class="testimonial-thumb">
+                                   <img src="<?= ASSETS ?>images/bg-img/t2.jpg" alt="">
+                              </div>
+                              <div class="testimonial-content">
+                                   <h5>Easy and user friendly courses</h5>
+                                   <p>Retiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus
+                                        blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et
+                                        tellus blandit. Etiam nec odio vestibul.</p>
+                                   <h6><span>Shawn Gaines,</span> Student</h6>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Single Testimonials Area -->
+                    <div class="col-12 col-md-6">
+                         <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="600ms">
+                              <div class="testimonial-thumb">
+                                   <img src="<?= ASSETS ?>images/bg-img/t3.jpg" alt="">
+                              </div>
+                              <div class="testimonial-content">
+                                   <h5>I just love the courses here</h5>
+                                   <p>Nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit.
+                                        Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna.
+                                        Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.</p>
+                                   <h6><span>Ross Cooper,</span> Student</h6>
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Single Testimonials Area -->
+                    <div class="col-12 col-md-6">
+                         <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="700ms">
+                              <div class="testimonial-thumb">
+                                   <img src="<?= ASSETS ?>images/bg-img/t4.jpg" alt="">
+                              </div>
+                              <div class="testimonial-content">
+                                   <h5>One good academy</h5>
+                                   <p>Vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam
+                                        nec odio vestibul. Etiam nec odio vestibu lum est mat tis effic iturut magna.
+                                        Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul. Etiam nec odio
+                                        vestibulum est mat tis effic iturut magnaNec odio vestibulum est mattis effic iturut
+                                        magna.</p>
+                                   <h6><span>James Williams,</span> Student</h6>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-12">
+                         <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="800ms">
+                              <a href="#" class="btn academy-btn">See More</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- ##### Testimonials Area End ##### -->
+
+     <!-- ##### Top Popular Courses Area Start ##### -->
+     <div class="top-popular-courses-area section-padding-100-70">
+          <div class="container">
+               <div class="row">
+                    <div class="col-12">
+                         <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                              <span>The Best</span>
+                              <h3>Top Popular Courses</h3>
+                         </div>
+                    </div>
+               </div>
+               <div class="row">
+
+                    <!-- Single Top Popular Course -->
+                    <div class="col-12 col-lg-6">
+                         <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="400ms">
+                              <div class="popular-course-content">
+                                   <h5>Business for begginers</h5>
+                                   <span>By Simon Smith | March 18, 2018</span>
+                                   <div class="course-ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                   </div>
+                                   <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est,
+                                        in euismod.</p>
+                                   <a href="#" class="btn academy-btn btn-sm">See More</a>
+                              </div>
+                              <div class="popular-course-thumb bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/pc-1.jpg);">
                               </div>
                          </div>
                     </div>
 
+                    <!-- Single Top Popular Course -->
+                    <div class="col-12 col-lg-6">
+                         <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="500ms">
+                              <div class="popular-course-content">
+                                   <h5>Advanced HTML5</h5>
+                                   <span>By Simon Smith | March 18, 2018</span>
+                                   <div class="course-ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                   </div>
+                                   <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est,
+                                        in euismod.</p>
+                                   <a href="#" class="btn academy-btn btn-sm">See More</a>
+                              </div>
+                              <div class="popular-course-thumb bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/pc-2.jpg);">
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- Single Top Popular Course -->
+                    <div class="col-12 col-lg-6">
+                         <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="600ms">
+                              <div class="popular-course-content">
+                                   <h5>Marketing 101</h5>
+                                   <span>By Simon Smith | March 18, 2018</span>
+                                   <div class="course-ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                   </div>
+                                   <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est,
+                                        in euismod.</p>
+                                   <a href="#" class="btn academy-btn btn-sm">See More</a>
+                              </div>
+                              <div class="popular-course-thumb bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/pc-3.jpg);">
+                              </div>
+                         </div>
+                    </div>
+
+                    <!-- Single Top Popular Course -->
+                    <div class="col-12 col-lg-6">
+                         <div class="single-top-popular-course d-flex align-items-center flex-wrap mb-30 wow fadeInUp" data-wow-delay="700ms">
+                              <div class="popular-course-content">
+                                   <h5>Business for begginers</h5>
+                                   <span>By Simon Smith | March 18, 2018</span>
+                                   <div class="course-ratings">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                   </div>
+                                   <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est,
+                                        in euismod.</p>
+                                   <a href="#" class="btn academy-btn btn-sm">See More</a>
+                              </div>
+                              <div class="popular-course-thumb bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/pc-4.jpg);">
+                              </div>
+                         </div>
+                    </div>
                </div>
           </div>
-     </section>
+     </div>
+     <!-- ##### Top Popular Courses Area End ##### -->
 
+     <!-- ##### Partner Area Start ##### -->
+     <div class="partner-area section-padding-0-100">
+          <div class="container">
+               <div class="row">
+                    <div class="col-12">
+                         <div class="partners-logo d-flex align-items-center justify-content-between flex-wrap">
+                              <a href="#"><img src="<?= ASSETS ?>images/clients-img/partner-1.png" alt=""></a>
+                              <a href="#"><img src="<?= ASSETS ?>images/clients-img/partner-2.png" alt=""></a>
+                              <a href="#"><img src="<?= ASSETS ?>images/clients-img/partner-3.png" alt=""></a>
+                              <a href="#"><img src="<?= ASSETS ?>images/clients-img/partner-4.png" alt=""></a>
+                              <a href="#"><img src="<?= ASSETS ?>images/clients-img/partner-5.png" alt=""></a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- ##### Partner Area End ##### -->
+
+     <!-- ##### CTA Area Start ##### -->
+     <div class="call-to-action-area">
+          <div class="container">
+               <div class="row">
+                    <div class="col-12">
+                         <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
+                              <h3>Do you want to enrole at our Academy? Get in touch!</h3>
+                              <a href="#" class="btn academy-btn">See More</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- ##### CTA Area End ##### -->
+
+     <!-- ##### Footer Area Start ##### -->
+     <?php include_once VIEW . "partials/_footer.php" ?>
+     <!-- ##### Footer Area Start ##### -->
+
+     <!-- ##### All Javascript Script ##### -->
+     <!-- jQuery-2.2.4 js -->
+     <script src="<?= ASSETS ?>libs/jquery/jquery-2.2.4.min.js"></script>
+     <!-- Popper js -->
+     <script src="<?= ASSETS ?>libs/bootstrap/js/popper.min.js"></script>
+     <!-- Bootstrap js -->
+     <script src="<?= ASSETS ?>libs/bootstrap/js/bootstrap.min.js"></script>
+     <!-- All Plugins js -->
+     <script src="<?= ASSETS ?>libs/plugins/plugins.js"></script>
+     <!-- Active js -->
+     <script src="<?= ASSETS ?>libs/active.js"></script>
 </body>
 
 </html>

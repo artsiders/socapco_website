@@ -11,8 +11,7 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?= ASSETS ?>images/favicon.png">
     <title>Socapco - admin</title>
-    <!-- Custom CSS -->
-    <link href="<?= ASSETS ?>libs/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet" />
+
     <!-- Custom CSS -->
     <link href="<?= ASSETS ?>dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -721,7 +720,7 @@
     <script src="<?= ASSETS ?>extra-libs/taskboard/js/jquery-ui.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?= ASSETS ?>libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="<?= ASSETS ?>libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?= ASSETS ?>libs/bootstrap/js/bootstrap.min.js"></script>
     <!-- apps -->
     <script src="<?= ASSETS ?>dist/js/app.min.js"></script>
     <script src="<?= ASSETS ?>dist/js/app.init.js"></script>

@@ -2,159 +2,144 @@
 <html lang="en">
 
 <head>
+     <meta charset="UTF-8">
+     <meta name="description" content="">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-     <title>socapco - contact</title>
-     <?php include_once VIEW . "partials/_head.php" ?>
+     <!-- Title -->
+     <title>socapco | contact</title>
+
+     <!-- Favicon -->
+     <link rel="icon" href="<?= ASSETS ?>img/core-img/favicon.ico">
+
+     <!-- Core Stylesheet -->
+     <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
+
 </head>
 
 <body>
+     <!-- ##### Preloader ##### -->
+     <div id="preloader">
+          <i class="circle-preloader"></i>
+     </div>
 
-     <!-- PRE LOADER -->
-     <?php include_once VIEW . 'partials/_pre_loader.php' ?>
+     <!-- ##### Header Area Start ##### -->
+     <header class="header-area">
 
+          <!-- Top Header Area -->
+          <?php include_once VIEW . "partials/_top_header.php" ?>
 
-     <!-- MENU -->
-     <?php include_once VIEW . 'partials/_navigation.php' ?>
+          <!-- Navbar Area -->
+          <?php include_once VIEW . "partials/_navigation.php" ?>
+     </header>
+     <!-- ##### Header Area End ##### -->
 
+     <!-- ##### Breadcumb Area Start ##### -->
+     <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>img/bg-img/breadcumb.jpg);">
+          <div class="bradcumbContent">
+               <h2>Contact</h2>
+          </div>
+     </div>
+     <!-- ##### Breadcumb Area End ##### -->
 
-     <!-- BLOG HEADER -->
-     <section id="blog-header" data-stellar-background-ratio="0.5">
-          <div class="overlay"></div>
+     <!-- ##### Google Maps ##### -->
+     <div class="map-area wow fadeInUp" data-wow-delay="300ms">
+          <div id="googleMap"></div>
+     </div>
+
+     <!-- ##### Contact Area Start ##### -->
+     <section class="contact-area">
           <div class="container">
                <div class="row">
-
-                    <div class="col-md-offset-1 col-md-5 col-sm-12">
-                         <h2>Do you Know What Thing Really Makes Artist Nowadays?</h2>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
-
-     <!-- CONTACT -->
-     <section id="contact" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-12 col-sm-12">
-                         <div class="section-title">
-                              <h2>Contact us</h2>
-                              <span class="line-bar">...</span>
-                         </div>
-                    </div>
-
-                    <div class="col-md-8 col-sm-8">
-
-                         <!-- CONTACT FORM HERE -->
-                         <form id="contact-form" role="form" action="#" method="post">
-                              <div class="col-md-6 col-sm-6">
-                                   <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">
-                              </div>
-
-                              <div class="col-md-6 col-sm-6">
-                                   <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="cf-email" required="">
-                              </div>
-
-                              <!-- <div class="col-md-6 col-sm-6">
-                                   <input type="tel" class="form-control" placeholder="Your Phone" id="cf-number" name="cf-number" required="">
-                              </div> -->
-
-                              <!-- <div class="col-md-6 col-sm-6">
-                                   <select class="form-control" id="cf-budgets" name="cf-budgets">
-                                        <option>Budget Level</option>
-                                        <option>$500 to $1,000</option>
-                                        <option>$1,000 to $2,200</option>
-                                        <option>$2,200 to $4,500</option>
-                                        <option>$4,500 to $7,500</option>
-                                        <option>$7,500 to $12,000</option>
-                                        <option>$12,000 or more</option>
-                                   </select>
-                              </div> -->
-
-                              <div class="col-md-12 col-sm-12">
-                                   <textarea class="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>
-                              </div>
-
-                              <div class="col-md-4 col-sm-12">
-                                   <input type="submit" class="form-control" name="submit" value="Send Message">
-                              </div>
-
-                         </form>
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                         <div class="google-map">
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" allowfullscreen></iframe>
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>
-
-
-     <!-- FOOTER -->
-     <?php include_once VIEW . 'partials/_footer.php' ?>
-
-     <!-- MODAL -->
-     <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-               <div class="modal-content modal-popup">
-
-                    <div class="modal-header">
-                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                         </button>
-                    </div>
-
-                    <div class="modal-body">
-                         <div class="container-fluid">
+                    <div class="col-12">
+                         <div class="contact-content">
                               <div class="row">
-
-                                   <div class="col-md-12 col-sm-12">
-                                        <div class="modal-title">
-                                             <h2>Hydro Co</h2>
-                                        </div>
-
-                                        <!-- NAV TABS -->
-                                        <ul class="nav nav-tabs" role="tablist">
-                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create an account</a></li>
-                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
-                                        </ul>
-
-                                        <!-- TAB PANES -->
-                                        <div class="tab-content">
-                                             <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
-                                                  <form action="#" method="post">
-                                                       <input type="text" class="form-control" name="name" placeholder="Name" required>
-                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Telephone" required>
-                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
-                                                  </form>
+                                   <!-- Contact Information -->
+                                   <div class="col-12 col-lg-5">
+                                        <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
+                                             <div class="section-heading text-left">
+                                                  <span>The Best</span>
+                                                  <h3>Contact Us</h3>
+                                                  <p class="mt-30">Lacinia, lacinia la cus non, fermen tum nisi. Donec et
+                                                       sollicitudin. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed
+                                                       faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut
+                                                       in iaculis enim, et pulvinar mauris.</p>
                                              </div>
 
-                                             <div role="tabpanel" class="tab-pane fade in" id="sign_in">
-                                                  <form action="#" method="post">
-                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                                       <input type="submit" class="form-control" name="submit" value="Submit Button">
-                                                       <a href="https://www.facebook.com/templatemo">Forgot your
-                                                            password?</a>
-                                                  </form>
+                                             <!-- Contact Social Info -->
+                                             <div class="contact-social-info d-flex mb-30">
+                                                  <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                                  <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                                                  <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                                                  <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                             </div>
+
+                                             <!-- Single Contact Info -->
+                                             <div class="single-contact-info d-flex">
+                                                  <div class="contact-icon mr-15">
+                                                       <i class="icon-placeholder"></i>
+                                                  </div>
+                                                  <p>4127/ 5B-C Mislane Road,<br> Gibraltar, UK</p>
+                                             </div>
+
+                                             <!-- Single Contact Info -->
+                                             <div class="single-contact-info d-flex">
+                                                  <div class="contact-icon mr-15">
+                                                       <i class="icon-telephone-1"></i>
+                                                  </div>
+                                                  <p>Main: 203-808-8613 <br> Office: 203-808-8648</p>
+                                             </div>
+
+                                             <!-- Single Contact Info -->
+                                             <div class="single-contact-info d-flex">
+                                                  <div class="contact-icon mr-15">
+                                                       <i class="icon-contract"></i>
+                                                  </div>
+                                                  <p>office@yourbusiness.com</p>
                                              </div>
                                         </div>
                                    </div>
-
+                                   <!-- Contact Form Area -->
+                                   <div class="col-12 col-lg-7">
+                                        <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
+                                             <form action="#" method="post">
+                                                  <input type="text" class="form-control" id="name" placeholder="Name">
+                                                  <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                                  <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                                  <button class="btn academy-btn mt-30" type="submit">Contact Us</button>
+                                             </form>
+                                        </div>
+                                   </div>
                               </div>
                          </div>
                     </div>
-
                </div>
           </div>
      </section>
+     <!-- ##### Contact Area End ##### -->
 
+     <!-- ##### Footer Area Start ##### -->
+     <?php include_once VIEW . "partials/_footer.php" ?>
+     <!-- ##### Footer Area Start ##### -->
+
+     <!-- ##### All Javascript Script ##### -->
+     <!-- jQuery-2.2.4 js -->
+     <script src="<?= ASSETS ?>libs/jquery/jquery-2.2.4.min.js"></script>
+     <!-- Popper js -->
+     <script src="<?= ASSETS ?>libs/bootstrap/js/popper.min.js"></script>
+     <!-- Bootstrap js -->
+     <script src="<?= ASSETS ?>libs/bootstrap/js/bootstrap.min.js"></script>
+     <!-- All Plugins js -->
+     <script src="<?= ASSETS ?>libs/plugins/plugins.js"></script>
+     <!-- Active js -->
+     <script src="<?= ASSETS ?>libs/active.js"></script>
+     <!-- Google Maps -->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
+     <script src="<?= ASSETS ?>libs/google-map/map-active.js"></script>
 </body>
 
 </html>

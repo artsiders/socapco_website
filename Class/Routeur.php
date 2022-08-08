@@ -20,8 +20,11 @@ class Routeur
         if ($this->request == "contact") {
             include VIEW . "contact.php";
         }
-        if ($this->request == "test") {
-            include VIEW . "dashboard.php";
+        if ($this->request == "blog") {
+            include VIEW . "blog.php";
+        }
+        if ($this->request == "services") {
+            include VIEW . "work.php";
         }
 
         // route admin app

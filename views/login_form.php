@@ -145,7 +145,7 @@
     <script src="<?= ASSETS ?>libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?= ASSETS ?>libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="<?= ASSETS ?>libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?= ASSETS ?>libs/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?= ASSETS ?>js/login.js"></script>
     <!-- ============================================================== -->
     <!-- This page plugin js -->
