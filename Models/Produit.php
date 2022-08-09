@@ -34,7 +34,8 @@ class Products
     // reserver a l'administrateur
     public function readAll()
     {
-        $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` P, `categories` C WHERE P.id_categorie = C.id_categorie ORDER BY P.add_date DESC");
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `product` P, `gammes` G, categories C
+        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 

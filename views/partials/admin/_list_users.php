@@ -101,15 +101,24 @@ try {
                             <td>
                                 <span class="label 
                             <?php
+                            if ($product["id_gamme"] == 1) echo "label-success";
+                            if ($product["id_gamme"] == 2) echo "label-danger";
+                            if ($product["id_gamme"] == 3) echo "label-warning";
+                            if ($product["id_gamme"] == 4) echo "label-primary";
+                            ?>"><?= $product['gam_libele'] ?></span>
+                            </td>
+                            <td>
+                                <span class="label 
+                            <?php
                             if ($product["id_categorie"] == 1) echo "label-success";
                             if ($product["id_categorie"] == 2) echo "label-danger";
                             if ($product["id_categorie"] == 3) echo "label-warning";
                             if ($product["id_categorie"] == 4) echo "label-primary";
-                            ?>"><?= $product['libele'] ?></span>
+                            ?>"><?= $product['cat_libele'] ?></span>
                             </td>
                             <td><?= $product['add_date'] ?></td>
                             <td><?= $product['name'] ?></td>
-                            <td><?= $product['name'] ?></td>
+                            <td><?= $product['cat_libele'] ?></td>
                             <td>
                                 <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="tooltip" data-original-title="edit">
                                     <i class="ti-pencil-alt" aria-hidden="true"></i>
