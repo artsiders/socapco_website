@@ -59,15 +59,15 @@
                         </div>
                         <div class="single-contact d-flex mb-30">
                             <i class="icon-placeholder"></i>
-                            <p>4127/ 5B-C Mislane Road, Gibraltar, UK</p>
+                            <p>FCHF+W92, Bafoussam</p>
                         </div>
                         <div class="single-contact d-flex mb-30">
                             <i class="icon-telephone-1"></i>
-                            <p>Main: 203-808-8613 <br>Office: 203-808-8648</p>
+                            <p>Principal: 000-000-000 <br>Bureau: 000-000-000</p>
                         </div>
                         <div class="single-contact d-flex">
                             <i class="icon-contract"></i>
-                            <p>office@yourbusiness.com</p>
+                            <p>contact@socapco.com</p>
                         </div>
                     </div>
                 </div>

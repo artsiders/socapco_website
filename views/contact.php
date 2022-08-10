@@ -46,7 +46,9 @@
 
      <!-- ##### Google Maps ##### -->
      <div class="map-area wow fadeInUp" data-wow-delay="300ms">
-          <div id="googleMap"></div>
+          <div id="googleMap">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.5848572277505!2d10.421200514264264!3d5.479755535936663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105f9b507d49740f%3A0x79eb78c707ce918e!2ssocapco%20sarl!5e0!3m2!1sfr!2scm!4v1660097682007!5m2!1sfr!2scm" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
      </div>
 
      <!-- ##### Contact Area Start ##### -->
@@ -60,8 +62,8 @@
                                    <div class="col-12 col-lg-5">
                                         <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
                                              <div class="section-heading text-left">
-                                                  <span>The Best</span>
-                                                  <h3>Contact Us</h3>
+                                                  <span>le meilleur</span>
+                                                  <h3>nous contacter</h3>
                                                   <p class="mt-30">Lacinia, lacinia la cus non, fermen tum nisi. Donec et
                                                        sollicitudin. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed
                                                        faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut
@@ -83,7 +85,7 @@
                                                   <div class="contact-icon mr-15">
                                                        <i class="icon-placeholder"></i>
                                                   </div>
-                                                  <p>4127/ 5B-C Mislane Road,<br> Gibraltar, UK</p>
+                                                  <p>FCHF+W92, Bafoussam</p>
                                              </div>
 
                                              <!-- Single Contact Info -->
@@ -91,7 +93,7 @@
                                                   <div class="contact-icon mr-15">
                                                        <i class="icon-telephone-1"></i>
                                                   </div>
-                                                  <p>Main: 203-808-8613 <br> Office: 203-808-8648</p>
+                                                  <p>Main: 000-000-000 <br> Office: 000-000-000</p>
                                              </div>
 
                                              <!-- Single Contact Info -->
@@ -99,7 +101,7 @@
                                                   <div class="contact-icon mr-15">
                                                        <i class="icon-contract"></i>
                                                   </div>
-                                                  <p>office@yourbusiness.com</p>
+                                                  <p>contact@socapco.com</p>
                                              </div>
                                         </div>
                                    </div>
@@ -110,7 +112,7 @@
                                                   <input type="text" class="form-control" id="name" placeholder="Name">
                                                   <input type="email" class="form-control" id="email" placeholder="E-mail">
                                                   <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                                                  <button class="btn academy-btn mt-30" type="submit">Contact Us</button>
+                                                  <button class="btn academy-btn mt-30" type="submit">contacter nous</button>
                                              </form>
                                         </div>
                                    </div>
@@ -137,9 +139,6 @@
      <script src="<?= ASSETS ?>libs/plugins/plugins.js"></script>
      <!-- Active js -->
      <script src="<?= ASSETS ?>libs/active.js"></script>
-     <!-- Google Maps -->
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
-     <script src="<?= ASSETS ?>libs/google-map/map-active.js"></script>
 </body>
 
 </html>

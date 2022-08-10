@@ -33,6 +33,8 @@ CREATE TABLE IF NOT EXISTS `socapco`.`categories` (
 CREATE TABLE IF NOT EXISTS `socapco`.`gammes` (
   `id_gamme` INT NOT NULL AUTO_INCREMENT,
   `gam_libele` VARCHAR(45) NOT NULL,
+  `id_categorie` INT NOT NULL,
+  FOREIGN KEY (id_categorie) REFERENCES categories(id_categorie),
   PRIMARY KEY (`id_gamme`)
 );
 
@@ -59,9 +61,9 @@ INSERT INTO `categories` (`id_categorie`, `cat_libele`) VALUES
 (NULL, 'bébés');
 
 
-INSERT INTO `gammes` (`id_gamme`, `gam_libele`) VALUES 
-(NULL, 'divine clarté'), 
-(NULL, 'carmel bébé');
+INSERT INTO `gammes` (`id_gamme`, `gam_libele`,`id_categorie`) VALUES 
+(NULL, 'divine clarté', '1'), 
+(NULL, 'carmel bébé', '1');
 
 
 INSERT INTO `product` (`id_product`, `name`, `decription`, `id_categorie`, `id_gamme`) VALUES 
