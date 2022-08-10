@@ -29,6 +29,156 @@
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
+.card_product {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background: #191919;
+  border-radius: 0;
+  overflow: hidden;
+  /*
+  .imgBox img {
+      max-width: 100%;
+
+      transition: .5s;
+  }
+
+  hover .imgBox img {
+      max-width: 50%;
+
+  }
+  */
+}
+.card_product::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #ffcc33;
+  background: linear-gradient(to right, #ffb347, #ffcc33);
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+.card_product:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+.card_product::after {
+  content: "SOCAPCO";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+.card_product .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+.card_product .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.card_product .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.card_product .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.card_product .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #ffb347;
+  background-image: linear-gradient(to right, #ffb347 0%, #ffcc33 51%, #ffb347 100%);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+.card_product:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+.card_product .mouse {
+  height: 300px;
+  width: auto;
+}
+
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.swiper-navBtn {
+  color: #ffcc33 !important;
+  transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+  color: #e75050 !important;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 35px;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: #3c3c3c;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e75050;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}
 /* [Master Stylesheet v1.0] */
 /* :: :: 1.0 Import Fonts */
 /* :: 2.0 Import All CSS */
@@ -41,6 +191,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -702,9 +853,9 @@ body {
 .top-features-area .features-content {
   position: relative;
   z-index: 50;
-  background: #ffcc33;
-  background: linear-gradient(to right, #ffb347, #ffcc33);
-  padding: 40px 15px;
+  background-color: #242424;
+  padding: 14px 0px;
+  margin-bottom: 80px;
   transform: translateY(-50%);
 }
 .top-features-area .features-content .single-top-features {

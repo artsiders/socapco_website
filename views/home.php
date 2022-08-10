@@ -27,6 +27,8 @@ try {
 
      <!-- Core Stylesheet -->
      <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
+     <!-- Core Stylesheet -->
+     <link rel="stylesheet" href="<?= ASSETS ?>libs/swiper/swiper-bundle.min.css">
 
 </head>
 
@@ -56,12 +58,11 @@ try {
                     <div class="container h-100">
                          <div class="row h-100 align-items-center">
                               <div class="col-12">
-                                   <div class="hero-slides-content">
-                                        <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
-                                        <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University
+                                   <div class="hero-slides-content text-center">
+                                        <h4 data-animation="fadeInUp" data-delay="100ms">faites vous plaisir, <br> sentez vous belle et légère avec les produits de la gamme </h4>
+                                        <h2 data-animation="fadeInUp" data-delay="400ms"> BELLE FACE <br> ECLAIRCISSANT
                                         </h2>
-                                        <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read
-                                             More</a>
+                                        <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Découvrez tous nos produits</a>
                                    </div>
                               </div>
                          </div>
@@ -73,12 +74,13 @@ try {
                     <div class="container h-100">
                          <div class="row h-100 align-items-center">
                               <div class="col-12">
-                                   <div class="hero-slides-content">
-                                        <h4 data-animation="fadeInUp" data-delay="100ms">All the courses you need</h4>
-                                        <h2 data-animation="fadeInUp" data-delay="400ms">Wellcome to our <br>Online University
+                                   <div class="hero-slides-content text-center">
+                                        <h4 data-animation="fadeInUp" data-delay="100ms">Faites plaisir à votre peaux,
+                                             <br> Essayez le nouveau blanchisseur .
+                                        </h4>
+                                        <h2 data-animation="fadeInUp" data-delay="400ms">belle face <br>éclaircissement
                                         </h2>
-                                        <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Read
-                                             More</a>
+                                        <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Nos produits</a>
                                    </div>
                               </div>
                          </div>
@@ -98,22 +100,19 @@ try {
                                    <!-- Single Top Features -->
                                    <div class="col-12 col-md-4">
                                         <div class="single-top-features d-flex align-items-center justify-content-center">
-                                             <i class="icon-agenda-1"></i>
-                                             <h5>Online Courses</h5>
+                                             <a href="https://web.facebook.com/socapco/"><i class="fa fa-facebook-square"></i></a>
                                         </div>
                                    </div>
                                    <!-- Single Top Features -->
                                    <div class="col-12 col-md-4">
                                         <div class="single-top-features d-flex align-items-center justify-content-center">
-                                             <i class="icon-assistance"></i>
-                                             <h5>Amazing Teachers</h5>
+                                             <a href="mailto:Service_client@socapco.com"><i class="fa fa-envelope"></i></a>
                                         </div>
                                    </div>
                                    <!-- Single Top Features -->
                                    <div class="col-12 col-md-4">
                                         <div class="single-top-features d-flex align-items-center justify-content-center">
-                                             <i class="icon-telephone-3"></i>
-                                             <h5>Great Support</h5>
+                                             <a href="tel:+237000000000"><i class="icon-telephone-3"></i></a>
                                         </div>
                                    </div>
                               </div>
@@ -123,6 +122,90 @@ try {
           </div>
      </div>
      <!-- ##### Top Feature Area End ##### -->
+
+     <!-- card -->
+     <h2 class="text-center mb-0 mt-4 mx-auto wow fadeInUp" data-wow-delay="300ms">Nos Produits</h2>
+
+     <div class="row d-flex justify-content-center">
+          <div class="slide-container swiper p-4 col-12">
+               <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+
+                         <div class="card_product swiper-slide">
+                              <div class="imgBox">
+                                   <img src="<?= ASSETS ?>images/about-image.png" alt="product" class="mouse">
+                              </div>
+
+                              <div class="contentBox">
+                                   <h3>Nom Produit</h3>
+                                   <h2 class="price">gamme</h2>
+                                   <a href="#" class="buy">voir plus</a>
+                              </div>
+                         </div>
+                         <div class="card_product swiper-slide">
+                              <div class="imgBox">
+                                   <img src="<?= ASSETS ?>images/about-image.png" alt="product" class="mouse">
+                              </div>
+
+                              <div class="contentBox">
+                                   <h3>Nom Produit</h3>
+                                   <h2 class="price">gamme</h2>
+                                   <a href="#" class="buy">voir plus</a>
+                              </div>
+                         </div>
+                         <div class="card_product swiper-slide">
+                              <div class="imgBox">
+                                   <img src="<?= ASSETS ?>images/about-image.png" alt="product" class="mouse">
+                              </div>
+
+                              <div class="contentBox">
+                                   <h3>Nom Produit</h3>
+                                   <h2 class="price">gamme</h2>
+                                   <a href="#" class="buy">voir plus</a>
+                              </div>
+                         </div>
+                         <div class="card_product swiper-slide">
+                              <div class="imgBox">
+                                   <img src="<?= ASSETS ?>images/about-image.png" alt="product" class="mouse">
+                              </div>
+
+                              <div class="contentBox">
+                                   <h3>Nom Produit</h3>
+                                   <h2 class="price">gamme</h2>
+                                   <a href="#" class="buy">voir plus</a>
+                              </div>
+                         </div>
+                         <div class="card_product swiper-slide">
+                              <div class="imgBox">
+                                   <img src="<?= ASSETS ?>images/about-image.png" alt="product" class="mouse">
+                              </div>
+
+                              <div class="contentBox">
+                                   <h3>Nom Produit</h3>
+                                   <h2 class="price">gamme</h2>
+                                   <a href="#" class="buy">voir plus</a>
+                              </div>
+                         </div>
+                         <div class="card_product swiper-slide">
+                              <div class="imgBox">
+                                   <img src="<?= ASSETS ?>images/about-image.png" alt="product" class="mouse">
+                              </div>
+
+                              <div class="contentBox">
+                                   <h3>Nom Produit</h3>
+                                   <h2 class="price">gamme</h2>
+                                   <a href="#" class="buy">voir plus</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="swiper-button-next swiper-navBtn"></div>
+               <div class="swiper-button-prev swiper-navBtn"></div>
+               <div class="swiper-pagination"></div>
+          </div>
+     </div>
+     <!-- end card -->
 
      <!-- ##### Course Area Start ##### -->
      <div class="academy-courses-area section-padding-100-0">
@@ -445,6 +528,9 @@ try {
      <script src="<?= ASSETS ?>libs/plugins/plugins.js"></script>
      <!-- Active js -->
      <script src="<?= ASSETS ?>libs/active.js"></script>
+     <!-- slider  -->
+     <script src="<?= ASSETS ?>libs/swiper/swiper-bundle.min.js"></script>
+     <script src="<?= ASSETS ?>js/slider.js"></script>
 </body>
 
 </html>

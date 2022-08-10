@@ -3,6 +3,8 @@
 @import 'mixin';
 @import 'responsive';
 @import 'scrollBar';
+@import 'card';
+@import 'slider';
 
 /* [Master Stylesheet v1.0] */
 
@@ -501,8 +503,9 @@ body {
     .features-content {
         position: relative;
         z-index: 50;
-        @include bg-gradients;
-        padding: 40px 15px;
+        background-color: $heading-color;
+        padding: 14px 0px;
+        margin-bottom: 80px;
         @include transform(translateY(-50%));
         .single-top-features {
             border-right: 2px solid $white-color;
