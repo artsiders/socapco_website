@@ -1,7 +1,7 @@
 <div class="row d-flex justify-content-center mb-4">
     <div class="slide-container swiper p-4 col-12">
         <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
+            <div class="card-wrapper swiper-wrapper wow fadeInUp" data-wow-delay="400ms">
 
                 <div class="card_product swiper-slide">
                     <div class="imgBox">
