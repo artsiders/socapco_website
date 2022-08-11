@@ -1,5 +1,3 @@
-<h2 class="text-center mb-0 mt-4 mx-auto wow fadeInUp" data-wow-delay="300ms">Nos Produits</h2>
-
 <div class="row d-flex justify-content-center mb-4">
     <div class="slide-container swiper p-4 col-12">
         <div class="slide-content">

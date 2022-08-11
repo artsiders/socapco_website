@@ -44,7 +44,7 @@
     <!-- ##### Breadcumb Area End ##### -->
 
     <!-- ##### Blog Area Start ##### -->
-    <div class="blog-area mt-50 section-padding-100">
+    <div class="blog-area mt-50 section-padding-100 d-none">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8">
@@ -62,7 +62,8 @@
                                     <a href="#" class="post-title">Top ten courses we love for you to try</a>
                                     <!-- Post Meta -->
                                     <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
+                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a
+                                                href="#">3 comments</a></p>
                                     </div>
                                     <!-- Post Excerpt -->
                                     <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
@@ -84,7 +85,8 @@
                                     <a href="#" class="post-title">Top ten courses we love for you to try</a>
                                     <!-- Post Meta -->
                                     <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
+                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a
+                                                href="#">3 comments</a></p>
                                     </div>
                                     <!-- Post Excerpt -->
                                     <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
@@ -106,7 +108,8 @@
                                     <a href="#" class="post-title">Top ten courses we love for you to try</a>
                                     <!-- Post Meta -->
                                     <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
+                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a
+                                                href="#">3 comments</a></p>
                                     </div>
                                     <!-- Post Excerpt -->
                                     <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et

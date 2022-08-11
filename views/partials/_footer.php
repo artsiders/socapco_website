@@ -12,10 +12,6 @@
                             in euismod erat. Ut at erat et arcu pulvinar cursus a eget.</p>
                         <div class="footer-social-info">
                             <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -27,10 +23,18 @@
                         </div>
                         <nav>
                             <ul class="useful-links">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Services &amp; Features</a></li>
-                                <li><a href="#">Accordions and tabs</a></li>
-                                <li><a href="#">Menu ideas</a></li>
+                                <li>
+                                    <a href="./contact">Contacts</a>
+                                </li>
+                                <li>
+                                    <a href="./about">A Propos</a>
+                                </li>
+                                <li>
+                                    <a href="./blog">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="./services">Services</aclass=>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -42,12 +46,12 @@
                             <h6>Gallery</h6>
                         </div>
                         <div class="gallery-list d-flex justify-content-between flex-wrap">
-                            <a href="<?= ASSETS ?>images/bg-img/gallery1.jpg" class="gallery-img" title="Gallery Image 1"><img src="<?= ASSETS ?>images/bg-img/gallery1.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/bg-img/gallery2.jpg" class="gallery-img" title="Gallery Image 2"><img src="<?= ASSETS ?>images/bg-img/gallery2.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/bg-img/gallery3.jpg" class="gallery-img" title="Gallery Image 3"><img src="<?= ASSETS ?>images/bg-img/gallery3.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/bg-img/gallery4.jpg" class="gallery-img" title="Gallery Image 4"><img src="<?= ASSETS ?>images/bg-img/gallery4.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/bg-img/gallery5.jpg" class="gallery-img" title="Gallery Image 5"><img src="<?= ASSETS ?>images/bg-img/gallery5.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/bg-img/gallery6.jpg" class="gallery-img" title="Gallery Image 6"><img src="<?= ASSETS ?>images/bg-img/gallery6.jpg" alt=""></a>
+                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 1"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
+                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 2"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
+                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 3"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
+                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 4"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
+                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 5"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
+                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 6"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
                         </div>
                     </div>
                 </div>

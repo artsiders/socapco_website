@@ -72,3 +72,9 @@
     background-image: -webkit-linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);
     background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);
 }
+
+@mixin bg-gradients-secondary {
+    background: #ff4646;
+    background: -webkit-linear-gradient(to right, #ff1e1e, #ff4646);
+    background: linear-gradient(to right, #ff2525, #ff4646);
+}
