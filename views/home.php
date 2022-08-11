@@ -63,7 +63,7 @@ try {
                                     belle et légère avec les produits de la gamme </h4>
                                 <h2 data-animation="fadeInUp" data-delay="400ms"> BELLE FACE <br> ECLAIRCISSANT
                                 </h2>
-                                <a href="#" class="btn academy-btn" data-animation="fadeInUp"
+                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp"
                                     data-delay="700ms">Découvrez tous nos produits</a>
                             </div>
                         </div>
@@ -82,7 +82,7 @@ try {
                                 </h4>
                                 <h2 data-animation="fadeInUp" data-delay="400ms">belle face <br>éclaircissement
                                 </h2>
-                                <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Nos
+                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Nos
                                     produits</a>
                             </div>
                         </div>

@@ -29,6 +29,9 @@ class Routeur
         if ($this->request == "product_detail") {
             include VIEW . "product_detail.php";
         }
+        if ($this->request == "produits") {
+            include VIEW . "products.php";
+        }
 
         // route admin app
         if ($this->request == "admin") {

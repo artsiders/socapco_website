@@ -1,0 +1,37 @@
+.list_product {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    
+    .card_product_main {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        max-height: 500px;
+        margin: 20px 10px;
+        width: 300px;
+        box-shadow: 0 0 5px lightgrey;
+    
+        .image_box {
+            max-height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include bg-gradients;
+            max-height: 200px;
+            img {
+                height: 200px;
+                transition: all .3s;
+            }
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+        .body {
+            padding: 15px;
+        }
+    }
+      
+      
+}
