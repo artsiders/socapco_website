@@ -137,6 +137,7 @@ body {
     z-index: 2;
     background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
     &::after {
         background-color: rgba(0, 0, 0, 0.88);
         position: absolute;
@@ -419,6 +420,7 @@ body {
         width: 100%;
         height: 850px;
         position: relative;
+        background-attachment: fixed;
         z-index: 1;
         @media #{$breakpoint-lg} {
             height: 650px;

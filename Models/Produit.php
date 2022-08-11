@@ -22,19 +22,27 @@ class Products
 
     public function read(int $idProduit)
     {
-        $sql = "SELECT * FROM `products` WHERE id_produit = :id_produit";
+        $sql = "SELECT * FROM `products` WHERE id_product = :id_product";
         $query = $this->connect->getConnect()->prepare($sql);
-        $query->bindParam("id_produit", $idProduit);
+        $query->bindParam("id_product", $idProduit);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
         return $result;
     }
+    public function readAllImportant()
+    {
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` P, `gammes` G, categories C
+        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.important = '1'");
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
+        return $result;
+    }
     // reserver a l'administrateur
     public function readAll()
     {
-        $query = $this->connect->getConnect()->prepare("SELECT * FROM `product` P, `gammes` G, categories C
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` P, `gammes` G, categories C
         WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -43,7 +51,7 @@ class Products
     }
     public function readCount()
     {
-        $query = $this->connect->getConnect()->prepare("SELECT COUNT(`id_produit`) FROM `products`");
+        $query = $this->connect->getConnect()->prepare("SELECT COUNT(`id_product`) FROM `products`");
         $query->execute();
         $result = $query->fetch(PDO::FETCH_NUM);
         return $result;
@@ -76,19 +84,19 @@ class Products
 
         $sql = "UPDATE `products` 
                 SET `post_description` = :post_description
-                WHERE `products`.`id_produit` = :id_produit";
+                WHERE `products`.`id_product` = :id_product";
 
         $query = $this->connect->getConnect()->prepare($sql);
 
         $query->bindParam("post_description", $description);
-        $query->bindParam("id_produit", $idProduit);
+        $query->bindParam("id_product", $idProduit);
 
         $query->execute();
     }
 
     public function delete($idProduit)
     {
-        $sql = "DELETE FROM `products` WHERE `products`.`id_produit` = :id";
+        $sql = "DELETE FROM `products` WHERE `products`.`id_product` = :id";
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("id", $idProduit);
         $query->execute();
@@ -96,7 +104,7 @@ class Products
     // dev
     public function readLike($idProduit)
     {
-        $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` ORDER BY id_produit DESC");
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` ORDER BY id_product DESC");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
