@@ -73,7 +73,9 @@
                     <!-- ============================================================== -->
                     <!-- Toggle which is visible on mobile only -->
                     <!-- ============================================================== -->
-                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="ti-more"></i>
                     </a>
                 </div>
@@ -86,7 +88,8 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-left mr-auto">
                         <li class="nav-item d-none d-md-block">
-                            <a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar">
+                            <a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)"
+                                data-sidebartype="mini-sidebar">
                                 <i class="sl-icon-menu font-20"></i>
                             </a>
                         </li>
@@ -94,7 +97,8 @@
                         <!-- mega menu -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown mega-dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <i class="ti-gift font-20"></i>
                             </a>
                             <div class="dropdown-menu animated bounceInDown">
@@ -106,25 +110,30 @@
                                             <div class="carousel-inner" role="listbox">
                                                 <div class="carousel-item active">
                                                     <div class="container p-0">
-                                                        <img class="d-block img-fluid" src="<?= ASSETS ?>images/big/img1.jpg" alt="First slide">
+                                                        <img class="d-block img-fluid"
+                                                            src="<?= ASSETS ?>images/big/img1.jpg" alt="First slide">
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
                                                     <div class="container p-0">
-                                                        <img class="d-block img-fluid" src="<?= ASSETS ?>images/big/img2.jpg" alt="Second slide">
+                                                        <img class="d-block img-fluid"
+                                                            src="<?= ASSETS ?>images/big/img2.jpg" alt="Second slide">
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
                                                     <div class="container p-0">
-                                                        <img class="d-block img-fluid" src="<?= ASSETS ?>images/big/img3.jpg" alt="Third slide">
+                                                        <img class="d-block img-fluid"
+                                                            src="<?= ASSETS ?>images/big/img3.jpg" alt="Third slide">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                            <a class="carousel-control-prev" href="#carouselExampleControls"
+                                                role="button" data-slide="prev">
                                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                 <span class="sr-only">Previous</span>
                                             </a>
-                                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                            <a class="carousel-control-next" href="#carouselExampleControls"
+                                                role="button" data-slide="next">
                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="sr-only">Next</span>
                                             </a>
@@ -138,42 +147,54 @@
                                             <div class="card m-b-5">
                                                 <div class="card-header" id="headingOne">
                                                     <h5 class="mb-0">
-                                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        <button class="btn btn-link" data-toggle="collapse"
+                                                            data-target="#collapseOne" aria-expanded="true"
+                                                            aria-controls="collapseOne">
                                                             Collapsible Group Item #1
                                                         </button>
                                                     </h5>
                                                 </div>
-                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
                                                     <div class="card-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry.
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                                        accusamus terry.
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="card m-b-5">
                                                 <div class="card-header" id="headingTwo">
                                                     <h5 class="mb-0">
-                                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#collapseTwo" aria-expanded="false"
+                                                            aria-controls="collapseTwo">
                                                             Collapsible Group Item #2
                                                         </button>
                                                     </h5>
                                                 </div>
-                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                    data-parent="#accordion">
                                                     <div class="card-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry.
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                                        accusamus terry.
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="card m-b-5">
                                                 <div class="card-header" id="headingThree">
                                                     <h5 class="mb-0">
-                                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#collapseThree" aria-expanded="false"
+                                                            aria-controls="collapseThree">
                                                             Collapsible Group Item #3
                                                         </button>
                                                     </h5>
                                                 </div>
-                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                                    data-parent="#accordion">
                                                     <div class="card-body">
-                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry.
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                                        accusamus terry.
                                                     </div>
                                                 </div>
                                             </div>
@@ -184,13 +205,15 @@
                                         <!-- Contact -->
                                         <form>
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="exampleInputname1" placeholder="Enter Name">
+                                                <input type="text" class="form-control" id="exampleInputname1"
+                                                    placeholder="Enter Name">
                                             </div>
                                             <div class="form-group">
                                                 <input type="email" class="form-control" placeholder="Enter email">
                                             </div>
                                             <div class="form-group">
-                                                <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
+                                                <textarea class="form-control" id="exampleTextarea" rows="3"
+                                                    placeholder="Message"></textarea>
                                             </div>
                                             <button type="submit" class="btn btn-info">Submit</button>
                                         </form>
@@ -231,7 +254,8 @@
                         <!-- Comment -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <i class="ti-bell font-20"></i>
 
                             </a>
@@ -277,7 +301,8 @@
                                                 </span>
                                                 <div class="mail-contnet">
                                                     <h5 class="message-title">Settings</h5>
-                                                    <span class="mail-desc">You can customize this template as you want</span>
+                                                    <span class="mail-desc">You can customize this template as you
+                                                        want</span>
                                                     <span class="time">9:08 AM</span>
                                                 </div>
                                             </a>
@@ -310,7 +335,8 @@
                         <!-- Messages -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="font-20 ti-email"></i>
 
                             </a>
@@ -330,7 +356,8 @@
                                             <!-- Message -->
                                             <a href="javascript:void(0)" class="message-item">
                                                 <span class="user-img">
-                                                    <img src="<?= ASSETS ?>images/users/1.jpg" alt="user" class="rounded-circle">
+                                                    <img src="<?= ASSETS ?>images/users/1.jpg" alt="user"
+                                                        class="rounded-circle">
                                                     <span class="profile-status online pull-right"></span>
                                                 </span>
                                                 <div class="mail-contnet">
@@ -342,7 +369,8 @@
                                             <!-- Message -->
                                             <a href="javascript:void(0)" class="message-item">
                                                 <span class="user-img">
-                                                    <img src="<?= ASSETS ?>images/users/2.jpg" alt="user" class="rounded-circle">
+                                                    <img src="<?= ASSETS ?>images/users/2.jpg" alt="user"
+                                                        class="rounded-circle">
                                                     <span class="profile-status busy pull-right"></span>
                                                 </span>
                                                 <div class="mail-contnet">
@@ -354,7 +382,8 @@
                                             <!-- Message -->
                                             <a href="javascript:void(0)" class="message-item">
                                                 <span class="user-img">
-                                                    <img src="<?= ASSETS ?>images/users/3.jpg" alt="user" class="rounded-circle">
+                                                    <img src="<?= ASSETS ?>images/users/3.jpg" alt="user"
+                                                        class="rounded-circle">
                                                     <span class="profile-status away pull-right"></span>
                                                 </span>
                                                 <div class="mail-contnet">
@@ -366,7 +395,8 @@
                                             <!-- Message -->
                                             <a href="javascript:void(0)" class="message-item">
                                                 <span class="user-img">
-                                                    <img src="<?= ASSETS ?>images/users/4.jpg" alt="user" class="rounded-circle">
+                                                    <img src="<?= ASSETS ?>images/users/4.jpg" alt="user"
+                                                        class="rounded-circle">
                                                     <span class="profile-status offline pull-right"></span>
                                                 </span>
                                                 <div class="mail-contnet">
@@ -434,7 +464,8 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href=""
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="<?= ASSETS ?>images/users/1.jpg" alt="user" class="rounded-circle" width="31">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated fadeInRight">
@@ -443,7 +474,8 @@
                                 </span>
                                 <div class="d-flex no-block align-items-center p-15 bg-primary text-white m-b-10">
                                     <div class="">
-                                        <img src="<?= ASSETS ?>images/uploads/<?= $_SESSION["socapco_admin"]["picture"] ?>" alt="user" class="img-circle" width="60">
+                                        <img src="<?= ASSETS ?>images/uploads/<?= $_SESSION["socapco_admin"]["picture"] ?>"
+                                            alt="user" class="img-circle" width="60">
                                     </div>
                                     <div class="m-l-10">
                                         <h4 class="m-b-0"><?= $_SESSION["socapco_admin"]["login"] ?></h4>
@@ -465,7 +497,8 @@
                                 <div class="dropdown-divider"></div>
 
                                 <div class="p-l-30 p-10">
-                                    <a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a>
+                                    <a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View
+                                        Profile</a>
                                 </div>
                             </div>
                         </li>
@@ -493,11 +526,14 @@
                             <!-- User Profile-->
                             <div class="user-profile dropdown m-t-20">
                                 <div class="user-pic">
-                                    <img src="<?= ASSETS ?>images/uploads/<?= $_SESSION["socapco_admin"]["picture"] ?>" alt="users" class="rounded-circle img-fluid" />
+                                    <img src="<?= ASSETS ?>images/uploads/<?= $_SESSION["socapco_admin"]["picture"] ?>"
+                                        alt="users" class="rounded-circle img-fluid" />
                                 </div>
                                 <div class="user-content hide-menu m-t-10">
-                                    <h5 class="m-b-10 user-name font-medium"><?= $_SESSION["socapco_admin"]["login"] ?></h5>
-                                    <a href="javascript:void(0)" class="btn btn-circle btn-sm m-r-5" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <h5 class="m-b-10 user-name font-medium"><?= $_SESSION["socapco_admin"]["login"] ?>
+                                    </h5>
+                                    <a href="javascript:void(0)" class="btn btn-circle btn-sm m-r-5" id="Userdd"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="ti-settings"></i>
                                     </a>
                                     <a href="javascript:void(0)" title="Logout" class="btn btn-circle btn-sm log_out">
@@ -524,7 +560,8 @@
                         </li>
                         <!-- User Profile-->
                         <li class="sidebar-item">
-                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                                aria-expanded="false">
                                 <i class="fab fa-product-hunt"></i>
                                 <span class="hide-menu">produits </span>
                             </a>
@@ -551,7 +588,8 @@
                             </ul>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                                aria-expanded="false">
                                 <i class="fas fa-user"></i>
                                 <span class="hide-menu">utilisateur</span>
                             </a>
@@ -571,7 +609,8 @@
                             </ul>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" id="btnDiconect" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" id="btnDiconect"
+                                aria-expanded="false">
                                 <i class="fab fa-get-pocket"></i>
                                 <span class="hide-menu"> se déconnecter </span>
                             </a>
@@ -608,7 +647,7 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- Column -->
-                        <?php require_once VIEW . "partials/admin/_list_users.php" ?>
+                        <?php require_once VIEW . "partials/admin/_list_products.php" ?>
                     </div>
                 </div>
                 <!-- ============================================================== -->
@@ -620,13 +659,17 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title"><strong>Add Event</strong></h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body"></div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
-                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                                <button type="button" class="btn btn-secondary waves-effect"
+                                    data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create
+                                    event</button>
+                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light"
+                                    data-dismiss="modal">Delete</button>
                             </div>
                         </div>
                     </div>
@@ -637,18 +680,21 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title"><strong>Add</strong> a category</h4>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">&times;</button>
                             </div>
                             <div class="modal-body">
                                 <form>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label class="control-label">Category Name</label>
-                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
+                                            <input class="form-control form-white" placeholder="Enter name" type="text"
+                                                name="category-name" />
                                         </div>
                                         <div class="col-md-6">
                                             <label class="control-label">Choose Category Color</label>
-                                            <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                            <select class="form-control form-white" data-placeholder="Choose a color..."
+                                                name="category-color">
                                                 <option value="success">Success</option>
                                                 <option value="danger">Danger</option>
                                                 <option value="info">Info</option>
@@ -661,8 +707,10 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
-                                <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light save-category"
+                                    data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-secondary waves-effect"
+                                    data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -676,7 +724,8 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                All Rights Reserved by admin. Designed and Developed by <a href="https://alt-plus.batisseurs-unis.cm">Alt plus</a>.
+                All Rights Reserved by admin. Designed and Developed by <a
+                    href="https://alt-plus.batisseurs-unis.cm">Alt plus</a>.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
@@ -697,13 +746,17 @@
         <div class="customizer-body">
             <ul class="nav customizer-tab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><i class="mdi mdi-wrench font-20"></i></a>
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                        aria-controls="pills-home" aria-selected="true"><i class="mdi mdi-wrench font-20"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#chat" role="tab" aria-controls="chat" aria-selected="false"><i class="mdi mdi-message-reply font-20"></i></a>
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#chat" role="tab"
+                        aria-controls="chat" aria-selected="false"><i class="mdi mdi-message-reply font-20"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="mdi mdi-star-circle font-20"></i></a>
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                        aria-controls="pills-contact" aria-selected="false"><i
+                            class="mdi mdi-star-circle font-20"></i></a>
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
