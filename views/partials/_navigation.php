@@ -1,5 +1,18 @@
+<?php
+require_once MODEL . "Produit.php";
+
+$gammes = new products;
+
+try {
+    $gammes = $gammes->readGam_cat("gamme");
+} catch (EXCEPTION $e) {
+    echo $e->getMessage();
+}
+
+?>
+
 <!-- Navbar Area -->
-<div class="academy-main-menu">
+<div class="academy-main-menu nav_bar">
     <div class="classy-nav-container breakpoint-off">
         <div class="container">
             <!-- Menu -->
@@ -38,80 +51,46 @@
                                     <li><a href="#">Elements</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">adults</a>
+                            <li><a href="#">adult</a>
                                 <div class="megamenu">
-                                    <div class="single-mega cn-col-4">
-                                        <img src="<?= ASSETS ?>images/bg-img/bg-1.jpg" alt="">
+                                    <div class="content_menu">
+                                        <div class="single-mega box_image">
+                                            <img src="<?= ASSETS ?>images/product/5.png" alt="">
+                                        </div>
+                                        <ul class="single-mega list">
+                                            <?php foreach ($gammes as $key => $gamme) : ?>
+                                            <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
+                                            <?php endforeach; ?>
+                                        </ul>
                                     </div>
-                                    <div class="single-mega cn-col-4">
-                                        <img src="<?= ASSETS ?>images/bg-img/bg-1.jpg" alt="">
-                                    </div>
-                                    <ul class="single-mega cn-col-4">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services &amp; Features</a></li>
-                                        <li><a href="#">Accordions and tabs</a></li>
-                                        <li><a href="#">Menu ideas</a></li>
-                                        <li><a href="#">Students Gallery</a></li>
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services &amp; Features</a></li>
-                                        <li><a href="#">Accordions and tabs</a></li>
-                                        <li><a href="#">Menu ideas</a></li>
-                                        <li><a href="#">Students Gallery</a></li>
-                                    </ul>
                                 </div>
                             </li>
-                            <li><a href="#">enfants</a>
+                            <li><a href="#">enfant</a>
                                 <div class="megamenu">
-                                    <div class="single-mega cn-col-4">
-                                        <img src="<?= ASSETS ?>images/bg-img/bg-1.jpg" alt="">
+                                    <div class="content_menu">
+                                        <div class="single-mega box_image">
+                                            <img src="<?= ASSETS ?>images/product/20.png" alt="">
+                                        </div>
+                                        <ul class="single-mega list">
+                                            <?php foreach ($gammes as $key => $gamme) : ?>
+                                            <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
+                                            <?php endforeach; ?>
+                                        </ul>
                                     </div>
-                                    <div class="single-mega cn-col-4">
-                                        <img src="<?= ASSETS ?>images/bg-img/bg-1.jpg" alt="">
-                                    </div>
-                                    <ul class="single-mega cn-col-4">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services &amp; Features</a></li>
-                                        <li><a href="#">Accordions and tabs</a></li>
-                                        <li><a href="#">Menu ideas</a></li>
-                                        <li><a href="#">Students Gallery</a></li>
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services &amp; Features</a></li>
-                                        <li><a href="#">Accordions and tabs</a></li>
-                                        <li><a href="#">Menu ideas</a></li>
-                                        <li><a href="#">Students Gallery</a></li>
-                                    </ul>
                                 </div>
                             </li>
-                            <li><a href="#">bébés</a>
+                            <li><a href="#">bébé</a>
                                 <div class="megamenu">
-                                    <div class="single-mega cn-col-4">
-                                        <img src="<?= ASSETS ?>images/bg-img/bg-1.jpg" alt="">
+                                    <div class="content_menu">
+                                        <div class="single-mega box_image">
+                                            <img src="<?= ASSETS ?>images/product/17.jpg" alt="">
+                                        </div>
+                                        <ul class="single-mega list">
+                                            <?php foreach ($gammes as $key => $gamme) : ?>
+                                            <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
+                                            <?php endforeach; ?>
+                                        </ul>
                                     </div>
-                                    <ul class="single-mega cn-col-4">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services &amp; Features</a></li>
-                                        <li><a href="#">Accordions and tabs</a></li>
-                                        <li><a href="#">Menu ideas</a></li>
-                                        <li><a href="#">Students Gallery</a></li>
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services &amp; Features</a></li>
-                                        <li><a href="#">Accordions and tabs</a></li>
-                                        <li><a href="#">Menu ideas</a></li>
-                                        <li><a href="#">Students Gallery</a></li>
-                                    </ul>
-                                    <ul class="single-mega cn-col-4">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services &amp; Features</a></li>
-                                        <li><a href="#">Accordions and tabs</a></li>
-                                        <li><a href="#">Menu ideas</a></li>
-                                        <li><a href="#">Students Gallery</a></li>
-                                    </ul>
                                 </div>
                             </li>
                             <li class="<?php if ($this->request == "services") echo "active" ?>">

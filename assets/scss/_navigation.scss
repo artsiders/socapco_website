@@ -1,0 +1,25 @@
+.nav_bar {
+    .content_menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 10px;
+        margin: 20px;
+    }
+    .box_image {
+        max-height: 200px;
+        img {
+            height: 200px;
+        }
+    }
+    .list {
+        grid-column: span 3;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media screen and(max-width: 993px) {
+        .content_menu {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

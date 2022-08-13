@@ -49,6 +49,20 @@ class Products
 
         return $result;
     }
+
+    public function readGam_cat($table)
+    {
+        if($table == "gamme") {
+            $sql = "SELECT * FROM `gammes`";
+        } else {
+            $sql = "SELECT * FROM `categories`";
+        }
+        $query = $this->connect->getConnect()->prepare($sql);
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
     public function readCount()
     {
         $query = $this->connect->getConnect()->prepare("SELECT COUNT(`id_product`) FROM `products`");

@@ -25,11 +25,10 @@ try {
     <title>Socapco | blog</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="<?= ASSETS ?>images/core-img/favicon.ico">
+    <link rel="icon" href="<?= ASSETS ?>images/favicon.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
-
 </head>
 
 <body>
@@ -48,44 +47,25 @@ try {
     </header>
     <!-- ##### Header Area End ##### -->
 
-    <section class="hero-area">
-        <div class="">
-            <div class="single-hero-slide bg-img"
-                style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg); background-attachment: fixed;">
-                <div class="h1 text-light text-center my-4 py-4 d-flex"
-                    style="height: 300px; align-items:center; justify-content:center;" height="200px">
-                    produits
-                </div>
-            </div>
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
+        <div class="bradcumbContent">
+            <h2>produits {$cat}</h2>
         </div>
-    </section>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
 
     <!-- ##### Blog Area Start ##### -->
     <div class="blog-area mt-50 section-padding-10">
         <div class="container">
 
-            <div class="list_product">
-                <?php foreach ($products as $key => $product) : ?>
-                <div class="wow fadeInUp card_product_main" data-wow-delay="400ms">
-                    <div class="image_box">
-                        <img src="<?= ASSETS ?>images/product/<?= $product["picture"]?>" alt="">
-                    </div>
-                    <div class="body">
-                        <h5><?= $product["name"]?></h5>
-                        <span>By Simon Smith | March 18, 2018</span>
-                        <div class="">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                        </div>
-                        <p><?= $product["description"]?></p>
-                        <a href="./product_detail&id=<?= $product["id_product"]?>" class="btn academy-btn btn-sm">voir plus</a>
-                    </div>
-                </div>
-                <?php endforeach; ?>
+            <div class="list_product row">
+                <!-- galery product  -->
+                <?php include_once VIEW . "partials/_galery.php" ?>
+                <!-- END galery product  -->
             </div>
+
             <!-- Pagination Area Start -->
             <div class="container">
                 <div class="academy-pagination-area wow fadeInUp my-4" data-wow-delay="400ms">
@@ -118,6 +98,7 @@ try {
     <script src="<?= ASSETS ?>libs/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="<?= ASSETS ?>libs/active.js"></script>
+
 </body>
 
 </html>

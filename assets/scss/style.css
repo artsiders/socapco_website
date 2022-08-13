@@ -182,16 +182,9 @@
     display: none;
   }
 }
-.list_product {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
-}
 .list_product .card_product_main {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  max-height: 500px;
   margin: 20px 10px;
   width: 300px;
   box-shadow: 0 0 5px lightgrey;
@@ -205,10 +198,10 @@
   align-items: center;
   background: #ffcc33;
   background: linear-gradient(to right, #ffb347, #ffcc33);
-  max-height: 200px;
+  max-height: 300px;
 }
 .list_product .card_product_main .image_box img {
-  height: 200px;
+  max-height: 300px;
   transition: all 0.3s;
 }
 .list_product .card_product_main:hover img {
@@ -216,6 +209,80 @@
 }
 .list_product .card_product_main .body {
   padding: 15px;
+}
+.list_product .button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+.list_product .button:active,
+.list_product .button.is-checked {
+  background: #ff4646;
+  outline: none;
+}
+.list_product .button-group {
+  margin: 20px 0;
+  text-align: center;
+}
+.list_product .button-group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.list_product img {
+  vertical-align: middle;
+}
+.list_product .img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.list_product .grid article {
+  background-color: #FFFFFF;
+  display: block;
+  float: left;
+  margin: 1%;
+  width: 23%;
+}
+@media (max-width: 1024px) {
+  .list_product .grid article {
+    width: 31.3%;
+  }
+}
+@media (max-width: 767px) {
+  .list_product .grid article {
+    width: 48%;
+  }
+}
+@media (max-width: 479px) {
+  .list_product .grid article {
+    margin: 2% 0;
+    width: 100%;
+  }
+}
+
+.nav_bar .content_menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  margin: 20px;
+}
+.nav_bar .box_image {
+  max-height: 200px;
+}
+.nav_bar .box_image img {
+  height: 200px;
+}
+.nav_bar .list {
+  grid-column: span 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 993px) {
+  .nav_bar .content_menu {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* [Master Stylesheet v1.0] */
