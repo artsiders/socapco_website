@@ -9,7 +9,7 @@
     </div>
 
     <section id="grid-container" class="transitions-enabled fluid masonry js-masonry grid">
-        <?php foreach ($products as $key => $product) : ?>
+        <?php foreach ($allProducts as $key => $product) : ?>
         <article class="card_product_main <?= $product["id_gamme"] ?>">
             <div class="image_box">
                 <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" class="img-responsive" />
@@ -32,7 +32,7 @@
         <?php endforeach; ?>
     </section>
 
-    <?php foreach ($products as $key => $product) : ?>
+    <?php foreach ($allProducts as $key => $product) : ?>
     <div class="wow d-none fadeInUp card_product_main filter-<?= $gamme["id_gamme"] ?>" data-wow-delay="400ms">
         <div class="image_box">
             <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" alt="">

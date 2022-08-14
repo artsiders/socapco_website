@@ -1,21 +1,4 @@
-<?php
-require_once MODEL . "Produit.php";
-
-$products = new products;
-if (isset($_GET['cat']) and !empty($_GET["cat"])) {
-    $cat = $_GET["cat"];
-} else {
-    $cat = "all";
-}
-
-try {
-    $products = $products->readAllByCat($cat);
-} catch (EXCEPTION $e) {
-    echo $e->getMessage();
-}
-
-
-?>
+<?php require_once VIEW . "globals.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">

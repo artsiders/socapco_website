@@ -1,15 +1,4 @@
-<?php
-require_once MODEL . "Produit.php";
-
-$gammes = new products;
-
-try {
-    $gammes = $gammes->readGam_cat("gamme");
-} catch (EXCEPTION $e) {
-    echo $e->getMessage();
-}
-
-?>
+<?php require_once VIEW . "globals.php"; ?>
 
 <!-- Navbar Area -->
 <div class="academy-main-menu nav_bar">

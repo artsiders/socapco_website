@@ -1,15 +1,4 @@
-<?php
-require_once MODEL . "Produit.php";
-
-$products = new products;
-
-try {
-    $products = $products->readAll();
-} catch (EXCEPTION $e) {
-    echo $e->getMessage();
-}
-
-?>
+<?php require_once VIEW . "globals.php"; ?>
 
 <div class="card">
     <div class="card-body">
@@ -35,28 +24,32 @@ try {
                                         <form class="form-horizontal form-material" id="addProductForm">
                                             <div class="form-group">
                                                 <div class="col-md-12 m-b-20">
+                                                    <label for="name">Nom Produit</label>
                                                     <input type="text" name="name" class="form-control"
                                                         placeholder="nom produit">
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
-                                                    <input type="text" class="form-control" placeholder="Email">
+                                                    <label for="gamme">Gamme</label>
+                                                    <select class="form-control" name="id_gamme" id="">
+                                                        <?php foreach ($gammes as $key => $gamme) : ?>
+                                                        <option value="id_gamme"><?= $gamme['gam_libele'] ?></option>
+                                                        <?php endforeach; ?>
+                                                    </select>
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
-                                                    <input type="text" class="form-control" placeholder="Phone">
+                                                    <label for="cat">Categorie</label>
+                                                    <select class="form-control" name="id_categorie" id="">
+                                                        <?php foreach ($categories as $key => $categorie) : ?>
+                                                        <option value="id_gamme"><?= $categorie['cat_libele'] ?>
+                                                        </option>
+                                                        <?php endforeach; ?>
+                                                    </select>
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
-                                                    <input type="text" class="form-control" placeholder="Designation">
-                                                </div>
-                                                <div class="col-md-12 m-b-20">
-                                                    <input type="text" class="form-control" placeholder="Age">
-                                                </div>
-                                                <div class="col-md-12 m-b-20">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Date of joining">
-                                                </div>
-                                                <div class="col-md-12 m-b-20">
+                                                    <label for="name">Description</label>
                                                     <textarea style="resize: none;" name="description"
-                                                        class="form-control" id="" cols="30" rows="2"></textarea>
+                                                        class="form-control" id="" cols="30" rows="2"
+                                                        placeholder="entrer la description"></textarea>
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
                                                     <label for="uploadFile"
@@ -69,10 +62,10 @@ try {
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-info waves-effect"
-                                            data-dismiss="modal">Save</button>
+                                        <button type="submit" class="btn btn-info waves-effect"
+                                            data-dismiss="modal">Enregistre</button>
                                         <button type="button" class="btn btn-default waves-effect"
-                                            data-dismiss="modal">Cancel</button>
+                                            data-dismiss="modal">Annuler</button>
                                     </div>
                                 </div>
                                 <!-- /.modal-content -->
@@ -98,7 +91,7 @@ try {
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($products as $key => $product) : ?>
+                    <?php foreach ($allProducts as $key => $product) : ?>
                     <tr>
                         <td><?= $key + 1 ?></td>
                         <td>
