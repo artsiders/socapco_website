@@ -51,45 +51,74 @@ try {
                                     <li><a href="#">Elements</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">adult</a>
+                            <li><a href="./produits&cat=adultes">adult</a>
                                 <div class="megamenu">
-                                    <div class="content_menu">
-                                        <div class="single-mega box_image">
+                                    <div class="content_menu row">
+                                        <div class="single-mega box_image col-lg-4 col-sm-12">
                                             <img src="<?= ASSETS ?>images/product/5.png" alt="">
                                         </div>
-                                        <ul class="single-mega list">
+                                        <ul class="single-mega list col">
                                             <?php foreach ($gammes as $key => $gamme) : ?>
                                             <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
                                             <?php endforeach; ?>
+
                                         </ul>
+                                        <ul class="col">
+                                            <li>
+                                                <a href="./produits&cat=adultes">
+                                                    <button class="btn academy-btn">voir les produits</button>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="col"></div>
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="#">enfant</a>
+                            <li><a href="./produits&cat=enfants">enfant</a>
                                 <div class="megamenu">
-                                    <div class="content_menu">
-                                        <div class="single-mega box_image">
+                                    <div class="content_menu row">
+                                        <div class="single-mega box_image col-lg-4 col-sm-12">
                                             <img src="<?= ASSETS ?>images/product/20.png" alt="">
                                         </div>
-                                        <ul class="single-mega list">
+                                        <ul class="single-mega list col">
                                             <?php foreach ($gammes as $key => $gamme) : ?>
                                             <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
                                             <?php endforeach; ?>
+
                                         </ul>
+                                        <ul class="col">
+                                            <li>
+                                                <a href="./produits&cat=enfants">
+                                                    <button class="btn academy-btn">
+                                                        voir les produits
+                                                    </button>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="col"></div>
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="#">bébé</a>
+                            <li><a href="./produits&cat=bébés">bébé</a>
                                 <div class="megamenu">
-                                    <div class="content_menu">
-                                        <div class="single-mega box_image">
+                                    <div class="content_menu row">
+                                        <div class="single-mega box_image col-lg-4 col-sm-12">
                                             <img src="<?= ASSETS ?>images/product/17.jpg" alt="">
                                         </div>
-                                        <ul class="single-mega list">
+                                        <ul class="single-mega list col">
                                             <?php foreach ($gammes as $key => $gamme) : ?>
                                             <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
                                             <?php endforeach; ?>
+
                                         </ul>
+                                        <ul class="col">
+                                            <li>
+                                                <a href="./produits&cat=bébés">
+                                                    <button class="btn academy-btn">voir les produits</button>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="col"></div>
                                     </div>
                                 </div>
                             </li>

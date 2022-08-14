@@ -19,7 +19,7 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="footer-widget mb-100">
                         <div class="widget-title">
-                            <h6>Usefull Links</h6>
+                            <h6>Menu</h6>
                         </div>
                         <nav>
                             <ul class="useful-links">
@@ -43,15 +43,18 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="footer-widget mb-100">
                         <div class="widget-title">
-                            <h6>Gallery</h6>
+                            <h6>Galerie</h6>
                         </div>
                         <div class="gallery-list d-flex justify-content-between flex-wrap">
-                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 1"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 2"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 3"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 4"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 5"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
-                            <a href="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" class="gallery-img" title="Gallery Image 6"><img src="<?= ASSETS ?>images/O1CN01uXYpiV1PkcsyeqHrt_!!4130571879.jpg" alt=""></a>
+                            <a href="<?= ASSETS ?>images/blog-img/1.png" class="gallery-img"
+                                title="Gallery Image 2"><img src="<?= ASSETS ?>images/blog-img/1.png" alt="">
+                            </a>
+                            <a href="<?= ASSETS ?>images/blog-img/2.png" class="gallery-img"
+                                title="Gallery Image 3"><img src="<?= ASSETS ?>images/blog-img/2.png" alt="">
+                            </a>
+                            <a href="<?= ASSETS ?>images/blog-img/3.png" class="gallery-img"
+                                title="Gallery Image 4"><img src="<?= ASSETS ?>images/blog-img/3.png" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -86,7 +89,7 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;
                         <script>
-                            document.write(new Date().getFullYear());
+                        document.write(new Date().getFullYear());
                         </script> All rights reserved | This
                         website is made by <a href="http://alt-plus.batisseurs-unis.cm" target="_blank">Alt-plus</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

@@ -35,7 +35,8 @@ try {
                                         <form class="form-horizontal form-material" id="addProductForm">
                                             <div class="form-group">
                                                 <div class="col-md-12 m-b-20">
-                                                    <input type="text" name="name" class="form-control" placeholder="nom produit">
+                                                    <input type="text" name="name" class="form-control"
+                                                        placeholder="nom produit">
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
                                                     <input type="text" class="form-control" placeholder="Email">
@@ -54,7 +55,8 @@ try {
                                                         placeholder="Date of joining">
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
-                                                    <textarea style="resize: none;" name="description" class="form-control" id="" cols="30" rows="2"></textarea>
+                                                    <textarea style="resize: none;" name="description"
+                                                        class="form-control" id="" cols="30" rows="2"></textarea>
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
                                                     <label for="uploadFile"
@@ -100,12 +102,12 @@ try {
                     <tr>
                         <td><?= $key + 1 ?></td>
                         <td>
-                            <img src="<?= ASSETS ?>images/uploads/<?= $product['picture'] ?>" alt="user" width="40"
-                                class="rounded-circle" />
+                            <img src="<?= ASSETS ?>images/product/<?= $product['picture'] ?>" alt="user" width="50"
+                                height="50" />
                         </td>
                         <td><?= $product['name'] ?></td>
                         <td class="text-center" data-toggle="tooltip"
-                            data-original-title="<?= $product['decription'] . ' ' . $product['add_date'] ?>">
+                            data-original-title="<?= $product['description'] . ' ' . $product['add_date'] ?>">
                             <div class="badge badge-info badge-pill h1">
                                 <i class="fa fa-info" aria-hidden="true"></i>
                             </div>

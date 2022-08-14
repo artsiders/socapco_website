@@ -262,26 +262,23 @@
 }
 
 .nav_bar .content_menu {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 10px;
-  margin: 20px;
+  padding: 15px;
 }
 .nav_bar .box_image {
-  max-height: 200px;
+  max-width: 100%;
+  margin-right: 15px;
 }
 .nav_bar .box_image img {
-  height: 200px;
+  max-width: 100%;
 }
 .nav_bar .list {
-  grid-column: span 3;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 @media screen and (max-width: 993px) {
   .nav_bar .content_menu {
     display: flex;
-    flex-direction: column;
+    margin-bottom: 20px;
   }
 }
 

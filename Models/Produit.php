@@ -50,9 +50,25 @@ class Products
         return $result;
     }
 
+    public function readAllByCat($cat)
+    {
+        if ($cat != "all") {
+            $sql = "SELECT * FROM `products` P, `gammes` G, categories C
+            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND C.cat_libele = '$cat'";
+        } else {
+            $sql = "SELECT * FROM `products` P, `gammes` G, categories C
+            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie";
+        }
+        $query = $this->connect->getConnect()->prepare($sql);
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+
     public function readGam_cat($table)
     {
-        if($table == "gamme") {
+        if ($table == "gamme") {
             $sql = "SELECT * FROM `gammes`";
         } else {
             $sql = "SELECT * FROM `categories`";

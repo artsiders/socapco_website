@@ -2,12 +2,18 @@
 require_once MODEL . "Produit.php";
 
 $products = new products;
+if (isset($_GET['cat']) and !empty($_GET["cat"])) {
+    $cat = $_GET["cat"];
+} else {
+    $cat = "all";
+}
 
 try {
-    $products = $products->readAll();
+    $products = $products->readAllByCat($cat);
 } catch (EXCEPTION $e) {
     echo $e->getMessage();
 }
+
 
 ?>
 
@@ -50,17 +56,18 @@ try {
     <!-- ##### Breadcumb Area Start ##### -->
     <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
         <div class="bradcumbContent">
-            <h2>produits {$cat}</h2>
+            <h2>produits <?php if ($cat != "all") echo $cat; ?></h2>
         </div>
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
 
     <!-- ##### Blog Area Start ##### -->
-    <div class="blog-area mt-50 section-padding-10">
+    <div class="blog-area mt-100 section-padding-10">
         <div class="container">
 
             <div class="list_product row">
+                <span class="text-center col-12">nos gamme de produits pour <?= $cat; ?></span>
                 <!-- galery product  -->
                 <?php include_once VIEW . "partials/_galery.php" ?>
                 <!-- END galery product  -->
