@@ -56,19 +56,46 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in
-                        euismod. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae
-                        urna consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam
-                        tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis
-                        ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
+                <div class="col-12 wow fadeInUp" data-wow-delay="400ms">
+                    <h2>Faisons connaissances maintenant</h2>
+                    <p>
+                        Dans l’optique d’apporter aux Cameroun en particulier et à l’Afrique en general, les solutions
+                        cosmétiques adaptées à leurs besoins, la Société Camerounaise des Produits Cosmétiques (SOCAPCO)
+                        voit le jour en 2013 et s’implante à Bafoussam. Etant donné que chaque être humain est beau à sa
+                        maniere, notre souci c’est votre bien-être car l’espèce humain est au coeur de notre passion.
+                    </p>
                 </div>
-                <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="500ms">
-                    <p>Vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.
-                        Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna
-                        consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam
-                        tristique magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis
-                        ornare hendrerit. Maecenas sodales suscipit ipsum.</p>
+                <div class="col-12 wow fadeInUp" data-wow-delay="400ms">
+                    <h3>MOTIVATION</h3>
+                    <p>
+                        Rendre la beaute accessible à tous est notre motivation, voilà pourquoi la Socapco s’est
+                        assignée la mission d’améliorer, d’enrichir et de capitaliser la beauté des peaux noires et
+                        metissées. D’avancer en mettant la ressource humaine et le management de qualité au cœur du
+                        metier afin d’offrir les produits de qualité au meilleur prix. L’objectif etant ainsi d’offrir
+                        des produits de meilleures qualités grâce à la mise sur pied de notre politique d’innovation
+                        permanente.
+                    </p>
+                </div>
+                <div class="col-12 wow fadeInUp" data-wow-delay="400ms">
+                    <h3>EQUIPE</h3>
+                    <p>
+                        Nous sommes passionnés par ce que nous faisons et c’est ce qui nous pousse à toujours
+                        entreprendre et s’améliorer. Constituée à 70% des jeunes et dynamique, la Socapco pense que les
+                        jeunes d’aujourd’hui sont l’Afrique de demain. C’est en des idées fulgurantes et des strategies
+                        des plus aiguisées, que repose l’un des fondements de l’entreprise. Parce que l’industrie de la
+                        beauté étant en réforme permanente, s’adapter est le maître mot pour s’y imposer et surtout y
+                        faire perdurer son leadership.
+                    </p>
+                </div>
+                <div class="col-12 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="blog-social-share">
+                        <h4>nous contactez</h4>
+                        <a href="https://facebook.com/socapco" class="btn btn-primary"><i
+                                class="fa fa-facebook"></i></a>
+                        <a href="#" class="btn btn-success"><i class="fa fa-whatsapp"></i></a>
+                        <a href="mailto:contact@socapco.com" class="btn btn-danger"><i class="fa fa-envelope"></i></a>
+                        <!-- Meta Info -->
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -80,7 +107,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- ##### About Us Area End ##### -->
 
