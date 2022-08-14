@@ -27,3 +27,11 @@ try {
 } catch (EXCEPTION $e) {
     echo $e->getMessage();
 }
+
+
+$products = new products;
+try {
+    $suggProducts = $products->readSuggest(4);
+} catch (EXCEPTION $e) {
+    echo $e->getMessage();
+}

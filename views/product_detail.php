@@ -1,9 +1,10 @@
+<?php require_once VIEW . "globals.php"; ?>
 <?php
 require_once MODEL . "Produit.php";
-if(isset($_GET["id"]) and !empty($_GET["id"])) {
+if (isset($_GET["id"]) and !empty($_GET["id"])) {
     $id = $_GET["id"];
     $product = new products;
-    
+
     try {
         $product = $product->read($id);
     } catch (EXCEPTION $e) {
@@ -29,7 +30,7 @@ if(isset($_GET["id"]) and !empty($_GET["id"])) {
     <title>Socapco | blog</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="<?= ASSETS ?>images/core-img/favicon.ico">
+    <link rel="icon" href="<?= ASSETS ?>images/favicon.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
@@ -48,27 +49,62 @@ if(isset($_GET["id"]) and !empty($_GET["id"])) {
     </header>
     <!-- ##### Header Area End ##### -->
 
-     <!-- ##### Top Popular Courses Details Area Start ##### -->
-     <div class="m-4 popular-course-details-area wow fadeInUp" data-wow-delay="300ms">
-        <div class="single-top-popular-course d-flex align-items-center flex-wrap">
-            <img src="<?= ASSETS ?>images/product/<?= $product["picture"]?>" alt=""  >
-            <div class="popular-course-content">
-                <h5><?= $product["name"]?></h5>
-                <span>By Simon Smith | March 18, 2018</span>
-                <div class="course-ratings">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                </div>
-                <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.
-                    Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed faucibus mauris vitae urna
-                    consectetur, sit amet maximus nisl sagittis. Ut in iaculis enim, et pulvinar mauris. Etiam tristique
-                    magna eget velit consectetur, a tincidunt velit dictum. Cras vulputate metus id felis ornare
-                    hendrerit. Maecenas sodales suscipit ipsum.</p>
-                <a href="#" class="btn academy-btn btn-sm mt-15">See More</a>
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/breadcumb.jpg);">
+        <div class="bradcumbContent">
+            <h2><?= $product["name"] ?></h2>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Top Popular Product Details Area Start ##### -->
+    <div class="product_details section-padding-100 p-t-20 container">
+        <section class="wow fadeInUp row bg-img bg-overlay text-light p-4" data-wow-delay="300ms">
+            <div class="col-md-6 col-sm-12 box_image">
+                <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" alt="">
             </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="">
+                    <h5 class="text-light"><?= $product["name"] ?></h5>
+                    <span>By Simon Smith | <?= $product["add_date"] ?></span>
+                    <div class="course-ratings">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                    <p class="text-light"><?= $product["description"] ?>.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="list_product container mt-4">
+            <span class="text-center h3 d-block">Suggéstion</span>
+            <section class="transitions-enabled fluid masonry js-masonry grid">
+                <?php foreach ($suggProducts as $key => $product) : ?>
+                <article class="card_product_main <?= $product["id_gamme"] ?> wow bounceIn"
+                    data-wow-delay="<?= $key + 2 ?>00ms">
+                    <div class="image_box">
+                        <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" class="img-responsive" />
+                    </div>
+                    <div class="body">
+                        <h5><?= $product["name"] ?></h5>
+                        <span>By Simon Smith | March 18, 2018</span>
+                        <div class="">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <p><?= $product["description"] ?></p>
+                        <a href="./product_detail&id=<?= $product["id_product"] ?>" class="btn academy-btn btn-sm">voir
+                            plus</a>
+                    </div>
+                </article>
+                <?php endforeach; ?>
+            </section>
         </div>
     </div>
     <!-- ##### Top Popular Courses Details Area End ##### -->

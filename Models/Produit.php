@@ -49,6 +49,15 @@ class Products
 
         return $result;
     }
+    public function readSuggest($limit)
+    {
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` P, `gammes` G, categories C
+        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie LIMIT $limit");
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
 
     public function readAllByCat($cat)
     {

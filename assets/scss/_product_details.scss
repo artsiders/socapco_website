@@ -1,0 +1,17 @@
+.product_details {
+    .box_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 2px solid rgba(255, 255, 255, 0.719);
+
+        img {
+            max-height: 50vh;
+            transition: all .3s;
+        }
+
+        &:hover img {
+            transform: scale(1.1) translateY(-10px);
+        }
+    }
+}

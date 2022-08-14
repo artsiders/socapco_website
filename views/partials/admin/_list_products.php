@@ -23,27 +23,41 @@
                                     <div class="modal-body">
                                         <form class="form-horizontal form-material" id="addProductForm">
                                             <div class="form-group">
-                                                <div class="col-md-12 m-b-20">
-                                                    <label for="name">Nom Produit</label>
-                                                    <input type="text" name="name" class="form-control"
-                                                        placeholder="nom produit">
+                                                <div class="row col-md-12">
+                                                    <div class="col-md-10">
+                                                        <label for="name">Nom Produit</label>
+                                                        <input type="text" name="name" class="form-control"
+                                                            placeholder="nom produit">
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <label for="uploadFile"
+                                                            class="fileupload btn btn-outline-secondary waves-effect waves-light">
+                                                            <span><i class="fas fa-image fa-4x"></i></span>
+                                                            <input type="file" id="uploadFile" class="upload" hidden>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-12 m-b-20">
-                                                    <label for="gamme">Gamme</label>
-                                                    <select class="form-control" name="id_gamme" id="">
-                                                        <?php foreach ($gammes as $key => $gamme) : ?>
-                                                        <option value="id_gamme"><?= $gamme['gam_libele'] ?></option>
-                                                        <?php endforeach; ?>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-12 m-b-20">
-                                                    <label for="cat">Categorie</label>
-                                                    <select class="form-control" name="id_categorie" id="">
-                                                        <?php foreach ($categories as $key => $categorie) : ?>
-                                                        <option value="id_gamme"><?= $categorie['cat_libele'] ?>
-                                                        </option>
-                                                        <?php endforeach; ?>
-                                                    </select>
+                                                <div class="row col-md-12 m-b-20">
+                                                    <div class="col-md-6">
+                                                        <label for="gamme">Gamme</label>
+                                                        <select class="form-control" name="id_gamme" id="">
+                                                            <?php foreach ($gammes as $key => $gamme) : ?>
+                                                            <option value="<?= $gamme['id_gamme'] ?>">
+                                                                <?= $gamme['gam_libele'] ?>
+                                                            </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="cat">Categorie</label>
+                                                        <select class="form-control" name="id_categorie" id="">
+                                                            <?php foreach ($categories as $key => $categorie) : ?>
+                                                            <option value="<?= $categorie['id_categorie'] ?>">
+                                                                <?= $categorie['cat_libele'] ?>
+                                                            </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
                                                     <label for="name">Description</label>
@@ -52,18 +66,16 @@
                                                         placeholder="entrer la description"></textarea>
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
-                                                    <label for="uploadFile"
-                                                        class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i
-                                                                class="ion-upload m-r-5"></i>ajouter des images</span>
-                                                        <input type="file" id="uploadFile" class="upload" hidden>
-                                                    </label>
+                                                    <label for="name">Ingrédient</label>
+                                                    <textarea style="resize: none;" name="ingredient"
+                                                        class="form-control" id="" cols="30" rows="2"
+                                                        placeholder="separer les ingrédient par une virgule(,)"></textarea>
                                                 </div>
                                             </div>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="submit" class="btn btn-info waves-effect"
-                                            data-dismiss="modal">Enregistre</button>
+                                        <button type="submit" class="btn btn-info waves-effect">Enregistre</button>
                                         <button type="button" class="btn btn-default waves-effect"
                                             data-dismiss="modal">Annuler</button>
                                     </div>
@@ -145,3 +157,5 @@
         </div>
     </div>
 </div>
+
+<script src="<?= ASSETS ?>js/addProduct.js"></script>

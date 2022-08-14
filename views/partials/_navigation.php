@@ -55,7 +55,7 @@
                                         <ul class="col">
                                             <li>
                                                 <a href="./produits&cat=adultes">
-                                                    <button class="btn academy-btn">voir les produits</button>
+                                                    <button class="btn academy-btn">toute la gamme adule</button>
                                                 </a>
                                             </li>
                                         </ul>
@@ -79,7 +79,7 @@
                                             <li>
                                                 <a href="./produits&cat=enfants">
                                                     <button class="btn academy-btn">
-                                                        voir les produits
+                                                        toute la gamme enfant
                                                     </button>
                                                 </a>
                                             </li>
@@ -103,7 +103,7 @@
                                         <ul class="col">
                                             <li>
                                                 <a href="./produits&cat=bébés">
-                                                    <button class="btn academy-btn">voir les produits</button>
+                                                    <button class="btn academy-btn">toute la gamme bébé</button>
                                                 </a>
                                             </li>
                                         </ul>
