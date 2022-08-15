@@ -122,17 +122,42 @@ class Products
         return $result;
     }
 
-    public function update(int $idProduit, string $description)
+    public function update(int $idProduit, array $data)
     {
+        if ($data["image"] == "") {
+            $sql = "UPDATE `products` SET 
+                `name`= :prod_name,
+                `description`= :prod_desc,
+                `id_categorie`= :categorie,
+                `id_gamme`= :gamme,
+                `ingredient`= :ingredient
+                WHERE id_product = :id";
+            $query = $this->connect->getConnect()->prepare($sql);
+            $query->bindParam("prod_name", $data['name']);
+            $query->bindParam("prod_desc", $data['description']);
+            $query->bindParam("categorie", $data['id_categorie']);
+            $query->bindParam("gamme", $data['id_gamme']);
+            $query->bindParam("ingredient", $data['ingredient']);
+            $query->bindParam("id", $idProduit);
+        } else {
+            $sql = "UPDATE `products` SET 
+                `name`= :prod_name,
+                `description`= :prod_desc,
+                `id_categorie`= :categorie,
+                `id_gamme`= :gamme,
+                `picture`= :picture,
+                `ingredient`= :ingredient
+                WHERE id_product = :id";
+            $query = $this->connect->getConnect()->prepare($sql);
+            $query->bindParam("prod_name", $data['name']);
+            $query->bindParam("prod_desc", $data['description']);
+            $query->bindParam("categorie", $data['id_categorie']);
+            $query->bindParam("gamme", $data['id_gamme']);
+            $query->bindParam("picture", $data['image']);
+            $query->bindParam("ingredient", $data['ingredient']);
+            $query->bindParam("id", $idProduit);
+        }
 
-        $sql = "UPDATE `products` 
-                SET `post_description` = :post_description
-                WHERE `products`.`id_product` = :id_product";
-
-        $query = $this->connect->getConnect()->prepare($sql);
-
-        $query->bindParam("post_description", $description);
-        $query->bindParam("id_product", $idProduit);
 
         $query->execute();
     }

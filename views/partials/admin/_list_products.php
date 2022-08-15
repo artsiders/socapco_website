@@ -12,6 +12,88 @@
                             <button type="button" class="btn btn-info btn-rounded" data-toggle="modal"
                                 data-target="#add-contact">ajouter un produit</button>
                         </td>
+
+                        <!-- Modal Edit Product -->
+                        <div id="editProdForm" class="modal fade" tabindex="-1" role="dialog"
+                            aria-labelledby="editLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="myModalLabel">modifier</h4>
+                                        <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="hide alert alert-danger text-center" id="editError"></p>
+                                        <p class="hide alert alert-success text-center" id="editSuccess"></p>
+                                        <form method="post" class="form-horizontal form-material" id="editProductForm">
+                                            <input type="hidden" name="id" id="idProd">
+                                            <div class="form-group">
+                                                <div class="row col-md-12">
+                                                    <div class="col-md-10">
+                                                        <label for="name">Nom Produit</label>
+                                                        <input id="prodName" type="text" name="name"
+                                                            class="form-control" placeholder="nom produit">
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <label for="uploadFile" id="imageLabel"
+                                                            class="fileupload btn btn-outline-secondary waves-effect waves-light">
+                                                            <span><i class="fas fa-image fa-4x"></i></span>
+                                                            <input name="image" type="file" id="uploadFile"
+                                                                class="upload" hidden>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row col-md-12 m-b-20">
+                                                    <div class="col-md-6">
+                                                        <label for="gamme">Gamme</label>
+                                                        <select class="form-control" name="id_gamme" id="">
+                                                            <?php foreach ($gammes as $key => $gamme) : ?>
+                                                            <option value="<?= $gamme['id_gamme'] ?>">
+                                                                <?= $gamme['gam_libele'] ?>
+                                                            </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="cat">Categorie</label>
+                                                        <select class="form-control" name="id_categorie" id="">
+                                                            <?php foreach ($categories as $key => $categorie) : ?>
+                                                            <option value="<?= $categorie['id_categorie'] ?>">
+                                                                <?= $categorie['cat_libele'] ?>
+                                                            </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 m-b-20">
+                                                    <label for="name">Description</label>
+                                                    <textarea id="prodDesc" style="resize: none;" name="description"
+                                                        class="form-control" id="" cols="30" rows="2"
+                                                        placeholder="entrer la description"></textarea>
+                                                </div>
+                                                <div class="col-md-12 m-b-20">
+                                                    <label for="name">Ingrédient</label>
+                                                    <textarea id="ProdIngre" style="resize: none;" name="ingredient"
+                                                        class="form-control" id="" cols="30" rows="2"
+                                                        placeholder="separer les ingrédient par une virgule(,)"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit"
+                                                    class="btn btn-info waves-effect">Enregistre</button>
+                                                <button type="button" class="btn btn-danger waves-effect"
+                                                    data-dismiss="modal">Annuler</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                        </div>
+                        <!-- END Modal Edit Product -->
+
+                        <!-- Modal ADD product -->
                         <div id="add-contact" class="modal fade in" tabindex="-1" role="dialog"
                             aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -142,14 +224,11 @@
                             ?>"><?= $product['cat_libele'] ?></span>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline-info delete-row-btn"
-                                data-toggle="tooltip" data-original-title="voir">
-                                <i class="ti-eye" aria-hidden="true"></i>
-                            </button>
                             <button type="button"
-                                class="btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn"
-                                data-toggle="tooltip" data-original-title="edit">
-                                <i class="ti-pencil-alt" aria-hidden="true"></i>
+                                class="btn_edit_prod btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn"
+                                data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip"
+                                data-original-title="edit" data-id="<?= $product['id_product'] ?>">
+                                <i class="ti-pencil-alt" aria-hidden="true" data-id="<?= $product['id_product'] ?>"></i>
                             </button>
                             <button type="button"
                                 class="btn_del_prod btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn"
@@ -168,3 +247,4 @@
 
 <script src="<?= ASSETS ?>js/addProduct.js"></script>
 <script src="<?= ASSETS ?>js/deleteProd.js"></script>
+<script src="<?= ASSETS ?>js/editProd.js"></script>
