@@ -21,7 +21,9 @@
                                             aria-hidden="true">×</button>
                                     </div>
                                     <div class="modal-body">
-                                        <form class="form-horizontal form-material" id="addProductForm">
+                                        <p class="hide alert alert-danger text-center" id="addError"></p>
+                                        <p class="hide alert alert-success text-center" id="addSuccess"></p>
+                                        <form method="post" class="form-horizontal form-material" id="addProductForm">
                                             <div class="form-group">
                                                 <div class="row col-md-12">
                                                     <div class="col-md-10">
@@ -30,10 +32,11 @@
                                                             placeholder="nom produit">
                                                     </div>
                                                     <div class="col-md-2">
-                                                        <label for="uploadFile"
+                                                        <label for="uploadFile" id="imageLabel"
                                                             class="fileupload btn btn-outline-secondary waves-effect waves-light">
                                                             <span><i class="fas fa-image fa-4x"></i></span>
-                                                            <input type="file" id="uploadFile" class="upload" hidden>
+                                                            <input name="image" type="file" id="uploadFile"
+                                                                class="upload" hidden>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -72,12 +75,13 @@
                                                         placeholder="separer les ingrédient par une virgule(,)"></textarea>
                                                 </div>
                                             </div>
+                                            <div class="modal-footer">
+                                                <button type="submit"
+                                                    class="btn btn-info waves-effect">Enregistre</button>
+                                                <button type="button" class="btn btn-danger waves-effect"
+                                                    data-dismiss="modal">Annuler</button>
+                                            </div>
                                         </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" class="btn btn-info waves-effect">Enregistre</button>
-                                        <button type="button" class="btn btn-default waves-effect"
-                                            data-dismiss="modal">Annuler</button>
                                     </div>
                                 </div>
                                 <!-- /.modal-content -->

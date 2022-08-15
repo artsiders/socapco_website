@@ -5,9 +5,6 @@ require_once "../Models/Connexion.php";
 $root = $_SERVER["DOCUMENT_ROOT"];
 define("ASSETS_ROOT", "$root/socapco_website/assets/");
 
-$connect = new Connexion;
-$connect = $connect->getConnect();
-
 
 if (isset($_POST) && !empty($_POST)) {
 

@@ -8,14 +8,18 @@ class Products
         $this->connect = new Connexion;
     }
 
-    public function create(array $data, $idCategorie)
+    public function create(array $data)
     {
-        $sql = "INSERT INTO `product` (`name`, `decription`, `id_categorie`) VALUES (:prod_name, :decription, :id_categorie)";
+        $sql = "INSERT INTO `products` (`name`, `description`, `id_categorie`, `id_gamme`, `picture`,`ingredient`) 
+        VALUES (:prod_name, :prod_desc, :categorie, :gamme, :picture, :ingredient)";
 
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("prod_name", $data['name']);
-        $query->bindParam("decription", $data['decription']);
-        $query->bindParam("id_categorie", $idCategorie);
+        $query->bindParam("prod_desc", $data['description']);
+        $query->bindParam("categorie", $data['id_categorie']);
+        $query->bindParam("gamme", $data['id_gamme']);
+        $query->bindParam("picture", $data['image']);
+        $query->bindParam("ingredient", $data['ingredient']);
 
         $query->execute();
     }

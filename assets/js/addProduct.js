@@ -1,11 +1,13 @@
 const addProductForm = document.getElementById("addProductForm")
 
-// let errorBox = document.getElementById("error")
-// let successBox = document.getElementById("success")
+let errorBox = document.getElementById("addError")
+let successBox = document.getElementById("addSuccess")
 
+let imageLabel = document.getElementById("imageLabel")
 
 addProductForm.addEventListener("submit", e => {
     e.preventDefault()
+
     let data = new FormData(addProductForm)
 
     fetch(`${location.origin}/socapco_website/controlers/addProduct.php`, {
@@ -15,26 +17,36 @@ addProductForm.addEventListener("submit", e => {
         },
         body: data
     }).then(responce => responce.json()).then(data => {
-        if (data.msg != "") {
-            errorBox.classList.remove("hide")
-            errorBox.innerHTML = data.msg
-        }
-        if (!data.login) {
-            addProductForm.login.classList.add("border-danger")
+        if (!data.name) {
+            addProductForm.name.classList.add("border-danger")
         }
         else {
-            addProductForm.login.classList.remove("border-danger")
+            addProductForm.name.classList.remove("border-danger")
         }
-        if (!data.pass) {
-            addProductForm.pass.classList.add("border-danger")
+        if (!data.description) {
+            addProductForm.description.classList.add("border-danger")
         }
         else {
-            addProductForm.pass.classList.remove("border-danger")
+            addProductForm.description.classList.remove("border-danger")
+        }
+        if (!data.image) {
+            imageLabel.classList.add("border-danger")
+        }
+        else {
+            imageLabel.classList.remove("border-danger")
         }
 
         if (data.msg == "") {
             if (data.isOk) {
-                location.assign(`${location.origin}/socapco_website/admin`)
+                errorBox.classList.add("hide")
+                successBox.classList.remove("hide")
+                successBox.innerHTML = `produit ajouter avec succé ! 
+                <button type="button" class="close" data-dismiss="modal"
+                aria-hidden="true">×</button>`;
+
+                addProductForm.name.value = ""
+                addProductForm.description.value = ""
+                addProductForm.image.value = ""
             } else {
                 errorBox.classList.remove("hide")
                 errorBox.innerHTML = "ERREUR <strong>500</strong>"
@@ -42,6 +54,7 @@ addProductForm.addEventListener("submit", e => {
         } else {
             errorBox.classList.remove("hide")
             errorBox.innerHTML = data.msg
+            successBox.classList.add("hide")
         }
     })
 })
