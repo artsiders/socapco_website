@@ -4,7 +4,8 @@
     <div class="card-body">
         <h4 class="card-title text-center">liste de produits</h4>
         <div class="table-responsive">
-            <table id="demo-foo-addrow" class="table m-t-30 no-wrap table-hover contact-list" data-page-size="10">
+            <table id="demo-foo-addrow" class="table m-t-30 no-wrap table-hover contact-list text-center"
+                data-page-size="10">
                 <thead>
                     <tr>
                         <td colspan="2">
@@ -97,7 +98,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th>N</th>
+                        <!-- <th>N</th> -->
                         <th>image</th>
                         <th>nom</th>
                         <th>desc</th>
@@ -109,7 +110,8 @@
                 <tbody>
                     <?php foreach ($allProducts as $key => $product) : ?>
                     <tr>
-                        <td><?= $key + 1 ?></td>
+                        <!-- <td><?php //echo $key + 1 
+                                        ?></td> -->
                         <td>
                             <img src="<?= ASSETS ?>images/product/<?= $product['picture'] ?>" alt="user" width="50"
                                 height="50" />
@@ -149,9 +151,11 @@
                                 data-toggle="tooltip" data-original-title="edit">
                                 <i class="ti-pencil-alt" aria-hidden="true"></i>
                             </button>
-                            <button type="button" class="btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn"
-                                data-toggle="tooltip" data-original-title="supprimer">
-                                <i class="ti-trash" aria-hidden="true"></i>
+                            <button type="button"
+                                class="btn_del_prod btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn"
+                                data-toggle="tooltip" data-original-title="supprimer"
+                                data-id="<?= $product['id_product'] ?>">
+                                <i class="ti-trash" aria-hidden="true" data-id="<?= $product['id_product'] ?>"></i>
                             </button>
                         </td>
                     </tr>
@@ -163,3 +167,4 @@
 </div>
 
 <script src="<?= ASSETS ?>js/addProduct.js"></script>
+<script src="<?= ASSETS ?>js/deleteProd.js"></script>

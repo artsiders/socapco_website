@@ -1,10 +1,7 @@
 <?php
-session_start();
 require_once "../Models/Produit.php";
 $root = $_SERVER["DOCUMENT_ROOT"];
 define("ASSETS_ROOT", "$root/socapco_website/assets/");
-$products = new Products;
-// $datas = $products->readAll();
 
 if (isset($_POST) && !empty($_POST)) {
 
