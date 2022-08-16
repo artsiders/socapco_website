@@ -791,7 +791,13 @@
     <script src="<?= ASSETS ?>libs/footable/dist/footable.all.min.js"></script>
     <script src="<?= ASSETS ?>js/deconnexion.js"></script>
     <!--This page JavaScript -->
-    <script>
+    <script src="<?= ASSETS ?>libs/datatables.net-bs4/dataTables.bootstrap5.min.js"></script>
+    <script src="<?= ASSETS ?>libs/datatables.net-bs4/jquery.dataTables.min.js"></script>
+
+    <script defer>
+    $(document).ready(function() {
+        $('#demo-foo-addrow').DataTable();
+    });
     </script>
 </body>
 

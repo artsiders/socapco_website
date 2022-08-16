@@ -43,6 +43,7 @@ a:focus {
 ul,
 ol {
     margin: 0;
+
     li {
         list-style: none;
     }
@@ -161,4 +162,8 @@ img {
 .section-padding-100-70 {
     padding-top: 100px;
     padding-bottom: 70px;
+}
+
+::selection {
+    background-color: $bg-default-2;
 }

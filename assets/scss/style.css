@@ -6,6 +6,7 @@
 @import '../css/font-awesome.min.css';
 @import '../css/custom-icon.css';
 @import '../css/classy-nav.min.css';
+@import '../libs/datatables.net-bs4/dataTables.bootstrap5.min.css';
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -461,6 +462,14 @@ img {
   padding-bottom: 70px;
 }
 
+::-moz-selection {
+  background-color: #ffcc33;
+}
+
+::selection {
+  background-color: #ffcc33;
+}
+
 /* body */
 body {
   background-color: #fffff2;
@@ -658,7 +667,8 @@ body {
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
+  /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }

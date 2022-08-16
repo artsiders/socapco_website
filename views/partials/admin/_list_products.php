@@ -1,10 +1,15 @@
 <?php require_once VIEW . "globals.php"; ?>
 
+<script defer>
+$(document).ready(function() {
+    $('#example').DataTable();
+});
+</script>
 <div class="card">
     <div class="card-body">
         <h4 class="card-title text-center">liste de produits</h4>
         <div class="table-responsive">
-            <table id="demo-foo-addrow" class="table m-t-30 no-wrap table-hover contact-list text-center"
+            <table id="demo-foo-addrow" class="table table-striped m-t-30 no-wrap table-hover contact-list text-center"
                 data-page-size="10">
                 <thead>
                     <tr>
