@@ -35,3 +35,11 @@ try {
 } catch (EXCEPTION $e) {
     echo $e->getMessage();
 }
+
+
+$users = new users;
+try {
+    $allusers = $users->readAll();
+} catch (EXCEPTION $e) {
+    echo $e->getMessage();
+}

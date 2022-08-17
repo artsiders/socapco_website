@@ -49,7 +49,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="./admin">
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -558,6 +558,7 @@
                             </div>
                             <!-- End User Profile-->
                         </li>
+                        <?php isset($_GET['page']) ? $page = $_GET['page'] : $page = "";?>
                         <!-- User Profile-->
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
@@ -566,22 +567,28 @@
                                 <span class="hide-menu">produits </span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item">
-                                    <a href="index.html" class="sidebar-link">
+                                <li class="sidebar-item <?php
+                                    if($page == 'product' || $page == '') echo "active";
+                                ?>">
+                                    <a href="./admin&page=product" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
                                         <span class="hide-menu"> Cosméthique </span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item">
-                                    <a href="index2.html" class="sidebar-link">
+                                <li class="sidebar-item <?php
+                                    if($page == 'savonerie') echo "active";
+                                ?>">
+                                    <a href="./admin&page=savonerie" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
-                                        <span class="hide-menu"> Sovonerie </span>
+                                        <span class="hide-menu"> Savonerie </span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item">
-                                    <a href="index3.html" class="sidebar-link">
+                                <li class="sidebar-item <?php
+                                    if($page == 'plastique') echo "active";
+                                ?>">
+                                    <a href="./admin&page=plastique" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
-                                        <span class="hide-menu"> lorem </span>
+                                        <span class="hide-menu"> plastique </span>
                                     </a>
                                 </li>
 
@@ -594,16 +601,20 @@
                                 <span class="hide-menu">utilisateur</span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item">
-                                    <a href="index.html" class="sidebar-link">
+                                <li class="sidebar-item <?php
+                                    if($page == 'list_user') echo "active";
+                                ?>">
+                                    <a href="./admin&page=list_user" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
-                                        <span class="hide-menu"> demande </span>
+                                        <span class="hide-menu"> liste </span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item">
-                                    <a href="index2.html" class="sidebar-link">
+                                <li class="sidebar-item <?php
+                                    if($page == 'add_user') echo "active";
+                                ?>">
+                                    <a href="./admin&page=add_user" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
-                                        <span class="hide-menu"> admin </span>
+                                        <span class="hide-menu"> ajouter </span>
                                     </a>
                                 </li>
                             </ul>
@@ -647,7 +658,26 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- Column -->
-                        <?php require_once VIEW . "partials/admin/_list_products.php" ?>
+                        <?php 
+                            switch ($page) {
+                                case '':
+                                    require_once VIEW . "partials/admin/_list_products.php";
+                                    break;
+                                case 'product':
+                                    require_once VIEW . "partials/admin/_list_products.php";
+                                    break;
+                                case 'add_user':
+                                    require_once VIEW . "partials/admin/_add_user.php";
+                                    break;
+                                case 'list_user':
+                                    require_once VIEW . "partials/admin/_list_user.php";
+                                    break;
+                                    
+                                default:
+                                    require_once VIEW . "partials/admin/_404.php";
+                                    break;
+                            }
+                        ?>
                     </div>
                 </div>
                 <!-- ============================================================== -->
