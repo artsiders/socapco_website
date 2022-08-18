@@ -440,25 +440,6 @@
                                 </a>
                             </form>
                         </li>
-                        <!-- ============================================================== -->
-                        <!-- create new -->
-                        <!-- lang  -->
-                        <!-- ============================================================== -->
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-globe fa-2x"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right  animated bounceInDown" aria-labelledby="navbarDropdown2">
-                                <a class="dropdown-item" href="#">
-                                    <i class="flag-icon flag-icon-us"></i> English</a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="flag-icon flag-icon-fr"></i> French</a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="flag-icon flag-icon-es"></i> Spanish</a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="flag-icon flag-icon-de"></i> German</a>
-                            </div>
-                        </li> -->
 
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
@@ -567,25 +548,19 @@
                                 <span class="hide-menu">produits </span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item <?php
-                                    if($page == 'product' || $page == '') echo "active";
-                                ?>">
+                                <li class="sidebar-item <?php if($page == 'product' || $page == '') echo "active"; ?>">
                                     <a href="./admin&page=product" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
                                         <span class="hide-menu"> Cosméthique </span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item <?php
-                                    if($page == 'savonerie') echo "active";
-                                ?>">
+                                <li class="sidebar-item <?php if($page == 'savonerie') echo "active"; ?>">
                                     <a href="./admin&page=savonerie" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
                                         <span class="hide-menu"> Savonerie </span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item <?php
-                                    if($page == 'plastique') echo "active";
-                                ?>">
+                                <li class="sidebar-item <?php if($page == 'plastique') echo "active"; ?>">
                                     <a href="./admin&page=plastique" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
                                         <span class="hide-menu"> plastique </span>
@@ -601,17 +576,13 @@
                                 <span class="hide-menu">utilisateur</span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item <?php
-                                    if($page == 'list_user') echo "active";
-                                ?>">
+                                <li class="sidebar-item <?php if($page == 'list_user') echo "active"; ?>">
                                     <a href="./admin&page=list_user" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
                                         <span class="hide-menu"> liste </span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item <?php
-                                    if($page == 'add_user') echo "active";
-                                ?>">
+                                <li class="sidebar-item <?php if($page == 'add_user') echo "active"; ?>">
                                     <a href="./admin&page=add_user" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
                                         <span class="hide-menu"> ajouter </span>
@@ -810,7 +781,6 @@
     <script src="<?= ASSETS ?>dist/js/app-style-switcher.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
     <script src="<?= ASSETS ?>libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="<?= ASSETS ?>extra-libs/sparkline/sparkline.js"></script>
     <!--Wave Effects -->
     <script src="<?= ASSETS ?>dist/js/waves.js"></script>
     <!--Menu sidebar -->
