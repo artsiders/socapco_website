@@ -11,9 +11,8 @@
     <!-- Title -->
     <title>socapco | contact</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="<?= ASSETS ?>images/core-img/favicon.ico">
-
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= ASSETS ?>images/favicon.png">
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
 

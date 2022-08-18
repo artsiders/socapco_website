@@ -6,7 +6,6 @@
 @import '../css/font-awesome.min.css';
 @import '../css/custom-icon.css';
 @import '../css/classy-nav.min.css';
-@import '../libs/datatables.net-bs4/dataTables.bootstrap5.min.css';
 ::-webkit-scrollbar {
   width: 8px;
 }
