@@ -59,21 +59,18 @@ class Users
         if (!$data["image"]) {
             $sql = "UPDATE `users` SET 
                 `login` = :user_login, 
-                `pass` = :pass, 
                 `email` = :email
                 WHERE `users`.`id_user` = :id_user";
 
 
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("user_login", $data['login']);
-            $query->bindParam("pass", $data['pass']);
             $query->bindParam("email", $data['email']);
             $query->bindParam("id_user", $idUser);
             $query->execute();
         } else {
             $sql = "UPDATE `users` SET 
                 `login` = :user_login, 
-                `pass` = :pass, 
                 `email` = :email,
                 `picture` = :picture
                 WHERE `users`.`id_user` = :id_user";
@@ -81,7 +78,6 @@ class Users
 
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("user_login", $data['login']);
-            $query->bindParam("pass", $data['pass']);
             $query->bindParam("email", $data['email']);
             $query->bindParam("picture", $data['image']);
             $query->bindParam("id_user", $idUser);

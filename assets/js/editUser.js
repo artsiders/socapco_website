@@ -55,7 +55,7 @@ editUserForm.addEventListener("submit", e => {
             if (data.isOk) {
                 errorBoxEdit.classList.add("hide")
                 successBoxEdit.classList.remove("hide")
-                successBoxEdit.innerHTML = `produit modifier avec succé !
+                successBoxEdit.innerHTML = `modifier avec succé !
                 <button type="button" class="close" data-dismiss="modal"
                 aria-hidden="true">×</button>`;
             } else {
