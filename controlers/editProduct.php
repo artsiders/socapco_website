@@ -54,7 +54,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
                 $data["image"] = $image_name;
             }
             // ajout de la publication dans la base de donnee
-            $products = new products;
+            $products = new Products;
             $products->update($id, $data);
             $resultArray["insertIsOk"] = true;
 
