@@ -48,7 +48,7 @@
                                         </div>
                                         <ul class="single-mega list col">
                                             <?php foreach ($gammes as $key => $gamme) : ?>
-                                            <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
+                                                <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
                                             <?php endforeach; ?>
 
                                         </ul>
@@ -63,55 +63,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="./produits&cat=enfants">enfant</a>
-                                <div class="megamenu">
-                                    <div class="content_menu row">
-                                        <div class="single-mega box_image col-lg-4 col-sm-12">
-                                            <img src="<?= ASSETS ?>images/product/20.png" alt="">
-                                        </div>
-                                        <ul class="single-mega list col">
-                                            <?php foreach ($gammes as $key => $gamme) : ?>
-                                            <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
-                                            <?php endforeach; ?>
-
-                                        </ul>
-                                        <ul class="col">
-                                            <li>
-                                                <a href="./produits&cat=enfants">
-                                                    <button class="btn academy-btn">
-                                                        toute la gamme enfant
-                                                    </button>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <div class="col"></div>
-                                    </div>
-                                </div>
+                            <?php isset($_GET['cat']) ? $cat = $_GET['cat'] : $cat = ""; ?>
+                            <li class="<?php if ($cat == "enfants") echo "active" ?>">
+                                <a href="./produits&cat=enfants">enfant</a>
                             </li>
-                            <li><a href="./produits&cat=bébés">bébé</a>
-                                <div class="megamenu">
-                                    <div class="content_menu row">
-                                        <div class="single-mega box_image col-lg-4 col-sm-12">
-                                            <img src="<?= ASSETS ?>images/product/17.jpg" alt="">
-                                        </div>
-                                        <ul class="single-mega list col">
-                                            <?php foreach ($gammes as $key => $gamme) : ?>
-                                            <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
-                                            <?php endforeach; ?>
-
-                                        </ul>
-                                        <ul class="col">
-                                            <li>
-                                                <a href="./produits&cat=bébés">
-                                                    <button class="btn academy-btn">toute la gamme bébé</button>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <div class="col"></div>
-                                    </div>
-                                </div>
+                            <li class="<?php if ($cat == "bebes") echo "active" ?>">
+                                <a href="./produits&cat=bebes">bébé</a>
                             </li>
-                            <li class="<?php if ($this->request == "services") echo "active" ?>">
+                            <li class="<?php if ($this->request == "produits&cat=bebes") echo "active" ?>">
                                 <a href="./services">nos services</a>
                             </li>
                         </ul>
