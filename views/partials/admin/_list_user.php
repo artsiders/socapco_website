@@ -122,7 +122,7 @@
                                     <button type="button" class="btn_edit_user btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editUserModal" data-toggle="tooltip" data-original-title="edit" data-id="<?= $user['id_user'] ?>">
                                         <i class="fa fa-edit" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
                                     </button>
-                                    <button type="button" class="btn_del_user btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $user['id_user'] ?>">
+                                    <button <?php if ($user['id_user'] == 1 || $user['id_user'] == 0) echo "disabled"; ?> type="button" class="btn_del_user btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $user['id_user'] ?>">
                                         <i class="fa fa-trash" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
                                     </button>
                                 </td>
