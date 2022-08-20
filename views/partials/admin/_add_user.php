@@ -1,22 +1,22 @@
 <style>
-.logo {
-    position: relative;
-}
+    .logo {
+        position: relative;
+    }
 
-.picture_label {
-    cursor: pointer;
-}
+    .picture_label {
+        cursor: pointer;
+    }
 
-.picture_label::after {
-    content: "";
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    background-color: #4798e8;
-    bottom: 40px;
-    right: 35%;
-    border-radius: 10px;
-}
+    .picture_label::after {
+        content: "";
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: #4798e8;
+        bottom: 40px;
+        right: 35%;
+        border-radius: 10px;
+    }
 </style>
 
 <div class="main-wrapper">
@@ -35,8 +35,7 @@
     <!-- ============================================================== -->
     <!-- Login box.scss -->
     <!-- ============================================================== -->
-    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center"
-        style="background:url(<?= ASSETS ?>images/big/auth-.jpg) no-repeat center center;">
+    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(<?= ASSETS ?>images/big/auth-.jpg) no-repeat center center;">
         <div class="auth-box mt-0">
             <div>
                 <div class="logo">
@@ -52,34 +51,29 @@
                     <div class="col-12">
                         <p class="hide alert alert-danger text-center" id="error"></p>
                         <p class="hide alert alert-success text-center" id="success"></p>
-                        <form class="form-horizontal m-t-20" method="post" action="" id="registerForm"
-                            enctype="multipart/form-data">
+                        <form class="form-horizontal m-t-20" method="post" action="" id="registerForm" enctype="multipart/form-data">
 
                             <input type="file" name="picture" id="profile" hidden>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="ti-user"></i></span>
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                                 </div>
-                                <input type="text" name="login" class="form-control form-control-lg"
-                                    placeholder="non d'utilisateur" aria-label="Username"
-                                    aria-describedby="basic-addon1">
+                                <input type="text" name="login" class="form-control form-control-lg" placeholder="non d'utilisateur" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon2"><i class="fas fa-at"></i></span>
                                 </div>
-                                <input type="text" name="email" class="form-control form-control-lg" placeholder="email"
-                                    aria-label="Username" aria-describedby="basic-addon2">
+                                <input type="text" name="email" class="form-control form-control-lg" placeholder="email" aria-label="Username" aria-describedby="basic-addon2">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon3"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="password" name="pass" class="form-control form-control-lg"
-                                    placeholder="mot de passe" aria-label="Password" aria-describedby="basic-addon3">
+                                <input type="password" name="pass" class="form-control form-control-lg" placeholder="mot de passe" aria-label="Password" aria-describedby="basic-addon3">
                             </div>
 
                             <div class="form-group text-center ">
@@ -105,6 +99,6 @@
 <!-- This page plugin js -->
 <!-- ============================================================== -->
 <script>
-$('[data-toggle="tooltip "]').tooltip();
-$(".preloader ").fadeOut();
+    $('[data-toggle="tooltip "]').tooltip();
+    $(".preloader ").fadeOut();
 </script>

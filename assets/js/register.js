@@ -43,11 +43,7 @@ registerForm.addEventListener("submit", e => {
             if (data.isOk) {
                 errorBox.classList.add("hide")
                 successBox.classList.remove("hide")
-                successBox.innerHTML = `compte créer avec succé ! </br>
-                    <a href='${location.origin}/socapco_website/login'>
-                        <button class='btn btn-outline-primary btn-sm'> ici </button>
-                    </a>
-                    pour vous connecter`;
+                successBox.innerHTML = `compte créer avec succé !`;
 
                 registerForm.login.value = ""
                 registerForm.email.value = ""
@@ -57,6 +53,7 @@ registerForm.addEventListener("submit", e => {
                 errorBox.innerHTML = "ERREUR <strong>500</strong>"
             }
         } else {
+            successBox.classList.add("hide")
             errorBox.classList.remove("hide")
             errorBox.innerHTML = data.msg
         }

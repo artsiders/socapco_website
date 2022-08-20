@@ -4,9 +4,9 @@ require_once MODEL . "Produit.php";
 $products = new products;
 
 try {
-     $products = $products->readAll();
+    $products = $products->readAll();
 } catch (EXCEPTION $e) {
-     echo $e->getMessage();
+    echo $e->getMessage();
 }
 ?>
 <!DOCTYPE html>
@@ -60,11 +60,10 @@ try {
                         <div class="col-12">
                             <div class="hero-slides-content text-center">
                                 <h4 data-animation="fadeInUp" data-delay="100ms">faites vous plaisir, <br> sentez vous
-                                    belle et légère avec les produits de la gamme </h4>
+                                    belle et légère avec les produits gomment </h4>
                                 <h2 data-animation="fadeInUp" data-delay="400ms"> BELLE FACE <br> ECLAIRCISSANT
                                 </h2>
-                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp"
-                                    data-delay="700ms">Découvrez tous nos produits</a>
+                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1500ms">Nos produits hydratent</a>
                             </div>
                         </div>
                     </div>
@@ -82,8 +81,27 @@ try {
                                 </h4>
                                 <h2 data-animation="fadeInUp" data-delay="400ms">belle face <br>éclaircissement
                                 </h2>
-                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Nos
-                                    produits</a>
+                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1500ms">Nos
+                                    produits éclaircissement</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-3.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="hero-slides-content text-center">
+                                <h4 data-animation="fadeInUp" data-delay="100ms">Faites plaisir à votre peaux,
+                                    <br> Essayez le nouveau blanchisseur .
+                                </h4>
+                                <h2 data-animation="fadeInUp" data-delay="400ms">belle face <br>éclaircissement
+                                </h2>
+                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1500ms">Nos
+                                    produits gomment</a>
                             </div>
                         </div>
                     </div>
@@ -115,8 +133,7 @@ try {
     <!-- end card -->
 
     <!-- ##### Testimonials Area Start ##### -->
-    <div class="testimonials-area section-padding-100 bg-img bg-overlay"
-        style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
+    <div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
