@@ -302,7 +302,15 @@
                                 require_once VIEW . "partials/admin/_list_products.php";
                                 break;
                             case 'add_user':
-                                require_once VIEW . "partials/admin/_add_user.php";
+                                if ($_SESSION['socapco_admin']["is_admin"] == 1) {
+                                    require_once VIEW . "partials/admin/_add_user.php";
+                                } else {
+                        ?>
+                                    <div class="container">
+                                        <h1 class="h2 text-center">seulement pour les admins</h1>
+                                    </div>
+                        <?php
+                                }
                                 break;
                             case 'list_user':
                                 require_once VIEW . "partials/admin/_list_user.php";

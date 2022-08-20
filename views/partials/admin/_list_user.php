@@ -90,7 +90,9 @@
                         <th>login</th>
                         <th>email</th>
                         <th>date</th>
-                        <th>action</th>
+                        <?php if ($_SESSION['socapco_admin']["is_admin"] == 1) : ?>
+                            <th>action</th>
+                        <?php endif; ?>
                     </tr>
                 </thead>
                 <tbody>
@@ -115,14 +117,16 @@
                                     <i class="fa fa-calendar" aria-hidden="true"></i>
                                 </div>
                             </td>
-                            <td>
-                                <button type="button" class="btn_edit_user btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editUserModal" data-toggle="tooltip" data-original-title="edit" data-id="<?= $user['id_user'] ?>">
-                                    <i class="fa fa-edit" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
-                                </button>
-                                <button type="button" class="btn_del_user btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $user['id_user'] ?>">
-                                    <i class="fa fa-trash" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
-                                </button>
-                            </td>
+                            <?php if ($_SESSION['socapco_admin']["is_admin"] == 1) : ?>
+                                <td>
+                                    <button type="button" class="btn_edit_user btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editUserModal" data-toggle="tooltip" data-original-title="edit" data-id="<?= $user['id_user'] ?>">
+                                        <i class="fa fa-edit" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
+                                    </button>
+                                    <button type="button" class="btn_del_user btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $user['id_user'] ?>">
+                                        <i class="fa fa-trash" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
+                                    </button>
+                                </td>
+                            <?php endif; ?>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
