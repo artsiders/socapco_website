@@ -37,7 +37,7 @@ class Products
     public function readAllImportant()
     {
         $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` P, `gammes` G, categories C
-        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.important = '1'");
+        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.important = '0'");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 

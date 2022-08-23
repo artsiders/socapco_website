@@ -192,6 +192,67 @@ try {
     </div>
     <!-- ##### Testimonials Area End ##### -->
 
+    <!-- whatsapp btn -->
+    <!-- <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+    <script>
+        var wa_btnSetting = {
+            "btnColor": "#16BE45",
+            "ctaText": "",
+            "cornerRadius": 40,
+            "marginBottom": 50,
+            "marginLeft": 50,
+            "marginRight": 50,
+            "btnPosition": "left",
+            "whatsAppNumber": "682696734",
+            "welcomeMessage": "Bonjour à tous ! Quel plaisir de vous voir. dites nous si vous avez un problème",
+            "zIndex": 999999,
+            "btnColorScheme": "light"
+        };
+        window.onload = () => {
+            _waEmbed(wa_btnSetting);
+        };
+    </script> -->
+
+    <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+    <script>
+        var wa_btnSetting = {
+            "btnColor": "#16BE45",
+            "ctaText": "",
+            "cornerRadius": 40,
+            "marginBottom": 50,
+            "marginLeft": 50,
+            "marginRight": 50,
+            "btnPosition": "left",
+            "whatsAppNumber": "682696734",
+            "welcomeMessage": "Bonjour à tous ! Quel plaisir de vous voir. dites nous si vous avez un problème",
+            "zIndex": 999999,
+            "btnColorScheme": "light"
+        };
+        var wa_widgetSetting = {
+            "title": "Socapco",
+            "subTitle": "réponse rapide",
+            "headerBackgroundColor": "#ffb347",
+            "headerColorScheme": "light",
+            "greetingText": "Bonjour à tous ! Quel plaisir de vous voir.\nComment pouvons-nous vous aider?",
+            "ctaText": "message",
+            "btnColor": "#4ed073",
+            "cornerRadius": 40,
+            "welcomeMessage": "Hello",
+            "btnColorScheme": "light",
+            "brandImage": "<?= ASSETS ?>images/favicon.png",
+            "darkHeaderColorScheme": {
+                "title": "#333333",
+                "subTitle": "#4F4F4F"
+            }
+        };
+        window.onload = () => {
+            _waEmbed(wa_btnSetting, wa_widgetSetting);
+        };
+    </script>
+
+
+    <!-- ---------------------------------- -->
+
     <!-- ##### Footer Area Start ##### -->
     <?php include_once VIEW . "partials/_footer.php" ?>
     <!-- ##### Footer Area Start ##### -->
