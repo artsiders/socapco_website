@@ -37,7 +37,7 @@ class Products
     public function readAllImportant()
     {
         $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` P, `gammes` G, categories C
-        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.important = '0'");
+        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.important = '1'");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -79,10 +79,12 @@ class Products
         return $result;
     }
 
-    public function readGam_cat($table)
+    public function read_gam_cat_eff($table)
     {
         if ($table == "gamme") {
             $sql = "SELECT * FROM `gammes`";
+        } else if ($table == "effect") {
+            $sql = "SELECT * FROM `effects`";
         } else {
             $sql = "SELECT * FROM `categories`";
         }

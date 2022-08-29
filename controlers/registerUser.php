@@ -16,9 +16,9 @@ if (isset($_POST) && !empty($_POST)) {
         "login_already" => true,
         "isOk" => true,
     );
-    $login = htmlspecialchars($_POST["login"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $pass = htmlspecialchars($_POST["pass"]);
+    $login = htmlspecialchars(strtolower(trim($_POST["login"])));
+    $email = htmlspecialchars(strtolower(trim($_POST["email"])));
+    $pass = htmlspecialchars(strtolower(trim($_POST["pass"])));
 
     if (strlen($pass) < 6) {
         $resultArray['pass'] = false;

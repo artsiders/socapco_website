@@ -2,14 +2,14 @@
     <!-- partial:index.partial.html -->
     <div class="button-group filters-button-group">
         <button class="btn academy-btn btn-sm button is-checked" data-filter="*">tout</button>
-        <?php foreach ($gammes as $key => $gamme) : ?>
-            <button class="btn academy-btn btn-sm button" data-filter=".<?= $gamme["id_gamme"] ?>"><?= $gamme["gam_libele"] ?></button>
+        <?php foreach ($effects as $key => $effect) : ?>
+            <button class="btn academy-btn btn-sm button" data-filter=".<?= $effect["id_effect"] ?>"><?= $effect["eff_libele"] ?></button>
         <?php endforeach; ?>
     </div>
 
     <section id="grid-container" class="transitions-enabled fluid masonry js-masonry grid">
         <?php foreach ($allProducts as $key => $product) : ?>
-            <article class="card_product_main <?= $product["id_gamme"] ?>  wow bounceIn" data-wow-delay="<?= $key + 2 ?>00ms">
+            <article class="card_product_main <?= $product["id_effect"] ?>  wow bounceIn" data-wow-delay="<?= $key + 2 ?>00ms">
                 <div class="image_box">
                     <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" class="img-responsive" />
                 </div>
@@ -32,7 +32,7 @@
     </section>
 
     <?php foreach ($allProducts as $key => $product) : ?>
-        <div class="wow d-none fadeInUp card_product_main filter-<?= $gamme["id_gamme"] ?>" data-wow-delay="400ms">
+        <div class="wow d-none fadeInUp card_product_main filter-<?= $effect["id_effect"] ?>" data-wow-delay="400ms">
             <div class="image_box">
                 <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" alt="">
             </div>

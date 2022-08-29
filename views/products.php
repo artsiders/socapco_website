@@ -50,7 +50,7 @@
         <div class="container">
 
             <div class="list_product row">
-                <span class="text-center col-12">nos gamme de produits pour <?= $cat; ?></span>
+                <span class="text-center col-12 h4">nos gamme de produits pour <?= $cat; ?></span>
                 <!-- galery product  -->
                 <?php include_once VIEW . "partials/_galery.php" ?>
                 <!-- END galery product  -->

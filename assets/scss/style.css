@@ -190,18 +190,21 @@
   box-shadow: 0 0 5px lightgrey;
 }
 .list_product .card_product_main .image_box {
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #ffcc33;
   background: linear-gradient(to right, #ffb347, #ffcc33);
-  max-height: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 400px;
+  position: relative;
+  overflow: hidden;
 }
 .list_product .card_product_main .image_box img {
-  max-height: 300px;
+  max-height: 400px;
+  max-width: 100%;
   transition: all 0.3s;
 }
 .list_product .card_product_main:hover img {

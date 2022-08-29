@@ -190,30 +190,7 @@ try {
             </div>
         </div>
     </div>
-    <!-- ##### Testimonials Area End ##### -->
-
-    <!-- whatsapp btn -->
-    <!-- <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-    <script>
-        var wa_btnSetting = {
-            "btnColor": "#16BE45",
-            "ctaText": "",
-            "cornerRadius": 40,
-            "marginBottom": 50,
-            "marginLeft": 50,
-            "marginRight": 50,
-            "btnPosition": "left",
-            "whatsAppNumber": "682696734",
-            "welcomeMessage": "Bonjour à tous ! Quel plaisir de vous voir. dites nous si vous avez un problème",
-            "zIndex": 999999,
-            "btnColorScheme": "light"
-        };
-        window.onload = () => {
-            _waEmbed(wa_btnSetting);
-        };
-    </script> -->
-
-    <script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
+    <script async src='<?= ASSETS ?>libs/embed.min.js'></script>
     <script>
         var wa_btnSetting = {
             "btnColor": "#16BE45",

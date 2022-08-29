@@ -1,3 +1,6 @@
+<?php require_once VIEW . "globals.php"; ?>
+<?php makeDefaultUser() ?>
+
 <!DOCTYPE html>
 <html dir="ltr">
 
@@ -100,8 +103,8 @@
                                 <div class="col-12">
                                     <button class="btn btn-block btn-lg btn-danger" type="submit" name="action">Réinitialisé</button>
                                 </div>
-                                <div class="col-sm-12 text-center">
-                                    <a href="./register" class="text-info m-l-5"><b>annuler</b></a>
+                                <div class="col-sm-12 text-center mt-3">
+                                    <a href="./login" class="text-info m-l-5"><b>annuler</b></a>
                                 </div>
                             </div>
                         </form>

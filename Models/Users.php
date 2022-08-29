@@ -8,15 +8,16 @@ class Users
         $this->connect = new Connexion;
     }
 
-    public function create(array $data, $passCrip, $picture)
+    public function create(array $data, $passCrip, $picture, $is_admin = 0)
     {
-        $sql = "INSERT INTO `users` (`login`, `pass`, `email`, `picture`) VALUES (:user_login, :pass, :email, :picture)";
+        $sql = "INSERT INTO `users` (`login`, `pass`, `email`, `picture`, `is_admin`) VALUES (:user_login, :pass, :email, :picture,:is_admin)";
 
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("user_login", $data['login']);
         $query->bindParam("pass", $passCrip);
         $query->bindParam("email", $data['email']);
         $query->bindParam("picture", $picture);
+        $query->bindParam("is_admin", $is_admin);
 
         $query->execute();
     }

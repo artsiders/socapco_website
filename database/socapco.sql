@@ -17,6 +17,8 @@ CREATE TABLE IF NOT EXISTS `socapco`.`users` (
 );
 
 
+
+
 -- -----------------------------------------------------
 -- Table `socapco`.`categories`
 -- -----------------------------------------------------
@@ -54,17 +56,20 @@ CREATE TABLE IF NOT EXISTS `socapco`.`effects` (
 CREATE TABLE IF NOT EXISTS `socapco`.`products` (
   `id_product` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `decription` TEXT NULL,
+  `description` TEXT NULL,
+  `ingredient` TEXT NULL,
   `id_categorie` INT NOT NULL,
   `id_gamme` INT NOT NULL,
   `id_effect` INT NOT NULL,
+  `id_user` INT NOT NULL,
   `important` INT NOT NULL DEFAULT 0,
   `picture` VARCHAR(255) NOT NULL DEFAULT 'default.png',
   `add_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   PRIMARY KEY (`id_product`),
   FOREIGN KEY (id_categorie) REFERENCES categories(id_categorie),
   FOREIGN KEY (id_effect) REFERENCES effects(id_effect),
-  FOREIGN KEY (id_gamme) REFERENCES gammes(id_gamme)
+  FOREIGN KEY (id_gamme) REFERENCES gammes(id_gamme),
+  FOREIGN KEY (id_user) REFERENCES users(id_user)
 );
 
 
@@ -83,12 +88,13 @@ INSERT INTO `effects` (`id_effect`, `eff_libele`) VALUES
 (NULL, 'eclaircissant'), 
 (NULL, 'gommant');
 
+INSERT INTO `users` (`login`, `pass`, `email`, `picture`) VALUES ('default_user', 'password', 'default@gmail.com', 'default');
 
-INSERT INTO `products` (`id_product`, `name`, `decription`, `id_categorie`, `id_gamme`, `id_effect`) VALUES 
-(NULL, 'test', 'kfzejou eizblufbiy', '1', '2', '1'), 
-(NULL, 'zdiofbauo ', 'aobmfozuei ezlbovze', '3', '1', '3');
-
-INSERT INTO `products` (`id_product`, `name`, `decription`, `id_categorie`, `id_gamme`, `id_effect`, `important`, `picture`, `add_date`) 
+INSERT INTO `products` (`id_product`, `name`, `description`, `ingredient`, `id_categorie`, `id_gamme`, `id_effect`, `id_user`, `important`, `picture`, `add_date`) 
 VALUES 
-(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf', '1', '2', '3', '0', 'default.png', current_timestamp()), 
-(NULL, 'qdsdd', 'qdsdqcsq qdfqfdqs fqsfd qfsfq', '2', '1', '1', '0', 'default.png', current_timestamp());
+(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '1.png', current_timestamp()), 
+(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '2.png', current_timestamp()), 
+(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '3.png', current_timestamp()), 
+(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '4.png', current_timestamp()), 
+(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '5.png', current_timestamp()), 
+(NULL, 'qdsdd', 'qdsdqcsq qdfqfdqs fqsfd qfsfq', 'dqdac,aeqaf,ccdcza,cddsdacd,aasf', '2', '1', '1', '1', '1', 'default.png', current_timestamp());

@@ -40,24 +40,24 @@
                                     <li><a href="#">Elements</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./produits&cat=adultes">adult</a>
+                            <li class="<?php if ($cat == "adultes") echo "active" ?>"><a href="./produits&cat=adultes">adulte</a>
                                 <div class="megamenu">
                                     <div class="content_menu row">
                                         <div class="single-mega box_image col-lg-4 col-sm-12">
                                             <img src="<?= ASSETS ?>images/product/5.png" alt="">
                                         </div>
-                                        <ul class="single-mega list col">
-                                            <?php foreach ($gammes as $key => $gamme) : ?>
-                                                <li><a href="#"><?= $gamme["gam_libele"] ?></a></li>
-                                            <?php endforeach; ?>
-
-                                        </ul>
                                         <ul class="col">
                                             <li>
                                                 <a href="./produits&cat=adultes">
-                                                    <button class="btn academy-btn">toute la gamme adule</button>
+                                                    <button class="btn academy-btn">toute la gamme adultes</button>
                                                 </a>
                                             </li>
+                                        </ul>
+                                        <ul class="single-mega list col">
+                                            <?php foreach ($effects as $key => $effect) : ?>
+                                                <li><a href="#"><?= $effect["eff_libele"] ?></a></li>
+                                            <?php endforeach; ?>
+
                                         </ul>
                                         <div class="col"></div>
                                     </div>
@@ -70,7 +70,7 @@
                             <li class="<?php if ($cat == "bebes") echo "active" ?>">
                                 <a href="./produits&cat=bebes">bébé</a>
                             </li>
-                            <li class="<?php if ($this->request == "produits&cat=bebes") echo "active" ?>">
+                            <li class="<?php if ($this->request == "services") echo "active" ?>">
                                 <a href="./services">nos services</a>
                             </li>
                         </ul>

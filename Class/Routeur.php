@@ -10,50 +10,37 @@ class Routeur
     {
         if ($this->request == "home" || $this->request == "") {
             include VIEW . "home.php";
-        }
-        if ($this->request == "detail") {
+        } else if ($this->request == "detail") {
             include VIEW . "blog-detail.php";
-        }
-        if ($this->request == "about") {
+        } else if ($this->request == "about") {
             include VIEW . "about.php";
-        }
-        if ($this->request == "contact") {
+        } else if ($this->request == "contact") {
             include VIEW . "contact.php";
-        }
-        if ($this->request == "blog") {
+        } else if ($this->request == "blog") {
             include VIEW . "blog.php";
-        }
-        if ($this->request == "services") {
+        } else if ($this->request == "services") {
             include VIEW . "work.php";
-        }
-        if ($this->request == "product_detail") {
+        } else if ($this->request == "product_detail") {
             include VIEW . "product_detail.php";
-        }
-        if ($this->request == "produits") {
+        } else if ($this->request == "produits") {
             include VIEW . "products.php";
         }
 
         // route admin app
-        if ($this->request == "admin") {
+        else if ($this->request == "admin") {
             if (isset($_SESSION['socapco_admin']) and !empty($_SESSION['socapco_admin'])) {
                 include VIEW . "dashboard.php";
             } else {
                 include VIEW . "login_form.php";
             }
-        }
-        if ($this->request == "login") {
+        } else if ($this->request == "login") {
             if (isset($_SESSION['socapco_admin']) and !empty($_SESSION['socapco_admin'])) {
                 header("location: admin");
             } else {
                 include VIEW . "login_form.php";
             }
-        }
-        if ($this->request == "register") {
-            if (isset($_SESSION['socapco_admin']) and !empty($_SESSION['socapco_admin'])) {
-                header("location: admin");
-            } else {
-                include VIEW . "register_form.php";
-            }
+        } else {
+            include VIEW . "partials/admin/_404.php";
         }
     }
 }
