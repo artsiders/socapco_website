@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "../Models/Produit.php";
 $root = $_SERVER["DOCUMENT_ROOT"];
 define("ASSETS_ROOT", "$root/socapco_website/assets/");
@@ -14,13 +15,14 @@ if (isset($_POST) && !empty($_POST)) {
         "isOk" => true,
         "insertIsOk" => null
     );
-    $name = htmlspecialchars($_POST['name']);
-    $descrition = htmlspecialchars($_POST['description']);
+    $name = htmlspecialchars(strtolower(trim($_POST['name'])));
+    $descrition = htmlspecialchars(strtolower(trim($_POST['description'])));
+    $ingredient = htmlspecialchars(strtolower(trim($_POST['ingredient'])));
+
     $idGamme = htmlspecialchars($_POST['id_gamme']);
     $idCategorie = htmlspecialchars($_POST['id_categorie']);
-    $ingredient = htmlspecialchars($_POST['ingredient']);
-    $idEffect = htmlspecialchars('1');
-    $idUser = htmlspecialchars('1');
+    $idEffect = htmlspecialchars($_POST['id_effect']);
+    $idUser = $_SESSION['socapco_admin']['id_user'];
 
 
     if (!empty($_FILES['product_image']['name'])) {

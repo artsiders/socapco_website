@@ -59,6 +59,18 @@
                                                         </select>
                                                     </div>
                                                 </div>
+                                                <div class="row col-md-12 m-b-20">
+                                                    <div class="col-md-12">
+                                                        <label for="gamme">éffets sur la peau</label>
+                                                        <select class="form-control" name="id_effect" id="">
+                                                            <?php foreach ($effects as $key => $effect) : ?>
+                                                                <option value="<?= $effect['id_effect'] ?>">
+                                                                    <?= $effect['eff_libele'] ?>
+                                                                </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                                 <div class="col-md-12 m-b-20">
                                                     <label for="name">Description</label>
                                                     <textarea id="prodDesc" style="resize: none;" name="description" class="form-control" id="" cols="30" rows="2" placeholder="entrer la description"></textarea>
@@ -122,6 +134,18 @@
                                                             <?php foreach ($categories as $key => $categorie) : ?>
                                                                 <option value="<?= $categorie['id_categorie'] ?>">
                                                                     <?= $categorie['cat_libele'] ?>
+                                                                </option>
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row col-md-12 m-b-20">
+                                                    <div class="col-md-12">
+                                                        <label for="gamme">éffets sur la peau</label>
+                                                        <select class="form-control" name="id_effect" id="">
+                                                            <?php foreach ($effects as $key => $effect) : ?>
+                                                                <option value="<?= $effect['id_effect'] ?>">
+                                                                    <?= $effect['eff_libele'] ?>
                                                                 </option>
                                                             <?php endforeach; ?>
                                                         </select>
