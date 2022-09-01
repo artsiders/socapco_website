@@ -224,7 +224,7 @@
                                 <button type="button" class="btn_edit_prod btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $product['id_product'] ?>">
                                     <i class="fa fa-edit" aria-hidden="true" data-id="<?= $product['id_product'] ?>"></i>
                                 </button>
-                                <button type="button" class="btn_del_prod btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $product['id_product'] ?>">
+                                <button type="button" class="btn_del_prod btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $product['id_product'] ?>" data-image="<?= $product['picture'] ?>">
                                     <i class="fa fa-trash" aria-hidden="true" data-id="<?= $product['id_product'] ?>"></i>
                                 </button>
                             </td>
