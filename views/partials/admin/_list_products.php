@@ -31,9 +31,9 @@
                                                         <input id="prodName" type="text" name="name" class="form-control" placeholder="nom produit">
                                                     </div>
                                                     <div class="col-md-2">
-                                                        <label for="uploadFile" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
+                                                        <label for="uploadFileEdit" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
                                                             <span><i class="fas fa-image fa-4x"></i></span>
-                                                            <input name="image" type="file" id="uploadFile" class="upload" hidden>
+                                                            <input name="image" type="file" id="uploadFileEdit" class="upload" hidden>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -91,7 +91,7 @@
                                     <div class="modal-body">
                                         <p class="hide alert alert-danger text-center" id="addError"></p>
                                         <p class="hide alert alert-success text-center" id="addSuccess"></p>
-                                        <form method="post" class="form-horizontal form-material" id="addProductForm">
+                                        <form method="post" class="form-horizontal form-material" id="addProductForm" enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <div class="row col-md-12">
                                                     <div class="col-md-10">
@@ -99,9 +99,9 @@
                                                         <input type="text" name="name" class="form-control" placeholder="nom produit">
                                                     </div>
                                                     <div class="col-md-2">
-                                                        <label for="uploadFile" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
+                                                        <label for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
                                                             <span><i class="fas fa-image fa-4x"></i></span>
-                                                            <input name="image" type="file" id="uploadFile" class="upload" hidden>
+                                                            <input name="product_image" type="file" id="uploadFileAdd" class="upload" hidden>
                                                         </label>
                                                     </div>
                                                 </div>
@@ -156,7 +156,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <!-- <th>N</th> -->
+                        <th>N</th>
                         <th>image</th>
                         <th>nom</th>
                         <th>desc</th>
@@ -168,10 +168,9 @@
                 <tbody>
                     <?php foreach ($allProducts as $key => $product) : ?>
                         <tr>
-                            <!-- <td><?php //echo $key + 1 
-                                        ?></td> -->
+                            <td><?= $key + 1 ?></td>
                             <td>
-                                <img src="<?= ASSETS ?>images/product/<?= $product['picture'] ?>" alt="user" width="50" height="50" />
+                                <img class="rounded-circle border border-success" src="<?= ASSETS ?>images/product/<?= $product['picture'] ?>" alt="user" width="50" height="50" />
                             </td>
                             <td><?= $product['name'] ?></td>
                             <td class="text-center" data-toggle="tooltip" data-original-title="<?= $product['description'] . ' ' . $product['add_date'] ?>">

@@ -3,6 +3,7 @@ require_once "../Models/Produit.php";
 $root = $_SERVER["DOCUMENT_ROOT"];
 define("ASSETS_ROOT", "$root/socapco_website/assets/");
 
+
 if (isset($_POST) && !empty($_POST)) {
 
     $resultArray = array(
@@ -18,11 +19,13 @@ if (isset($_POST) && !empty($_POST)) {
     $idGamme = htmlspecialchars($_POST['id_gamme']);
     $idCategorie = htmlspecialchars($_POST['id_categorie']);
     $ingredient = htmlspecialchars($_POST['ingredient']);
+    $idEffect = htmlspecialchars('1');
+    $idUser = htmlspecialchars('1');
 
 
-    if (!empty($_FILES['image']['name'])) {
-        $image_name = $_FILES['image']['name'];
-        $file_tmp_name = $_FILES['image']['tmp_name'];
+    if (!empty($_FILES['product_image']['name'])) {
+        $image_name = $_FILES['product_image']['name'];
+        $file_tmp_name = $_FILES['product_image']['tmp_name'];
 
         $resultArray["image"] = true;
     } else {
@@ -43,26 +46,35 @@ if (isset($_POST) && !empty($_POST)) {
     }
 
 
-    // les donnees a passer en parametre de la methode create
-    $data = array(
-        "description" => $descrition,
-        "name" => $name,
-        "image" => $image_name,
-        "id_categorie" => $idCategorie,
-        "id_gamme" => $idGamme,
-        "ingredient" => $ingredient,
-    );
 
     // si le formulair est bien rempli, j'envoie les information dans la base de donnée
     if ($resultArray['isOk']) {
         try {
-            // ajout de la publication dans la base de donnee
-            $products = new products;
-            $products->create($data);
-            $resultArray["insertIsOk"] = true;
+            $file_ext = strtolower(substr(strrchr($image_name, '.'), 1));
+            $uniq_name = md5(uniqid(rand(1, 15))) . "." . $file_ext;
 
-            move_uploaded_file($file_tmp_name, ASSETS_ROOT . "images/product/$image_name");
+            $dir = ASSETS_ROOT . "images/product/";
 
+            $move_file = move_uploaded_file($file_tmp_name, $dir . $image_name);
+            $rename_file = rename($dir . $image_name, $dir . $uniq_name);
+
+            if ($rename_file && $move_file) {
+                // les donnees a passer en parametre de la methode create
+                $data = array(
+                    "description" => $descrition,
+                    "name" => $name,
+                    "image" => $uniq_name,
+                    "id_categorie" => $idCategorie,
+                    "id_gamme" => $idGamme,
+                    "id_effect" => $idEffect,
+                    "id_user" => $idUser,
+                    "ingredient" => $ingredient,
+                );
+                // ajout de la publication dans la base de donnee
+                $products = new products;
+                $products->create($data);
+                $resultArray["insertIsOk"] = true;
+            }
             $resultArray["msg"] = "";
         } catch (Exception $e) {
             $resultArray["insertIsOk"] = false;
