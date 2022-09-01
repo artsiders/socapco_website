@@ -8,7 +8,7 @@ class Users
         $this->connect = new Connexion;
     }
 
-    public function create(array $data, $passCrip, $picture, $is_admin = 0)
+    public function create(array $data, $passCrip, $picture = "default.png", $is_admin = 0)
     {
         $sql = "INSERT INTO `users` (`login`, `pass`, `email`, `picture`, `is_admin`) VALUES (:user_login, :pass, :email, :picture,:is_admin)";
 

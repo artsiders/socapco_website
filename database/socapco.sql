@@ -88,7 +88,7 @@ INSERT INTO `effects` (`id_effect`, `eff_libele`) VALUES
 (NULL, 'eclaircissant'), 
 (NULL, 'gommant');
 
-INSERT INTO `users` (`login`, `pass`, `email`, `picture`) VALUES ('default_user', 'password', 'default@gmail.com', 'default');
+INSERT INTO `users` (`login`, `pass`, `email`, `picture`) VALUES ('default_user', 'password', 'default@gmail.com', 'default.png');
 
 INSERT INTO `products` (`id_product`, `name`, `description`, `ingredient`, `id_categorie`, `id_gamme`, `id_effect`, `id_user`, `important`, `picture`, `add_date`) 
 VALUES 

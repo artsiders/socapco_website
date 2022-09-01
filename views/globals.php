@@ -59,7 +59,6 @@ function makeDefaultUser()
 
     if (!$test) {
         $passCrip = password_hash('@Motdepass1', PASSWORD_DEFAULT);
-        $picture = "default.png";
 
         $data = array(
             "id_user" => 0,
@@ -68,6 +67,7 @@ function makeDefaultUser()
             "email" => 'jimsky699@gmail.com',
             "is_admin" => 1
         );
-        $users->create($data, $passCrip, $picture, 1);
+        echo json_encode($data);
+        $users->create($data, $passCrip, 1);
     }
 }

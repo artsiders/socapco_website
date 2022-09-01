@@ -12,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Favicon -->
+    <link rel="icon" href="<?= ASSETS ?>images/favicon.png">
     <!-- Custom CSS -->
     <link href="<?= ASSETS ?>dist/css/style.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= ASSETS ?>css/index.css">
@@ -91,17 +93,17 @@
                     </div>
                     <div class="row m-t-20">
                         <!-- Form -->
-                        <form id="recoveryForm" class="col-12" action="">
+                        <form id="recoveryForm" class="col-12">
                             <!-- email -->
                             <div class="form-group row">
                                 <div class="col-12">
-                                    <input name="email" class="form-control form-control-lg" type="email" placeholder="exemple@exemple.com">
+                                    <input name="email" required class="form-control form-control-lg" type="email" placeholder="exemple@exemple.com">
                                 </div>
                             </div>
                             <!-- pwd -->
                             <div class="row m-t-20">
                                 <div class="col-12">
-                                    <button class="btn btn-block btn-lg btn-danger" type="submit" name="action">Réinitialisé</button>
+                                    <button type="submit" class="btn btn-block btn-lg btn-danger" type="submit" name="action">Réinitialisé</button>
                                 </div>
                                 <div class="col-sm-12 text-center mt-3">
                                     <a href="./login" class="text-info m-l-5"><b>annuler</b></a>

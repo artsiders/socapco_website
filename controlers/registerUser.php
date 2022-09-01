@@ -16,9 +16,12 @@ if (isset($_POST) && !empty($_POST)) {
         "login_already" => true,
         "isOk" => true,
     );
-    $login = htmlspecialchars(strtolower(trim($_POST["login"])));
-    $email = htmlspecialchars(strtolower(trim($_POST["email"])));
-    $pass = htmlspecialchars(strtolower(trim($_POST["pass"])));
+    extract($_POST);
+    $datas = array(
+        "login" => htmlspecialchars(strtolower(trim($login))),
+        "email" => htmlspecialchars(strtolower(trim($email))),
+        "pass" => htmlspecialchars(strtolower(trim($pass))),
+    );
 
     if (strlen($pass) < 6) {
         $resultArray['pass'] = false;
@@ -73,7 +76,7 @@ if (isset($_POST) && !empty($_POST)) {
     // si le formulair est bien rempli, j'envoie les information dans la base de donnée
     if ($resultArray['isOk']) {
         $result = new Users;
-        $result->create($_POST, $passCrypt, $image_name);
+        $result->create($datas, $passCrypt, $image_name);
     }
     echo json_encode($resultArray);
 }

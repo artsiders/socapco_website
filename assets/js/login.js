@@ -1,4 +1,5 @@
 const loginForm = document.getElementById("loginForm")
+const recoveryForm = document.getElementById("recoveryForm")
 
 let errorBox = document.getElementById("error")
 let successBox = document.getElementById("success")
@@ -45,3 +46,21 @@ loginForm.addEventListener("submit", e => {
         }
     })
 })
+
+
+recoveryForm.addEventListener("submit", e => {
+    e.preventDefault()
+    let data = new FormData(loginForm)
+
+    fetch(`${location.origin}/socapco_website/controlers/password_forget.php`, {
+        method: 'POST',
+        headers: {
+            'X-Requested-With': 'xmlhttprequest'
+        },
+        body: data
+    }).then(responce => responce.json()).then(data => {
+        console.log(data);
+    })
+})
+
+
