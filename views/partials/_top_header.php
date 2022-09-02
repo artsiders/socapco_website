@@ -8,9 +8,6 @@
                     </div>
                     <div class="row nav">
                         <div class="login-content col-sm">
-                            <a class="<?php if ($this->request == "blog") echo "active" ?>" href="./blog">blog</a>
-                        </div>
-                        <div class="login-content col-sm">
                             <a class="<?php if ($this->request == "contact") echo "active" ?>" href="./contact">Contacts</a>
                         </div>
                         <div class="login-content col-sm">

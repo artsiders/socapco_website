@@ -26,25 +26,11 @@
                             <li class="<?php if ($this->request == "home" || $this->request == "") echo "active" ?>">
                                 <a href="./home">Accueil</a>
                             </li>
-                            <li class="d-none pages">
-                                <a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li class="<?php if ($this->request == "contact") echo "active" ?>">
-                                        <a href="./contact">Contacts</a>
-                                    </li>
-                                    <li class="<?php if ($this->request == "about") echo "active" ?>">
-                                        <a href="./about">A Propos</a>
-                                    </li>
-                                    <li><a href="#">Course</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Elements</a></li>
-                                </ul>
-                            </li>
                             <li class="<?php if ($cat == "adultes") echo "active" ?>"><a href="./produits&cat=adultes">adulte</a>
                                 <div class="megamenu">
                                     <div class="content_menu row">
                                         <div class="single-mega box_image col-lg-4 col-sm-12">
-                                            <img src="<?= ASSETS ?>images/product/5.png" alt="">
+                                            <img src="<?= ASSETS ?>images/blog-img/adult-cover.jpg" alt="">
                                         </div>
                                         <ul class="col">
                                             <li>

@@ -19,7 +19,7 @@ class Routeur
         } else if ($this->request == "blog") {
             include VIEW . "blog.php";
         } else if ($this->request == "services") {
-            include VIEW . "work.php";
+            include VIEW . "services.php";
         } else if ($this->request == "product_detail") {
             include VIEW . "product_detail.php";
         } else if ($this->request == "produits") {
