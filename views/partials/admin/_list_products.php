@@ -171,6 +171,32 @@
                             </div>
                             <!-- /.modal-dialog -->
                         </div>
+
+                        <!-- Modal DELETE product -->
+                        <div id="modal-delete" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="myModalLabel">voulez vous supprimer ?</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class=" d-flex justify-content-lg-end">
+                                            <div class="m-2">
+                                                <button class="btn btn-danger" id="confirDel">supprimer</button>
+                                            </div>
+                                            <div class="m-2">
+                                                <button class="btn btn-outline-primary" data-dismiss="modal" aria-hidden="true">annuler</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                        <!-- END MODAL DELETE PRODUCT -->
+
                         <td colspan="7">
                             <div class="">
                                 <nav aria-label="Page navigation example">
@@ -224,7 +250,7 @@
                                 <button type="button" class="btn_edit_prod btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $product['id_product'] ?>">
                                     <i class="fa fa-edit" aria-hidden="true" data-id="<?= $product['id_product'] ?>"></i>
                                 </button>
-                                <button type="button" class="btn_del_prod btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $product['id_product'] ?>" data-image="<?= $product['picture'] ?>">
+                                <button type="button" class="btn_del_prod btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $product['id_product'] ?>" data-image="<?= $product['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
                                     <i class="fa fa-trash" aria-hidden="true" data-id="<?= $product['id_product'] ?>"></i>
                                 </button>
                             </td>
