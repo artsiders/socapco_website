@@ -10,8 +10,8 @@ class Products
 
     public function create(array $data)
     {
-        $sql = "INSERT INTO `products` (`name`, `description`, `id_categorie`, `id_gamme`, `picture`,`ingredient`, `id_effect`, `id_user`) 
-        VALUES (:prod_name, :prod_desc, :categorie, :gamme, :picture, :ingredient, :id_effect, :id_user)";
+        $sql = "INSERT INTO `products` (`name`, `description`, `id_categorie`, `id_gamme`, `picture`,`ingredient`, `id_effect`, `id_user`, `important`, `grammage`) 
+        VALUES (:prod_name, :prod_desc, :categorie, :gamme, :picture, :ingredient, :id_effect, :id_user, :important, :grammage)";
 
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("prod_name", $data['name']);
@@ -22,6 +22,8 @@ class Products
         $query->bindParam("ingredient", $data['ingredient']);
         $query->bindParam("id_effect", $data['id_effect']);
         $query->bindParam("id_user", $data['id_user']);
+        $query->bindParam("important", $data['important']);
+        $query->bindParam("grammage", $data['grammage']);
 
         $query->execute();
     }

@@ -4,7 +4,6 @@ require_once "../Models/Produit.php";
 $root = $_SERVER["DOCUMENT_ROOT"];
 define("ASSETS_ROOT", "$root/socapco_website/assets/");
 
-
 if (isset($_POST) && !empty($_POST)) {
 
     $resultArray = array(
@@ -18,6 +17,8 @@ if (isset($_POST) && !empty($_POST)) {
     $name = htmlspecialchars(strtolower(trim($_POST['name'])));
     $descrition = htmlspecialchars(strtolower(trim($_POST['description'])));
     $ingredient = htmlspecialchars(strtolower(trim($_POST['ingredient'])));
+    $grammage = (int)$_POST['grammage'];
+    isset($_POST['important']) && $_POST['important'] == 1 ? $important = 1 : $important = 0;
 
     $idGamme = htmlspecialchars($_POST['id_gamme']);
     $idCategorie = htmlspecialchars($_POST['id_categorie']);
@@ -71,6 +72,8 @@ if (isset($_POST) && !empty($_POST)) {
                     "id_effect" => $idEffect,
                     "id_user" => $idUser,
                     "ingredient" => $ingredient,
+                    "important" => $important,
+                    "grammage" => $grammage,
                 );
                 // ajout de la publication dans la base de donnee
                 $products = new products;

@@ -60,15 +60,19 @@
                                                     </div>
                                                 </div>
                                                 <div class="row col-md-12 m-b-20">
-                                                    <div class="col-md-12">
-                                                        <label for="gamme">éffets sur la peau</label>
-                                                        <select class="form-control" name="id_effect" id="">
+                                                    <div class="col-md-10">
+                                                        <label for="effect">éffets sur la peau</label>
+                                                        <select class="form-control" name="id_effect" id="effect">
                                                             <?php foreach ($effects as $key => $effect) : ?>
                                                                 <option value="<?= $effect['id_effect'] ?>">
                                                                     <?= $effect['eff_libele'] ?>
                                                                 </option>
                                                             <?php endforeach; ?>
                                                         </select>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <label for="gammage">gammage</label>
+                                                        <input type="number" class=" form-control">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12 m-b-20">
@@ -106,17 +110,17 @@
                                         <form method="post" class="form-horizontal form-material" id="addProductForm" enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <div class="row col-md-12">
-                                                    <div class="col-md-10">
-                                                        <label for="name">Nom Produit</label>
+                                                    <div class="col-11">
                                                         <input type="text" name="name" class="form-control" placeholder="nom produit">
                                                     </div>
-                                                    <div class="col-md-2">
-                                                        <label for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
-                                                            <span><i class="fas fa-image fa-4x"></i></span>
+                                                    <div class="col-1">
+                                                        <label style="height: 35px;" for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
+                                                            <span><i class="fas fa-image"></i></span>
                                                             <input name="product_image" type="file" id="uploadFileAdd" class="upload" hidden>
                                                         </label>
                                                     </div>
                                                 </div>
+                                                <hr>
                                                 <div class="row col-md-12 m-b-20">
                                                     <div class="col-md-6">
                                                         <label for="gamme">Gamme</label>
@@ -139,8 +143,9 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="row col-md-12 m-b-20">
-                                                    <div class="col-md-12">
+                                                <hr>
+                                                <div class="row col-md-12">
+                                                    <div class="col-md-8">
                                                         <label for="gamme">éffets sur la peau</label>
                                                         <select class="form-control" name="id_effect" id="">
                                                             <?php foreach ($effects as $key => $effect) : ?>
@@ -150,8 +155,17 @@
                                                             <?php endforeach; ?>
                                                         </select>
                                                     </div>
+                                                    <div class="col-md-4">
+                                                        <label for="gammage">gammage</label>
+                                                        <div class="input-group mb-3">
+                                                            <input value="100" step="10" type="number" name="grammage" class="form-control" aria-label="" aria-describedby="basic-gram">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="basic-gram">g</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-12 m-b-20">
+                                                <div class="col-md-12">
                                                     <label for="name">Description</label>
                                                     <textarea style="resize: none;" name="description" class="form-control" id="" cols="30" rows="2" placeholder="entrer la description"></textarea>
                                                 </div>
@@ -159,6 +173,13 @@
                                                     <label for="name">Ingrédient</label>
                                                     <textarea style="resize: none;" name="ingredient" class="form-control" id="" cols="30" rows="2" placeholder="separer les ingrédient par une virgule(,)"></textarea>
                                                 </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" name="important" value="1" class="form-check-input" id="important">
+                                                        <label class="form-check-label" for="important">mettre en avant</label>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="submit" class="btn btn-info waves-effect">Enregistre</button>
