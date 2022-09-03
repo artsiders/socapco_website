@@ -41,15 +41,17 @@ class Gammes
         $query->execute();
     }
 
-    public function update(array $data)
+    public function update($id, array $data)
     {
         $cat = 1;
         $sql = "UPDATE `gammes` SET `gam_libele` = :gam_libele, 
-        `id_categorie` = :id_categorie";
+        `id_categorie` = :id_categorie
+        WHERE `id_gamme` = :id";
 
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("gam_libele", $data["gam_libele"]);
         $query->bindParam("id_categorie", $cat);
+        $query->bindParam("id", $id);
 
         $query->execute();
     }

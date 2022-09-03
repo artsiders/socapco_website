@@ -42,5 +42,61 @@ function addGamme() {
         })
     })
 }
-
 addGamme()
+
+function editGamme() {
+    const editGammeForm = document.getElementById('editGammeForm')
+    const btnEditGam = document.querySelectorAll('.btn_edit_gam')
+    const gamLibele = document.getElementById('gamLibele')
+    const idGam = document.getElementById('idGam')
+
+
+    let editError = document.getElementById("editError")
+    let editSuccess = document.getElementById("editSuccess")
+
+    btnEditGam.forEach(btn => {
+        btn.addEventListener("click", e => {
+            const id = e.target.dataset.id
+
+            fetch(`${location.origin}/socapco_website/controlers/gammes.php?action=read&id=${id}`)
+                .then(responce => responce.json()).then(data => {
+                    gamLibele.value = data.gam_libele
+                    idGam.value = data.id_gamme
+                }).catch(error => console.log(error))
+        })
+    });
+
+    editGammeForm.addEventListener("submit", e => {
+        e.preventDefault()
+
+        let data = new FormData(editGammeForm)
+
+        fetch(`${location.origin}/socapco_website/controlers/gammes.php?action=update`, {
+            method: 'POST',
+            headers: {
+                'X-Requested-With': 'xmlhttprequest'
+            },
+            body: data
+        }).then(responce => responce.json()).then(data => {
+            if (!data.gam_libele) {
+                editGammeForm.gam_libele.classList.add("border-danger")
+            }
+
+            if (data.msg == "") {
+                editError.classList.add("hide")
+                editSuccess.classList.remove("hide")
+                editSuccess.innerHTML = `modifier avec succé ! 
+                    <button type="button" class="close" data-dismiss="modal"
+                    aria-hidden="true">×</button>`;
+
+                editGammeForm.gam_libele.value = ""
+                editGammeForm.gam_libele.classList.remove("border-danger")
+            } else {
+                editError.classList.remove("hide")
+                editError.innerHTML = data.msg
+                editSuccess.classList.add("hide")
+            }
+        })
+    })
+}
+editGamme()
