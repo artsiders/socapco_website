@@ -56,6 +56,7 @@ CREATE TABLE IF NOT EXISTS `socapco`.`effects` (
 CREATE TABLE IF NOT EXISTS `socapco`.`products` (
   `id_product` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
+  `grammage` INT NOT NULL,
   `description` TEXT NULL,
   `ingredient` TEXT NULL,
   `id_categorie` INT NOT NULL,
@@ -90,11 +91,11 @@ INSERT INTO `effects` (`id_effect`, `eff_libele`) VALUES
 
 INSERT INTO `users` (`login`, `pass`, `email`, `picture`) VALUES ('default_user', 'password', 'default@gmail.com', 'default.png');
 
-INSERT INTO `products` (`id_product`, `name`, `description`, `ingredient`, `id_categorie`, `id_gamme`, `id_effect`, `id_user`, `important`, `picture`, `add_date`) 
+INSERT INTO `products` (`name`, `grammage`, `description`, `ingredient`, `id_categorie`, `id_gamme`, `id_effect`, `id_user`, `important`, `picture`, `add_date`) 
 VALUES 
-(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '1.png', current_timestamp()), 
-(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '2.png', current_timestamp()), 
-(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '3.png', current_timestamp()), 
-(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '4.png', current_timestamp()), 
-(NULL, 'test', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '5.png', current_timestamp()), 
-(NULL, 'qdsdd', 'qdsdqcsq qdfqfdqs fqsfd qfsfq', 'dqdac,aeqaf,ccdcza,cddsdacd,aasf', '2', '1', '1', '1', '1', 'default.png', current_timestamp());
+('test', '300', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '1.png', current_timestamp()), 
+('test', '600', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '2.png', current_timestamp()), 
+('test', '300', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '3.png', current_timestamp()), 
+('test', '700', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '4.png', current_timestamp()), 
+('test', '300', 'dqdacaeqafccdczacddsdacdaasf','dqdac,aeqaf,ccdcza,cddsdacd,aasf', '1', '2', '3', '1', '1', '5.png', current_timestamp()), 
+('qdsdd', '300', 'qdsdqcsq qdfqfdqs fqsfd qfsfq', 'dqdac,aeqaf,ccdcza,cddsdacd,aasf', '2', '1', '1', '1', '1', 'default.png', current_timestamp());
