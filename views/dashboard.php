@@ -211,25 +211,25 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
                                 <i class="fab fa-product-hunt"></i>
-                                <span class="hide-menu">produits </span>
+                                <span class="hide-menu">Cosméthique</span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item <?php if ($page == 'product' || $page == '') echo "active"; ?>">
-                                    <a href="./admin&page=product" class="sidebar-link">
+                                    <a href="./admin" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
-                                        <span class="hide-menu"> Cosméthique </span>
+                                        <span class="hide-menu"> produits </span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item <?php if ($page == 'savonerie') echo "active"; ?>">
-                                    <a href="./admin&page=savonerie" class="sidebar-link">
+                                    <a href="./admin&page=gamme" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
-                                        <span class="hide-menu"> Savonerie </span>
+                                        <span class="hide-menu"> gammes </span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item <?php if ($page == 'plastique') echo "active"; ?>">
-                                    <a href="./admin&page=plastique" class="sidebar-link">
+                                    <a href="./admin&page=effect" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
-                                        <span class="hide-menu"> plastique </span>
+                                        <span class="hide-menu"> effets </span>
                                     </a>
                                 </li>
 
@@ -300,6 +300,12 @@
                                 break;
                             case 'product':
                                 require_once VIEW . "partials/admin/_list_products.php";
+                                break;
+                            case 'gamme':
+                                require_once VIEW . "partials/admin/_list_gamme.php";
+                                break;
+                            case 'effect':
+                                require_once VIEW . "partials/admin/_list_effect.php";
                                 break;
                             case 'add_user':
                                 if ($_SESSION['socapco_admin']["is_admin"] == 1) {
