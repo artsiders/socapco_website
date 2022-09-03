@@ -3,7 +3,14 @@ const prodName = document.getElementById("prodName")
 const prodDesc = document.getElementById("prodDesc")
 const ProdIngre = document.getElementById("ProdIngre")
 
+const seletGamme = document.getElementById("seletGamme")
+const selectCat = document.getElementById("selectCat")
+const selectEff = document.getElementById("selectEff")
+const inpGrammage = document.getElementById("inpGrammage")
+const editImportant = document.getElementById("editImportant")
+
 const inputId = document.getElementById("idProd")
+const oldImage = document.getElementById("oldImage")
 
 const editProductForm = document.getElementById("editProductForm")
 
@@ -14,12 +21,16 @@ btnEditProd.forEach(btn => {
 
         fetch(`${location.origin}/socapco_website/controlers/get_prod.php?id=${id}`)
             .then(responce => responce.json()).then(data => {
-                console.log(data);
-                console.log(prodName);
                 prodName.value = data.name
                 prodDesc.value = data.description
                 ProdIngre.value = data.ingredient
                 inputId.value = data.id_product
+                seletGamme.value = data.id_gamme
+                selectCat.value = data.id_categorie
+                selectEff.value = data.id_effect
+                inpGrammage.value = data.grammage
+                oldImage.value = data.picture
+                data.important == 1 ? editImportant.checked = true : editImportant.checked = false
             }).catch(error => console.log(error))
     })
 });

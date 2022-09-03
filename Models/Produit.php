@@ -67,14 +67,15 @@ class Products
         return $result;
     }
 
-    public function readAllByCat($cat)
+    public function readAllByCat($cat = "all")
     {
         if ($cat != "all") {
-            $sql = "SELECT * FROM `products` P, `gammes` G, categories C
-            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND C.cat_libele = '$cat'";
+            $sql = "SELECT * FROM `products` P, `gammes` G, categories C, effects E
+            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect 
+            AND C.cat_libele = '$cat'";
         } else {
-            $sql = "SELECT * FROM `products` P, `gammes` G, categories C
-            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie";
+            $sql = "SELECT * FROM `products` P, `gammes` G, categories C, effects E
+            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect";
         }
         $query = $this->connect->getConnect()->prepare($sql);
         $query->execute();
@@ -136,6 +137,10 @@ class Products
                 `description`= :prod_desc,
                 `id_categorie`= :categorie,
                 `id_gamme`= :gamme,
+                `id_effect`= :effect,
+                `id_user`= :user,
+                `important`= :important,
+                `grammage`= :grammage,
                 `ingredient`= :ingredient
                 WHERE id_product = :id";
             $query = $this->connect->getConnect()->prepare($sql);
@@ -143,6 +148,10 @@ class Products
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("categorie", $data['id_categorie']);
             $query->bindParam("gamme", $data['id_gamme']);
+            $query->bindParam("effect", $data['id_effect']);
+            $query->bindParam("user", $data['id_user']);
+            $query->bindParam("important", $data['important']);
+            $query->bindParam("grammage", $data['grammage']);
             $query->bindParam("ingredient", $data['ingredient']);
             $query->bindParam("id", $idProduit);
         } else {
@@ -151,6 +160,10 @@ class Products
                 `description`= :prod_desc,
                 `id_categorie`= :categorie,
                 `id_gamme`= :gamme,
+                `id_effect`= :effect,
+                `id_user`= :user,
+                `important`= :important,
+                `grammage`= :grammage,
                 `picture`= :picture,
                 `ingredient`= :ingredient
                 WHERE id_product = :id";
@@ -159,8 +172,12 @@ class Products
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("categorie", $data['id_categorie']);
             $query->bindParam("gamme", $data['id_gamme']);
-            $query->bindParam("picture", $data['image']);
+            $query->bindParam("effect", $data['id_effect']);
+            $query->bindParam("user", $data['id_user']);
+            $query->bindParam("important", $data['important']);
+            $query->bindParam("grammage", $data['grammage']);
             $query->bindParam("ingredient", $data['ingredient']);
+            $query->bindParam("picture", $data['image']);
             $query->bindParam("id", $idProduit);
         }
 
