@@ -108,9 +108,11 @@
 											<h5 class="h4"><?= $gamme['gam_libele'] ?></h5>
 											<div class="d-flex justify-content-between align-items-center">
 												<div class="btn-group">
-													<button type="button" class="btn btn-sm btn-outline-danger">
-														<i class="fa fa-trash"></i>
-													</button>
+													<a href="admin&page=gamme&id_gamme=<?= $gamme['id_gamme'] ?>">
+														<button type="button" class="btn btn-sm btn-outline-danger">
+															<i class="fa fa-trash"></i>
+														</button>
+													</a>
 													<button type="button" class="btn_edit_gam btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $gamme['id_gamme'] ?>">
 														<i class="fa fa-edit" aria-hidden="true" data-id="<?= $gamme['id_gamme'] ?>"></i>
 													</button>

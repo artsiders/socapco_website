@@ -70,3 +70,17 @@ function makeDefaultUser()
         $users->create($data, $passCrip, "default.png", 1);
     }
 }
+
+function deleteGamma()
+{
+    if (isset($_GET['id_gamme']) and !empty($_GET['id_gamme'])) {
+        $id = $_GET['id_gamme'];
+        $gammes = new Gammes;
+        try {
+            $gammes->delete($id);
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+}
+deleteGamma();
