@@ -264,29 +264,32 @@
 							<td>
 								<span class="label 
                             <?php
-														if ($product["id_gamme"] == 1) echo "label-success";
-														if ($product["id_gamme"] == 2) echo "label-danger";
-														if ($product["id_gamme"] == 3) echo "label-warning";
-														if ($product["id_gamme"] == 4) echo "label-primary";
-														?>"><?= $product['gam_libele'] ?></span>
+							if ($product["id_gamme"] == 1) echo "label-success";
+							else if ($product["id_gamme"] == 2) echo "label-danger";
+							else if ($product["id_gamme"] == 3) echo "label-warning";
+							else if ($product["id_gamme"] == 4) echo "label-primary";
+							else echo "label-dark";
+							?>"><?= $product['gam_libele'] ?></span>
 							</td>
 							<td>
 								<span class="label 
                             <?php
-														if ($product["id_categorie"] == 1) echo "label-success";
-														if ($product["id_categorie"] == 2) echo "label-danger";
-														if ($product["id_categorie"] == 3) echo "label-warning";
-														if ($product["id_categorie"] == 4) echo "label-primary";
-														?>"><?= $product['cat_libele'] ?></span>
+							if ($product["id_categorie"] == 1) echo "label-success";
+							else if ($product["id_categorie"] == 2) echo "label-danger";
+							else if ($product["id_categorie"] == 3) echo "label-warning";
+							else if ($product["id_categorie"] == 4) echo "label-primary";
+							else echo "label-dark";
+							?>"><?= $product['cat_libele'] ?></span>
 							</td>
 							<td>
 								<span class="label 
                             <?php
-														if ($product["id_effect"] == 1) echo "label-success";
-														if ($product["id_effect"] == 2) echo "label-danger";
-														if ($product["id_effect"] == 3) echo "label-warning";
-														if ($product["id_effect"] == 4) echo "label-primary";
-														?>"><?= $product['eff_libele'] ?></span>
+							if ($product["id_effect"] == 1) echo "label-success";
+							else if ($product["id_effect"] == 2) echo "label-danger";
+							else if ($product["id_effect"] == 3) echo "label-warning";
+							else if ($product["id_effect"] == 4) echo "label-primary";
+							else echo "label-dark";
+							?>"><?= $product['eff_libele'] ?></span>
 							</td>
 							<td>
 								<button type="button" class="btn_edit_prod btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $product['id_product'] ?>">
