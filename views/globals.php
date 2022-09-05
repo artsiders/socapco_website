@@ -79,7 +79,8 @@ function deleteGamma()
         try {
             $gammes->delete($id);
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            echo "<span class='alert alert-danger'>impossible de supprimer une gamme contenant des produits.
+            il faut d'abord supprimer les produits en question !</span>";
         }
     }
 }

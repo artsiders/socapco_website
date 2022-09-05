@@ -220,13 +220,13 @@
                                         <span class="hide-menu"> produits </span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item <?php if ($page == 'savonerie') echo "active"; ?>">
+                                <li class="sidebar-item <?php if ($page == 'gamme') echo "active"; ?>">
                                     <a href="./admin&page=gamme" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
                                         <span class="hide-menu"> gammes </span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item <?php if ($page == 'plastique') echo "active"; ?>">
+                                <li class="sidebar-item <?php if ($page == 'effect') echo "active"; ?>">
                                     <a href="./admin&page=effect" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
                                         <span class="hide-menu"> effets </span>
