@@ -48,6 +48,7 @@ function editGamme() {
     const editGammeForm = document.getElementById('editGammeForm')
     const btnEditGam = document.querySelectorAll('.btn_edit_gam')
     const gamLibele = document.getElementById('gamLibele')
+    const gamColor = document.getElementById('gamColor')
     const idGam = document.getElementById('idGam')
 
 
@@ -61,6 +62,7 @@ function editGamme() {
             fetch(`${location.origin}/socapco_website/controlers/gammes.php?action=read&id=${id}`)
                 .then(responce => responce.json()).then(data => {
                     gamLibele.value = data.gam_libele
+                    gamColor.value = data.gam_color
                     idGam.value = data.id_gamme
                 }).catch(error => console.log(error))
         })

@@ -29,6 +29,10 @@
 													<label for="inputAddress">Intitulé</label>
 													<input type="text" name="gam_libele" class="form-control" id="gamLibele">
 												</div>
+												<div class="form-group">
+													<label for="inputAddress">coleur</label>
+													<input type="color" name="gam_color" class="form-control" id="gamColor">
+												</div>
 											</div>
 											<div class="modal-footer">
 												<button type="submit" class="btn btn-info waves-effect">Enregistre</button>
@@ -58,6 +62,10 @@
 												<div class="form-group">
 													<label for="inputAddress">Intitulé</label>
 													<input type="text" name="gam_libele" class="form-control">
+												</div>
+												<div class="form-group">
+													<label for="inputAddress">coleur</label>
+													<input type="color" name="gam_color" class="form-control" value="#ffb347">
 												</div>
 											</div>
 											<div class="modal-footer">
@@ -117,7 +125,7 @@
 														<i class="fa fa-edit" aria-hidden="true" data-id="<?= $gamme['id_gamme'] ?>"></i>
 													</button>
 												</div>
-												<small class="text-muted">12</small>
+												<smalls style="background-color: <?= $gamme['gam_color'] ?>;" class="badge text-light">couleur</smalls>
 											</div>
 										</div>
 									</div>

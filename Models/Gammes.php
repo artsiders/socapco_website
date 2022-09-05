@@ -31,11 +31,12 @@ class Gammes
     public function create(array $data)
     {
         $cat = 1;
-        $sql = "INSERT INTO `gammes` (`gam_libele`, `id_categorie`) 
-        VALUES (:gam_libele, :id_categorie)";
+        $sql = "INSERT INTO `gammes` (`gam_libele`, `gam_color`, `id_categorie`) 
+        VALUES (:gam_libele, :gam_color, :id_categorie)";
 
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("gam_libele", $data["gam_libele"]);
+        $query->bindParam("gam_color", $data["gam_color"]);
         $query->bindParam("id_categorie", $cat);
 
         $query->execute();
@@ -44,12 +45,15 @@ class Gammes
     public function update($id, array $data)
     {
         $cat = 1;
-        $sql = "UPDATE `gammes` SET `gam_libele` = :gam_libele, 
+        $sql = "UPDATE `gammes` SET 
+        `gam_libele` = :gam_libele, 
+        `gam_color` = :gam_color, 
         `id_categorie` = :id_categorie
         WHERE `id_gamme` = :id";
 
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("gam_libele", $data["gam_libele"]);
+        $query->bindParam("gam_color", $data["gam_color"]);
         $query->bindParam("id_categorie", $cat);
         $query->bindParam("id", $id);
 

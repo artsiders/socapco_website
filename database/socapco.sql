@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS `socapco`.`categories` (
 CREATE TABLE IF NOT EXISTS `socapco`.`gammes` (
   `id_gamme` INT NOT NULL AUTO_INCREMENT,
   `gam_libele` VARCHAR(45) NOT NULL,
+  `gam_color` VARCHAR(45) NOT NULL DEFAULT '#ffb347',
   `id_categorie` INT NOT NULL,
   FOREIGN KEY (id_categorie) REFERENCES categories(id_categorie),
   PRIMARY KEY (`id_gamme`)
@@ -74,20 +75,20 @@ CREATE TABLE IF NOT EXISTS `socapco`.`products` (
 );
 
 
-INSERT INTO `categories` (`id_categorie`, `cat_libele`) VALUES 
-(NULL, 'adultes'), 
-(NULL, 'enfants'), 
-(NULL, 'bébés');
+INSERT INTO `categories` (`cat_libele`) VALUES 
+('adultes'), 
+('enfants'), 
+('bébés');
 
 
-INSERT INTO `gammes` (`id_gamme`, `gam_libele`,`id_categorie`) VALUES 
-(NULL, 'divine clarté', '1'), 
-(NULL, 'carmel bébé', '1');
+INSERT INTO `gammes` (`gam_libele`, `gam_color`, `id_categorie`) VALUES 
+('divine clarté', '#ffb347', '1'), 
+('carmel bébé', '#ffb347', '1');
 
-INSERT INTO `effects` (`id_effect`, `eff_libele`) VALUES 
-(NULL, 'hydratant'), 
-(NULL, 'eclaircissant'), 
-(NULL, 'gommant');
+INSERT INTO `effects` (`eff_libele`) VALUES 
+('hydratant'), 
+('eclaircissant'), 
+('gommant');
 
 INSERT INTO `users` (`login`, `pass`, `email`, `picture`) VALUES ('default_user', 'password', 'default@gmail.com', 'default.png');
 

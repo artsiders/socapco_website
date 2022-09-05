@@ -14,6 +14,7 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                 "insertIsOk" => null
             );
             $gam_libele = htmlspecialchars(strtolower(trim($_POST['gam_libele'])));
+            $gam_color = htmlspecialchars(strtolower(trim($_POST['gam_color'])));
 
 
             if (empty($gam_libele)) {
@@ -26,6 +27,7 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
             if ($resultArray['isOk']) {
                 $data = array(
                     "gam_libele" => $gam_libele,
+                    "gam_color" => $gam_color,
                 );
                 try {
                     $gammes = new Gammes;
@@ -46,6 +48,7 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                 "gam_libele" => true,
             );
             $gam_libele = htmlspecialchars(strtolower(trim($_POST['gam_libele'])));
+            $gam_color = htmlspecialchars(strtolower(trim($_POST['gam_color'])));
             $id = (int)$_POST['id'];
 
 
@@ -57,6 +60,7 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
             if ($resultArray["gam_libele"]) {
                 $data = array(
                     "gam_libele" => $gam_libele,
+                    "gam_color" => $gam_color,
                 );
                 try {
                     $gammes = new Gammes;
