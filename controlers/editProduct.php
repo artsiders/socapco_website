@@ -71,17 +71,20 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
 
                 $move_file = move_uploaded_file($file_tmp_name, $dir . $image_name);
                 $rename_file = rename($dir . $image_name, $dir . $uniq_name);
-                $delete_old_file = unlink($dir . $old_image);
+                @unlink($dir . $old_image);
 
-                if ($rename_file && $move_file && $delete_old_file) {
-                    $data["image"] = $uniq_name;
+                if ($move_file) {
+                    if ($rename_file) $data["image"] = $uniq_name;
+                    else $data["image"] = $image_name;
+                } else {
+                    throw new Exception("l'image n'a pas pu être importer sur le serveur");
                 }
             }
             // ajout de la publication dans la base de donnee
             $products = new Products;
             $products->update($id, $data);
-            $resultArray["insertIsOk"] = true;
 
+            $resultArray["insertIsOk"] = true;
             $resultArray["msg"] = "";
         } catch (Exception $e) {
             $resultArray["insertIsOk"] = false;
