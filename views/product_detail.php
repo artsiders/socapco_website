@@ -79,16 +79,14 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
                     <div class="card border-dark bg-img bg-overlay">
                         <div class="card-header" id="headingOne">
                             <h2 class="mb-0">
-                                <button class="btn btn-dark" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     description
                                     <i class="fa fa-angle-down"></i>
                                 </button>
                             </h2>
                         </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
                                 <?= $product["description"] ?>
                             </div>
@@ -97,32 +95,33 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
                     <div class="card border-dark bg-img bg-overlay">
                         <div class="card-header" id="headingTwo">
                             <h2 class="mb-0">
-                                <button class="btn btn-dark collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     ingrédients
                                     <i class="fa fa-angle-down"></i>
                                 </button>
                             </h2>
                         </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#accordionExample">
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                             <div class="card-body">
-                                <?= $product["ingredient"] ?>
+                                <?php
+                                $ingredients = mb_split(",", $product["ingredient"]);
+                                foreach ($ingredients as $key => $ingredient) {
+                                    echo "<div class='badge badge-light m-2'>$ingredient</div>";
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
                     <div class="card border-dark bg-img bg-overlay">
                         <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
-                                <button class="btn btn-dark collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     autres
                                     <i class="fa fa-angle-down"></i>
                                 </button>
                             </h2>
                         </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                            data-parent="#accordionExample">
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
                                 squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
@@ -142,26 +141,25 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
             <span class="text-center h3 d-block">Suggéstion</span>
             <section class="transitions-enabled fluid masonry js-masonry grid">
                 <?php foreach ($suggProducts as $key => $product) : ?>
-                <article class="card_product_main <?= $product["id_gamme"] ?> wow bounceIn"
-                    data-wow-delay="<?= $key + 2 ?>00ms">
-                    <div class="image_box">
-                        <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" class="img-responsive" />
-                    </div>
-                    <div class="body">
-                        <h5><?= $product["name"] ?></h5>
-                        <span>By Simon Smith | March 18, 2018</span>
-                        <div class="">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <article class="card_product_main <?= $product["id_gamme"] ?> wow bounceIn" data-wow-delay="<?= $key + 2 ?>00ms">
+                        <div class="image_box">
+                            <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" class="img-responsive" />
                         </div>
-                        <p><?= $product["description"] ?></p>
-                        <a href="./product_detail&id=<?= $product["id_product"] ?>" class="btn academy-btn btn-sm">voir
-                            plus</a>
-                    </div>
-                </article>
+                        <div class="body">
+                            <h5><?= $product["name"] ?></h5>
+                            <span>By Simon Smith | March 18, 2018</span>
+                            <div class="">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                            <p><?= $product["description"] ?></p>
+                            <a href="./product_detail&id=<?= $product["id_product"] ?>" class="btn academy-btn btn-sm">voir
+                                plus</a>
+                        </div>
+                    </article>
                 <?php endforeach; ?>
             </section>
         </div>
