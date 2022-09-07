@@ -7,7 +7,7 @@
 </script>
 
 <div class="card">
-    <!-- Modal Edit Product -->
+    <!-- Modal Edit user -->
     <div id="editUserModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -64,7 +64,32 @@
             <!-- /.modal-content -->
         </div>
     </div>
-    <!-- END Modal Edit Product -->
+    <!-- END Modal Edit user -->
+
+    <!-- Modal DELETE user -->
+    <div id="modal-delete" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">voulez vous supprimer ?</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class=" d-flex justify-content-lg-end">
+                        <div class="m-2">
+                            <button class="btn btn-danger" id="confirDel">supprimer</button>
+                        </div>
+                        <div class="m-2">
+                            <button class="btn btn-outline-primary" data-dismiss="modal" aria-hidden="true">annuler</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- END MODAL DELETE user -->
     <div class="card-body">
         <h4 class="card-title text-center">liste de produits</h4>
         <div class="table-responsive">
@@ -116,8 +141,8 @@
                                         <button type="button" class="btn_edit_user btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editUserModal" data-toggle="tooltip" data-original-title="edit" data-id="<?= $user['id_user'] ?>">
                                             <i class="fa fa-edit" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
                                         </button>
-                                        <button type="button" class="btn_del_user btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $user['id_user'] ?>" data-is_admin="<?= $user['is_admin'] ?>">
-                                            <i class="fa fa-trash" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
+                                        <button type="button" class="btn_del_user btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $user['id_user'] ?>" data-is_admin="<?= $user['is_admin'] ?>" data-toggle="modal" data-target="#modal-delete">
+                                            <i class="fa fa-trash" aria-hidden="true" data-id="<?= $user['id_user'] ?>" data-is_admin="<?= $user['is_admin'] ?>"></i>
                                         </button>
                                     </td>
                                 <?php endif; ?>
