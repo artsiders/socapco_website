@@ -10,11 +10,6 @@
 						<td colspan="2">
 							<button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#add-contact">ajouter un produit</button>
 						</td>
-						<td colspan="5"></td>
-						<td colspan="1">
-							<button type="button" onclick="window.location.reload()" class="btn btn-success btn-rounded" data-toggle="tooltip" data-original-title="actualisé"><i class="fa fa-retweet"></i></button>
-						</td>
-
 						<!-- Modal Edit Product -->
 						<div id="editProdForm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
 							<div class="modal-dialog">

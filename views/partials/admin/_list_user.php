@@ -76,10 +76,6 @@
                                 <button class="btn btn-info btn-rounded">ajouter un utilisateur</button>
                             </a>
                         </td>
-                        <td colspan="3"></td>
-                        <td colspan="1">
-                            <button type="button" onclick="window.location.reload()" class="btn btn-success btn-rounded" data-toggle="tooltip" data-original-title="actualisé"><i class="fa fa-retweet"></i></button>
-                        </td>
                     </tr>
                     <tr>
                         <th>status</th>
