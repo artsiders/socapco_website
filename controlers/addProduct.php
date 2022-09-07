@@ -80,7 +80,12 @@ if (isset($_POST) && !empty($_POST)) {
                 $products->create($data);
                 $resultArray["insertIsOk"] = true;
             }
+
             $resultArray["msg"] = "";
+            $_SESSION["socapco_alert"] = array(
+                "type" => "success",
+                "message" => "prodruit ajouter avec succès",
+            );
         } catch (Exception $e) {
             $resultArray["insertIsOk"] = false;
             $resultArray["msg"] = $e->getMessage();

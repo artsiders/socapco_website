@@ -38,15 +38,16 @@ addProductForm.addEventListener("submit", e => {
 
         if (data.msg == "") {
             if (data.isOk) {
-                errorBox.classList.add("hide")
-                successBox.classList.remove("hide")
-                successBox.innerHTML = `produit ajouter avec succé ! 
-                <button type="button" class="close" data-dismiss="modal"
-                aria-hidden="true">×</button>`;
+                window.location.reload()
+                // errorBox.classList.add("hide")
+                // successBox.classList.remove("hide")
+                // successBox.innerHTML = `produit ajouter avec succé ! 
+                // <button type="button" class="close" data-dismiss="modal"
+                // aria-hidden="true">×</button>`;
 
-                addProductForm.name.value = ""
-                addProductForm.description.value = ""
-                addProductForm.image.value = ""
+                // addProductForm.name.value = ""
+                // addProductForm.description.value = ""
+                // addProductForm.image.value = ""
             } else {
                 errorBox.classList.remove("hide")
                 errorBox.innerHTML = "ERREUR <strong>500</strong>"
