@@ -86,6 +86,10 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
 
             $resultArray["insertIsOk"] = true;
             $resultArray["msg"] = "";
+            $_SESSION["socapco_alert"] = array(
+                "type" => "success",
+                "message" => "prodruit modifier avec succès",
+            );
         } catch (Exception $e) {
             $resultArray["insertIsOk"] = false;
             $resultArray["msg"] = $e->getMessage();

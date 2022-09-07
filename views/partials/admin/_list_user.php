@@ -90,37 +90,39 @@
                 </thead>
                 <tbody>
                     <?php foreach ($allusers as $key => $user) : ?>
-                        <tr>
-                            <td>
-                                <span class="label 
+                        <?php if ($user['is_admin'] <= 1) : ?>
+                            <tr>
+                                <td>
+                                    <span class="label 
                             <?php
                             if ($user["is_admin"] == 1) echo "label-success";
                             else echo "label-info";
                             ?>">
-                                    <?php
-                                    if ($user["is_admin"] == 1) echo "admin";
-                                    else echo "user";
-                                    ?></span>
-                            </td>
-                            <td><img height="30px" width="30px" src="<?= ASSETS ?>images/uploads/<?= $user["picture"] ?>" alt=""></td>
-                            <td><?= $user['login'] ?></td>
-                            <td><?= $user['email'] ?></td>
-                            <td class="text-center" data-toggle="tooltip" data-original-title="<?= $user['join_date'] ?>">
-                                <div class="">
-                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                </div>
-                            </td>
-                            <?php if ($_SESSION['socapco_admin']["is_admin"] == 1) : ?>
-                                <td>
-                                    <button type="button" class="btn_edit_user btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editUserModal" data-toggle="tooltip" data-original-title="edit" data-id="<?= $user['id_user'] ?>">
-                                        <i class="fa fa-edit" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
-                                    </button>
-                                    <button <?php if ($user['is_admin'] == 1) echo "disabled"; ?> type="button" class="btn_del_user btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $user['id_user'] ?>">
-                                        <i class="fa fa-trash" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
-                                    </button>
+                                        <?php
+                                        if ($user["is_admin"] == 1) echo "admin";
+                                        else echo "user";
+                                        ?></span>
                                 </td>
-                            <?php endif; ?>
-                        </tr>
+                                <td><img height="30px" width="30px" src="<?= ASSETS ?>images/uploads/<?= $user["picture"] ?>" alt=""></td>
+                                <td><?= $user['login'] ?></td>
+                                <td><?= $user['email'] ?></td>
+                                <td class="text-center" data-toggle="tooltip" data-original-title="<?= $user['join_date'] ?>">
+                                    <div class="">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </div>
+                                </td>
+                                <?php if ($_SESSION['socapco_admin']["is_admin"] >= 1) : ?>
+                                    <td>
+                                        <button type="button" class="btn_edit_user btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editUserModal" data-toggle="tooltip" data-original-title="edit" data-id="<?= $user['id_user'] ?>">
+                                            <i class="fa fa-edit" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
+                                        </button>
+                                        <button type="button" class="btn_del_user btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-toggle="tooltip" data-original-title="supprimer" data-id="<?= $user['id_user'] ?>" data-is_admin="<?= $user['is_admin'] ?>">
+                                            <i class="fa fa-trash" aria-hidden="true" data-id="<?= $user['id_user'] ?>"></i>
+                                        </button>
+                                    </td>
+                                <?php endif; ?>
+                            </tr>
+                        <?php endif; ?>
                     <?php endforeach; ?>
                 </tbody>
             </table>

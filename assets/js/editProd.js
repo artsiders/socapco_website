@@ -65,11 +65,7 @@ editProductForm.addEventListener("submit", e => {
 
         if (data.msg == "") {
             if (data.isOk) {
-                errorBoxEdit.classList.add("hide")
-                successBoxEdit.classList.remove("hide")
-                successBoxEdit.innerHTML = `produit modifier avec succé ! 
-                <button type="button" class="close" data-dismiss="modal"
-                aria-hidden="true">×</button>`;
+                window.location.reload()
             } else {
                 errorBoxEdit.classList.remove("hide")
                 errorBoxEdit.innerHTML = "ERREUR <strong>500</strong>"
