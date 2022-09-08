@@ -11,18 +11,19 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
     $image = $_GET["image"];
 
     try {
-        if (!unlink(PRODUCTS_FOLDER . $image)) {
-            throw new Exception("impossible de supprimer l'image");
-        } else {
-            $products->delete($id);
-            $res = "supprime";
-            $_SESSION["socapco_alert"] = array(
-                "type" => "success",
-                "message" => "prodruit supprimer avec succès",
-            );
-        }
+        @unlink(PRODUCTS_FOLDER . $image);
+        $products->delete($id);
+        $_SESSION["socapco_alert"] = array(
+            "type" => "success",
+            "message" => "prodruit supprimer avec succès",
+        );
+        $res = "supprime";
     } catch (EXCEPTION $e) {
-        $res = "ERREUR" . $e->getMessage();
+        $_SESSION["socapco_alert"] = array(
+            "type" => "error",
+            "message" => "inpossible de supprimer le produit ! une erreur c'est produite!  reéssayez plus tard",
+        );
+        $res = "ERREUR : " . $e->getMessage();
     }
     echo json_encode($res);
 }

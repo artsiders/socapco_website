@@ -17,8 +17,6 @@ confirDel.addEventListener("click", e => {
 
     fetch(`${location.origin}/socapco_website/controlers/del_prod.php?id=${id}&image=${image}`)
         .then(responce => responce.json()).then(data => {
-            if (data == "supprime") {
-                window.location.reload()
-            }
+            window.location.reload()
         }).catch(error => console.log(error))
 })
