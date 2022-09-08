@@ -58,16 +58,22 @@ function makeDefaultUser()
     $test = $users->checkUser("admin");
 
     if (!$test) {
+        $passCrip = password_hash('@Socapco237', PASSWORD_DEFAULT);
+
+        $data = array(
+            "login" => 'socapco',
+            "email" => 'contact@socapco.com',
+        );
+        $users->create($data, $passCrip, "default.png", 1);
+
+
         $passCrip = password_hash('@Motdepass1', PASSWORD_DEFAULT);
 
         $data = array(
-            "id_user" => 0,
             "login" => 'admin',
-            "pass" => $passCrip,
             "email" => 'jimsky699@gmail.com',
-            "is_admin" => 1
         );
-        $users->create($data, $passCrip, "default.png", 1);
+        $users->create($data, $passCrip, "default.png", 2);
     }
 }
 

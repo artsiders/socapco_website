@@ -101,6 +101,7 @@
                                 <button class="btn btn-info btn-rounded">ajouter un utilisateur</button>
                             </a>
                         </td>
+                        <td colspan="4"></td>
                     </tr>
                     <tr>
                         <th>status</th>
