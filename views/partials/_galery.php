@@ -15,15 +15,9 @@
                 </div>
                 <div class="body">
                     <h5><?= $product["name"] ?></h5>
-                    <span>By Simon Smith | March 18, 2018</span>
-                    <div class="">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
-                    </div>
-                    <p><?= $product["description"] ?></p>
+                    <span class=" badge badge-dark badge-pill"><?= $product["grammage"] ?> g</span>
+
+                    <p><?= substr($product["description"], 0, 50) ?>...</p>
                     <a href="./product_detail&id=<?= $product["id_product"] ?>" class="btn academy-btn btn-sm">voir
                         plus</a>
                 </div>
