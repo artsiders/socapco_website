@@ -132,24 +132,13 @@
                                         <p class=" m-b-0"><?= $_SESSION["socapco_admin"]["email"] ?></p>
                                     </div>
                                 </div>
-                                <a class="dropdown-item" href="javascript:void(0)">
-                                    <i class="ti-user m-r-5 m-l-5"></i>mon profile</a>
-
-                                <div class="dropdown-divider"></div>
-
-                                <a class="dropdown-item" href="javascript:void(0)">
+                                <a class="dropdown-item" href="./admin&page=list_user">
                                     <i class="fa fa-cog m-r-5 m-l-5"></i>parametre du compte</a>
 
                                 <div class="dropdown-divider"></div>
 
                                 <a class="dropdown-item log_out" href="javascript:void(0)">
                                     <i class="fa fa-power-off m-r-5 m-l-5"></i>se déconnecter</a>
-                                <div class="dropdown-divider"></div>
-
-                                <div class="p-l-30 p-10">
-                                    <a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View
-                                        Profile</a>
-                                </div>
                             </div>
                         </li>
                         <!-- ============================================================== -->
@@ -188,19 +177,13 @@
                                         <i class="fa fa-power-off"></i>
                                     </a>
                                     <div class="dropdown-menu animated  fadeInUp " aria-labelledby="Userdd">
-                                        <a class="dropdown-item" href="javascript:void(0)">
-                                            <i class="ti-user m-r-5 m-l-5"></i>mon profile</a>
-
-                                        <div class="dropdown-divider"></div>
-
-                                        <a class="dropdown-item" href="javascript:void(0)">
+                                        <a class="dropdown-item" href="./admin&page=list_user">
                                             <i class="fa fa-cog m-r-5 m-l-5"></i>parametre du compte</a>
 
                                         <div class="dropdown-divider"></div>
 
                                         <a class="dropdown-item log_out" href="javascript:void(0)">
                                             <i class="fa fa-power-off m-r-5 m-l-5"></i>se déconnecter</a>
-                                        <div class="dropdown-divider"></div>
                                     </div>
                                 </div>
                             </div>
