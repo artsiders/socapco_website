@@ -43,6 +43,14 @@ try {
     echo $e->getMessage();
 }
 
+$products = new products;
+try {
+    $productsImportant = $products->readAllImportant();
+} catch (EXCEPTION $e) {
+    echo $e->getMessage();
+}
+
+
 
 $users = new Users;
 try {

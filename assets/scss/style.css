@@ -299,6 +299,10 @@
   transform: scale(1.1) translateY(-10px);
 }
 
+.block_services video {
+  max-width: 100%;
+}
+
 /* [Master Stylesheet v1.0] */
 /* :: :: 1.0 Import Fonts */
 /* :: 2.0 Import All CSS */

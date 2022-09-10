@@ -1,3 +1,4 @@
+<?php require_once VIEW . "globals.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,15 +37,15 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img" style="background-image: url(img/bg-img/breadcumb.jpg);">
+    <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/breadcumb.jpg);">
         <div class="bradcumbContent">
-            <h2>les News</h2>
+            <h2>Nos Services</h2>
         </div>
     </div>
     <!-- ##### Breadcumb Area End ##### -->
 
     <!-- ##### Blog Area Start ##### -->
-    <div class="blog-area mt-50 section-padding-100">
+    <div class="blog-area mt-50 section-padding-100 block_services">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8">
@@ -54,80 +55,52 @@
                             <!-- Single Blog Start -->
                             <div class="col-12">
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
+                                    <!-- Post Title -->
+                                    <a href="#" class="post-title">Savonerie</a>
                                     <!-- Post Thumb -->
                                     <div class="blog-post-thumb mb-50">
-                                        <img src="<?= ASSETS ?>images/blog-img/1.jpg" alt="">
-                                    </div>
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title">Top ten courses we love for you to try</a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
+                                        <video src="<?= ASSETS ?>videos/1.mp4" muted autoplay loop></video>
                                     </div>
                                     <!-- Post Excerpt -->
                                     <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
                                         sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum
                                         nisi. Donec et sollicitudin est.</p>
-                                    <!-- Read More btn -->
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
                                 </div>
                             </div>
 
                             <!-- Single Blog Start -->
                             <div class="col-12">
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="400ms">
+                                    <a href="#" class="post-title">plastique</a>
                                     <!-- Post Thumb -->
                                     <div class="blog-post-thumb mb-50">
-                                        <img src="<?= ASSETS ?>images/blog-img/2.jpg" alt="">
+                                        <video src="<?= ASSETS ?>videos/2.mp4" muted autoplay loop></video>
                                     </div>
                                     <!-- Post Title -->
-                                    <a href="#" class="post-title">Top ten courses we love for you to try</a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
-                                    </div>
                                     <!-- Post Excerpt -->
                                     <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
                                         sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum
                                         nisi. Donec et sollicitudin est.</p>
-                                    <!-- Read More btn -->
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
                                 </div>
                             </div>
 
                             <!-- Single Blog Start -->
                             <div class="col-12">
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="500ms">
+                                    <!-- Post Title -->
                                     <!-- Post Thumb -->
                                     <div class="blog-post-thumb mb-50">
-                                        <img src="<?= ASSETS ?>images/blog-img/3.jpg" alt="">
+                                        <video src="<?= ASSETS ?>videos/3.mp4" muted autoplay loop></video>
                                     </div>
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title">Top ten courses we love for you to try</a>
-                                    <!-- Post Meta -->
-                                    <div class="post-meta">
-                                        <p>By <a href="#">Simon Smith</a> | <a href="#">March 18, 2018</a> | <a href="#">3 comments</a></p>
-                                    </div>
+                                    <a href="#" class="post-title">Cosméthique</a>
                                     <!-- Post Excerpt -->
                                     <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
                                         sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum
                                         nisi. Donec et sollicitudin est.</p>
-                                    <!-- Read More btn -->
-                                    <a href="#" class="btn academy-btn btn-sm mt-15">Read More</a>
                                 </div>
                             </div>
 
                         </div>
-                    </div>
-                    <!-- Pagination Area Start -->
-                    <div class="academy-pagination-area wow fadeInUp" data-wow-delay="400ms">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
 
@@ -141,73 +114,29 @@
                             </form>
                         </div>
 
-                        <!-- Blog Post Catagories -->
-                        <div class="blog-post-categories mb-30">
-                            <h5>Categories</h5>
-                            <ul>
-                                <li><a href="#">Courses</a></li>
-                                <li><a href="#">Education</a></li>
-                                <li><a href="#">Teachers</a></li>
-                                <li><a href="#">Uncategorized</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Latest Blog Posts Area -->
-                        <div class="latest-blog-posts mb-30">
-                            <h5>Latest Posts</h5>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="<?= ASSETS ?>images/blog-img/lb-1.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>New Courses for you</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="<?= ASSETS ?>images/blog-img/lb-2.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>A great way to start</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex mb-30">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="<?= ASSETS ?>images/blog-img/lb-3.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>New Courses for you</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                            <!-- Single Latest Blog Post -->
-                            <div class="single-latest-blog-post d-flex">
-                                <div class="latest-blog-post-thumb">
-                                    <img src="<?= ASSETS ?>images/blog-img/lb-4.jpg" alt="">
-                                </div>
-                                <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Start your training</h6>
-                                    </a>
-                                    <a href="#" class="post-date">March 18, 2018</a>
-                                </div>
-                            </div>
-                        </div>
 
                         <!-- Add Widget -->
-                        <div class="add-widget">
+                        <div class="add-widget mb-4">
                             <a href="#"><img src="<?= ASSETS ?>images/blog-img/add.png" alt=""></a>
+                        </div>
+                        <!-- Latest Blog Posts Area -->
+                        <div class="latest-blog-posts mb-30">
+                            <h5>Produit mis en avant</h5>
+                            <?php foreach ($productsImportant as $key => $product) : ?>
+                                <a href="./product_detail&id=<?= $product["id_product"] ?>">
+                                    <div class="single-latest-blog-post d-flex mb-30 bg-light p-2">
+                                        <div style="background: linear-gradient(to right, #ffb347, #ffcc33);" class="latest-blog-post-thumb d-flex justify-content-center p-1">
+                                            <img style="max-height: 100px;" src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" alt="produit">
+                                        </div>
+                                        <div class="latest-blog-post-content">
+                                            <a href="#" class="post-title">
+                                                <h6><?= $product["name"] ?></h6>
+                                            </a>
+                                            <a href="#" class="post-date"><?= $product["gam_libele"] ?></a>
+                                        </div>
+                                    </div>
+                                </a>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
