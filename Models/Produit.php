@@ -30,7 +30,8 @@ class Products
 
     public function read(int $idProduit)
     {
-        $sql = "SELECT * FROM `products` WHERE id_product = :id_product";
+        $sql = "SELECT * FROM `products` P, `gammes` G, categories C
+        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND id_product = :id_product";
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("id_product", $idProduit);
         $query->execute();
@@ -57,10 +58,11 @@ class Products
 
         return $result;
     }
-    public function readSuggest($limit)
+    public function readSuggest($limit, $gam_libele)
     {
         $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` P, `gammes` G, categories C
-        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie LIMIT $limit");
+        WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND `gam_libele` = :gam_libele ORDER BY RAND() LIMIT $limit");
+        $query->bindParam("gam_libele", $gam_libele);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 

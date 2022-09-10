@@ -52,7 +52,7 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
     <!-- ##### Breadcumb Area Start ##### -->
     <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/breadcumb.jpg);">
         <div class="bradcumbContent">
-            <h2><?= $product["name"] ?></h2>
+            <h2><?= $product["gam_libele"] ?></h2>
         </div>
     </div>
     <!-- ##### Breadcumb Area End ##### -->
@@ -64,16 +64,13 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
                 <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" alt="">
             </div>
             <div class="col-md-6 col-sm-12">
-                <div class="">
+                <div class="m-2">
                     <h5 class="text-light"><?= $product["name"] ?></h5>
-                    <span>By Simon Smith | <?= $product["add_date"] ?></span>
-                    <div class="course-ratings">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <div class="d-flex">
+                        <h4><span class="badge badge-warning m-1"><?= $product["gam_libele"] ?></span></h4>
+                        <h4><span class="badge badge-warning m-1"><?= $product["grammage"] ?> g</span></h4>
                     </div>
+                    <span>by socapco | <?= date('j, F Y', strtotime($product["add_date"])); ?></span>
                 </div>
                 <div class="accordion" id="accordionExample">
                     <div class="card border-dark bg-img bg-overlay">
@@ -138,8 +135,16 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
         </section>
 
         <div class="list_product container mt-4">
-            <span class="text-center h3 d-block">Suggéstion</span>
+            <span class="text-center h3 d-block">Suggéstion de produit similaire</span>
             <section class="transitions-enabled fluid masonry js-masonry grid">
+                <?php
+                $products = new Products;
+                try {
+                    $suggProducts = $products->readSuggest(4, $product['gam_libele']);
+                } catch (EXCEPTION $e) {
+                    echo $e->getMessage();
+                }
+                ?>
                 <?php foreach ($suggProducts as $key => $product) : ?>
                     <article class="card_product_main <?= $product["id_gamme"] ?> wow bounceIn" data-wow-delay="<?= $key + 2 ?>00ms">
                         <div class="image_box">
@@ -147,15 +152,9 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
                         </div>
                         <div class="body">
                             <h5><?= $product["name"] ?></h5>
-                            <span>By Simon Smith | March 18, 2018</span>
-                            <div class="">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                            <p><?= $product["description"] ?></p>
+                            <span class=" badge badge-dark badge-pill"><?= $product["grammage"] ?> g</span>
+
+                            <p><?= substr($product["description"], 0, 50) ?>...</p>
                             <a href="./product_detail&id=<?= $product["id_product"] ?>" class="btn academy-btn btn-sm">voir
                                 plus</a>
                         </div>

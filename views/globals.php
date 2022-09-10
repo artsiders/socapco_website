@@ -35,14 +35,6 @@ try {
     echo $e->getMessage();
 }
 
-
-$products = new Products;
-try {
-    $suggProducts = $products->readSuggest(4);
-} catch (EXCEPTION $e) {
-    echo $e->getMessage();
-}
-
 $products = new products;
 try {
     $productsImportant = $products->readAllImportant();
