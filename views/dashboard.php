@@ -311,7 +311,7 @@
                                 require_once VIEW . "partials/admin/_list_effect.php";
                                 break;
                             case 'add_user':
-                                if ($_SESSION['socapco_admin']["is_admin"] == 1) {
+                                if ($_SESSION['socapco_admin']["is_admin"] >= 1) {
                                     require_once VIEW . "partials/admin/_add_user.php";
                                 } else {
                         ?>

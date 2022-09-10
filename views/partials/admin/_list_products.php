@@ -261,24 +261,10 @@
 								</div>
 							</td>
 							<td>
-								<span class="label 
-                            <?php
-							if ($product["id_gamme"] == 1) echo "label-success";
-							else if ($product["id_gamme"] == 2) echo "label-danger";
-							else if ($product["id_gamme"] == 3) echo "label-warning";
-							else if ($product["id_gamme"] == 4) echo "label-primary";
-							else echo "label-dark";
-							?>"><?= $product['gam_libele'] ?></span>
+								<span style="background-color: <?= $product['gam_color'] ?>;" class="label"><?= $product['gam_libele'] ?></span>
 							</td>
 							<td>
-								<span class="label 
-                            <?php
-							if ($product["id_categorie"] == 1) echo "label-success";
-							else if ($product["id_categorie"] == 2) echo "label-danger";
-							else if ($product["id_categorie"] == 3) echo "label-warning";
-							else if ($product["id_categorie"] == 4) echo "label-primary";
-							else echo "label-dark";
-							?>"><?= $product['cat_libele'] ?></span>
+								<span class=""><?= $product['cat_libele'] ?></span>
 							</td>
 							<td>
 								<span class="label 
