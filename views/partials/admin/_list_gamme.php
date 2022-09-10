@@ -79,31 +79,6 @@
 							</div>
 							<!-- /.modal-dialog -->
 						</div>
-
-						<!-- Modal DELETE gamme -->
-						<div id="modal-delete" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<h4 class="modal-title" id="myModalLabel">voulez vous supprimer ?</h4>
-										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-									</div>
-									<div class="modal-body">
-										<div class=" d-flex justify-content-lg-end">
-											<div class="m-2">
-												<button class="btn btn-danger" id="confirDel">supprimer</button>
-											</div>
-											<div class="m-2">
-												<button class="btn btn-outline-primary" data-dismiss="modal" aria-hidden="true">annuler</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- /.modal-content -->
-							</div>
-							<!-- /.modal-dialog -->
-						</div>
-						<!-- END MODAL DELETE gamme -->
 					</div>
 				</div>
 				<div class="album py-5">
@@ -116,11 +91,9 @@
 											<h5 class="h4"><?= $gamme['gam_libele'] ?></h5>
 											<div class="d-flex justify-content-between align-items-center">
 												<div class="btn-group">
-													<a href="admin&page=gamme&id_gamme=<?= $gamme['id_gamme'] ?>">
-														<button type="button" class="btn btn-sm btn-outline-danger">
-															<i class="fa fa-trash"></i>
-														</button>
-													</a>
+													<button data-id="<?= $gamme['id_gamme'] ?>" class="delete_gamme btn btn-outline-danger" type="button" class="btn btn-sm btn-outline-danger">
+														<i data-id="<?= $gamme['id_gamme'] ?>" class="fa fa-trash"></i>
+													</button>
 													<button type="button" class="btn_edit_gam btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $gamme['id_gamme'] ?>">
 														<i class="fa fa-edit" aria-hidden="true" data-id="<?= $gamme['id_gamme'] ?>"></i>
 													</button>

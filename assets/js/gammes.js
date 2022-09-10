@@ -22,14 +22,7 @@ function addGamme() {
 
             if (data.msg == "") {
                 if (data.isOk) {
-                    errorBox.classList.add("hide")
-                    successBox.classList.remove("hide")
-                    successBox.innerHTML = `gamme ajouter avec succé ! 
-                    <button type="button" class="close" data-dismiss="modal"
-                    aria-hidden="true">×</button>`;
-
-                    addGammeForm.gam_libele.value = ""
-                    addGammeForm.gam_libele.classList.remove("border-danger")
+                    window.location.reload();
                 } else {
                     errorBox.classList.remove("hide")
                     errorBox.innerHTML = "ERREUR <strong>500</strong>"
@@ -102,3 +95,18 @@ function editGamme() {
     })
 }
 editGamme()
+
+
+function deleteGamme() {
+    const delete_gamme = document.querySelectorAll('.delete_gamme')
+    delete_gamme.forEach(btn => {
+        btn.addEventListener("click", e => {
+            const id = e.target.dataset.id
+            fetch(`${location.origin}/socapco_website/controlers/gammes.php?action=delete&id=${id}`)
+                .then(responce => responce.json()).then(_ => {
+                    window.location.reload()
+                }).catch(error => console.log(error))
+        })
+    });
+}
+deleteGamme()
