@@ -95,7 +95,10 @@ INSERT INTO `gammes` (`id_gamme`, `gam_libele`, `gam_color`) VALUES
 CREATE TABLE `plastique` (
   `id_plastique` int(11) NOT NULL,
   `description` text NOT NULL,
-  `grammage` varchar(5) NOT NULL DEFAULT 'ml',
+  `grammage` int(11) NOT NULL,
+  `unite` varchar(45) NOT NULL DEFAULT 'ml',
+  `picture` varchar(255) NOT NULL DEFAULT 'default.png',
+  `add_date` datetime NOT NULL DEFAULT current_timestamp(),
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -103,13 +106,13 @@ CREATE TABLE `plastique` (
 -- Déchargement des données de la table `plastique`
 --
 
-INSERT INTO `plastique` (`id_plastique`, `description`, `grammage`, `id_user`) VALUES
-(1, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'ml', 3),
-(2, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'ml', 3),
-(3, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'ml', 3),
-(4, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'ml', 3),
-(5, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'ml', 3),
-(6, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'ml', 3);
+INSERT INTO `plastique` (`id_plastique`, `description`, `grammage`, `unite`, `picture`, `add_date`, `id_user`) VALUES
+(1, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', '200', 'ml', 'default.png', '2022-09-10 06:27:29', 3),
+(2, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', '200', 'ml', 'default.png', '2022-09-10 06:27:30', 3),
+(3, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', '200', 'ml', 'default.png', '2022-09-10 06:27:31', 3),
+(4, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', '200', 'ml', 'default.png', '2022-09-10 06:27:32', 3),
+(5, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', '200', 'ml', 'default.png', '2022-09-10 06:27:33', 3),
+(6, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', '200', 'ml', 'default.png', '2022-09-10 06:27:34', 3);
 
 -- --------------------------------------------------------
 
@@ -159,28 +162,32 @@ INSERT INTO `products` (`id_product`, `name`, `grammage`, `description`, `ingred
 -- Structure de la table `soap`
 --
 
-CREATE TABLE `soap` (
+CREATE TABLE `soaps` (
   `id_soap` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `grammage` varchar(5) NOT NULL DEFAULT 'g',
+  `grammage` int(11) NOT NULL,
+  `unite` varchar(45) NOT NULL DEFAULT 'g',
+  `picture` varchar(255) NOT NULL DEFAULT 'default.png',
+  `add_date` datetime NOT NULL DEFAULT current_timestamp(),
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `soap`
+-- Déchargement des données de la table `soaps`
 --
 
-INSERT INTO `soap` (`id_soap`, `description`, `grammage`, `id_user`) VALUES
-(1, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 3),
-(2, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 3),
-(3, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 3),
-(4, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 4),
-(5, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 3),
-(6, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 3),
-(7, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 3),
-(8, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 3),
-(9, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 4),
-(10, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', 'g', 3);
+INSERT INTO `soaps` (`id_soap`, `name`, `description`, `grammage`, `unite`, `picture`, `add_date`, `id_user`) VALUES
+(1, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n','200', 'g', 'default.png', '2022-09-10 06:27:29', 3),
+(2, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n','200', 'g', 'default.png', '2022-09-10 06:27:30', 3),
+(3, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n','200', 'g', 'default.png', '2022-09-10 06:27:31', 3),
+(4, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n','200', 'g', 'default.png', '2022-09-10 06:27:32', 3),
+(5, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n','200', 'g', 'default.png', '2022-09-10 06:27:33', 3),
+(6, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n','200', 'g', 'default.png', '2022-09-10 06:27:34', 3),
+(7, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n','200', 'g', 'default.png', '2022-09-10 06:27:35', 3),
+(8, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n','200', 'g', 'default.png', '2022-09-10 06:27:36', 3),
+(9, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n', '200', 'g', 'default.png', '2022-09-10 06:27:37', 3),
+(10, 'test', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dignissimos quod aut, praesentium dolorum, placeat animi quo atque expedita quidem sapiente. Earum omnis consectetur magni est similique repudiandae sit dolor?\r\n','200', 'g', 'default.png', '2022-09-10 06:27:38', 3);
 
 -- --------------------------------------------------------
 
@@ -250,9 +257,9 @@ ALTER TABLE `products`
   ADD KEY `id_user` (`id_user`);
 
 --
--- Index pour la table `soap`
+-- Index pour la table `soaps`
 --
-ALTER TABLE `soap`
+ALTER TABLE `soaps`
   ADD PRIMARY KEY (`id_soap`),
   ADD KEY `id_user` (`id_user`);
 
@@ -299,7 +306,7 @@ ALTER TABLE `products`
 --
 -- AUTO_INCREMENT pour la table `soap`
 --
-ALTER TABLE `soap`
+ALTER TABLE `soaps`
   MODIFY `id_soap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
@@ -330,7 +337,7 @@ ALTER TABLE `products`
 --
 -- Contraintes pour la table `soap`
 --
-ALTER TABLE `soap`
+ALTER TABLE `soaps`
   ADD CONSTRAINT `soap_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
 COMMIT;
 
