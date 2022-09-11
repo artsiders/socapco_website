@@ -38,7 +38,7 @@ class Soaps
     public function readAll()
     {
         $query = $this->connect->getConnect()->prepare("SELECT * FROM `soaps` S, `users` U
-        WHERE S.id_soar = u.id_soar");
+        WHERE S.id_user = u.id_user");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 

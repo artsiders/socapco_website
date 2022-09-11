@@ -2,13 +2,13 @@
 
 <div class="card">
 	<div class="card-body">
-		<h4 class="card-title text-center">liste de produits</h4>
+		<h4 class="card-title text-center">les savon de ménage</h4>
 		<div class="table-responsive">
 			<table id="demo-foo-addrow" class="table table-striped m-t-30 no-wrap table-hover contact-list text-center" data-page-size="10">
 				<thead>
 					<tr>
 						<td colspan="2">
-							<button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#add-contact">ajouter un produit</button>
+							<button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#add-contact">ajouter</button>
 						</td>
 						<!-- Modal Edit Product -->
 						<div id="editProdForm" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
@@ -245,49 +245,30 @@
 						<th>image</th>
 						<th>nom</th>
 						<th>desc</th>
-						<th>gamme</th>
-						<th>categorie</th>
-						<th>effets</th>
 						<th>unite</th>
 						<th>Act</th>
 					</tr>
 				</thead>
 				<tbody>
-					<?php foreach ($allProducts as $key => $product) : ?>
+					<?php foreach ($allSoap as $key => $soap) : ?>
 						<tr>
 							<td><?= $key + 1 ?></td>
 							<td>
-								<img class="rounded-circle border border-success" src="<?= ASSETS ?>images/product/<?= $product['picture'] ?>" alt="user" width="50" height="50" />
+								<img class="rounded-circle border border-success" src="<?= ASSETS ?>images/product/<?= $soap['picture'] ?>" alt="user" width="50" height="50" />
 							</td>
-							<td><?= $product['name'] ?></td>
-							<td class="text-center" data-toggle="tooltip" data-original-title="<?= $product['description'] . ' ' . $product['add_date'] ?>">
+							<td><?= $soap['name'] ?></td>
+							<td class="text-center" data-toggle="tooltip" data-original-title="<?= $soap['description'] . ' ' . $soap['add_date'] ?>">
 								<div class="badge badge-info badge-pill h1">
 									<i class="fa fa-info" aria-hidden="true"></i>
 								</div>
 							</td>
+							<td><?= $soap['grammage'] . " " . $soap['unite'] ?></td>
 							<td>
-								<span style="background-color: <?= $product['gam_color'] ?>;" class="label"><?= $product['gam_libele'] ?></span>
-							</td>
-							<td>
-								<span class=""><?= $product['cat_libele'] ?></span>
-							</td>
-							<td>
-								<span class="label 
-                            <?php
-							if ($product["id_effect"] == 1) echo "label-success";
-							else if ($product["id_effect"] == 2) echo "label-danger";
-							else if ($product["id_effect"] == 3) echo "label-warning";
-							else if ($product["id_effect"] == 4) echo "label-primary";
-							else echo "label-dark";
-							?>"><?= $product['eff_libele'] ?></span>
-							</td>
-							<td><?= $product['grammage'] . " " . $product['unite'] ?></td>
-							<td>
-								<button type="button" class="btn_edit_prod btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $product['id_product'] ?>">
-									<i class="fa fa-edit" aria-hidden="true" data-id="<?= $product['id_product'] ?>"></i>
+								<button type="button" class="btn_edit_prod btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $soap['id_soap'] ?>">
+									<i class="fa fa-edit" aria-hidden="true" data-id="<?= $soap['id_soap'] ?>"></i>
 								</button>
-								<button type="button" class="btn_del_prod btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $product['id_product'] ?>" data-image="<?= $product['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
-									<i class="fa fa-trash" aria-hidden="true" data-id="<?= $product['id_product'] ?>"></i>
+								<button type="button" class="btn_del_prod btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $soap['id_soap'] ?>" data-image="<?= $soap['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
+									<i class="fa fa-trash" aria-hidden="true" data-id="<?= $soap['id_soap'] ?>"></i>
 								</button>
 							</td>
 						</tr>

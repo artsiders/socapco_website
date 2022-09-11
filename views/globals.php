@@ -1,6 +1,9 @@
 <?php
 require_once MODEL . "Produit.php";
+require_once MODEL . "Users.php";
+require_once MODEL . "Soaps.php";
 
+// PRODUCTS____________________________________________
 $products = new Products;
 if (isset($_GET['cat']) and !empty($_GET["cat"])) {
     $cat = $_GET["cat"];
@@ -43,7 +46,7 @@ try {
 }
 
 
-
+// USER_____________________________________________
 $users = new Users;
 try {
     $allusers = $users->readAll();
@@ -75,4 +78,12 @@ function makeDefaultUser()
         );
         $users->create($data, $passCrip, "default.png", 2);
     }
+}
+
+// SOAP____________________________
+$soaps = new Soaps;
+try {
+    $allSoap = $soaps->readAll();
+} catch (EXCEPTION $e) {
+    echo $e->getMessage();
 }
