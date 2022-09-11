@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `socapco`.`effects` (
 CREATE TABLE IF NOT EXISTS `socapco`.`products` (
   `id_product` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `grammage` INT NOT NULL,
+  `grammage` VARCHAR(45) NOT NULL,
   `description` TEXT NULL,
   `ingredient` TEXT NULL,
   `id_categorie` INT NOT NULL,

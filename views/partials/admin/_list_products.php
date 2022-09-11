@@ -70,12 +70,13 @@
 														</select>
 													</div>
 													<div class="col-md-4">
-														<label for="gammage">gammage</label>
+														<label for="gammage">unité de mesure</label>
 														<div class="input-group mb-3">
 															<input id="inpGrammage" step="10" type="number" name="grammage" class="form-control" aria-label="" aria-describedby="basic-gram">
-															<div class="input-group-prepend">
-																<span class="input-group-text" id="basic-gram">g</span>
-															</div>
+															<select name="unite" class="input-group-text" id="basic-gram">
+																<option value="g">g</option>
+																<option value="ml">ml</option>
+															</select>
 														</div>
 													</div>
 												</div>
@@ -166,11 +167,14 @@
 														</select>
 													</div>
 													<div class="col-md-4">
-														<label for="gammage">gammage</label>
+														<label for="gammage">unité de mesure</label>
 														<div class="input-group mb-3">
 															<input value="100" step="10" type="number" name="grammage" class="form-control" aria-label="" aria-describedby="basic-gram">
 															<div class="input-group-prepend">
-																<span class="input-group-text" id="basic-gram">g</span>
+																<select name="unite" class="input-group-text" id="basic-gram">
+																	<option value="g">g</option>
+																	<option value="ml">ml</option>
+																</select>
 															</div>
 														</div>
 													</div>
@@ -244,6 +248,7 @@
 						<th>gamme</th>
 						<th>categorie</th>
 						<th>effets</th>
+						<th>unite</th>
 						<th>Act</th>
 					</tr>
 				</thead>
@@ -276,6 +281,7 @@
 							else echo "label-dark";
 							?>"><?= $product['eff_libele'] ?></span>
 							</td>
+							<td><?= $product['grammage'] . " " . $product['unite'] ?></td>
 							<td>
 								<button type="button" class="btn_edit_prod btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $product['id_product'] ?>">
 									<i class="fa fa-edit" aria-hidden="true" data-id="<?= $product['id_product'] ?>"></i>

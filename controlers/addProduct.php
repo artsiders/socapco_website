@@ -18,6 +18,7 @@ if (isset($_POST) && !empty($_POST)) {
     $descrition = htmlspecialchars(strtolower(trim($_POST['description'])));
     $ingredient = htmlspecialchars(strtolower(trim($_POST['ingredient'])));
     $grammage = (int)$_POST['grammage'];
+    $unite = htmlspecialchars(strtolower(trim($_POST['unite'])));
     isset($_POST['important']) && $_POST['important'] == 1 ? $important = 1 : $important = 0;
 
     $idGamme = htmlspecialchars($_POST['id_gamme']);
@@ -74,6 +75,7 @@ if (isset($_POST) && !empty($_POST)) {
                     "ingredient" => $ingredient,
                     "important" => $important,
                     "grammage" => $grammage,
+                    "unite" => $unite,
                 );
                 // ajout de la publication dans la base de donnee
                 $products = new products;
