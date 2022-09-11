@@ -193,10 +193,10 @@
                         <!-- User Profile-->
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
-                                <i class="fab fa-product-hunt"></i>
+                                <i class="fab fa-get-pocket"></i>
                                 <span class="hide-menu">Cosmétique</span>
                             </a>
-                            <ul aria-expanded="false" class="collapse  first-level">
+                            <ul aria-expanded="false" class="collapse first-level">
                                 <li class="sidebar-item <?php if ($page == 'product' || $page == '') echo "active"; ?>">
                                     <a href="./admin" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
@@ -216,6 +216,20 @@
                                     </a>
                                 </li>
 
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                                <i class="fab fa-get-pocket"></i>
+                                <span class="hide-menu">Savonérie</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item <?php if ($page == 'savon') echo "active"; ?>">
+                                    <a href="./admin&page=savon" class="sidebar-link">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="hide-menu"> savon de ménage </span>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="sidebar-item">
@@ -292,6 +306,9 @@
                                 break;
                             case 'effect':
                                 require_once VIEW . "partials/admin/_list_effect.php";
+                                break;
+                            case 'savon':
+                                require_once VIEW . "partials/admin/_list_savons.php";
                                 break;
                             case 'add_user':
                                 if ($_SESSION['socapco_admin']["is_admin"] >= 1) {
