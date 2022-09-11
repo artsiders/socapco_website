@@ -36,40 +36,8 @@
 														</label>
 													</div>
 												</div>
-												<div class="row col-md-12 m-b-20">
-													<div class="col-md-6">
-														<label for="gamme">Gamme</label>
-														<select class="form-control" name="id_gamme" id="seletGamme">
-															<?php foreach ($gammes as $key => $gamme) : ?>
-																<option value="<?= $gamme['id_gamme'] ?>">
-																	<?= $gamme['gam_libele'] ?>
-																</option>
-															<?php endforeach; ?>
-														</select>
-													</div>
-													<div class="col-md-6">
-														<label for="cat">Categorie</label>
-														<select class="form-control" name="id_categorie" id="selectCat">
-															<?php foreach ($categories as $key => $categorie) : ?>
-																<option value="<?= $categorie['id_categorie'] ?>">
-																	<?= $categorie['cat_libele'] ?>
-																</option>
-															<?php endforeach; ?>
-														</select>
-													</div>
-												</div>
 												<div class="row col-md-12">
-													<div class="col-md-8">
-														<label for="gamme">éffets sur la peau</label>
-														<select class="form-control" name="id_effect" id="selectEff">
-															<?php foreach ($effects as $key => $effect) : ?>
-																<option value="<?= $effect['id_effect'] ?>">
-																	<?= $effect['eff_libele'] ?>
-																</option>
-															<?php endforeach; ?>
-														</select>
-													</div>
-													<div class="col-md-4">
+													<div class="col-md-12">
 														<label for="gammage">unité de mesure</label>
 														<div class="input-group mb-3">
 															<input id="inpGrammage" step="10" type="number" name="grammage" class="form-control" aria-label="" aria-describedby="basic-gram">
@@ -83,16 +51,6 @@
 												<div class="col-md-12 m-b-20">
 													<label for="name">Description</label>
 													<textarea id="prodDesc" style="resize: none;" name="description" class="form-control" id="" cols="30" rows="2" placeholder="entrer la description"></textarea>
-												</div>
-												<div class="col-md-12 m-b-20">
-													<label for="name">Ingrédient</label>
-													<textarea id="ProdIngre" style="resize: none;" name="ingredient" class="form-control" id="" cols="30" rows="2" placeholder="separer les ingrédient par une virgule(,)"></textarea>
-												</div>
-												<div class="col-md-12">
-													<div class="form-group form-check">
-														<input type="checkbox" name="important" value="1" class="form-check-input" id="editImportant">
-														<label class="form-check-label" for="editImportant">mettre en avant</label>
-													</div>
 												</div>
 											</div>
 											<div class="modal-footer">
@@ -131,42 +89,8 @@
 														</label>
 													</div>
 												</div>
-												<hr>
-												<div class="row col-md-12 m-b-20">
-													<div class="col-md-6">
-														<label for="gamme">Gamme</label>
-														<select class="form-control" name="id_gamme" id="">
-															<?php foreach ($gammes as $key => $gamme) : ?>
-																<option value="<?= $gamme['id_gamme'] ?>">
-																	<?= $gamme['gam_libele'] ?>
-																</option>
-															<?php endforeach; ?>
-														</select>
-													</div>
-													<div class="col-md-6">
-														<label for="cat">Categorie</label>
-														<select class="form-control" name="id_categorie" id="">
-															<?php foreach ($categories as $key => $categorie) : ?>
-																<option value="<?= $categorie['id_categorie'] ?>">
-																	<?= $categorie['cat_libele'] ?>
-																</option>
-															<?php endforeach; ?>
-														</select>
-													</div>
-												</div>
-												<hr>
 												<div class="row col-md-12">
-													<div class="col-md-8">
-														<label for="gamme">éffets sur la peau</label>
-														<select class="form-control" name="id_effect" id="">
-															<?php foreach ($effects as $key => $effect) : ?>
-																<option value="<?= $effect['id_effect'] ?>">
-																	<?= $effect['eff_libele'] ?>
-																</option>
-															<?php endforeach; ?>
-														</select>
-													</div>
-													<div class="col-md-4">
+													<div class="col-md-12">
 														<label for="gammage">unité de mesure</label>
 														<div class="input-group mb-3">
 															<input value="100" step="10" type="number" name="grammage" class="form-control" aria-label="" aria-describedby="basic-gram">
@@ -183,17 +107,6 @@
 													<label for="name">Description</label>
 													<textarea style="resize: none;" name="description" class="form-control" id="" cols="30" rows="2" placeholder="entrer la description"></textarea>
 												</div>
-												<div class="col-md-12 m-b-20">
-													<label for="name">Ingrédient</label>
-													<textarea style="resize: none;" name="ingredient" class="form-control" id="" cols="30" rows="2" placeholder="separer les ingrédient par une virgule(,)"></textarea>
-												</div>
-												<div class="col-md-12">
-													<div class="form-group form-check">
-														<input type="checkbox" name="important" value="1" class="form-check-input" id="important">
-														<label class="form-check-label" for="important">mettre en avant</label>
-													</div>
-												</div>
-
 											</div>
 											<div class="modal-footer">
 												<button type="submit" class="btn btn-info waves-effect">Enregistre</button>
@@ -253,7 +166,7 @@
 					<?php foreach ($allSoap as $key => $soap) : ?>
 						<tr>
 							<td><?= $key + 1 ?></td>
-							<td>
+							<td style="padding: 5px;">
 								<img class="rounded-circle border border-success" src="<?= ASSETS ?>images/product/<?= $soap['picture'] ?>" alt="user" width="50" height="50" />
 							</td>
 							<td><?= $soap['name'] ?></td>

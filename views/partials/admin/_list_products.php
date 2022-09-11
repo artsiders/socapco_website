@@ -256,7 +256,7 @@
 					<?php foreach ($allProducts as $key => $product) : ?>
 						<tr>
 							<td><?= $key + 1 ?></td>
-							<td>
+							<td style="padding: 5px;">
 								<img class="rounded-circle border border-success" src="<?= ASSETS ?>images/product/<?= $product['picture'] ?>" alt="user" width="50" height="50" />
 							</td>
 							<td><?= $product['name'] ?></td>
