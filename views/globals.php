@@ -76,18 +76,3 @@ function makeDefaultUser()
         $users->create($data, $passCrip, "default.png", 2);
     }
 }
-
-function deleteGamma()
-{
-    if (isset($_GET['id_gamme']) and !empty($_GET['id_gamme'])) {
-        $id = $_GET['id_gamme'];
-        $gammes = new Gammes;
-        try {
-            $gammes->delete($id);
-        } catch (PDOException $e) {
-            echo "<span class='alert alert-danger'>impossible de supprimer une gamme contenant des produits.
-            il faut d'abord supprimer les produits en question !</span>";
-        }
-    }
-}
-deleteGamma();

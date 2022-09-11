@@ -194,7 +194,7 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
                                 <i class="fab fa-product-hunt"></i>
-                                <span class="hide-menu">Cosméthique</span>
+                                <span class="hide-menu">Cosmétique</span>
                             </a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item <?php if ($page == 'product' || $page == '') echo "active"; ?>">
@@ -212,7 +212,7 @@
                                 <li class="sidebar-item <?php if ($page == 'effect') echo "active"; ?>">
                                     <a href="./admin&page=effect" class="sidebar-link">
                                         <i class="fas fa-circle"></i>
-                                        <span class="hide-menu"> effets </span>
+                                        <span class="hide-menu"> effets sur la peau </span>
                                     </a>
                                 </li>
 
