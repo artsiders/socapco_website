@@ -8,7 +8,7 @@
 				<div>
 					<div>
 						<div>
-							<button type="button" class="btn btn-info btn-rounded m-2 d-none" data-toggle="modal" data-target="#add-contact">ajouter</button>
+							<button type="button" class="btn btn-info btn-rounded m-2" data-toggle="modal" data-target="#add-contact">ajouter</button>
 						</div>
 
 						<!-- Modal Edit effect -->
@@ -22,12 +22,12 @@
 									<div class="modal-body">
 										<p class="hide alert alert-danger text-center" id="editError"></p>
 										<p class="hide alert alert-success text-center" id="editSuccess"></p>
-										<form method="post" class="form-horizontal form-material" id="editGammeForm">
-											<input type="hidden" name="id" id="idGam">
+										<form method="post" class="form-horizontal form-material" id="editEffectForm">
+											<input type="hidden" name="id" id="idEff">
 											<div class="col-auto">
 												<div class="form-group">
 													<label for="inputAddress">Intitulé</label>
-													<input type="text" name="gam_libele" class="form-control" id="gamLibele">
+													<input type="text" name="eff_libele" class="form-control" id="effLibele">
 												</div>
 											</div>
 											<div class="modal-footer">
@@ -40,24 +40,24 @@
 								<!-- /.modal-content -->
 							</div>
 						</div>
-						<!-- END Modal Edit gamme -->
+						<!-- END Modal Edit effect -->
 
-						<!-- Modal ADD gamme -->
+						<!-- Modal ADD effect -->
 						<div id="add-contact" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-header">
-										<h4 class="modal-title" id="myModalLabel">ajouter une gamme</h4>
+										<h4 class="modal-title" id="myModalLabel">ajouter une effet</h4>
 										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 									</div>
 									<div class="modal-body">
 										<p class="hide alert alert-danger text-center" id="addError"></p>
 										<p class="hide alert alert-success text-center" id="addSuccess"></p>
-										<form method="post" class="form-horizontal form-material" id="addGammeForm">
+										<form method="post" class="form-horizontal form-material" id="addEffectForm">
 											<div class="col-auto">
 												<div class="form-group">
 													<label for="inputAddress">Intitulé</label>
-													<input type="text" name="gam_libele" class="form-control">
+													<input type="text" name="eff_libele" class="form-control">
 												</div>
 											</div>
 											<div class="modal-footer">
@@ -72,7 +72,7 @@
 							<!-- /.modal-dialog -->
 						</div>
 
-						<!-- Modal DELETE gamme -->
+						<!-- Modal DELETE effect -->
 						<div id="modal-delete" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							<div class="modal-dialog">
 								<div class="modal-content">
@@ -95,7 +95,7 @@
 							</div>
 							<!-- /.modal-dialog -->
 						</div>
-						<!-- END MODAL DELETE gamme -->
+						<!-- END MODAL DELETE effect -->
 					</div>
 				</div>
 				<div class="album py-5">
@@ -107,13 +107,11 @@
 										<div class="card-body pt-2">
 											<h5 class="h4"><?= $effect['eff_libele'] ?></h5>
 											<div class="d-flex justify-content-between align-items-center">
-												<div class="btn-group d-none">
-													<a href="admin&page=effect&id_effect=<?= $effect['id_effect'] ?>">
-														<button type="button" class="btn btn-sm btn-outline-danger">
-															<i class="fa fa-trash"></i>
-														</button>
-													</a>
-													<button type="button" class="btn_edit_gam btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $effect['id_effect'] ?>">
+												<div class="btn-group">
+													<button data-id="<?= $effect['id_effect'] ?>" type="button" class="delete_effect btn btn-sm btn-outline-danger">
+														<i data-id="<?= $effect['id_effect'] ?>" class="fa fa-trash"></i>
+													</button>
+													<button type="button" class="btn_edit_eff btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $effect['id_effect'] ?>">
 														<i class="fa fa-edit" aria-hidden="true" data-id="<?= $effect['id_effect'] ?>"></i>
 													</button>
 												</div>
