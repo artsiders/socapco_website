@@ -76,14 +76,7 @@ function editEffect() {
             }
 
             if (data.msg == "") {
-                editError.classList.add("hide")
-                editSuccess.classList.remove("hide")
-                editSuccess.innerHTML = `modifier avec succé ! 
-                    <button type="button" class="close" data-dismiss="modal"
-                    aria-hidden="true">×</button>`;
-
-                editEffectForm.eff_libele.value = ""
-                editEffectForm.eff_libele.classList.remove("border-danger")
+                window.location.reload()
             } else {
                 editError.classList.remove("hide")
                 editError.innerHTML = data.msg

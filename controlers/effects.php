@@ -52,6 +52,7 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
         case "update":
             $resultArray = array(
                 "msg" => "",
+                "error" => "",
                 "eff_libele" => true,
             );
             $eff_libele = htmlspecialchars(strtolower(trim($_POST['eff_libele'])));
@@ -71,8 +72,17 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                     $effect = new Effect;
                     $effect->update($id, $data);
                     $resultArray["msg"] = "";
+                    $_SESSION["socapco_alert"] = array(
+                        "type" => "success",
+                        "message" => "modifié avec succès !",
+                    );
                 } catch (Exception $e) {
-                    $resultArray["msg"] = $e->getMessage();
+                    $resultArray["msg"] = '';
+                    $resultArray["error"] = $e->getMessage();
+                    $_SESSION["socapco_alert"] = array(
+                        "type" => "error",
+                        "message" => "une erreur est survenu lors de la modification !",
+                    );
                 }
             }
             echo json_encode($resultArray);

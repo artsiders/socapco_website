@@ -75,8 +75,16 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                     $gammes = new Gammes;
                     $gammes->update($id, $data);
                     $resultArray["msg"] = "";
+                    $_SESSION["socapco_alert"] = array(
+                        "type" => "success",
+                        "message" => "modifié avec succès",
+                    );
                 } catch (Exception $e) {
                     $resultArray["msg"] = $e->getMessage();
+                    $_SESSION["socapco_alert"] = array(
+                        "type" => "error",
+                        "message" => "erreur pendant la modification",
+                    );
                 }
             }
             echo json_encode($resultArray);
