@@ -75,10 +75,10 @@ class Products
         if ($cat != "all") {
             $sql = "SELECT * FROM `products` P, `gammes` G, categories C, effects E
             WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect 
-            AND C.cat_libele = '$cat'";
+            AND C.cat_libele = '$cat' ORDER BY P.add_date DESC";
         } else {
             $sql = "SELECT * FROM `products` P, `gammes` G, categories C, effects E
-            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect";
+            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect ORDER BY P.add_date DESC";
         }
         $query = $this->connect->getConnect()->prepare($sql);
         $query->execute();
