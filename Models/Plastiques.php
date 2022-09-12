@@ -26,9 +26,9 @@ class Plastiques
     public function read(int $idPlastique)
     {
         $sql = "SELECT * FROM `plastique` P, `users` U
-        WHERE P.id_user = U.id_user AND id_soap = :id_soap";
+        WHERE P.id_user = U.id_user AND id_plastique = :id_plastique";
         $query = $this->connect->getConnect()->prepare($sql);
-        $query->bindParam("id_soap", $idPlastique);
+        $query->bindParam("id_plastique", $idPlastique);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
@@ -70,7 +70,7 @@ class Plastiques
             $sql = "UPDATE `plastique` SET 
                 `description`= :prod_desc,
                 `grammage`= :grammage
-                WHERE id_soap = :id";
+                WHERE id_plastique = :id";
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("grammage", $data['grammage']);
@@ -80,7 +80,7 @@ class Plastiques
                 `description`= :prod_desc,
                 `grammage`= :grammage,
                 `picture`= :picture
-                WHERE id_soap = :id";
+                WHERE id_plastique = :id";
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("grammage", $data['grammage']);
