@@ -26,7 +26,7 @@ class Soaps
     public function read(int $idSoap)
     {
         $sql = "SELECT * FROM `soaps` S, `users` U
-        WHERE S.id_soar = u.id_soar AND id_soap = :id_soap";
+        WHERE S.id_user = u.id_user AND id_soap = :id_soap";
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("id_soap", $idSoap);
         $query->execute();
@@ -47,7 +47,8 @@ class Soaps
         S.unite, 
         S.add_date
         FROM `soaps` S, `users` U
-        WHERE S.id_user = U.id_user");
+        WHERE S.id_user = U.id_user
+        ORDER BY S.name");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -71,29 +72,29 @@ class Soaps
             $sql = "UPDATE `soaps` SET 
                 `name`= :prod_name,
                 `description`= :prod_desc,
-                `grammage`= :grammage,
-                `id_user`= :id_user
+                `unite`= :unite,
+                `grammage`= :grammage
                 WHERE id_soap = :id";
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("prod_name", $data['name']);
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("grammage", $data['grammage']);
-            $query->bindParam("id_user", $data['id_user']);
+            $query->bindParam("unite", $data['unite']);
             $query->bindParam("id", $idSoap);
         } else {
             $sql = "UPDATE `soaps` SET 
                 `name`= :prod_name,
                 `description`= :prod_desc,
                 `grammage`= :grammage,
-                `picture`= :picture,
-                `id_user`= :id_user
+                `unite`= :unite,
+                `picture`= :picture
                 WHERE id_soap = :id";
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("prod_name", $data['name']);
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("grammage", $data['grammage']);
             $query->bindParam("picture", $data['image']);
-            $query->bindParam("id_user", $data['id_user']);
+            $query->bindParam("unite", $data['unite']);
             $query->bindParam("id", $idSoap);
         }
 

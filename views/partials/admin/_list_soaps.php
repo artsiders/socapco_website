@@ -27,7 +27,7 @@
 											<div class="form-group">
 												<div class="row col-md-12">
 													<div class="col-11">
-														<input id="prodName" type="text" name="name" class="form-control" placeholder="nom produit">
+														<input id="soapName" type="text" name="name" class="form-control" placeholder="nom produit">
 													</div>
 													<div class="col-1">
 														<label style="height: 35px;" for="uploadFileEdit" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
@@ -41,7 +41,7 @@
 														<label for="gammage">unité de mesure</label>
 														<div class="input-group mb-3">
 															<input id="inpGrammage" step="10" type="number" name="grammage" class="form-control" aria-label="" aria-describedby="basic-gram">
-															<select name="unite" class="input-group-text" id="basic-gram">
+															<select name="unite" class="input-group-text" id="uniteSelect">
 																<option value="g">g</option>
 																<option value="ml">ml</option>
 															</select>
@@ -50,7 +50,7 @@
 												</div>
 												<div class="col-md-12 m-b-20">
 													<label for="name">Description</label>
-													<textarea id="prodDesc" style="resize: none;" name="description" class="form-control" id="" cols="30" rows="2" placeholder="entrer la description"></textarea>
+													<textarea id="soapDesc" style="resize: none;" name="description" class="form-control" id="" cols="30" rows="2" placeholder="entrer la description"></textarea>
 												</div>
 											</div>
 											<div class="modal-footer">
@@ -177,7 +177,7 @@
 							</td>
 							<td><?= $soap['grammage'] . " " . $soap['unite'] ?></td>
 							<td>
-								<button type="button" class="btn_edit_prod btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $soap['id_soap'] ?>">
+								<button type="button" class="btn_edit_soap btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $soap['id_soap'] ?>">
 									<i class="fa fa-edit" aria-hidden="true" data-id="<?= $soap['id_soap'] ?>"></i>
 								</button>
 								<button type="button" class="btn_del_soap btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $soap['id_soap'] ?>" data-image="<?= $soap['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
