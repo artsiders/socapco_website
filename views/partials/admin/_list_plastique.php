@@ -156,32 +156,30 @@
 					<tr>
 						<th>N</th>
 						<th>image</th>
-						<th>nom</th>
 						<th>desc</th>
 						<th>unite</th>
 						<th>Act</th>
 					</tr>
 				</thead>
 				<tbody>
-					<?php foreach ($allSoap as $key => $soap) : ?>
+					<?php foreach ($allPlastique as $key => $plastique) : ?>
 						<tr>
 							<td><?= $key + 1 ?></td>
 							<td style="padding: 5px;">
-								<img class="rounded-circle border border-success" src="<?= ASSETS ?>images/product/<?= $soap['picture'] ?>" alt="user" width="50" height="50" />
+								<img class="rounded-circle border border-success" src="<?= ASSETS ?>images/product/<?= $plastique['picture'] ?>" alt="user" width="50" height="50" />
 							</td>
-							<td><?= $soap['name'] ?></td>
-							<td class="text-center" data-toggle="tooltip" data-original-title="<?= $soap['description'] . ' ' . $soap['add_date'] ?>">
+							<td class="text-center" data-toggle="tooltip" data-original-title="<?= $plastique['description'] . ' ' . $plastique['add_date'] ?>">
 								<div class="badge badge-info badge-pill h1">
 									<i class="fa fa-info" aria-hidden="true"></i>
 								</div>
 							</td>
-							<td><?= $soap['grammage'] . " " . $soap['unite'] ?></td>
+							<td><?= $plastique['grammage'] . " " . $plastique['unite'] ?></td>
 							<td>
-								<button type="button" class="btn_edit_soap btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $soap['id_soap'] ?>">
-									<i class="fa fa-edit" aria-hidden="true" data-id="<?= $soap['id_soap'] ?>"></i>
+								<button type="button" class="btn_edit_soap btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $plastique['id_plastique'] ?>">
+									<i class="fa fa-edit" aria-hidden="true" data-id="<?= $plastique['id_plastique'] ?>"></i>
 								</button>
-								<button type="button" class="btn_del_soap btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $soap['id_soap'] ?>" data-image="<?= $soap['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
-									<i class="fa fa-trash" aria-hidden="true" data-id="<?= $soap['id_soap'] ?>"></i>
+								<button type="button" class="btn_del_soap btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $plastique['id_plastique'] ?>" data-image="<?= $plastique['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
+									<i class="fa fa-trash" aria-hidden="true" data-id="<?= $plastique['id_plastique'] ?>"></i>
 								</button>
 							</td>
 						</tr>

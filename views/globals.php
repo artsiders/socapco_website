@@ -87,3 +87,11 @@ try {
 } catch (EXCEPTION $e) {
     echo $e->getMessage();
 }
+
+// PLASTIQUE____________________________
+$plastiques = new Plastiques;
+try {
+    $allPlastique = $plastiques->readAll();
+} catch (EXCEPTION $e) {
+    echo $e->getMessage();
+}

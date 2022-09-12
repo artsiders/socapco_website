@@ -10,7 +10,7 @@ class Plastiques
 
     public function create(array $data)
     {
-        $sql = "INSERT INTO `plastiques` (`description`, `grammage`, `picture`, `unite`, `id_user`) 
+        $sql = "INSERT INTO `plastique` (`description`, `grammage`, `picture`, `unite`, `id_user`) 
         VALUES (:prod_desc, :grammage, :picture, :unite, :id_user)";
 
         $query = $this->connect->getConnect()->prepare($sql);
@@ -25,7 +25,7 @@ class Plastiques
 
     public function read(int $idPlastique)
     {
-        $sql = "SELECT * FROM `plastiques` P, `users` U
+        $sql = "SELECT * FROM `plastique` P, `users` U
         WHERE P.id_user = U.id_user AND id_soap = :id_soap";
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("id_soap", $idPlastique);
@@ -37,7 +37,15 @@ class Plastiques
 
     public function readAll()
     {
-        $query = $this->connect->getConnect()->prepare("SELECT * FROM `plastiques` P, `users` U
+        $query = $this->connect->getConnect()->prepare("SELECT 
+        P.id_plastique, 
+        U.id_user, 
+        P.picture, 
+        P.description, 
+        P.grammage, 
+        P.unite, 
+        P.add_date
+        FROM `plastique` P, `users` U
         WHERE P.id_user = u.id_user");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -47,7 +55,7 @@ class Plastiques
 
     public function readSuggest($limit)
     {
-        $query = $this->connect->getConnect()->prepare("SELECT * FROM `plastiques` P, `users` U
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `plastique` P, `users` U
         WHERE P.id_user = u.id_user ORDER BY RAND() LIMIT $limit");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -59,7 +67,7 @@ class Plastiques
     public function update(int $idPlastique, array $data)
     {
         if ($data["image"] == "") {
-            $sql = "UPDATE `plastiques` SET 
+            $sql = "UPDATE `plastique` SET 
                 `description`= :prod_desc,
                 `grammage`= :grammage
                 WHERE id_soap = :id";
@@ -68,7 +76,7 @@ class Plastiques
             $query->bindParam("grammage", $data['grammage']);
             $query->bindParam("id", $idPlastique);
         } else {
-            $sql = "UPDATE `plastiques` SET 
+            $sql = "UPDATE `plastique` SET 
                 `description`= :prod_desc,
                 `grammage`= :grammage,
                 `picture`= :picture
@@ -86,7 +94,7 @@ class Plastiques
 
     public function delete($idPlastique)
     {
-        $sql = "DELETE FROM `plastiques` WHERE `plastiques`.`id_plastique` = :id";
+        $sql = "DELETE FROM `plastique` WHERE `plastique`.`id_plastique` = :id";
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("id", $idPlastique);
         $query->execute();
