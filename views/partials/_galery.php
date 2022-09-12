@@ -10,7 +10,7 @@
     <section id="grid-container" class="transitions-enabled fluid masonry js-masonry grid">
         <?php foreach ($allProducts as $key => $product) : ?>
             <article class="card_product_main <?= $product["id_effect"] ?>  wow bounceIn" data-wow-delay="<?= $key + 2 ?>00ms">
-                <div class="image_box">
+                <div onclick="link(`./product_detail&id=<?= $product['id_product'] ?>`)" class="image_box">
                     <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" class="img-responsive" />
                 </div>
                 <div class="body">

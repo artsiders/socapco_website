@@ -147,7 +147,7 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
                 ?>
                 <?php foreach ($suggProducts as $key => $product) : ?>
                     <article class="card_product_main <?= $product["id_gamme"] ?> wow bounceIn" data-wow-delay="<?= $key + 2 ?>00ms">
-                        <div class="image_box">
+                        <div onclick="link(`./product_detail&id=<?= $product['id_product'] ?>`)" class="image_box">
                             <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" class="img-responsive" />
                         </div>
                         <div class="body">

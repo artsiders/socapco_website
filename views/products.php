@@ -11,7 +11,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Socapco | blog</title>
+    <title>Socapco | produit</title>
 
     <!-- Favicon -->
     <link rel="icon" href="<?= ASSETS ?>images/favicon.png">
@@ -50,7 +50,11 @@
         <div class="container">
 
             <div class="list_product row">
-                <span class="text-center col-12 h4">nos gamme de produits pour <?= $cat; ?></span>
+                <?php if ($cat != "") : ?>
+                    <span class="text-center col-12 h4">Nos Gamme De Produits Pour <?= $cat; ?></span>
+                <?php else : ?>
+                    <span class="text-center col-12 h4">Nos Produits</span>
+                <?php endif; ?>
                 <!-- galery product  -->
                 <?php include_once VIEW . "partials/_galery.php" ?>
                 <!-- END galery product  -->

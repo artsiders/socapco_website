@@ -201,6 +201,7 @@
   max-height: 400px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 .list_product .card_product_main .image_box img {
   max-height: 400px;
