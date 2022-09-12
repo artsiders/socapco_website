@@ -10,13 +10,14 @@ class Plastiques
 
     public function create(array $data)
     {
-        $sql = "INSERT INTO `plastique` (`description`, `grammage`, `picture`, `unite`, `id_user`) 
-        VALUES (:prod_desc, :grammage, :picture, :unite, :id_user)";
+        $sql = "INSERT INTO `plastique` (`name`, `description`, `grammage`, `picture`, `unite`, `id_user`) 
+        VALUES (:prod_name, :prod_desc, :grammage, :picture, :unite, :id_user)";
 
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("prod_desc", $data['description']);
         $query->bindParam("grammage", $data['grammage']);
         $query->bindParam("unite", $data['unite']);
+        $query->bindParam("prod_name", $data['name']);
         $query->bindParam("picture", $data['image']);
         $query->bindParam("id_user", $data['id_user']);
 
@@ -44,9 +45,11 @@ class Plastiques
         P.description, 
         P.grammage, 
         P.unite, 
+        P.name, 
         P.add_date
         FROM `plastique` P, `users` U
-        WHERE P.id_user = u.id_user");
+        WHERE P.id_user = u.id_user
+        ORDER BY P.add_date DESC");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -69,21 +72,25 @@ class Plastiques
         if ($data["image"] == "") {
             $sql = "UPDATE `plastique` SET 
                 `description`= :prod_desc,
+                `name`= :prod_name,
                 `grammage`= :grammage
                 WHERE id_plastique = :id";
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("grammage", $data['grammage']);
+            $query->bindParam("prod_name", $data['name']);
             $query->bindParam("id", $idPlastique);
         } else {
             $sql = "UPDATE `plastique` SET 
                 `description`= :prod_desc,
                 `grammage`= :grammage,
+                `name`= :prod_name,
                 `picture`= :picture
                 WHERE id_plastique = :id";
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("grammage", $data['grammage']);
+            $query->bindParam("prod_name", $data['name']);
             $query->bindParam("picture", $data['image']);
             $query->bindParam("id", $idPlastique);
         }

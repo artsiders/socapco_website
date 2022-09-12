@@ -49,7 +49,7 @@ class Soaps
         S.add_date
         FROM `soaps` S, `users` U
         WHERE S.id_user = U.id_user
-        ORDER BY S.name");
+        ORDER BY S.add_date DESC");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 

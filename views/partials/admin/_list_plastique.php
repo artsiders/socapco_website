@@ -156,6 +156,7 @@
 					<tr>
 						<th>N</th>
 						<th>image</th>
+						<th>name</th>
 						<th>desc</th>
 						<th>unite</th>
 						<th>Act</th>
@@ -168,6 +169,7 @@
 							<td style="padding: 5px;">
 								<img class="rounded-circle border border-success" src="<?= ASSETS ?>images/product/<?= $plastique['picture'] ?>" alt="user" width="50" height="50" />
 							</td>
+							<td><?= $plastique["name"]; ?></td>
 							<td class="text-center" data-toggle="tooltip" data-original-title="<?= $plastique['description'] . ' ' . $plastique['add_date'] ?>">
 								<div class="badge badge-info badge-pill h1">
 									<i class="fa fa-info" aria-hidden="true"></i>
