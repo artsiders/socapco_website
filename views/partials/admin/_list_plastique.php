@@ -21,13 +21,13 @@
 									<div class="modal-body">
 										<p class="hide alert alert-danger text-center" id="editError"></p>
 										<p class="hide alert alert-success text-center" id="editSuccess"></p>
-										<form method="post" class="form-horizontal form-material" id="editSoapForm">
+										<form method="post" class="form-horizontal form-material" id="editPlastiqueForm">
 											<input type="hidden" name="id" id="idProd">
 											<input type="hidden" name="old_image" id="oldImage">
 											<div class="form-group">
 												<div class="row col-md-12">
 													<div class="col-11">
-														<input id="soapName" type="text" name="name" class="form-control" placeholder="nom produit">
+														<input id="plastiqueName" type="text" name="name" class="form-control" placeholder="nom produit">
 													</div>
 													<div class="col-1">
 														<label style="height: 35px;" for="uploadFileEdit" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
@@ -50,7 +50,7 @@
 												</div>
 												<div class="col-md-12 m-b-20">
 													<label for="name">Description</label>
-													<textarea id="soapDesc" style="resize: none;" name="description" class="form-control" id="" cols="30" rows="2" placeholder="entrer la description"></textarea>
+													<textarea id="plastiqueDesc" style="resize: none;" name="description" class="form-control" id="" cols="30" rows="2" placeholder="entrer la description"></textarea>
 												</div>
 											</div>
 											<div class="modal-footer">
@@ -76,7 +76,7 @@
 									<div class="modal-body">
 										<p class="hide alert alert-danger text-center" id="addError"></p>
 										<p class="hide alert alert-success text-center" id="addSuccess"></p>
-										<form method="post" class="form-horizontal form-material" id="addSoapForm" enctype="multipart/form-data">
+										<form method="post" class="form-horizontal form-material" id="addPlastiqueForm" enctype="multipart/form-data">
 											<div class="form-group">
 												<div class="row col-md-12">
 													<div class="col-11">
@@ -85,7 +85,7 @@
 													<div class="col-1">
 														<label style="height: 35px;" for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input name="soap_image" type="file" id="uploadFileAdd" class="upload" hidden>
+															<input name="plastique_image" type="file" id="uploadFileAdd" class="upload" hidden>
 														</label>
 													</div>
 												</div>
@@ -175,10 +175,10 @@
 							</td>
 							<td><?= $plastique['grammage'] . " " . $plastique['unite'] ?></td>
 							<td>
-								<button type="button" class="btn_edit_soap btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $plastique['id_plastique'] ?>">
+								<button type="button" class="btn_edit_plastique btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $plastique['id_plastique'] ?>">
 									<i class="fa fa-edit" aria-hidden="true" data-id="<?= $plastique['id_plastique'] ?>"></i>
 								</button>
-								<button type="button" class="btn_del_soap btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $plastique['id_plastique'] ?>" data-image="<?= $plastique['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
+								<button type="button" class="btn_del_plastique btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $plastique['id_plastique'] ?>" data-image="<?= $plastique['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
 									<i class="fa fa-trash" aria-hidden="true" data-id="<?= $plastique['id_plastique'] ?>"></i>
 								</button>
 							</td>
@@ -190,6 +190,8 @@
 	</div>
 </div>
 
-<script src="<?= ASSETS ?>js/addSoap.js"></script>
-<script src="<?= ASSETS ?>js/deleteSoap.js"></script>
-<script src="<?= ASSETS ?>js/editSoap.js"></script>
+<script src="<?= ASSETS ?>js/addPlastique.js"></script>
+<!-- <script src="<?php //echo ASSETS 
+					?>js/deletePlastique.js"></script> -->
+<!-- <script src="<?php //echo ASSETS 
+					?>js/editPlastique.js"></script> -->
