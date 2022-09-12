@@ -23,7 +23,7 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                 $name = htmlspecialchars(strtolower(trim($_POST['name'])));
                 $descrition = htmlspecialchars(strtolower(trim($_POST['description'])));
                 $grammage = (int)$_POST['grammage'];
-                $unite = htmlspecialchars(strtolower(trim($_POST['unite'])));
+                $unite = $_POST['unite'];
 
                 $idUser = $_SESSION['socapco_admin']['id_user'];
 

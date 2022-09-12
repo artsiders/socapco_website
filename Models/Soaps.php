@@ -10,13 +10,14 @@ class Soaps
 
     public function create(array $data)
     {
-        $sql = "INSERT INTO `soaps` (`name`, `description`, `grammage`, `picture`, `id_user`) 
-        VALUES (:prod_name, :prod_desc, :grammage, :picture, :id_user)";
+        $sql = "INSERT INTO `soaps` (`name`, `description`, `grammage`, `picture`, `unite`, `id_user`) 
+        VALUES (:prod_name, :prod_desc, :grammage, :picture, :unite, :id_user)";
 
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("prod_name", $data['name']);
         $query->bindParam("prod_desc", $data['description']);
         $query->bindParam("grammage", $data['grammage']);
+        $query->bindParam("unite", $data['unite']);
         $query->bindParam("picture", $data['image']);
         $query->bindParam("id_user", $data['id_user']);
 
