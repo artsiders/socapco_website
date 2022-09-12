@@ -180,7 +180,7 @@
 								<button type="button" class="btn_edit_prod btn btn-sm btn-icon btn-pure btn-outline-success delete-row-btn" data-toggle="modal" data-target="#editProdForm" data-toggle="tooltip" data-original-title="edit" data-id="<?= $soap['id_soap'] ?>">
 									<i class="fa fa-edit" aria-hidden="true" data-id="<?= $soap['id_soap'] ?>"></i>
 								</button>
-								<button type="button" class="btn_del_prod btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $soap['id_soap'] ?>" data-image="<?= $soap['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
+								<button type="button" class="btn_del_soap btn btn-sm btn-icon btn-pure btn-outline-danger delete-row-btn" data-id="<?= $soap['id_soap'] ?>" data-image="<?= $soap['picture'] ?>" data-toggle="modal" data-target="#modal-delete">
 									<i class="fa fa-trash" aria-hidden="true" data-id="<?= $soap['id_soap'] ?>"></i>
 								</button>
 							</td>

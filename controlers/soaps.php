@@ -3,6 +3,7 @@ session_start();
 require_once "../Models/Soaps.php";
 $root = $_SERVER["DOCUMENT_ROOT"];
 define("ASSETS_ROOT", "$root/socapco_website/assets/");
+define("PRODUCTS_FOLDER", "$root/socapco_website/assets/images/product/");
 
 
 if (isset($_GET['action']) && !empty($_GET['action'])) {
@@ -144,23 +145,25 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
             echo json_encode($result);
             break;
         case "delete":
-            if (isset($_GET['id']) and !empty($_GET['id'])) {
-                $id = $_GET['id'];
-                $gammes = new Gammes;
+            if (isset($_GET["id"]) and !empty($_GET["id"])) {
+                $id = $_GET["id"];
+                $image = $_GET["image"];
+
                 try {
-                    $gammes->delete($id);
-                    $res = "";
+                    @unlink(PRODUCTS_FOLDER . $image);
+                    $soaps = new Soaps;
+                    $soaps->delete($id);
                     $_SESSION["socapco_alert"] = array(
                         "type" => "success",
-                        "message" => "la gamme a été supprimer avec succès",
+                        "message" => "prodruit supprimer avec succès",
                     );
-                } catch (PDOException $e) {
-                    $res =  "ERREUR : " . $e->getMessage();
+                    $res = "supprime";
+                } catch (EXCEPTION $e) {
                     $_SESSION["socapco_alert"] = array(
-                        "type" => "warning",
-                        "message" => "impossible de supprimer une gamme contenant des produits.
-                        il faut d'abord supprimer les produits en question !",
+                        "type" => "error",
+                        "message" => "inpossible de supprimer le produit ! une erreur c'est produite!  reéssayez plus tard",
                     );
+                    $res = "ERREUR : " . $e->getMessage();
                 }
                 echo json_encode($res);
             }
