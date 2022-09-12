@@ -17,7 +17,7 @@
                     <h5><?= $product["name"] ?></h5>
                     <span class=" badge badge-dark badge-pill"><?= $product["grammage"] ?> g</span>
 
-                    <p><?= substr($product["description"], 0, 50) ?>...</p>
+                    <p><?= substr($product["description"], 0, 50) ?> ...</p>
                     <a href="./product_detail&id=<?= $product["id_product"] ?>" class="btn academy-btn btn-sm">voir
                         plus</a>
                 </div>

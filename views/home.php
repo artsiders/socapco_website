@@ -248,6 +248,8 @@ try {
     <!-- slider  -->
     <script src="<?= ASSETS ?>libs/swiper/swiper-bundle.min.js"></script>
     <script src="<?= ASSETS ?>js/slider.js"></script>
+    <!-- Fonction APP -->
+    <script src="<?= ASSETS ?>js/fonction.js"></script>
 </body>
 
 </html>

@@ -462,6 +462,8 @@
             $('#demo-foo-addrow').DataTable();
         });
     </script>
+    <!-- Fonction APP -->
+    <script src="<?= ASSETS ?>js/fonction.js"></script>
 </body>
 
 </html>

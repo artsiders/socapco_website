@@ -90,8 +90,7 @@
                 <div class="col-12 wow fadeInUp" data-wow-delay="400ms">
                     <div class="blog-social-share">
                         <h4>nous contactez</h4>
-                        <a href="https://facebook.com/socapco" class="btn btn-primary"><i
-                                class="fa fa-facebook"></i></a>
+                        <a href="https://facebook.com/socapco" class="btn btn-primary"><i class="fa fa-facebook"></i></a>
                         <a href="#" class="btn btn-success"><i class="fa fa-whatsapp"></i></a>
                         <a href="mailto:contact@socapco.com" class="btn btn-danger"><i class="fa fa-envelope"></i></a>
                         <!-- Meta Info -->
@@ -126,6 +125,8 @@
     <script src="<?= ASSETS ?>libs/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="<?= ASSETS ?>libs/active.js"></script>
+    <!-- Fonction APP -->
+    <script src="<?= ASSETS ?>js/fonction.js"></script>
 </body>
 
 </html>

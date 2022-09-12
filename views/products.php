@@ -88,6 +88,8 @@
     <script src="<?= ASSETS ?>libs/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="<?= ASSETS ?>libs/active.js"></script>
+    <!-- Fonction APP -->
+    <script src="<?= ASSETS ?>js/fonction.js"></script>
 
 </body>
 
