@@ -191,7 +191,5 @@
 </div>
 
 <script src="<?= ASSETS ?>js/addPlastique.js"></script>
-<!-- <script src="<?php //echo ASSETS 
-					?>js/deletePlastique.js"></script> -->
-<!-- <script src="<?php //echo ASSETS 
-					?>js/editPlastique.js"></script> -->
+<script src="<?= ASSETS ?>js/deletePlastique.js"></script>
+<script src="<?= ASSETS ?>js/editPlastique.js"></script>
