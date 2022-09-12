@@ -308,7 +308,7 @@
                                 require_once VIEW . "partials/admin/_list_effect.php";
                                 break;
                             case 'savon':
-                                require_once VIEW . "partials/admin/_list_savons.php";
+                                require_once VIEW . "partials/admin/_list_soaps.php";
                                 break;
                             case 'add_user':
                                 if ($_SESSION['socapco_admin']["is_admin"] >= 1) {

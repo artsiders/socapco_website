@@ -21,7 +21,7 @@
 									<div class="modal-body">
 										<p class="hide alert alert-danger text-center" id="editError"></p>
 										<p class="hide alert alert-success text-center" id="editSuccess"></p>
-										<form method="post" class="form-horizontal form-material" id="editProductForm">
+										<form method="post" class="form-horizontal form-material" id="editSoapForm">
 											<input type="hidden" name="id" id="idProd">
 											<input type="hidden" name="old_image" id="oldImage">
 											<div class="form-group">
@@ -76,7 +76,7 @@
 									<div class="modal-body">
 										<p class="hide alert alert-danger text-center" id="addError"></p>
 										<p class="hide alert alert-success text-center" id="addSuccess"></p>
-										<form method="post" class="form-horizontal form-material" id="addProductForm" enctype="multipart/form-data">
+										<form method="post" class="form-horizontal form-material" id="addSoapForm" enctype="multipart/form-data">
 											<div class="form-group">
 												<div class="row col-md-12">
 													<div class="col-11">
@@ -85,7 +85,7 @@
 													<div class="col-1">
 														<label style="height: 35px;" for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input name="product_image" type="file" id="uploadFileAdd" class="upload" hidden>
+															<input name="soap_image" type="file" id="uploadFileAdd" class="upload" hidden>
 														</label>
 													</div>
 												</div>
@@ -192,6 +192,6 @@
 	</div>
 </div>
 
-<script src="<?= ASSETS ?>js/addProduct.js"></script>
-<script src="<?= ASSETS ?>js/deleteProd.js"></script>
-<script src="<?= ASSETS ?>js/editProd.js"></script>
+<script src="<?= ASSETS ?>js/addSoap.js"></script>
+<script src="<?= ASSETS ?>js/deleteSoap.js"></script>
+<script src="<?= ASSETS ?>js/editSoap.js"></script>
