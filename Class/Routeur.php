@@ -24,6 +24,8 @@ class Routeur
             include VIEW . "product_detail.php";
         } else if ($this->request == "produits") {
             include VIEW . "products.php";
+        } else if ($this->request == "savons") {
+            include VIEW . "savon_page.php";
         }
 
         // route admin app

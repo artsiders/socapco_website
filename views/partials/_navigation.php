@@ -56,6 +56,9 @@
                             <li class="<?php if ($cat == "bebes") echo "active" ?>">
                                 <a href="./produits&cat=bebes">bébé</a>
                             </li>
+                            <li class="<?php if ($this->request == "savons") echo "active" ?>">
+                                <a href="./savons">savons</a>
+                            </li>
                             <li class="<?php if ($this->request == "services") echo "active" ?>">
                                 <a href="./services">nos services</a>
                             </li>
