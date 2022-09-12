@@ -59,7 +59,7 @@ class Soaps
     public function readSuggest($limit)
     {
         $query = $this->connect->getConnect()->prepare("SELECT * FROM `soaps` S, `users` U
-        WHERE S.id_soar = u.id_soar ORDER BY RAND() LIMIT $limit");
+        WHERE S.id_user = u.id_user ORDER BY RAND() LIMIT $limit");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 

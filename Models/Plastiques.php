@@ -10,24 +10,25 @@ class Plastiques
 
     public function create(array $data)
     {
-        $sql = "INSERT INTO `plastiques` (`description`, `grammage`, `picture`, `id_user`) 
-        VALUES (:prod_desc, :grammage, :picture, :id_user)";
+        $sql = "INSERT INTO `plastiques` (`description`, `grammage`, `picture`, `unite`, `id_user`) 
+        VALUES (:prod_desc, :grammage, :picture, :unite, :id_user)";
 
         $query = $this->connect->getConnect()->prepare($sql);
         $query->bindParam("prod_desc", $data['description']);
         $query->bindParam("grammage", $data['grammage']);
+        $query->bindParam("unite", $data['unite']);
         $query->bindParam("picture", $data['image']);
         $query->bindParam("id_user", $data['id_user']);
 
         $query->execute();
     }
 
-    public function read(int $idSoap)
+    public function read(int $idPlastique)
     {
-        $sql = "SELECT * FROM `plastiques` S, `users` U
-        WHERE S.id_soar = u.id_soar AND id_soap = :id_soap";
+        $sql = "SELECT * FROM `plastiques` P, `users` U
+        WHERE P.id_user = U.id_user AND id_soap = :id_soap";
         $query = $this->connect->getConnect()->prepare($sql);
-        $query->bindParam("id_soap", $idSoap);
+        $query->bindParam("id_soap", $idPlastique);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
 
@@ -36,8 +37,8 @@ class Plastiques
 
     public function readAll()
     {
-        $query = $this->connect->getConnect()->prepare("SELECT * FROM `plastiques` S, `users` U
-        WHERE S.id_soar = u.id_soar");
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `plastiques` P, `users` U
+        WHERE P.id_user = u.id_user");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -46,8 +47,8 @@ class Plastiques
 
     public function readSuggest($limit)
     {
-        $query = $this->connect->getConnect()->prepare("SELECT * FROM `plastiques` S, `users` U
-        WHERE S.id_soar = u.id_soar ORDER BY RAND() LIMIT $limit");
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `plastiques` P, `users` U
+        WHERE P.id_user = u.id_user ORDER BY RAND() LIMIT $limit");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -55,43 +56,39 @@ class Plastiques
     }
 
 
-    public function update(int $idSoap, array $data)
+    public function update(int $idPlastique, array $data)
     {
         if ($data["image"] == "") {
             $sql = "UPDATE `plastiques` SET 
                 `description`= :prod_desc,
-                `grammage`= :grammage,
-                `id_user`= :id_user
+                `grammage`= :grammage
                 WHERE id_soap = :id";
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("grammage", $data['grammage']);
-            $query->bindParam("id_user", $data['id_user']);
-            $query->bindParam("id", $idSoap);
+            $query->bindParam("id", $idPlastique);
         } else {
             $sql = "UPDATE `plastiques` SET 
                 `description`= :prod_desc,
                 `grammage`= :grammage,
-                `picture`= :picture,
-                `id_user`= :id_user
+                `picture`= :picture
                 WHERE id_soap = :id";
             $query = $this->connect->getConnect()->prepare($sql);
             $query->bindParam("prod_desc", $data['description']);
             $query->bindParam("grammage", $data['grammage']);
             $query->bindParam("picture", $data['image']);
-            $query->bindParam("id_user", $data['id_user']);
-            $query->bindParam("id", $idSoap);
+            $query->bindParam("id", $idPlastique);
         }
 
 
         $query->execute();
     }
 
-    public function delete($idSoap)
+    public function delete($idPlastique)
     {
-        $sql = "DELETE FROM `plastiques` WHERE `plastiques`.`id_soap` = :id";
+        $sql = "DELETE FROM `plastiques` WHERE `plastiques`.`id_plastique` = :id";
         $query = $this->connect->getConnect()->prepare($sql);
-        $query->bindParam("id", $idSoap);
+        $query->bindParam("id", $idPlastique);
         $query->execute();
     }
 }
