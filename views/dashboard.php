@@ -234,6 +234,20 @@
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
+                                <i class="fab fa-get-pocket"></i>
+                                <span class="hide-menu">Plastique</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item <?php if ($page == 'plastique') echo "active"; ?>">
+                                    <a href="./admin&page=plastique" class="sidebar-link">
+                                        <i class="fas fa-circle"></i>
+                                        <span class="hide-menu"> produit plastique </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
                                 <i class="fas fa-user"></i>
                                 <span class="hide-menu">utilisateur</span>
                             </a>
@@ -309,6 +323,9 @@
                                 break;
                             case 'savon':
                                 require_once VIEW . "partials/admin/_list_soaps.php";
+                                break;
+                            case 'plastique':
+                                require_once VIEW . "partials/admin/_list_plastique.php";
                                 break;
                             case 'add_user':
                                 if ($_SESSION['socapco_admin']["is_admin"] >= 1) {
