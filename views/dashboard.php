@@ -16,6 +16,7 @@
     <link href="<?= ASSETS ?>dist/css/style.css" rel="stylesheet">
 
     <link href="<?= ASSETS ?>libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,6 +26,9 @@
 </head>
 
 <body>
+    <div class="col-12">
+        <?php include_once VIEW . "partials/_notification.php"; ?>
+    </div>
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -302,9 +306,6 @@
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-12">
-                        <?php include_once VIEW . "partials/_notification.php"; ?>
-                    </div>
                     <div class="col-12">
                         <!-- Column -->
                         <?php
