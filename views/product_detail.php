@@ -35,6 +35,9 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
 
+    <!-- LIGHTBOX -->
+    <link rel="stylesheet" href="<?= ASSETS ?>libs/lightbox2-2.11.3/css/lightbox.min.css">
+
 </head>
 
 <body>
@@ -61,7 +64,9 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
     <div class="product_details section-padding-100 p-t-20 container">
         <section class="wow fadeInUp row bg-img bg-overlay text-light p-4" data-wow-delay="300ms">
             <div class="col-md-6 col-sm-12 box_image">
-                <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" alt="">
+                <a href="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" data-lightbox="detailImage" data-title="<?= $product["name"] ?>">
+                    <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" alt="">
+                </a>
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="m-2">
@@ -106,27 +111,6 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
                                     echo "<div class='badge badge-light m-2'>$ingredient</div>";
                                 }
                                 ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card border-dark bg-img bg-overlay">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    autres
-                                    <i class="fa fa-angle-down"></i>
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                                squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                                craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                                butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                             </div>
                         </div>
                     </div>
@@ -182,6 +166,8 @@ if (isset($_GET["id"]) and !empty($_GET["id"])) {
     <script src="<?= ASSETS ?>libs/active.js"></script>
     <!-- Fonction APP -->
     <script src="<?= ASSETS ?>js/fonction.js"></script>
+    <!-- LIGHTBOX -->
+    <script src="<?= ASSETS ?>libs/lightbox2-2.11.3/js/lightbox.min.js"></script>
 </body>
 
 </html>

@@ -30,7 +30,7 @@
                                     <a href="./about">A Propos</a>
                                 </li>
                                 <li>
-                                    <a href="./blog">Blog</a>
+                                    <a href="./savons">savons</a>
                                 </li>
                                 <li>
                                     <a href="./services">Services</aclass=>
@@ -46,14 +46,11 @@
                             <h6>Galerie</h6>
                         </div>
                         <div class="gallery-list d-flex justify-content-between flex-wrap">
-                            <a href="<?= ASSETS ?>images/blog-img/1.png" class="gallery-img"
-                                title="Gallery Image 2"><img src="<?= ASSETS ?>images/blog-img/1.png" alt="">
+                            <a href="<?= ASSETS ?>images/blog-img/1.png" class="gallery-img" title="Gallery Image 2"><img src="<?= ASSETS ?>images/blog-img/1.png" alt="">
                             </a>
-                            <a href="<?= ASSETS ?>images/blog-img/2.png" class="gallery-img"
-                                title="Gallery Image 3"><img src="<?= ASSETS ?>images/blog-img/2.png" alt="">
+                            <a href="<?= ASSETS ?>images/blog-img/2.png" class="gallery-img" title="Gallery Image 3"><img src="<?= ASSETS ?>images/blog-img/2.png" alt="">
                             </a>
-                            <a href="<?= ASSETS ?>images/blog-img/3.png" class="gallery-img"
-                                title="Gallery Image 4"><img src="<?= ASSETS ?>images/blog-img/3.png" alt="">
+                            <a href="<?= ASSETS ?>images/blog-img/3.png" class="gallery-img" title="Gallery Image 4"><img src="<?= ASSETS ?>images/blog-img/3.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -89,7 +86,7 @@
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;
                         <script>
-                        document.write(new Date().getFullYear());
+                            document.write(new Date().getFullYear());
                         </script> All rights reserved | This
                         website is made by <a href="http://alt-plus.batisseurs-unis.cm" target="_blank">Alt-plus</a>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->

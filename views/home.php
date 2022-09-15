@@ -158,7 +158,7 @@ try {
                             <p class="h2">DIVINE CLARTE</p>
                             <p class="h3">c'est simple</p>
                             <p>Formulée à partir d'actifs d'origine naturelle ou issus de la pharmacie.</p>
-                            <!-- <h6><span><a href="#">voir plus</a></span></h6> -->
+                            <!-- <h6><span><a class="text-light" href="#">voir plus</a></span></h6> -->
                         </div>
                     </div>
                 </div>
@@ -169,16 +169,37 @@ try {
                             <img src="<?= ASSETS ?>images/logo.jpg" alt="">
                         </div>
                         <div class="testimonial-content">
-                            <p class="h2">Divine Clarté</p>
+                            <p class="h2">BELLE FACE</p>
                             <p class="h3">C’EST EFFICACE</p>
                             <p>Des formules justement dosées à l’efficacité prouvée.</p>
-                            <!-- <h6><span><a href="#">voir plus</a></span></h6> -->
+                            <!-- <h6><span><a class="text-light" href="#">voir plus</a></span></h6> -->
                         </div>
                     </div>
                 </div>
+
                 <!-- Single Testimonials Area -->
                 <div class="col-12 col-md-6 p-4">
                     <img src="<?= ASSETS ?>images/arton19554.jpg" alt="">
+                </div>
+            </div>
+            <div class="row my-3">
+                <!-- Single Testimonials Area -->
+                <div class="col-12 col-md-6">
+                    <img src="<?= ASSETS ?>images/femme.jpg" alt="">
+                </div>
+                <!-- Single Testimonials Area -->
+                <div class="col-12 col-md-6">
+                    <div class="single-testimonial-area mb-100 d-flex wow fadeInUp" data-wow-delay="500ms">
+                        <div class="testimonial-thumb">
+                            <img src="<?= ASSETS ?>images/logo.jpg" alt="">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="h2">CARMEL BEBE</p>
+                            <p class="h3">c'est simple</p>
+                            <p>Formulée à partir d'actifs d'origine naturelle ou issus de la pharmacie.</p>
+                            <!-- <h6><span><a class="text-light" href="#">voir plus</a></span></h6> -->
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
