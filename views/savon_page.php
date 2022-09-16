@@ -21,6 +21,18 @@
 </head>
 
 <body>
+    <style>
+        .content_card_soap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .content_card_soap .card_soap {
+            width: 250px;
+        }
+    </style>
     <!-- ##### Preloader ##### -->
     <div id="preloader">
         <i class="circle-preloader"></i>
@@ -33,6 +45,8 @@
 
         <!-- Navbar Area -->
         <?php include_once VIEW . "partials/_navigation.php" ?>
+        <!-- LIGHTBOX -->
+        <link rel="stylesheet" href="<?= ASSETS ?>libs/lightbox2-2.11.3/css/lightbox.min.css">
     </header>
     <!-- ##### Header Area End ##### -->
 
@@ -42,33 +56,54 @@
             <h2>Nos Savons <?php if ($cat != "all") echo $cat; ?></h2>
         </div>
     </div>
-    <!-- ##### Breadcumb Area End ##### -->
-
-
-    <!-- ##### Blog Area Start ##### -->
-    <div class="blog-area mt-100 section-padding-10">
+    <div class="top-popular-courses-area mt-10 section-padding-100-70">
         <div class="container">
-
-            <div class="list_product row">
-                <!-- galery product  -->
-                <?php include_once VIEW . "partials/_galery.php" ?>
-                <!-- END galery product  -->
-            </div>
-
-            <!-- Pagination Area Start -->
-            <div class="container">
-                <div class="academy-pagination-area wow fadeInUp my-4" data-wow-delay="400ms">
-                    <nav>
-                        <ul class="pagination">
-                            <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                            <li class="page-item"><a class="page-link" href="#">02</a></li>
-                            <li class="page-item"><a class="page-link" href="#">03</a></li>
-                        </ul>
-                    </nav>
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
+                        <span>Savonérie</span>
+                        <h3>savon de ménage</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- ##### Breadcumb Area End ##### -->
+    <div class="container">
+
+        <div class="content_card_soap">
+            <?php foreach ($allSoap as $key => $soap) : ?>
+                <div class="card_soap">
+                    <div class="card shadow-sm">
+                        <a id="imageSoap" href="<?= ASSETS ?>images/product/<?= $soap["picture"] ?>" class="bd-placeholder-img card-img-top image_box" data-lightbox="soapgallery" data-title="<?= $soap['description'] ?>">
+                            <img width="100%" height="225" src="<?= ASSETS ?>images/product/<?= $soap["picture"] ?>" class="img-responsive" />
+                        </a>
+
+                        <div class="card-body">
+                            <p class="card-text"><?= substr($soap["description"], 0, 50) ?> ...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button onclick="document.getElementById('imageSoap').click()" class="btn academy-btn btn-sm">voir
+                                        plus</button>
+                                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                </div>
+                                <small class="badge badge-dark badge-pill"><?= $soap['grammage'] . " " . $soap['unite'] ?></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            <!-- Pagination Area Start -->
+            <div class="academy-pagination-area wow fadeInUp my-4" data-wow-delay="400ms">
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                        <li class="page-item"><a class="page-link" href="#">02</a></li>
+                        <li class="page-item"><a class="page-link" href="#">03</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
     <!-- ##### Blog Area End ##### -->
 
@@ -89,6 +124,8 @@
     <script src="<?= ASSETS ?>libs/active.js"></script>
     <!-- Fonction APP -->
     <script src="<?= ASSETS ?>js/fonction.js"></script>
+    <!-- LIGHTBOX -->
+    <script src="<?= ASSETS ?>libs/lightbox2-2.11.3/js/lightbox.min.js"></script>
 
 </body>
 

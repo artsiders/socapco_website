@@ -1143,6 +1143,10 @@ body {
     height: 250px;
   }
 }
+.single-top-popular-course:hover .popular-course-thumb {
+  max-width: 100%;
+  width: 100%;
+}
 
 .popular-course-details-area .single-top-popular-course {
   margin-bottom: 0;

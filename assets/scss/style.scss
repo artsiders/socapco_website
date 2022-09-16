@@ -761,6 +761,11 @@ body {
             height: 250px;
         }
     }
+
+    &:hover .popular-course-thumb {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .popular-course-details-area {

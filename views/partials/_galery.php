@@ -9,13 +9,13 @@
 
     <section id="grid-container" class="transitions-enabled fluid masonry js-masonry grid">
         <?php foreach ($allProducts as $key => $product) : ?>
-            <article class="card_product_main <?= $product["id_effect"] ?>  wow bounceIn" data-wow-delay="<?= $key + 2 ?>00ms">
+            <article class="card_product_main <?= $product["id_effect"] ?> wow fadeInUp" data-wow-delay="<?= $key + 2 ?>00ms">
                 <div onclick="link(`./product_detail&id=<?= $product['id_product'] ?>`)" class="image_box">
                     <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" class="img-responsive" />
                 </div>
                 <div class="body">
                     <h5><?= $product["name"] ?></h5>
-                    <span class=" badge badge-dark badge-pill"><?= $product["grammage"] ?> g</span>
+                    <span class="badge badge-dark badge-pill"><?= $product["grammage"] ?> g</span>
 
                     <p><?= substr($product["description"], 0, 50) ?> ...</p>
                     <a href="./product_detail&id=<?= $product["id_product"] ?>" class="btn academy-btn btn-sm">voir
