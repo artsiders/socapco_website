@@ -82,10 +82,22 @@ function makeDefaultUser()
 
 // SOAP____________________________
 $soaps = new Soaps;
+$limit = 4;
+$totalSoap = (int)$soaps->readCount();
+$totalPageSoap = ceil($totalSoap / $limit);
+
+if (isset($_GET['ps']) and !empty($_GET['ps']) and $_GET['ps'] >= 1 and $_GET['ps'] <= $totalPageSoap) {
+    $curentPage = (int)$_GET['ps'];
+} else {
+    $curentPage = 1;
+}
+$start = ($curentPage - 1) * $limit;
+
 try {
-    $allSoap = $soaps->readAll();
+    $allSoap = $soaps->readAllPaginate($start, $limit);
 } catch (EXCEPTION $e) {
     echo $e->getMessage();
+    exit;
 }
 
 // PLASTIQUE____________________________

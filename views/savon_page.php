@@ -53,23 +53,12 @@
     <!-- ##### Breadcumb Area Start ##### -->
     <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
         <div class="bradcumbContent">
-            <h2>Nos Savons <?php if ($cat != "all") echo $cat; ?></h2>
+            <h2>savon de ménage</h2>
         </div>
     </div>
-    <div class="top-popular-courses-area mt-10 section-padding-100-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <span>Savonérie</span>
-                        <h3>savon de ménage</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- ##### Breadcumb Area End ##### -->
-    <div class="container">
+    <div class="container mt-10 section-padding-100-70">
 
         <div class="content_card_soap">
             <?php foreach ($allSoap as $key => $soap) : ?>
@@ -94,12 +83,20 @@
                 </div>
             <?php endforeach; ?>
             <!-- Pagination Area Start -->
+        </div>
+        <div class="container m-4">
             <div class="academy-pagination-area wow fadeInUp my-4" data-wow-delay="400ms">
                 <nav>
                     <ul class="pagination">
-                        <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                        <li class="page-item"><a class="page-link" href="#">02</a></li>
-                        <li class="page-item"><a class="page-link" href="#">03</a></li>
+                        <?php for ($i = 1; $i <= $totalPageSoap; $i++) : ?>
+                            <li class="page-item <?php if ($curentPage == $i) echo "active" ?>">
+                                <?php if ($curentPage == $i) : ?>
+                                    <a class="page-link"><?= $i ?></a>
+                                <?php else : ?>
+                                    <a class="page-link" href="./savons&ps=<?= $i ?>"><?= $i ?></a>
+                                <?php endif; ?>
+                            </li>
+                        <?php endfor; ?>
                     </ul>
                 </nav>
             </div>

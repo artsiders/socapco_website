@@ -55,6 +55,22 @@ class Soaps
 
         return $result;
     }
+    public function readAllPaginate(int $start, int $limit)
+    {
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `soaps` LIMIT $start, $limit");
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+    public function readCount()
+    {
+        $query = $this->connect->getConnect()->prepare("SELECT COUNT(S.id_soap) FROM `soaps` S, `users` U WHERE S.id_user = U.id_user");
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_NUM);
+
+        return (int)$result[0];
+    }
 
     public function readSuggest($limit)
     {
