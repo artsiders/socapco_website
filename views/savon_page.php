@@ -61,7 +61,7 @@
     <div class="container mt-10 section-padding-100-70">
 
         <div class="content_card_soap">
-            <?php foreach ($allSoap as $key => $soap) : ?>
+            <?php foreach ($allSoapPaginate as $key => $soap) : ?>
                 <div class="card_soap">
                     <div class="card shadow-sm">
                         <a id="imageSoap" href="<?= ASSETS ?>images/product/<?= $soap["picture"] ?>" class="bd-placeholder-img card-img-top image_box" data-lightbox="soapgallery" data-title="<?= $soap['description'] ?>">

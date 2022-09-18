@@ -49,7 +49,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <?php isset($_GET['cat']) ? $cat = $_GET['cat'] : $cat = ""; ?>
+                            <?php isset($_GET['cat']) ? $cat = $_GET['cat'] : $cat = "all"; ?>
                             <li class="<?php if ($cat == "enfants") echo "active" ?>">
                                 <a href="./produits&cat=enfants">enfant</a>
                             </li>

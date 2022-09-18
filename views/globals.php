@@ -4,18 +4,39 @@ require_once MODEL . "Users.php";
 require_once MODEL . "Soaps.php";
 
 // PRODUCTS____________________________________________
-$products = new Products;
-if (isset($_GET['cat']) and !empty($_GET["cat"])) {
-    $cat = $_GET["cat"];
-} else {
-    $cat = "all";
-}
+if (isset($_GET['cat']) and !empty($_GET["cat"])) $cat = $_GET["cat"];
+else  $cat = "all";
 
+if (isset($_GET['eff']) and !empty($_GET['eff'])) $eff = $_GET["eff"];
+else $eff = "all";
+
+if (isset($_GET['action']) and !empty($_GET['action']) and $_GET['action'] == 'produits') {
+    $products = new Products;
+    $limit = 4;
+
+    $totalProduct = (int)$products->readCount($cat, $eff);
+    $totalPage = ceil($totalProduct / $limit);
+
+    if (isset($_GET['pc']) and !empty($_GET['pc']) and $_GET['pc'] >= 1 and $_GET['pc'] <= $totalPage) {
+        $curentPage = (int)$_GET['pc'];
+    } else {
+        $curentPage = 1;
+    }
+    $start = ($curentPage - 1) * $limit;
+
+    try {
+        $allProductsClientSide = $products->readAllPaginate($cat, $start, $limit, $eff);
+    } catch (EXCEPTION $e) {
+        echo $e->getMessage();
+    }
+}
 try {
+    $products = new Products;
     $allProducts = $products->readAllByCat($cat);
 } catch (EXCEPTION $e) {
     echo $e->getMessage();
 }
+
 
 $products = new Products;
 try {
@@ -81,23 +102,30 @@ function makeDefaultUser()
 }
 
 // SOAP____________________________
-$soaps = new Soaps;
-$limit = 4;
-$totalSoap = (int)$soaps->readCount();
-$totalPageSoap = ceil($totalSoap / $limit);
+if (isset($_GET['action']) and !empty($_GET['action']) and $_GET['action'] == 'savons') {
+    $soaps = new Soaps;
+    $limit = 4;
+    $totalSoap = (int)$soaps->readCount();
+    $totalPageSoap = ceil($totalSoap / $limit);
 
-if (isset($_GET['ps']) and !empty($_GET['ps']) and $_GET['ps'] >= 1 and $_GET['ps'] <= $totalPageSoap) {
-    $curentPage = (int)$_GET['ps'];
-} else {
-    $curentPage = 1;
+    if (isset($_GET['ps']) and !empty($_GET['ps']) and $_GET['ps'] >= 1 and $_GET['ps'] <= $totalPageSoap) {
+        $curentPage = (int)$_GET['ps'];
+    } else {
+        $curentPage = 1;
+    }
+    $start = ($curentPage - 1) * $limit;
+
+    try {
+        $allSoapPaginate = $soaps->readAllPaginate($start, $limit);
+    } catch (EXCEPTION $e) {
+        echo $e->getMessage();
+    }
 }
-$start = ($curentPage - 1) * $limit;
-
+$soaps = new Soaps;
 try {
-    $allSoap = $soaps->readAllPaginate($start, $limit);
+    $allSoap = $soaps->readAll();
 } catch (EXCEPTION $e) {
     echo $e->getMessage();
-    exit;
 }
 
 // PLASTIQUE____________________________

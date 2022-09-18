@@ -57,7 +57,7 @@ class Soaps
     }
     public function readAllPaginate(int $start, int $limit)
     {
-        $query = $this->connect->getConnect()->prepare("SELECT * FROM `soaps` LIMIT $start, $limit");
+        $query = $this->connect->getConnect()->prepare("SELECT * FROM `soaps` ORDER BY id_soap DESC LIMIT $start, $limit");
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
 

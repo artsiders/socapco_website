@@ -86,6 +86,32 @@ class Products
 
         return $result;
     }
+    public function readAllPaginate(string $cat, int $start, int $limit, string $eff = "all")
+    {
+        if ($eff != "all" && $cat != "all") {
+            $sql = "SELECT * FROM `products` P, `gammes` G, categories C, effects E
+            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect 
+            AND C.cat_libele = '$cat' AND E.eff_libele = '$eff' ORDER BY P.add_date DESC LIMIT $start, $limit";
+        } else if ($cat != "all") {
+            $sql = "SELECT * FROM `products` P, `gammes` G, categories C, effects E
+            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect 
+            AND C.cat_libele = '$cat' ORDER BY P.add_date DESC LIMIT $start, $limit";
+        } else if ($eff != "all") {
+            $sql = "SELECT * FROM `products` P, `gammes` G, categories C, effects E
+            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect 
+            AND E.eff_libele = '$eff' ORDER BY P.add_date DESC LIMIT $start, $limit";
+        } else {
+            $sql = "SELECT * FROM `products` P, `gammes` G, categories C, effects E
+            WHERE P.id_gamme = G.id_gamme AND P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect 
+            ORDER BY P.add_date DESC LIMIT $start, $limit";
+        }
+        $query = $this->connect->getConnect()->prepare($sql);
+        $query->execute();
+        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+
 
     public function read_gam_cat_eff($table)
     {
@@ -102,13 +128,30 @@ class Products
 
         return $result;
     }
-    public function readCount()
+    public function readCount(string $cat, string $eff)
     {
-        $query = $this->connect->getConnect()->prepare("SELECT COUNT(`id_product`) FROM `products`");
+        if ($cat != "all" and $eff != "all") {
+            $sql = "SELECT COUNT(`id_product`) FROM `products` P, categories C, effects E
+            WHERE P.id_categorie = C.id_categorie AND P.id_effect = E.id_effect 
+            AND C.cat_libele = '$cat' AND E.eff_libele = '$eff'";
+        } else if ($cat != "all") {
+            $sql = "SELECT COUNT(`id_product`) FROM `products` P, categories C
+            WHERE P.id_categorie = C.id_categorie
+            AND C.cat_libele = '$cat'";
+        } else if ($eff != "all") {
+            $sql = "SELECT COUNT(`id_product`) FROM `products` P, effects E
+            WHERE P.id_effect = E.id_effect 
+            AND E.eff_libele = '$eff'";
+        } else {
+            $sql = "SELECT COUNT(`id_product`) FROM `products`";
+        }
+        $query = $this->connect->getConnect()->prepare($sql);
         $query->execute();
         $result = $query->fetch(PDO::FETCH_NUM);
-        return $result;
+
+        return (int)$result[0];
     }
+
     public function readAllSearch(string $search)
     {
         $query = $this->connect->getConnect()->prepare("SELECT * FROM `products` P, `categories` C

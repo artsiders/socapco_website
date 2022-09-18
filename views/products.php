@@ -50,7 +50,7 @@
         <div class="container">
 
             <div class="list_product row">
-                <?php if ($cat != "") : ?>
+                <?php if ($cat != "all") : ?>
                     <span class="text-center col-12 h4">Nos Gamme De Produits Pour <?= $cat; ?></span>
                 <?php else : ?>
                     <span class="text-center col-12 h4">Nos Produits</span>
@@ -58,19 +58,6 @@
                 <!-- galery product  -->
                 <?php include_once VIEW . "partials/_galery.php" ?>
                 <!-- END galery product  -->
-            </div>
-
-            <!-- Pagination Area Start -->
-            <div class="container">
-                <div class="academy-pagination-area wow fadeInUp my-4" data-wow-delay="400ms">
-                    <nav>
-                        <ul class="pagination">
-                            <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                            <li class="page-item"><a class="page-link" href="#">02</a></li>
-                            <li class="page-item"><a class="page-link" href="#">03</a></li>
-                        </ul>
-                    </nav>
-                </div>
             </div>
         </div>
     </div>
