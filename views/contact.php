@@ -12,7 +12,7 @@
      <title>socapco | contact</title>
 
      <!-- Favicon -->
-     <link rel="icon" href="<?= ASSETS ?>img/core-img/favicon.ico">
+     <link rel="icon" href="<?= ASSETS ?>images/favicon.png">
 
      <!-- Core Stylesheet -->
      <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
@@ -37,7 +37,7 @@
      <!-- ##### Header Area End ##### -->
 
      <!-- ##### Breadcumb Area Start ##### -->
-     <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>img/bg-img/breadcumb.jpg);">
+     <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/breadcumb.jpg);">
           <div class="bradcumbContent">
                <h2>Contact</h2>
           </div>
@@ -63,11 +63,10 @@
                                         <div class="contact-information wow fadeInUp" data-wow-delay="400ms">
                                              <div class="section-heading text-left">
                                                   <span>le meilleur</span>
-                                                  <h3>nous contacter</h3>
-                                                  <p class="mt-30">Lacinia, lacinia la cus non, fermen tum nisi. Donec et
-                                                       sollicitudin. Morbi vel arcu gravida, iaculis lacus vel, posuere ipsum. Sed
-                                                       faucibus mauris vitae urna consectetur, sit amet maximus nisl sagittis. Ut
-                                                       in iaculis enim, et pulvinar mauris.</p>
+                                                  <h3>contactez nous</h3>
+                                                  <p class="mt-30">
+                                                       Les informations recueillies sur ce formulaire sont traitées par SOCAPCO afin de traiter votre demande.
+                                                  </p>
                                              </div>
 
                                              <!-- Contact Social Info -->

@@ -228,10 +228,20 @@
   margin: 20px 0;
   text-align: center;
 }
+.list_product .button-group button {
+  margin: 5px;
+}
 .list_product .button-group:after {
   content: "";
   display: block;
   clear: both;
+}
+@media (max-width: 479px) {
+  .list_product .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 .list_product img {
   vertical-align: middle;
@@ -298,6 +308,13 @@
 }
 .product_details .box_image:hover img {
   transform: scale(1.1) translateY(-10px);
+}
+@media (max-width: 767px) {
+  .product_details .box_image {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.719);
+    border-right: none;
+    padding-bottom: 15px;
+  }
 }
 
 .block_services video {

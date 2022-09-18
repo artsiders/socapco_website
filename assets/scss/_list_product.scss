@@ -53,12 +53,25 @@
   .button-group {
     margin: 20px 0;
     text-align: center;
+
+    button {
+      margin: 5px;
+    }
   }
 
   .button-group:after {
     content: '';
     display: block;
     clear: both;
+  }
+
+  @media (max-width: 479px) {
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
   }
 
   img {

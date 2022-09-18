@@ -14,4 +14,12 @@
             transform: scale(1.1) translateY(-10px);
         }
     }
+
+    @media (max-width: 767px) {
+        .box_image {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.719);
+            border-right: none;
+            padding-bottom: 15px;
+        }
+    }
 }

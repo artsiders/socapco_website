@@ -8,8 +8,9 @@
                         <div class="widget-title">
                             <a href="./home"><img src="<?= ASSETS ?>images/core-img/logo2.png" alt=""></a>
                         </div>
-                        <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est,
-                            in euismod erat. Ut at erat et arcu pulvinar cursus a eget.</p>
+                        <p>
+                            SOCAPCO, expert des peaux sensibles de toute la famille depuis plus de 90 ans vous partage ses conseils beauté.
+                        </p>
                         <div class="footer-social-info">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                         </div>

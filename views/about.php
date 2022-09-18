@@ -12,7 +12,7 @@
     <title>socapco | A propos</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="<?= ASSETS ?>images/core-img/favicon.ico">
+    <link rel="icon" href="<?= ASSETS ?>images/favicon.png">
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
