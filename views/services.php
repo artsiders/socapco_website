@@ -61,10 +61,12 @@
                                         <video src="<?= ASSETS ?>videos/2.mp4" muted autoplay loop></video>
                                     </div>
                                     <!-- Post Title -->
+                                    <a href="./contact" class="post-title">contacter socapco</a>
                                     <!-- Post Excerpt -->
                                     <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
                                         sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum
-                                        nisi. Donec et sollicitudin est.</p>
+                                        nisi. Donec et sollicitudin est.
+                                    </p>
                                     <a href="">
                                         <button class="btn academy-btn btn-sm">en savoir plus ...</button>
                                     </a>
