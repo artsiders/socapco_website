@@ -1,6 +1,5 @@
 function editPlastique() {
     const btnEditPlastique = document.querySelectorAll(".btn_edit_plastique")
-    const plastiqueName = document.getElementById("plastiqueName")
     const plastiqueDesc = document.getElementById("plastiqueDesc")
     const inpGrammage = document.getElementById("inpGrammage")
     const uniteSelect = document.getElementById("uniteSelect")
@@ -18,7 +17,6 @@ function editPlastique() {
 
             fetch(`${location.origin}/socapco_website/controlers/plastiques.php?action=read&id=${id}`)
                 .then(responce => responce.json()).then(data => {
-                    plastiqueName.value = data.name
                     plastiqueDesc.value = data.description
                     inputId.value = data.id_plastique
                     inpGrammage.value = data.grammage
@@ -43,12 +41,6 @@ function editPlastique() {
             },
             body: data
         }).then(responce => responce.json()).then(data => {
-            if (!data.name) {
-                plastiqueName.classList.add("border-danger")
-            }
-            else {
-                plastiqueName.classList.remove("border-danger")
-            }
             if (!data.description) {
                 plastiqueDesc.classList.add("border-danger")
             }

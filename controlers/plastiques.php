@@ -15,12 +15,10 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                 $resultArray = array(
                     "msg" => "",
                     "image" => true,
-                    "name" => true,
                     "description" => true,
                     "isOk" => true,
                     "insertIsOk" => null
                 );
-                $name = htmlspecialchars(strtolower(trim($_POST['name'])));
                 $descrition = htmlspecialchars(strtolower(trim($_POST['description'])));
                 $grammage = (int)$_POST['grammage'];
                 $unite = $_POST['unite'];
@@ -44,13 +42,6 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                     $resultArray["isOk"] = false;
                     $resultArray["msg"] = "renseignez une petite description sur la produit";
                 }
-                if (empty($name)) {
-                    $resultArray["name"] = false;
-                    $resultArray["isOk"] = false;
-                    $resultArray["msg"] = "le nom du produit est obligatoire";
-                }
-
-
 
                 // si le formulair est bien rempli, j'envoie les information dans la base de donnée
                 if ($resultArray['isOk']) {
@@ -67,7 +58,6 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                             // les donnees a passer en parametre de la methode create
                             $data = array(
                                 "description" => $descrition,
-                                "name" => $name,
                                 "image" => $uniq_name,
                                 "id_user" => $idUser,
                                 "grammage" => $grammage,
@@ -100,13 +90,11 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                 $resultArray = array(
                     "msg" => "",
                     "image" => true,
-                    "name" => true,
                     "description" => true,
                     "isOk" => true,
                     "insertIsOk" => null
                 );
 
-                $name = htmlspecialchars(strtolower(trim($_POST['name'])));
                 $descrition = htmlspecialchars(strtolower(trim($_POST['description'])));
                 $unite = $_POST['unite'];
                 $old_image = $_POST['old_image'];
@@ -117,18 +105,11 @@ if (isset($_GET['action']) && !empty($_GET['action'])) {
                     $resultArray["isOk"] = false;
                     $resultArray["msg"] = "renseignez une petite description sur la produit";
                 }
-                if (empty($name)) {
-                    $resultArray["name"] = false;
-                    $resultArray["isOk"] = false;
-                    $resultArray["msg"] = "le nom du produit est obligatoire";
-                }
-
 
                 if ($resultArray['isOk']) {
                     // les donnees a passer en parametre de la methode create
                     $data = array(
                         "description" => $descrition,
-                        "name" => $name,
                         "unite" => $unite,
                         "image" => "",
                         "grammage" => $grammage,

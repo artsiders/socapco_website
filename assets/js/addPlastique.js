@@ -18,12 +18,6 @@ function addPlastique() {
             },
             body: data
         }).then(responce => responce.json()).then(data => {
-            if (!data.name) {
-                addPlastiqueForm.name.classList.add("border-danger")
-            }
-            else {
-                addPlastiqueForm.name.classList.remove("border-danger")
-            }
             if (!data.description) {
                 addPlastiqueForm.description.classList.add("border-danger")
             }

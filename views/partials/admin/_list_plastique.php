@@ -26,13 +26,10 @@
 											<input type="hidden" name="old_image" id="oldImage">
 											<div class="form-group">
 												<div class="row col-md-12">
-													<div class="col-11">
-														<input id="plastiqueName" type="text" name="name" class="form-control" placeholder="nom produit">
-													</div>
-													<div class="col-1">
-														<label style="height: 35px;" for="uploadFileEdit" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
+													<div class="col-12">
+														<label style="height: 43px;" for="uploadFileEdit" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input name="image" type="file" id="uploadFileEdit" class="upload" hidden>
+															<input name="image" type="file" id="uploadFileEdit" class="upload">
 														</label>
 													</div>
 												</div>
@@ -79,13 +76,10 @@
 										<form method="post" class="form-horizontal form-material" id="addPlastiqueForm" enctype="multipart/form-data">
 											<div class="form-group">
 												<div class="row col-md-12">
-													<div class="col-11">
-														<input type="text" name="name" class="form-control" placeholder="nom produit">
-													</div>
-													<div class="col-1">
-														<label style="height: 35px;" for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
+													<div class="col-12">
+														<label style="height: 43px;" for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input name="plastique_image" type="file" id="uploadFileAdd" class="upload" hidden>
+															<input name="plastique_image" type="file" id="uploadFileAdd" class="upload">
 														</label>
 													</div>
 												</div>
@@ -156,7 +150,6 @@
 					<tr>
 						<th>N</th>
 						<th>image</th>
-						<th>name</th>
 						<th>desc</th>
 						<th>unite</th>
 						<th>Act</th>
@@ -169,7 +162,6 @@
 							<td style="padding: 5px;">
 								<img class="rounded-circle border border-success" src="<?= ASSETS ?>images/product/<?= $plastique['picture'] ?>" alt="user" width="50" height="50" />
 							</td>
-							<td><?= $plastique["name"]; ?></td>
 							<td class="text-center" data-toggle="tooltip" data-original-title="<?= $plastique['description'] . ' ' . $plastique['add_date'] ?>">
 								<div class="badge badge-info badge-pill h1">
 									<i class="fa fa-info" aria-hidden="true"></i>
