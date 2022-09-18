@@ -69,6 +69,7 @@
                         </a>
 
                         <div class="card-body">
+                            <strong><?= $soap["name"] ?></strong>
                             <p class="card-text"><?= substr($soap["description"], 0, 50) ?> ...</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">

@@ -54,6 +54,25 @@
 
                             <!-- Single Blog Start -->
                             <div class="col-12">
+                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="400ms">
+                                    <a href="#" class="post-title">Atelier de fabriquation plastique</a>
+                                    <!-- Post Thumb -->
+                                    <div class="blog-post-thumb mb-50">
+                                        <video src="<?= ASSETS ?>videos/2.mp4" muted autoplay loop></video>
+                                    </div>
+                                    <!-- Post Title -->
+                                    <!-- Post Excerpt -->
+                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
+                                        sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum
+                                        nisi. Donec et sollicitudin est.</p>
+                                    <a href="">
+                                        <button class="btn academy-btn btn-sm">en savoir plus ...</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Single Blog Start -->
+                            <div class="col-12">
                                 <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
                                     <!-- Post Title -->
                                     <a href="#" class="post-title">Savonerie</a>
@@ -61,22 +80,6 @@
                                     <div class="blog-post-thumb mb-50">
                                         <video src="<?= ASSETS ?>videos/1.mp4" muted autoplay loop></video>
                                     </div>
-                                    <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
-                                        sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum
-                                        nisi. Donec et sollicitudin est.</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="400ms">
-                                    <a href="#" class="post-title">plastique</a>
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <video src="<?= ASSETS ?>videos/2.mp4" muted autoplay loop></video>
-                                    </div>
-                                    <!-- Post Title -->
                                     <!-- Post Excerpt -->
                                     <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
                                         sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum

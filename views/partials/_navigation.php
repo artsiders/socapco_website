@@ -29,23 +29,27 @@
                             <li class="<?php if ($cat == "adultes") echo "active" ?>"><a href="./produits&cat=adultes">adulte</a>
                                 <div class="megamenu">
                                     <div class="content_menu row">
-                                        <div class="single-mega box_image col-lg-4 col-sm-12">
+                                        <div class="single-mega box_image col-lg-3 col-sm-12">
                                             <img src="<?= ASSETS ?>images/blog-img/adult-cover.jpg" alt="">
                                         </div>
-                                        <ul class="col">
-                                            <li>
-                                                <a href="./produits&cat=adultes">
-                                                    <button class="btn academy-btn">toute la gamme adultes</button>
-                                                </a>
-                                            </li>
-                                        </ul>
                                         <ul class="single-mega list col">
                                             <?php foreach ($effects as $key => $effect) : ?>
-                                                <li><a href="#"><?= $effect["eff_libele"] ?></a></li>
+                                                <li>
+                                                    <a href="./produits&cat=<?= $cat ?>&eff=<?= $effect["eff_libele"] ?>"><?= $effect["eff_libele"] ?></a>
+                                                </li>
                                             <?php endforeach; ?>
 
                                         </ul>
-                                        <div class="col"></div>
+                                        <ul class="col">
+                                            <li>
+                                                <a href="./produits&cat=adultes">
+                                                    <button class="btn academy-btn">tous les produits</button>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="single-mega box_image col-lg-3 col-sm-12 d-flex justify-content-center">
+                                            <img style="max-height: 250px;" src="<?= ASSETS ?>images/menu_image.png" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </li>
