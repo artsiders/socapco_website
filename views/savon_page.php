@@ -62,7 +62,7 @@
 
         <div class="content_card_soap">
             <?php foreach ($allSoapPaginate as $key => $soap) : ?>
-                <div class="card_soap">
+                <div class="card_soap wow fadeInUp" data-wow-delay="<?= $key + 2 ?>00ms">
                     <div class="card shadow-sm">
                         <a id="imageSoap" href="<?= ASSETS ?>images/product/<?= $soap["picture"] ?>" class="bd-placeholder-img card-img-top image_box" data-lightbox="soapgallery" data-title="<?= $soap['description'] ?>">
                             <img width="100%" height="225" src="<?= ASSETS ?>images/product/<?= $soap["picture"] ?>" class="img-responsive" />
@@ -86,7 +86,7 @@
             <!-- Pagination Area Start -->
         </div>
         <div class="container m-4">
-            <div class="academy-pagination-area wow fadeInUp my-4" data-wow-delay="400ms">
+            <div class="academy-pagination-area my-4">
                 <nav>
                     <ul class="pagination">
                         <?php for ($i = 1; $i <= $totalPageSoap; $i++) : ?>
