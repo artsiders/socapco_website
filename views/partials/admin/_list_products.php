@@ -32,7 +32,7 @@
 													<div class="col-1">
 														<label style="height: 35px;" for="uploadFileEdit" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input type="file" id="uploadFileEdit" class="upload" hidden accept="image/*">
+															<input type="file" id="uploadFileEdit" class="upload" hidden accept=".png, .jpg, .jpeg">
 														</label>
 													</div>
 												</div>
@@ -127,7 +127,7 @@
 													<div class="col-1">
 														<label style="height: 35px;" for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input type="file" id="uploadFileAdd" class="upload" hidden accept="image/*">
+															<input type="file" id="uploadFileAdd" class="upload" hidden accept=".png, .jpg, .jpeg">
 														</label>
 													</div>
 												</div>
