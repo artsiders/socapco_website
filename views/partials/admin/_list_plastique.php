@@ -29,7 +29,7 @@
 													<div class="col-12">
 														<label style="height: 43px;" for="uploadFileEdit" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input name="image" type="file" id="uploadFileEdit" class="upload">
+															<input type="file" id="uploadFileEdit" class="upload" accept=".png, .jpg, .jpeg" hidden>
 														</label>
 													</div>
 												</div>
@@ -79,7 +79,7 @@
 													<div class="col-12">
 														<label style="height: 43px;" for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input name="plastique_image" type="file" id="uploadFileAdd" class="upload">
+															<input type="file" id="uploadFileAdd" class="upload" accept=".png, .jpg, .jpeg" hidden>
 														</label>
 													</div>
 												</div>
@@ -184,6 +184,7 @@
 	</div>
 </div>
 
+<script src="<?= ASSETS ?>libs/compressorjs/compressor.min.js"></script>
 <script src="<?= ASSETS ?>js/addPlastique.js"></script>
 <script src="<?= ASSETS ?>js/deletePlastique.js"></script>
 <script src="<?= ASSETS ?>js/editPlastique.js"></script>
