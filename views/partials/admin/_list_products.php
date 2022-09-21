@@ -32,7 +32,7 @@
 													<div class="col-1">
 														<label style="height: 35px;" for="uploadFileEdit" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input name="image" type="file" id="uploadFileEdit" class="upload" hidden>
+															<input name="image" type="file" id="uploadFileEdit" class="upload" hidden accept="image/*">
 														</label>
 													</div>
 												</div>
@@ -127,7 +127,7 @@
 													<div class="col-1">
 														<label style="height: 35px;" for="uploadFileAdd" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input name="product_image" type="file" id="uploadFileAdd" class="upload" hidden>
+															<input type="file" id="uploadFileAdd" class="upload" hidden accept="image/*">
 														</label>
 													</div>
 												</div>
@@ -298,6 +298,7 @@
 	</div>
 </div>
 
+<script src="<?= ASSETS ?>libs/compressorjs/compressor.min.js"></script>
 <script src="<?= ASSETS ?>js/addProduct.js"></script>
 <script src="<?= ASSETS ?>js/deleteProd.js"></script>
 <script src="<?= ASSETS ?>js/editProd.js"></script>
