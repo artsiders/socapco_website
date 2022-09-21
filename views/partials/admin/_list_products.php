@@ -32,7 +32,7 @@
 													<div class="col-1">
 														<label style="height: 35px;" for="uploadFileEdit" id="imageLabel" class="fileupload btn btn-outline-secondary waves-effect waves-light">
 															<span><i class="fas fa-image"></i></span>
-															<input name="image" type="file" id="uploadFileEdit" class="upload" hidden accept="image/*">
+															<input type="file" id="uploadFileEdit" class="upload" hidden accept="image/*">
 														</label>
 													</div>
 												</div>

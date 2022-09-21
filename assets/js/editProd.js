@@ -8,6 +8,7 @@ const selectCat = document.getElementById("selectCat")
 const selectEff = document.getElementById("selectEff")
 const inpGrammage = document.getElementById("inpGrammage")
 const editImportant = document.getElementById("editImportant")
+const uploadFileEdit = document.getElementById("uploadFileEdit")
 
 const inputId = document.getElementById("idProd")
 const oldImage = document.getElementById("oldImage")
@@ -41,39 +42,70 @@ editProductForm.addEventListener("submit", e => {
     let errorBoxEdit = document.getElementById("editError")
     let successBoxEdit = document.getElementById("editSuccess")
 
-    let data = new FormData(editProductForm)
+    let file = uploadFileEdit.files[0]
+    if (!file) {
+        errorBoxEdit.classList.remove("hide")
+        errorBoxEdit.innerHTML = "selectionner une image pour le produit"
+        return;
+    } else {
+        let type = file.type;
 
-    fetch(`${location.origin}/socapco_website/controlers/editProduct.php`, {
-        method: 'POST',
-        headers: {
-            'X-Requested-With': 'xmlhttprequest'
-        },
-        body: data
-    }).then(responce => responce.json()).then(data => {
-        if (!data.name) {
-            prodName.classList.add("border-danger")
-        }
-        else {
-            prodName.classList.remove("border-danger")
-        }
-        if (!data.description) {
-            prodDesc.classList.add("border-danger")
-        }
-        else {
-            prodDesc.classList.remove("border-danger")
-        }
-
-        if (data.msg == "") {
-            if (data.isOk) {
-                window.location.reload()
-            } else {
-                errorBoxEdit.classList.remove("hide")
-                errorBoxEdit.innerHTML = "ERREUR <strong>500</strong>"
-            }
-        } else {
+        if (type != "image/jpeg" && type != "image/jpg" && type != "image/png") {
             errorBoxEdit.classList.remove("hide")
-            errorBoxEdit.innerHTML = data.msg
-            successBoxEdit.classList.add("hide")
+            errorBoxEdit.innerHTML = "le ficher selectionner n'est pas une image"
+            return;
+        } else {
+            errorBoxEdit.classList.add("hide")
         }
-    })
+    }
+
+    new Compressor(file, {
+        quality: 0.2,
+
+        // The compression process is asynchronous,
+        // which means you have to access the `result` in the `success` hook function.
+        success(result) {
+            const formData = new FormData(editProductForm);
+
+            // The third parameter is required for server
+            formData.append('image', result, result.name);
+
+            fetch(`${location.origin}/socapco_website/controlers/editProduct.php`, {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'xmlhttprequest'
+                },
+                body: formData
+            }).then(responce => responce.json()).then(data => {
+                if (!data.name) {
+                    prodName.classList.add("border-danger")
+                }
+                else {
+                    prodName.classList.remove("border-danger")
+                }
+                if (!data.description) {
+                    prodDesc.classList.add("border-danger")
+                }
+                else {
+                    prodDesc.classList.remove("border-danger")
+                }
+
+                if (data.msg == "") {
+                    if (data.isOk) {
+                        window.location.reload()
+                    } else {
+                        errorBoxEdit.classList.remove("hide")
+                        errorBoxEdit.innerHTML = "ERREUR <strong>500</strong>"
+                    }
+                } else {
+                    errorBoxEdit.classList.remove("hide")
+                    errorBoxEdit.innerHTML = data.msg
+                    successBoxEdit.classList.add("hide")
+                }
+            })
+        },
+        error(err) {
+            console.log(err.message);
+        },
+    });
 })
