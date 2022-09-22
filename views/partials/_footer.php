@@ -97,3 +97,40 @@
         </div>
     </div>
 </footer>
+
+<script async src='<?= ASSETS ?>libs/embed.min.js'></script>
+<script>
+    var wa_btnSetting = {
+        "btnColor": "#ff4545",
+        "ctaText": "",
+        "cornerRadius": 40,
+        "marginBottom": 56,
+        "marginLeft": 50,
+        "marginRight": 50,
+        "btnPosition": "left",
+        "whatsAppNumber": "651284114",
+        "welcomeMessage": "Bonjour à tous ! Quel plaisir de vous voir. dites nous si vous avez un problème",
+        "zIndex": 999999,
+        "btnColorScheme": "light"
+    };
+    var wa_widgetSetting = {
+        "title": "Socapco",
+        "subTitle": "réponse rapide",
+        "headerBackgroundColor": "#ffb347",
+        "headerColorScheme": "light",
+        "greetingText": "Bonjour à tous ! Quel plaisir de vous voir.\nComment pouvons-nous vous aider?",
+        "ctaText": "message",
+        "btnColor": "#4ed073",
+        "cornerRadius": 40,
+        "welcomeMessage": "Hello",
+        "btnColorScheme": "light",
+        "brandImage": "<?= ASSETS ?>images/favicon.png",
+        "darkHeaderColorScheme": {
+            "title": "#333333",
+            "subTitle": "#4F4F4F"
+        }
+    };
+    window.onload = () => {
+        _waEmbed(wa_btnSetting, wa_widgetSetting);
+    };
+</script>

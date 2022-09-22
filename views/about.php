@@ -16,10 +16,45 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="<?= ASSETS ?>scss/style.css">
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="<?= ASSETS ?>libs/swiper/swiper-bundle.min.css">
 
 </head>
 
 <body>
+    <style>
+        .swiper {
+            width: 100%;
+            height: 300px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
     <!-- ##### Preloader ##### -->
     <div id="preloader">
         <i class="circle-preloader"></i>
@@ -97,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row d-none">
                 <div class="col-12">
                     <div class="about-slides owl-carousel mt-100 wow fadeInUp" data-wow-delay="600ms">
                         <img src="<?= ASSETS ?>images/bg-img/bg-3.jpg" alt="">
@@ -106,10 +141,33 @@
                     </div>
                 </div>
             </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper my-4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="<?= ASSETS ?>images/bg-img/bg-1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="<?= ASSETS ?>images/bg-img/bg-2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="<?= ASSETS ?>images/bg-img/bg-3.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
     </section>
     <!-- ##### About Us Area End ##### -->
 
-    <!-- ##### Features Area Start ##### -->
+    <script src="<?= ASSETS ?>libs/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            fade: 'true',
+            autoplay: {
+                delay: 3000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
 
     <!-- ##### Footer Area Start ##### -->
     <?php include_once VIEW . "partials/_footer.php" ?>
