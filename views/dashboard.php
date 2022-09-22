@@ -197,7 +197,7 @@
                         <!-- User Profile-->
                         <li class="sidebar-item">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
-                                <i class="fab fa-get-pocket"></i>
+                                <i class="fab fa-cuttlefish"></i>
                                 <span class="hide-menu">Cosmétique</span>
                             </a>
                             <ul aria-expanded="false" class="collapse first-level">
@@ -452,7 +452,8 @@
     <!--Custom JavaScript -->
     <script src="<?= ASSETS ?>dist/js/custom.min.js"></script>
 
-    <script src="<?= ASSETS ?>libs/footable/dist/footable.all.min.js"></script>
+    <!-- <script src="<?php //echo ASSETS 
+                        ?>libs/footable/dist/footable.all.min.js"></script> -->
     <script src="<?= ASSETS ?>js/deconnexion.js"></script>
     <!--This page JavaScript -->
     <script src="<?= ASSETS ?>extra-libs/DataTables/datatables.min.js"></script>
