@@ -34,13 +34,10 @@ function editSoap() {
         e.preventDefault()
         let errorBoxEdit = document.getElementById("editError")
         let successBoxEdit = document.getElementById("editSuccess")
+        const formData = new FormData(editSoapForm);
 
         let file = uploadFileEdit.files[0]
-        if (!file) {
-            errorBoxEdit.classList.remove("hide")
-            errorBoxEdit.innerHTML = "selectionner une image pour le produit"
-            return;
-        } else {
+        if (file) {
             let type = file.type;
 
             if (type != "image/jpeg" && type != "image/jpg" && type != "image/png") {
@@ -49,58 +46,57 @@ function editSoap() {
                 return;
             } else {
                 errorBoxEdit.classList.add("hide")
+                new Compressor(file, {
+                    quality: 0.2,
+                    success(result) {
+                        formData.append('image', result, result.name);
+                        putData(formData)
+                    },
+                    error(err) {
+                        console.log(err.message);
+                    },
+                });
             }
+        } else {
+            putData(formData)
         }
 
-        new Compressor(file, {
-            quality: 0.2,
 
-            // The compression process is asynchronous,
-            // which means you have to access the `result` in the `success` hook function.
-            success(result) {
-                const formData = new FormData(editSoapForm);
+        function putData(formData) {
+            fetch(`${location.origin}/socapco_website/controlers/soaps.php?action=update`, {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'xmlhttprequest'
+                },
+                body: formData
+            }).then(responce => responce.json()).then(data => {
+                if (!data.name) {
+                    soapName.classList.add("border-danger")
+                }
+                else {
+                    soapName.classList.remove("border-danger")
+                }
+                if (!data.description) {
+                    soapDesc.classList.add("border-danger")
+                }
+                else {
+                    soapDesc.classList.remove("border-danger")
+                }
 
-                // The third parameter is required for server
-                formData.append('image', result, result.name);
-
-                fetch(`${location.origin}/socapco_website/controlers/soaps.php?action=update`, {
-                    method: 'POST',
-                    headers: {
-                        'X-Requested-With': 'xmlhttprequest'
-                    },
-                    body: formData
-                }).then(responce => responce.json()).then(data => {
-                    if (!data.name) {
-                        soapName.classList.add("border-danger")
-                    }
-                    else {
-                        soapName.classList.remove("border-danger")
-                    }
-                    if (!data.description) {
-                        soapDesc.classList.add("border-danger")
-                    }
-                    else {
-                        soapDesc.classList.remove("border-danger")
-                    }
-
-                    if (data.msg == "") {
-                        if (data.isOk) {
-                            window.location.reload()
-                        } else {
-                            errorBoxEdit.classList.remove("hide")
-                            errorBoxEdit.innerHTML = "ERREUR <strong>500</strong>"
-                        }
+                if (data.msg == "") {
+                    if (data.isOk) {
+                        window.location.reload()
                     } else {
                         errorBoxEdit.classList.remove("hide")
-                        errorBoxEdit.innerHTML = data.msg
-                        successBoxEdit.classList.add("hide")
+                        errorBoxEdit.innerHTML = "ERREUR <strong>500</strong>"
                     }
-                })
-            },
-            error(err) {
-                console.log(err.message);
-            },
-        });
+                } else {
+                    errorBoxEdit.classList.remove("hide")
+                    errorBoxEdit.innerHTML = data.msg
+                    successBoxEdit.classList.add("hide")
+                }
+            })
+        }
     })
 }
 editSoap()

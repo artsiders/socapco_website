@@ -32,13 +32,10 @@ function editPlastique() {
         e.preventDefault()
         let errorBoxEdit = document.getElementById("editError")
         let successBoxEdit = document.getElementById("editSuccess")
+        const formData = new FormData(editPlastiqueForm);
 
         let file = uploadFileEdit.files[0]
-        if (!file) {
-            errorBoxEdit.classList.remove("hide")
-            errorBoxEdit.innerHTML = "selectionner une image pour le produit"
-            return;
-        } else {
+        if (file) {
             let type = file.type;
 
             if (type != "image/jpeg" && type != "image/jpg" && type != "image/png") {
@@ -47,51 +44,51 @@ function editPlastique() {
                 return;
             } else {
                 errorBoxEdit.classList.add("hide")
+                new Compressor(file, {
+                    quality: 0.2,
+                    success(result) {
+                        formData.append('image', result, result.name);
+                        putData(formData)
+                    },
+                    error(err) {
+                        console.log(err.message);
+                    },
+                });
             }
+        } else {
+            putData(formData)
         }
 
-        new Compressor(file, {
-            quality: 0.2,
 
-            // The compression process is asynchronous,
-            // which means you have to access the `result` in the `success` hook function.
-            success(result) {
-                const formData = new FormData(editPlastiqueForm);
+        function putData(formData) {
+            fetch(`${location.origin}/socapco_website/controlers/plastiques.php?action=update`, {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'xmlhttprequest'
+                },
+                body: formData
+            }).then(responce => responce.json()).then(data => {
+                if (!data.description) {
+                    plastiqueDesc.classList.add("border-danger")
+                }
+                else {
+                    plastiqueDesc.classList.remove("border-danger")
+                }
 
-                // The third parameter is required for server
-                formData.append('image', result, result.name);
-                fetch(`${location.origin}/socapco_website/controlers/plastiques.php?action=update`, {
-                    method: 'POST',
-                    headers: {
-                        'X-Requested-With': 'xmlhttprequest'
-                    },
-                    body: formData
-                }).then(responce => responce.json()).then(data => {
-                    if (!data.description) {
-                        plastiqueDesc.classList.add("border-danger")
-                    }
-                    else {
-                        plastiqueDesc.classList.remove("border-danger")
-                    }
-
-                    if (data.msg == "") {
-                        if (data.isOk) {
-                            window.location.reload()
-                        } else {
-                            errorBoxEdit.classList.remove("hide")
-                            errorBoxEdit.innerHTML = "ERREUR <strong>500</strong>"
-                        }
+                if (data.msg == "") {
+                    if (data.isOk) {
+                        window.location.reload()
                     } else {
                         errorBoxEdit.classList.remove("hide")
-                        errorBoxEdit.innerHTML = data.msg
-                        successBoxEdit.classList.add("hide")
+                        errorBoxEdit.innerHTML = "ERREUR <strong>500</strong>"
                     }
-                })
-            },
-            error(err) {
-                console.log(err.message);
-            },
-        });
+                } else {
+                    errorBoxEdit.classList.remove("hide")
+                    errorBoxEdit.innerHTML = data.msg
+                    successBoxEdit.classList.add("hide")
+                }
+            })
+        }
     })
 }
 editPlastique()
