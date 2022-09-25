@@ -1456,6 +1456,11 @@ body {
 }
 
 /* Blog Area CSS */
+.academy-blog-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 110px;
+}
 @media only screen and (max-width:767px) {
   .academy-blog-sidebar {
     margin-top: 100px;

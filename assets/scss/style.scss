@@ -1099,6 +1099,9 @@ body {
 /* Blog Area CSS */
 
 .academy-blog-sidebar {
+    position: sticky;
+    top: 110px;
+
     @media #{$breakpoint-xs} {
         margin-top: 100px;
     }

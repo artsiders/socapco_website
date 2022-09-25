@@ -53,57 +53,19 @@
                         <div class="row">
 
                             <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="400ms">
-                                    <a href="#" class="post-title">Atelier de fabriquation plastique</a>
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <video src="<?= ASSETS ?>videos/2.mp4" muted autoplay loop></video>
+                            <?php foreach ($allPlastique as $key => $plastic) : ?>
+                                <div class="col-12">
+                                    <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="400ms">
+                                        <!-- Post Thumb -->
+                                        <div class="blog-post-thumb mb-50">
+                                            <img src="<?= ASSETS ?>images/product/<?= $plastic['picture'] ?>" alt="">
+                                        </div>
+                                        <!-- Post Excerpt -->
+                                        <p><?= $plastic['description'] ?></p>
+                                        <p class=" text-right"><?= $plastic['add_date'] ?></p>
                                     </div>
-                                    <!-- Post Title -->
-                                    <a href="./contact" class="post-title">contacter socapco</a>
-                                    <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
-                                        sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum
-                                        nisi. Donec et sollicitudin est.
-                                    </p>
-                                    <a href="./plastique">
-                                        <button class="btn academy-btn btn-sm">en savoir plus ...</button>
-                                    </a>
                                 </div>
-                            </div>
-
-                            <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="300ms">
-                                    <!-- Post Title -->
-                                    <a href="#" class="post-title">Savonerie</a>
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <video src="<?= ASSETS ?>videos/1.mp4" muted autoplay loop></video>
-                                    </div>
-                                    <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
-                                        sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum
-                                        nisi. Donec et sollicitudin est.</p>
-                                </div>
-                            </div>
-
-                            <!-- Single Blog Start -->
-                            <div class="col-12">
-                                <div class="single-blog-post mb-50 wow fadeInUp" data-wow-delay="500ms">
-                                    <!-- Post Title -->
-                                    <!-- Post Thumb -->
-                                    <div class="blog-post-thumb mb-50">
-                                        <video src="<?= ASSETS ?>videos/3.mp4" muted autoplay loop></video>
-                                    </div>
-                                    <a href="#" class="post-title">Cosméthique</a>
-                                    <!-- Post Excerpt -->
-                                    <p>Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et
-                                        sollicitudin est, in euismod. Vitae turpis lacinia, lacinia lacus non, fermentum
-                                        nisi. Donec et sollicitudin est.</p>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
 
                         </div>
                     </div>
