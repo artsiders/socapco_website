@@ -37,7 +37,7 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/breadcumb.jpg);">
+    <div class="breadcumb-area bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/manufacture.jpg);">
         <div class="bradcumbContent">
             <h2>Nos Services</h2>
         </div>

@@ -50,20 +50,39 @@ try {
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Hero Area Start ##### -->
+    <style>
+        .divine {
+            background-image: url('<?= ASSETS ?>images/bg-img/bg-1.jpg');
+        }
+
+        @media screen and (max-width:800px) {
+            .divine {
+                background-image: url('<?= ASSETS ?>images/bg-img/bg-1-phone.jpg');
+            }
+
+            .divine .hero-slides-content {
+                text-align: center;
+            }
+        }
+
+        .carmel .hero-slides-content {
+            text-align: right;
+        }
+    </style>
     <section class="hero-area">
         <div class="hero-slides owl-carousel">
 
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-1.jpg);">
+            <div class="single-hero-slide bg-img divine">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                            <div class="hero-slides-content text-center">
-                                <h4 data-animation="fadeInUp" data-delay="100ms">faites vous plaisir, <br> sentez vous
-                                    belle et légère avec les produits gomment </h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms"> BELLE FACE <br> ECLAIRCISSANT
+                            <div class="hero-slides-content">
+                                <h4 class="h4" data-animation="fadeInUp" data-delay="100ms">faites vous plaisir, <br> sentez vous
+                                    belle et légère avec la gamme de produits</h4>
+                                <h2 data-animation="fadeInUp" data-delay="300ms"> DIVINE Clarté
                                 </h2>
-                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1500ms">Nos produits hydratent</a>
+                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1000ms">Nos produits</a>
                             </div>
                         </div>
                     </div>
@@ -71,18 +90,18 @@ try {
             </div>
 
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
+            <div class="single-hero-slide bg-img carmel" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                            <div class="hero-slides-content text-center">
-                                <h4 data-animation="fadeInUp" data-delay="100ms">Faites plaisir à votre peaux,
-                                    <br> Essayez le nouveau blanchisseur .
+                            <div class="hero-slides-content">
+                                <h4 data-animation="fadeInUp" data-delay="100ms">Socapco Cosmétique, l’expert des peaux sensibles,
+                                    <br> vous propose une large gamme de produits bébé
                                 </h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">belle face <br>éclaircissement
+                                <h2 data-animation="fadeInUp" data-delay="400ms">CARMEL Bébé
                                 </h2>
-                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1500ms">Nos
-                                    produits éclaircissement</a>
+                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1000ms">Nos
+                                    produits hydratant</a>
                             </div>
                         </div>
                     </div>
@@ -94,7 +113,7 @@ try {
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
-                            <div class="hero-slides-content text-center">
+                            <div class="hero-slides-content">
                                 <h4 data-animation="fadeInUp" data-delay="100ms">Faites plaisir à votre peaux,
                                     <br> Essayez le nouveau blanchisseur .
                                 </h4>
@@ -110,6 +129,20 @@ try {
         </div>
     </section>
     <!-- ##### Hero Area End ##### -->
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            fade: 'true',
+            autoplay: {
+                delay: 3000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
 
     <!-- ##### Top Feature Area Start ##### -->
     <div class="top-features-area wow fadeInUp" data-wow-delay="300ms">
@@ -135,7 +168,7 @@ try {
 
 
     <!-- ##### Testimonials Area Start ##### -->
-    <div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
+    <div class="testimonials-area section-padding-100 bg-img bg-overlay" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2s.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -148,7 +181,7 @@ try {
             <div class="row">
                 <!-- Single Testimonials Area -->
                 <div class="col-12 col-md-6">
-                    <img src="<?= ASSETS ?>images/Copie-de-Copie-de-Sans-titre-ConvertImage-700x700.jpg" alt="">
+                    <img src="<?= ASSETS ?>images/divine.jpg" alt="">
                 </div>
                 <!-- Single Testimonials Area -->
                 <div class="col-12 col-md-6">
@@ -181,13 +214,13 @@ try {
 
                 <!-- Single Testimonials Area -->
                 <div class="col-12 col-md-6 p-4">
-                    <img src="<?= ASSETS ?>images/arton19554.jpg" alt="">
+                    <img src="<?= ASSETS ?>images/belle-face.jpg" alt="">
                 </div>
             </div>
             <div class="row my-3">
                 <!-- Single Testimonials Area -->
                 <div class="col-12 col-md-6">
-                    <img src="<?= ASSETS ?>images/femme.jpg" alt="">
+                    <img src="<?= ASSETS ?>images/first-baby-Savon.jpg" alt="">
                 </div>
                 <!-- Single Testimonials Area -->
                 <div class="col-12 col-md-6">
@@ -196,7 +229,7 @@ try {
                             <img src="<?= ASSETS ?>images/logo.jpg" alt="">
                         </div>
                         <div class="testimonial-content">
-                            <p class="h2">CARMEL BEBE</p>
+                            <p class="h2">FIRST BABY</p>
                             <p class="h3">c'est simple</p>
                             <p>Formulée à partir d'actifs d'origine naturelle ou issus de la pharmacie.</p>
                             <!-- <h6><span><a class="text-light" href="#">voir plus</a></span></h6> -->
