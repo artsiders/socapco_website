@@ -11,7 +11,7 @@
                             <a class="<?php if ($this->request == "contact") echo "active" ?>" href="./contact">Contacts</a>
                         </div>
                         <div class="login-content col-sm">
-                            <a class="<?php if ($this->request == "about") echo "active" ?>" href="./about">A_Propos</a>
+                            <a class="<?php if ($this->request == "about") echo "active" ?>" href="./about">A&#174;Propos</a>
                         </div>
                     </div>
                 </div>
