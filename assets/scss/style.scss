@@ -36,6 +36,12 @@ body {
     background-color: #fffff2;
 }
 
+@media screen and (max-width:995px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
 /* Section Heading */
 
 .section-heading {

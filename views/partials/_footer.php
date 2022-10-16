@@ -100,12 +100,21 @@
 
 <script async src='<?= ASSETS ?>libs/embed.min.js'></script>
 <script>
+    let marginLeft
+    let marginBottom
+    if (window.matchMedia("(max-width: 800px)").matches) {
+        marginLeft = 20
+        marginBottom = 25
+    } else {
+        marginLeft = 50
+        marginBottom = 56
+    }
     var wa_btnSetting = {
         "btnColor": "#ff4545",
         "ctaText": "",
         "cornerRadius": 40,
-        "marginBottom": 56,
-        "marginLeft": 50,
+        "marginBottom": marginBottom,
+        "marginLeft": marginLeft,
         "marginRight": 50,
         "btnPosition": "left",
         "whatsAppNumber": "651284114",

@@ -6,6 +6,7 @@ const ProdIngre = document.getElementById("ProdIngre")
 const seletGamme = document.getElementById("seletGamme")
 const selectCat = document.getElementById("selectCat")
 const selectEff = document.getElementById("selectEff")
+const selectUnite = document.getElementById("selectUnite")
 const inpGrammage = document.getElementById("inpGrammage")
 const editImportant = document.getElementById("editImportant")
 const uploadFileEdit = document.getElementById("uploadFileEdit")
@@ -30,6 +31,7 @@ btnEditProd.forEach(btn => {
                 selectCat.value = data.id_categorie
                 selectEff.value = data.id_effect
                 inpGrammage.value = data.grammage
+                selectUnite.value = data.unite
                 oldImage.value = data.picture
                 data.important == 1 ? editImportant.checked = true : editImportant.checked = false
             }).catch(error => console.log(error))

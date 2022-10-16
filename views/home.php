@@ -55,13 +55,34 @@ try {
             background-image: url('<?= ASSETS ?>images/bg-img/bg-1.jpg');
         }
 
+        .carmel {
+            background-image: url('<?= ASSETS ?>images/bg-img/bg-2.jpg');
+        }
+
+        .belle {
+            background-image: url('<?= ASSETS ?>images/bg-img/bg-3.jpg');
+        }
+
         @media screen and (max-width:800px) {
             .divine {
                 background-image: url('<?= ASSETS ?>images/bg-img/bg-1-phone.jpg');
             }
 
+            .divine .h4 {
+                /* display: none; */
+                margin-top: 75%;
+            }
+
             .divine .hero-slides-content {
                 text-align: center;
+            }
+
+            .carmel {
+                background-image: url('<?= ASSETS ?>images/bg-img/bg-2-phone.jpg');
+            }
+
+            .belle {
+                background-image: url('<?= ASSETS ?>images/bg-img/bg-3-phone.jpg');
             }
         }
 
@@ -82,7 +103,7 @@ try {
                                     belle et légère avec la gamme de produits</h4>
                                 <h2 data-animation="fadeInUp" data-delay="300ms"> DIVINE Clarté
                                 </h2>
-                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1000ms">Nos produits</a>
+                                <a href="./produits&eff=eclaircissant" class="btn academy-btn" data-animation="fadeInUp" data-delay="1000ms">Produits eclaircissant</a>
                             </div>
                         </div>
                     </div>
@@ -90,7 +111,7 @@ try {
             </div>
 
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img carmel" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-2.jpg);">
+            <div class="single-hero-slide bg-img carmel">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
@@ -100,8 +121,8 @@ try {
                                 </h4>
                                 <h2 data-animation="fadeInUp" data-delay="400ms">CARMEL Bébé
                                 </h2>
-                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1000ms">Nos
-                                    produits hydratant</a>
+                                <a href="./produits&eff=hydratant" class="btn academy-btn" data-animation="fadeInUp" data-delay="1000ms">
+                                    Produits hydratant</a>
                             </div>
                         </div>
                     </div>
@@ -109,7 +130,7 @@ try {
             </div>
 
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(<?= ASSETS ?>images/bg-img/bg-3.jpg);">
+            <div class="single-hero-slide bg-img belle">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12">
@@ -119,8 +140,8 @@ try {
                                 </h4>
                                 <h2 data-animation="fadeInUp" data-delay="400ms">belle face <br>éclaircissement
                                 </h2>
-                                <a href="./produits" class="btn academy-btn" data-animation="fadeInUp" data-delay="1500ms">Nos
-                                    produits gomment</a>
+                                <a href="./produits&eff=gommant" class="btn academy-btn" data-animation="fadeInUp" data-delay="1500ms">
+                                    Produits gommant</a>
                             </div>
                         </div>
                     </div>
@@ -148,8 +169,7 @@ try {
     <div class="top-features-area wow fadeInUp" data-wow-delay="300ms">
         <div class="container">
             <div class="row">
-                <div class="col-3"></div>
-                <div class="col-6">
+                <div class="col-12">
                     <div class="features-content">
                         <div class="col">
                             <h3 class="text-center text-light">Nos Meilleurs Prodruits</h3>

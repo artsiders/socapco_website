@@ -31,8 +31,8 @@
                 </article>
             <?php endforeach; ?>
         <?php else : ?>
-            <div class="text-center col-12 h4 m-4 p-4 bg-overlay text-light">pas de produit <?= $eff ?> pour <?= $cat ?> disponible
-                <br /> pour le moment. <br />
+            <div style="width: calc(100% - 45px);" class="card_product_main wow fadeInUp text-center col-12 h4 m-4 p-4 bg-overlay text-light">
+                pas de produit disponible pour le moment
                 <a href="./produits&cat=<?= $cat; ?>" class="btn academy-btn m-4" data-animation="fadeInUp" data-delay="1500ms">
                     voir d'autre produits
                 </a>

@@ -20,6 +20,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
     $ingredient = htmlspecialchars(strtolower(trim($_POST['ingredient'])));
     $old_image = $_POST['old_image'];
     $grammage = (int)$_POST['grammage'];
+    $unite = htmlspecialchars(strtolower(trim($_POST['unite'])));
     isset($_POST['important']) && $_POST['important'] == 1 ? $important = 1 : $important = 0;
 
     $idGamme = htmlspecialchars($_POST['id_gamme']);
@@ -54,6 +55,7 @@ if (isset($_POST['id']) && !empty($_POST['id'])) {
             "ingredient" => $ingredient,
             "important" => $important,
             "grammage" => $grammage,
+            "unite" => $unite,
         );
         $id = (int)$_POST["id"];
 

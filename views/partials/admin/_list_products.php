@@ -73,7 +73,7 @@
 														<label for="gammage">unité de mesure</label>
 														<div class="input-group mb-3">
 															<input id="inpGrammage" step="10" type="number" name="grammage" class="form-control" aria-label="" aria-describedby="basic-gram">
-															<select name="unite" class="input-group-text" id="basic-gram">
+															<select id="selectUnite" name="unite" class="input-group-text" id="basic-gram">
 																<option value="g">g</option>
 																<option value="ml">ml</option>
 															</select>

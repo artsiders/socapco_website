@@ -187,6 +187,7 @@ class Products
                 `id_user`= :user,
                 `important`= :important,
                 `grammage`= :grammage,
+                `unite`= :unite,
                 `ingredient`= :ingredient
                 WHERE id_product = :id";
             $query = $this->connect->getConnect()->prepare($sql);
@@ -198,6 +199,7 @@ class Products
             $query->bindParam("user", $data['id_user']);
             $query->bindParam("important", $data['important']);
             $query->bindParam("grammage", $data['grammage']);
+            $query->bindParam("unite", $data['unite']);
             $query->bindParam("ingredient", $data['ingredient']);
             $query->bindParam("id", $idProduit);
         } else {
