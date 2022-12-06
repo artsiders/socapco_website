@@ -119,7 +119,7 @@ try {
                                 <h4 data-animation="fadeInUp" data-delay="100ms">Socapco Cosmétique, l’expert des peaux sensibles,
                                     <br> vous propose une large gamme de produits bébé
                                 </h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">CARMEL Bébé
+                                <h2 data-animation="fadeInUp" data-delay="400ms">CARMELL BÉBÉ
                                 </h2>
                                 <a href="./produits&eff=hydratant" class="btn academy-btn" data-animation="fadeInUp" data-delay="1000ms">
                                     Produits hydratant</a>

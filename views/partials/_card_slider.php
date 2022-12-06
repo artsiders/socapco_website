@@ -6,7 +6,7 @@
         <div class="slide-content">
             <div class="card-wrapper swiper-wrapper">
                 <?php foreach ($productsImportant as $key => $product) : ?>
-                    <div class="card_product swiper-slide  wow fadeInUp" data-wow-delay="<?= $key + 2 ?>00ms">
+                    <div class="card_product first_product swiper-slide  wow fadeInUp" data-wow-delay="<?= $key + 2 ?>00ms">
                         <div class="imgBox">
                             <img src="<?= ASSETS ?>images/product/<?= $product["picture"] ?>" alt="produit" class="mouse">
                         </div>

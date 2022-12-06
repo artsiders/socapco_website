@@ -68,11 +68,11 @@
                         </div>
                         <div class="single-contact d-flex mb-30">
                             <i class="icon-telephone-1"></i>
-                            <p>Principal: 000-000-000 <br>Bureau: 000-000-000</p>
+                            <p>Principal: 650 84 20 71<br>Bureau: 699 37 9480</p>
                         </div>
                         <div class="single-contact d-flex">
                             <i class="icon-contract"></i>
-                            <p>contact@socapco.com</p>
+                            <p>socapcocosmetiquesarl@yahoo.com</p>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
         "marginLeft": marginLeft,
         "marginRight": 50,
         "btnPosition": "left",
-        "whatsAppNumber": "651284114",
+        "whatsAppNumber": "699379480",
         "welcomeMessage": "Bonjour à tous ! Quel plaisir de vous voir. dites nous si vous avez un problème",
         "zIndex": 999999,
         "btnColorScheme": "light"

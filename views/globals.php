@@ -12,7 +12,7 @@ else $eff = "all";
 
 if (isset($_GET['action']) and !empty($_GET['action']) and $_GET['action'] == 'produits') {
     $products = new Products;
-    $limit = 4;
+    $limit = 8;
 
     $totalProduct = (int)$products->readCount($cat, $eff);
     $totalPage = ceil($totalProduct / $limit);
@@ -112,7 +112,7 @@ function makeDefaultUser()
 // SOAP____________________________
 if (isset($_GET['action']) and !empty($_GET['action']) and $_GET['action'] == 'savons') {
     $soaps = new Soaps;
-    $limit = 4;
+    $limit = 8;
     $totalSoap = (int)$soaps->readCount();
     $totalPageSoap = ceil($totalSoap / $limit);
 

@@ -92,7 +92,7 @@
                                                   <div class="contact-icon mr-15">
                                                        <i class="icon-telephone-1"></i>
                                                   </div>
-                                                  <p>Main: 000-000-000 <br> Office: 000-000-000</p>
+                                                  <p>Principal: 650 84 20 71<br>Bureau: 699 37 9480</p>
                                              </div>
 
                                              <!-- Single Contact Info -->
@@ -100,7 +100,7 @@
                                                   <div class="contact-icon mr-15">
                                                        <i class="icon-contract"></i>
                                                   </div>
-                                                  <p>contact@socapco.com</p>
+                                                  <p>socapcocosmetiquesarl@yahoo.com</p>
                                              </div>
                                         </div>
                                    </div>

@@ -1,5 +1,4 @@
 .list_product {
-
   .card_product_main {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -12,7 +11,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      @include bg-gradients;
+      // @include bg-gradients;
+      background-color: white;
       height: fit-content;
       max-height: 400px;
       position: relative;
@@ -22,7 +22,7 @@
       img {
         max-height: 400px;
         max-width: 100%;
-        transition: all .3s;
+        transition: all 0.3s;
       }
     }
 
@@ -32,15 +32,17 @@
 
     .body {
       padding: 15px;
+      background-color: #fbf5c7;
+
+      h5 {
+        text-transform: capitalize;
+      }
     }
   }
 
-
-
-
   .button {
     display: inline-block;
-    padding: 0.5em 1.0em;
+    padding: 0.5em 1em;
     cursor: pointer;
   }
 
@@ -60,7 +62,7 @@
   }
 
   .button-group:after {
-    content: '';
+    content: "";
     display: block;
     clear: both;
   }
@@ -70,7 +72,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-
     }
   }
 
@@ -85,7 +86,7 @@
   }
 
   .grid article {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     display: block;
     float: left;
     margin: 1%;
@@ -110,6 +111,4 @@
       width: 100%;
     }
   }
-
-
 }

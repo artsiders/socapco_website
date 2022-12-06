@@ -74,9 +74,9 @@
                 <!-- Calling Info -->
                 <div class="calling-info">
                     <div class="call-center">
-                        <a href="tel:+237000000000">
-                            <i class="fa fa-whatsapp"></i>
-                            <span>(+237) 000 000 000</span>
+                        <a href="tel:+237650842071">
+                            <i class="fa fa-phone"></i>
+                            <span>(+237) 650 84 20 71</span>
                         </a>
                     </div>
                 </div>
